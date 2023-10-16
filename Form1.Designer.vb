@@ -37,13 +37,10 @@ Partial Class Form1
         Me.lblHome = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlUserInfo = New System.Windows.Forms.Panel()
         Me.pnlChangeable = New System.Windows.Forms.Panel()
-        Me.btnRemove = New System.Windows.Forms.Button()
-        Me.btnClear = New System.Windows.Forms.Button()
-        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
-        Me.pnlChangeable.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -200,54 +197,29 @@ Partial Class Form1
         Me.Panel3.Size = New System.Drawing.Size(42, 42)
         Me.Panel3.TabIndex = 2
         '
-        'Panel2
+        'pnlUserInfo
         '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(34, 100)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(271, 729)
-        Me.Panel2.TabIndex = 2
+        Me.pnlUserInfo.BackColor = System.Drawing.Color.White
+        Me.pnlUserInfo.Location = New System.Drawing.Point(34, 100)
+        Me.pnlUserInfo.Name = "pnlUserInfo"
+        Me.pnlUserInfo.Size = New System.Drawing.Size(271, 729)
+        Me.pnlUserInfo.TabIndex = 2
         '
         'pnlChangeable
         '
         Me.pnlChangeable.BackColor = System.Drawing.Color.White
-        Me.pnlChangeable.Controls.Add(Me.btnRemove)
-        Me.pnlChangeable.Controls.Add(Me.btnClear)
-        Me.pnlChangeable.Controls.Add(Me.btnSubmit)
         Me.pnlChangeable.Location = New System.Drawing.Point(342, 100)
         Me.pnlChangeable.Name = "pnlChangeable"
         Me.pnlChangeable.Size = New System.Drawing.Size(1109, 729)
         Me.pnlChangeable.TabIndex = 3
         '
-        'btnRemove
+        'Panel2
         '
-        Me.btnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRemove.Location = New System.Drawing.Point(582, 659)
-        Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(117, 34)
-        Me.btnRemove.TabIndex = 1
-        Me.btnRemove.Text = "Remove"
-        Me.btnRemove.UseVisualStyleBackColor = True
-        '
-        'btnClear
-        '
-        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(731, 659)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(117, 34)
-        Me.btnClear.TabIndex = 1
-        Me.btnClear.Text = "Clear"
-        Me.btnClear.UseVisualStyleBackColor = True
-        '
-        'btnSubmit
-        '
-        Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Location = New System.Drawing.Point(882, 659)
-        Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(187, 34)
-        Me.btnSubmit.TabIndex = 0
-        Me.btnSubmit.Text = "Submit"
-        Me.btnSubmit.UseVisualStyleBackColor = True
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel2.Location = New System.Drawing.Point(1233, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(251, 861)
+        Me.Panel2.TabIndex = 0
         '
         'Form1
         '
@@ -255,8 +227,9 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1484, 861)
-        Me.Controls.Add(Me.pnlChangeable)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.pnlChangeable)
+        Me.Controls.Add(Me.pnlUserInfo)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
@@ -264,18 +237,14 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.pnlChangeable.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlUserInfo As Panel
     Friend WithEvents pnlChangeable As Panel
-    Friend WithEvents btnSubmit As Button
-    Friend WithEvents btnRemove As Button
-    Friend WithEvents btnClear As Button
     Friend WithEvents lblBMICalculator As Label
     Friend WithEvents lblHome As Label
     Friend WithEvents Panel4 As Panel
@@ -289,4 +258,5 @@ Partial Class Form1
     Friend WithEvents lblRecords As Label
     Friend WithEvents lblDrugsMedicine As Label
     Friend WithEvents lblSymptomChecker As Label
+    Friend WithEvents Panel2 As Panel
 End Class

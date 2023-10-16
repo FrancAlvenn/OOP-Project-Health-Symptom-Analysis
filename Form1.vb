@@ -32,7 +32,7 @@
         'bottom right
         'to change the bottom right the x,y,width,height must be same
         rad.AddArc(New Rectangle(button.Width - 15, button.Height - 15, 15, 15), 0, 90)
-        rad.AddLine(button.Width - 10, button.Width, 10, button.Height)
+        rad.AddLine(button.Width - 10, button.Height, 10, button.Height)
         'bottom left
         rad.AddArc(New Rectangle(0, button.Height - 10, 10, 10), 90, 90)
         button.Region = New Region(rad)
@@ -55,6 +55,26 @@
     End Sub
 
 
+    'Round Panel Function
+    Private Sub RoundCornerPanel(panel As Panel)
+        panel.BorderStyle = FlatStyle.Flat
+
+        Dim rad As New Drawing2D.GraphicsPath
+        rad.StartFigure()
+        'top left
+        rad.AddArc(New Rectangle(0, 0, 20, 20), 180, 90)
+        rad.AddLine(10, 0, panel.Width - 20, 0)
+        'top right
+        rad.AddArc(New Rectangle(panel.Width - 20, 0, 20, 20), -90, 90)
+        rad.AddLine(panel.Width, 20, panel.Width, panel.Height - 20)
+        'bottom right
+        'to change the bottom right the x,y,width,height must be same
+        rad.AddArc(New Rectangle(panel.Width - 25, panel.Height - 25, 25, 25), 0, 90)
+        rad.AddLine(panel.Width - 10, panel.Height, 20, panel.Height)
+        'bottom left
+        rad.AddArc(New Rectangle(0, panel.Height - 20, 20, 20), 90, 90)
+        panel.Region = New Region(rad)
+    End Sub
 
 
 
@@ -64,13 +84,14 @@
 
     'Form Load
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RoundCornerButton(btnSubmit)
-        RoundCornerButton(btnClear)
-        RoundCornerButton(btnRemove)
+        RoundCornerPanel(pnlChangeable)
+        RoundCornerPanel(pnlUserInfo)
         'fucntion call to get childform
         childForm(Home)
         'function call to change Fore Color of MenuBar
         changeForeColor(lblHome)
+
+
     End Sub
 
     'lblBMICalculator_Click
