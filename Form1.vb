@@ -1,30 +1,6 @@
 ﻿Public Class Form1
     Private selectedLabel As Label = Nothing
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RoundCornerButton(btnSubmit)
-        RoundCornerButton(btnClear)
-        RoundCornerButton(btnRemove)
 
-    End Sub
-
-
-    Private Sub lblBMICalculator_Click(sender As Object, e As EventArgs) Handles lblBMICalculator.Click
-        'fucntion call to get childform
-        childForm(BMIChecker)
-        'function call to change Fore Color of MenuBar
-        changeForeColor(sender)
-    End Sub
-
-    Private Sub lblHome_Click(sender As Object, e As EventArgs) Handles lblHome.Click
-        'fucntion call to get childform
-        childForm(Home)
-        'function call to change Fore Color of MenuBar
-        changeForeColor(sender)
-    End Sub
-
-
-
-    '-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
     'Funtions and Methods
 
     'Form Change in a Panel
@@ -62,8 +38,6 @@
         button.Region = New Region(rad)
     End Sub
 
-
-
     'Funtion to Change ForeColor
     Private Sub changeForeColor(sender As Object)
         Dim clickedLabel As Label = DirectCast(sender, Label)
@@ -81,4 +55,69 @@
     End Sub
 
 
+
+
+
+    '-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
+
+    'Event Handlers
+
+    'Form Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RoundCornerButton(btnSubmit)
+        RoundCornerButton(btnClear)
+        RoundCornerButton(btnRemove)
+        'fucntion call to get childform
+        childForm(Home)
+        'function call to change Fore Color of MenuBar
+        changeForeColor(lblHome)
+    End Sub
+
+    'lblBMICalculator_Click
+    Private Sub lblBMICalculator_Click(sender As Object, e As EventArgs) Handles lblBMICalculator.Click
+        'fucntion call to get childform
+        childForm(BMIChecker)
+        'function call to change Fore Color of MenuBar
+        changeForeColor(sender)
+    End Sub
+
+    'lblHome_Click
+    Private Sub lblHome_Click(sender As Object, e As EventArgs) Handles lblHome.Click
+        'fucntion call to get childform
+        childForm(Home)
+        'function call to change Fore Color of MenuBar
+        changeForeColor(sender)
+    End Sub
+
+    'lblSymptomChecker_Click
+    Private Sub lblSymptomChecker_Click(sender As Object, e As EventArgs) Handles lblSymptomChecker.Click
+        'fucntion call to get childform
+        childForm(SymptomChecker)
+        'function call to change Fore Color of MenuBar
+        changeForeColor(sender)
+    End Sub
+
+    'DrugsMedicine_Click
+    Private Sub lblDrugsMedicine_Click(sender As Object, e As EventArgs) Handles lblDrugsMedicine.Click
+        'fucntion call to get childform
+        childForm(DrugsMedicine)
+        'function call to change Fore Color of MenuBar
+        changeForeColor(sender)
+    End Sub
+
+    'Records_Click
+    Private Sub lblRecords_Click(sender As Object, e As EventArgs) Handles lblRecords.Click
+        'fucntion call to get childform
+        childForm(Records)
+        'function call to change Fore Color of MenuBar
+        changeForeColor(sender)
+    End Sub
+
+    'About_Click
+    Private Sub lblAbout_Click(sender As Object, e As EventArgs) Handles lblAbout.Click
+        'fucntion call to get childform
+        childForm(About)
+        'function call to change Fore Color of MenuBar
+        changeForeColor(sender)
+    End Sub
 End Class

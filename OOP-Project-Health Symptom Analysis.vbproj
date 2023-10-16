@@ -73,10 +73,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BMIChecker.Designer.vb">
       <DependentUpon>BMIChecker.vb</DependentUpon>
     </Compile>
     <Compile Include="BMIChecker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugsMedicine.Designer.vb">
+      <DependentUpon>DrugsMedicine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DrugsMedicine.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -107,10 +119,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Records.Designer.vb">
+      <DependentUpon>Records.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Records.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SymptomChecker.Designer.vb">
+      <DependentUpon>SymptomChecker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SymptomChecker.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BMIChecker.resx">
       <DependentUpon>BMIChecker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugsMedicine.resx">
+      <DependentUpon>DrugsMedicine.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -123,6 +153,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Records.resx">
+      <DependentUpon>Records.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SymptomChecker.resx">
+      <DependentUpon>SymptomChecker.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
