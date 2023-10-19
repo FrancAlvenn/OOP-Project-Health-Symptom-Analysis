@@ -173,5 +173,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\close.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

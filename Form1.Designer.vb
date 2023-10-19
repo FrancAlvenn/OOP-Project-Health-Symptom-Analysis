@@ -22,8 +22,10 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnMenu = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -35,12 +37,15 @@ Partial Class Form1
         Me.lblSymptomChecker = New System.Windows.Forms.Label()
         Me.lblBMICalculator = New System.Windows.Forms.Label()
         Me.lblHome = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.pnlUserInfo = New System.Windows.Forms.Panel()
         Me.pnlChangeable = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlMenu = New System.Windows.Forms.Panel()
+        Me.btnClose = New System.Windows.Forms.Label()
+        Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
+        Me.pnlMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -55,6 +60,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.btnMenu)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -66,12 +72,20 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.lblSymptomChecker)
         Me.Panel1.Controls.Add(Me.lblBMICalculator)
         Me.Panel1.Controls.Add(Me.lblHome)
-        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1484, 61)
         Me.Panel1.TabIndex = 1
+        '
+        'btnMenu
+        '
+        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu
+        Me.btnMenu.Location = New System.Drawing.Point(1414, 10)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(49, 42)
+        Me.btnMenu.TabIndex = 0
         '
         'Label11
         '
@@ -181,22 +195,6 @@ Partial Class Form1
         Me.lblHome.TabIndex = 4
         Me.lblHome.Text = "Home"
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(1409, 10)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(42, 42)
-        Me.Panel4.TabIndex = 3
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(34, 10)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(42, 42)
-        Me.Panel3.TabIndex = 2
-        '
         'pnlUserInfo
         '
         Me.pnlUserInfo.BackColor = System.Drawing.Color.White
@@ -213,13 +211,41 @@ Partial Class Form1
         Me.pnlChangeable.Size = New System.Drawing.Size(1109, 729)
         Me.pnlChangeable.TabIndex = 3
         '
-        'Panel2
+        'pnlMenu
         '
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(1233, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(251, 861)
-        Me.Panel2.TabIndex = 0
+        Me.pnlMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.pnlMenu.Controls.Add(Me.btnClose)
+        Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Right
+        Me.pnlMenu.Location = New System.Drawing.Point(1484, 0)
+        Me.pnlMenu.MaximumSize = New System.Drawing.Size(230, 0)
+        Me.pnlMenu.Name = "pnlMenu"
+        Me.pnlMenu.Size = New System.Drawing.Size(0, 861)
+        Me.pnlMenu.TabIndex = 0
+        '
+        'btnClose
+        '
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.close
+        Me.btnClose.Location = New System.Drawing.Point(3, 9)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(40, 29)
+        Me.btnClose.TabIndex = 14
+        '
+        'TimerPanelIncrease
+        '
+        Me.TimerPanelIncrease.Interval = 10
+        '
+        'TimerPanelDecrease
+        '
+        Me.TimerPanelDecrease.Interval = 10
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.Panel3.Location = New System.Drawing.Point(34, 10)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(42, 42)
+        Me.Panel3.TabIndex = 2
         '
         'Form1
         '
@@ -227,7 +253,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1484, 861)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.pnlMenu)
         Me.Controls.Add(Me.pnlChangeable)
         Me.Controls.Add(Me.pnlUserInfo)
         Me.Controls.Add(Me.Panel1)
@@ -237,6 +263,7 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.pnlMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -247,8 +274,6 @@ Partial Class Form1
     Friend WithEvents pnlChangeable As Panel
     Friend WithEvents lblBMICalculator As Label
     Friend WithEvents lblHome As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
@@ -258,5 +283,10 @@ Partial Class Form1
     Friend WithEvents lblRecords As Label
     Friend WithEvents lblDrugsMedicine As Label
     Friend WithEvents lblSymptomChecker As Label
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnlMenu As Panel
+    Friend WithEvents btnMenu As Label
+    Friend WithEvents btnClose As Label
+    Friend WithEvents TimerPanelIncrease As Timer
+    Friend WithEvents TimerPanelDecrease As Timer
+    Friend WithEvents Panel3 As Panel
 End Class

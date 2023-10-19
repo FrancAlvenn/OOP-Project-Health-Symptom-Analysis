@@ -141,4 +141,51 @@
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
     End Sub
+
+    'btnMenu_Click
+    Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
+
+        If pnlMenu.Width > 230 Then
+            TimerPanelDecrease.Enabled = True
+        Else
+            TimerPanelIncrease.Enabled = True
+        End If
+    End Sub
+
+    'btnClose
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        If pnlMenu.Width > 0 Then
+            TimerPanelDecrease.Enabled = True
+        Else
+            TimerPanelIncrease.Enabled = True
+        End If
+
+    End Sub
+
+    Private Sub TimerPanelDecrease_Tick(sender As Object, e As EventArgs) Handles TimerPanelDecrease.Tick
+        If pnlMenu.Width > 0 Then
+            pnlMenu.Width -= 10
+        Else
+            TimerPanelDecrease.Enabled = False
+        End If
+    End Sub
+
+    Private Sub TimerPanelIncrease_Tick(sender As Object, e As EventArgs) Handles TimerPanelIncrease.Tick
+        If pnlMenu.Width < 230 Then
+            pnlMenu.Width += 10
+        Else
+            TimerPanelIncrease.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Form1_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
+        'Closes Menu Bar if open
+        If pnlMenu.Width > 0 Then
+            TimerPanelDecrease.Enabled = True
+        Else
+            TimerPanelIncrease.Enabled = True
+        End If
+
+
+    End Sub
 End Class
