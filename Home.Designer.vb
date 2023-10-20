@@ -22,7 +22,16 @@ Partial Class Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.cmbSymptoms = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
+        '
+        'cmbSymptoms
+        '
+        Me.cmbSymptoms.FormattingEnabled = True
+        Me.cmbSymptoms.Location = New System.Drawing.Point(76, 133)
+        Me.cmbSymptoms.Name = "cmbSymptoms"
+        Me.cmbSymptoms.Size = New System.Drawing.Size(256, 21)
+        Me.cmbSymptoms.TabIndex = 0
         '
         'Home
         '
@@ -30,9 +39,12 @@ Partial Class Home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightCoral
         Me.ClientSize = New System.Drawing.Size(1093, 690)
+        Me.Controls.Add(Me.cmbSymptoms)
         Me.Name = "Home"
         Me.Text = "Home"
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents cmbSymptoms As ComboBox
 End Class

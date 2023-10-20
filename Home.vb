@@ -1,4 +1,5 @@
 ﻿Public Class Home
+
     Private Sub RoundCornerButton(form As Form)
         form.FormBorderStyle = FormBorderStyle.None
 
@@ -21,5 +22,10 @@
         'bottom left
         rad.AddArc(New Rectangle(0, form.Height - 10, 10, 10), 90, 90)
         form.Region = New Region(rad)
+    End Sub
+
+    Private Sub Home_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+
     End Sub
 End Class

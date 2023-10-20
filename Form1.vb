@@ -77,6 +77,14 @@
     End Sub
 
 
+    Private Sub CloseMenuBar()
+        'Closes Menu Bar if open
+        If pnlMenu.Width > 0 Then
+            TimerPanelDecrease.Enabled = True
+        End If
+    End Sub
+
+
 
     '-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
 
@@ -84,6 +92,7 @@
 
     'Form Load
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         RoundCornerPanel(pnlChangeable)
         RoundCornerPanel(pnlUserInfo)
         'fucntion call to get childform
@@ -91,6 +100,11 @@
         'function call to change Fore Color of MenuBar
         changeForeColor(lblHome)
 
+
+
+        'databaseConnection.APISymptoms()
+        'databaseConnection.APIIssues()
+        databaseConnection.APIIssueSpecific()
 
     End Sub
 
@@ -100,14 +114,19 @@
         childForm(BMIChecker)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
+        'Close Menubar if open
+        CloseMenuBar()
     End Sub
 
     'lblHome_Click
     Private Sub lblHome_Click(sender As Object, e As EventArgs) Handles lblHome.Click
+
         'fucntion call to get childform
         childForm(Home)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
+        'Close Menubar if open
+        CloseMenuBar()
     End Sub
 
     'lblSymptomChecker_Click
@@ -116,6 +135,8 @@
         childForm(SymptomChecker)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
+        'Close Menubar if open
+        CloseMenuBar()
     End Sub
 
     'DrugsMedicine_Click
@@ -124,6 +145,8 @@
         childForm(DrugsMedicine)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
+        'Close Menubar if open
+        CloseMenuBar()
     End Sub
 
     'Records_Click
@@ -132,6 +155,8 @@
         childForm(Records)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
+        'Close Menubar if open
+        CloseMenuBar()
     End Sub
 
     'About_Click
@@ -140,6 +165,8 @@
         childForm(About)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
+        'Close Menubar if open
+        CloseMenuBar()
     End Sub
 
     'btnMenu_Click
@@ -154,12 +181,7 @@
 
     'btnClose
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        If pnlMenu.Width > 0 Then
-            TimerPanelDecrease.Enabled = True
-        Else
-            TimerPanelIncrease.Enabled = True
-        End If
-
+        CloseMenuBar()
     End Sub
 
     Private Sub TimerPanelDecrease_Tick(sender As Object, e As EventArgs) Handles TimerPanelDecrease.Tick
@@ -179,13 +201,6 @@
     End Sub
 
     Private Sub Form1_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
-        'Closes Menu Bar if open
-        If pnlMenu.Width > 0 Then
-            TimerPanelDecrease.Enabled = True
-        Else
-            TimerPanelIncrease.Enabled = True
-        End If
-
-
+        CloseMenuBar()
     End Sub
 End Class

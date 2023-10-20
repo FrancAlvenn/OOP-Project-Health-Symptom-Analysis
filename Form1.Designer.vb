@@ -25,7 +25,6 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnMenu = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -40,9 +39,10 @@ Partial Class Form1
         Me.pnlUserInfo = New System.Windows.Forms.Panel()
         Me.pnlChangeable = New System.Windows.Forms.Panel()
         Me.pnlMenu = New System.Windows.Forms.Panel()
-        Me.btnClose = New System.Windows.Forms.Label()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
+        Me.btnClose = New System.Windows.Forms.Label()
+        Me.btnMenu = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
@@ -77,15 +77,6 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1484, 61)
         Me.Panel1.TabIndex = 1
-        '
-        'btnMenu
-        '
-        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu
-        Me.btnMenu.Location = New System.Drawing.Point(1414, 10)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(49, 42)
-        Me.btnMenu.TabIndex = 0
         '
         'Label11
         '
@@ -222,6 +213,14 @@ Partial Class Form1
         Me.pnlMenu.Size = New System.Drawing.Size(0, 861)
         Me.pnlMenu.TabIndex = 0
         '
+        'TimerPanelIncrease
+        '
+        Me.TimerPanelIncrease.Interval = 10
+        '
+        'TimerPanelDecrease
+        '
+        Me.TimerPanelDecrease.Interval = 10
+        '
         'btnClose
         '
         Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
@@ -231,13 +230,14 @@ Partial Class Form1
         Me.btnClose.Size = New System.Drawing.Size(40, 29)
         Me.btnClose.TabIndex = 14
         '
-        'TimerPanelIncrease
+        'btnMenu
         '
-        Me.TimerPanelIncrease.Interval = 10
-        '
-        'TimerPanelDecrease
-        '
-        Me.TimerPanelDecrease.Interval = 10
+        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu
+        Me.btnMenu.Location = New System.Drawing.Point(1414, 10)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(49, 42)
+        Me.btnMenu.TabIndex = 0
         '
         'Panel3
         '
