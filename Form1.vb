@@ -92,6 +92,12 @@
 
     'Form Load
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'databaseConnection.APISymptoms()
+        'databaseConnection.APIIssues()
+        'databaseConnection.APIIssueSpecific()
+        'APIBodyLocations()
+        'APIBodyLocationSpecific()
+        APIBodySymptom()
 
         RoundCornerPanel(pnlChangeable)
         RoundCornerPanel(pnlUserInfo)
@@ -102,9 +108,7 @@
 
 
 
-        'databaseConnection.APISymptoms()
-        'databaseConnection.APIIssues()
-        databaseConnection.APIIssueSpecific()
+
 
     End Sub
 
