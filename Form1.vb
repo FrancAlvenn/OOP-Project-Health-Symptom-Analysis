@@ -1,4 +1,5 @@
 ﻿Public Class Form1
+    Inherits Windows.Forms.Form
     Private selectedLabel As Label = Nothing
 
     'Funtions and Methods
@@ -44,11 +45,11 @@
 
         ' Reset the properties of the previously selected label (if any)
         If selectedLabel IsNot Nothing AndAlso selectedLabel IsNot clickedLabel Then
-            selectedLabel.ForeColor = Color.Black
+            selectedLabel.ForeColor = Color.White
         End If
 
         ' Set the properties of the clicked label
-        clickedLabel.ForeColor = Color.FromArgb(5, 121, 203)
+        clickedLabel.ForeColor = Color.FromArgb(137, 207, 240)
 
         ' Update the selected label
         selectedLabel = clickedLabel
@@ -85,6 +86,16 @@
     End Sub
 
 
+    Private Sub DrawFormGradient(ByVal TopColor As Color, ByVal BottomColor As Color)
+        Dim objBrush As New Drawing2D.LinearGradientBrush(Me.DisplayRectangle, TopColor, BottomColor, Drawing2D.LinearGradientMode.BackwardDiagonal)
+        Dim objGraphics As Graphics = Me.CreateGraphics
+        objGraphics.FillRectangle(objBrush, Me.DisplayRectangle)
+        objBrush.Dispose()
+        objGraphics.Dispose()
+
+    End Sub
+
+
 
     '-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
 
@@ -114,19 +125,8 @@
 
 
 
-
-
     End Sub
 
-    'lblBMICalculator_Click
-    Private Sub lblBMICalculator_Click(sender As Object, e As EventArgs) Handles lblBMICalculator.Click
-        'fucntion call to get childform
-        childForm(BMIChecker)
-        'function call to change Fore Color of MenuBar
-        changeForeColor(sender)
-        'Close Menubar if open
-        CloseMenuBar()
-    End Sub
 
     'lblHome_Click
     Private Sub lblHome_Click(sender As Object, e As EventArgs) Handles lblHome.Click
@@ -139,30 +139,31 @@
         CloseMenuBar()
     End Sub
 
-    'lblSymptomChecker_Click
-    Private Sub lblSymptomChecker_Click(sender As Object, e As EventArgs) Handles lblSymptomChecker.Click
+    'PhysicalAssessment_Click
+    Private Sub lblPhysicalAssessment_Click(sender As Object, e As EventArgs) Handles lblPhysicalAssessment.Click
         'fucntion call to get childform
-        childForm(SymptomChecker)
+        childForm(BMICalc)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
         'Close Menubar if open
         CloseMenuBar()
     End Sub
 
-    'DrugsMedicine_Click
-    Private Sub lblDrugsMedicine_Click(sender As Object, e As EventArgs) Handles lblDrugsMedicine.Click
+    'lblMentalAssessment_Click
+    Private Sub lblMentalAssessment_Click(sender As Object, e As EventArgs) Handles lblMentalAssessment.Click
         'fucntion call to get childform
-        childForm(DrugsMedicine)
+        childForm(MentalAssessment)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
         'Close Menubar if open
         CloseMenuBar()
     End Sub
+
 
     'Records_Click
-    Private Sub lblRecords_Click(sender As Object, e As EventArgs) Handles lblRecords.Click
+    Private Sub lblContactUs_Click(sender As Object, e As EventArgs) Handles lblContactUs.Click
         'fucntion call to get childform
-        childForm(Records)
+        childForm(ContactUs)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
         'Close Menubar if open
@@ -212,5 +213,10 @@
 
     Private Sub Form1_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
         CloseMenuBar()
+    End Sub
+
+
+    Private Sub Form1_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
+        DrawFormGradient(Color.FromArgb(1, 27, 80), Color.FromArgb(63, 86, 187))
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class DrugsMedicine
+Partial Class ContactUs
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,14 +24,14 @@ Partial Class DrugsMedicine
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'DrugsMedicine
+        'Records
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.BackColor = System.Drawing.Color.PaleGreen
         Me.ClientSize = New System.Drawing.Size(1093, 690)
-        Me.Name = "DrugsMedicine"
-        Me.Text = "DrugsMedicine"
+        Me.Name = "Records"
+        Me.Text = "Records"
         Me.ResumeLayout(False)
 
     End Sub

@@ -129,17 +129,11 @@
     <Compile Include="About.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BMIChecker.Designer.vb">
-      <DependentUpon>BMIChecker.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BMIChecker.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="databaseConnection.vb" />
-    <Compile Include="DrugsMedicine.Designer.vb">
-      <DependentUpon>DrugsMedicine.vb</DependentUpon>
+    <Compile Include="BMICalc.Designer.vb">
+      <DependentUpon>BMICalc.vb</DependentUpon>
     </Compile>
-    <Compile Include="DrugsMedicine.vb">
+    <Compile Include="BMICalc.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -147,6 +141,12 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhysicalAssessment.Designer.vb">
+      <DependentUpon>PhysicalAssessment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PhysicalAssessment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.vb">
@@ -170,16 +170,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Records.Designer.vb">
-      <DependentUpon>Records.vb</DependentUpon>
+    <Compile Include="ContactUs.Designer.vb">
+      <DependentUpon>ContactUs.vb</DependentUpon>
     </Compile>
-    <Compile Include="Records.vb">
+    <Compile Include="ContactUs.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SymptomChecker.Designer.vb">
-      <DependentUpon>SymptomChecker.vb</DependentUpon>
+    <Compile Include="MentalAssessment.Designer.vb">
+      <DependentUpon>MentalAssessment.vb</DependentUpon>
     </Compile>
-    <Compile Include="SymptomChecker.vb">
+    <Compile Include="MentalAssessment.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -187,11 +187,8 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BMIChecker.resx">
-      <DependentUpon>BMIChecker.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DrugsMedicine.resx">
-      <DependentUpon>DrugsMedicine.vb</DependentUpon>
+    <EmbeddedResource Include="BMICalc.resx">
+      <DependentUpon>BMICalc.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -205,11 +202,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Records.resx">
-      <DependentUpon>Records.vb</DependentUpon>
+    <EmbeddedResource Include="ContactUs.resx">
+      <DependentUpon>ContactUs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SymptomChecker.resx">
-      <DependentUpon>SymptomChecker.vb</DependentUpon>
+    <EmbeddedResource Include="MentalAssessment.resx">
+      <DependentUpon>MentalAssessment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhysicalAssessment.resx">
+      <DependentUpon>PhysicalAssessment.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +233,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\Temporary Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\warningsign.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

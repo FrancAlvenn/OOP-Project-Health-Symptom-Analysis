@@ -117,4 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>The information in these tools
+should not be relied upon to
+make decisions about your 
+health. Always consult your
+family doctor with questions
+about individual condition(s) 
+and/or circumstances.</value>
+  </data>
+  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="Label18.Text" xml:space="preserve">
+    <value>You may be diagnosed with obesity if your body mass index (BMI) is at or above 30kg/m2. You can 
+lower your BMI by following standard weight-loss tips, such as:
+
+
+◉ Eating healthy. Choose lean meats, fruits, vegetables, and whole grains. Reduce alcohol, sugar,
+    processed foods, sodas, and juices. Consume fewer calories.
+
+◉ Exercising regularly. This includes cardio and weight-bearing exercises to build muscle and lose fat.
+    This is effective in controlling belly fat. Belly fat increases the risk of certain health conditions. Always
+     talk to your doctor before beginning an exercise program.
+
+◉ Being mindful of portion control. Don’t overeat during meals and snacks.</value>
+  </data>
 </root>
