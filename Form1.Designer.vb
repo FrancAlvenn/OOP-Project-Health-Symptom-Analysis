@@ -79,7 +79,7 @@ Partial Class Form1
         '
         Me.btnMenu.BackColor = System.Drawing.Color.Transparent
         Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu
+        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu1
         Me.btnMenu.Location = New System.Drawing.Point(1414, 10)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(49, 42)
@@ -220,7 +220,6 @@ Partial Class Form1
         'btnClose
         '
         Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnClose.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.close
         Me.btnClose.Location = New System.Drawing.Point(3, 9)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(40, 29)

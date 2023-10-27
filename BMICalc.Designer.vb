@@ -45,6 +45,7 @@ Partial Class BMICalc
         Me.BMICalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PhysicalAssessmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -59,7 +60,6 @@ Partial Class BMICalc
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.pnlWeight.SuspendLayout()
         Me.pnlHeight.SuspendLayout()
@@ -87,6 +87,7 @@ Partial Class BMICalc
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox1.Location = New System.Drawing.Point(31, 48)
@@ -150,26 +151,35 @@ Partial Class BMICalc
         '
         'btnSubmit
         '
+        Me.btnSubmit.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnSubmit.FlatAppearance.BorderSize = 0
+        Me.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSubmit.Location = New System.Drawing.Point(190, 336)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(123, 31)
         Me.btnSubmit.TabIndex = 10
         Me.btnSubmit.Text = "Submit"
-        Me.btnSubmit.UseVisualStyleBackColor = True
+        Me.btnSubmit.UseVisualStyleBackColor = False
         '
         'btnReset
         '
+        Me.btnReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnReset.FlatAppearance.BorderSize = 0
+        Me.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReset.Location = New System.Drawing.Point(30, 336)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(123, 31)
         Me.btnReset.TabIndex = 9
         Me.btnReset.Text = "Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
+        Me.btnReset.UseVisualStyleBackColor = False
         '
         'pnlWeight
         '
-        Me.pnlWeight.BackColor = System.Drawing.Color.White
-        Me.pnlWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlWeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.pnlWeight.Controls.Add(Me.lblWeight)
         Me.pnlWeight.Controls.Add(Me.txtHeight)
         Me.pnlWeight.Location = New System.Drawing.Point(48, 264)
@@ -181,7 +191,7 @@ Partial Class BMICalc
         'lblWeight
         '
         Me.lblWeight.AutoSize = True
-        Me.lblWeight.BackColor = System.Drawing.Color.White
+        Me.lblWeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.lblWeight.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWeight.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.lblWeight.Location = New System.Drawing.Point(236, 6)
@@ -192,6 +202,7 @@ Partial Class BMICalc
         '
         'txtHeight
         '
+        Me.txtHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.txtHeight.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtHeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHeight.Location = New System.Drawing.Point(4, 6)
@@ -201,8 +212,7 @@ Partial Class BMICalc
         '
         'pnlHeight
         '
-        Me.pnlHeight.BackColor = System.Drawing.Color.White
-        Me.pnlHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.pnlHeight.Controls.Add(Me.txtWeight)
         Me.pnlHeight.Controls.Add(Me.lblHeight)
         Me.pnlHeight.Location = New System.Drawing.Point(48, 182)
@@ -213,6 +223,7 @@ Partial Class BMICalc
         '
         'txtWeight
         '
+        Me.txtWeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.txtWeight.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtWeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtWeight.Location = New System.Drawing.Point(4, 6)
@@ -223,7 +234,7 @@ Partial Class BMICalc
         'lblHeight
         '
         Me.lblHeight.AutoSize = True
-        Me.lblHeight.BackColor = System.Drawing.Color.White
+        Me.lblHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.lblHeight.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeight.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.lblHeight.Location = New System.Drawing.Point(235, 5)
@@ -278,24 +289,25 @@ Partial Class BMICalc
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BMICalculatorToolStripMenuItem, Me.PhysicalAssessmentToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1093, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1093, 35)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'BMICalculatorToolStripMenuItem
         '
         Me.BMICalculatorToolStripMenuItem.Name = "BMICalculatorToolStripMenuItem"
-        Me.BMICalculatorToolStripMenuItem.Size = New System.Drawing.Size(97, 20)
+        Me.BMICalculatorToolStripMenuItem.Size = New System.Drawing.Size(97, 31)
         Me.BMICalculatorToolStripMenuItem.Text = "BMI Calculator"
         '
         'PhysicalAssessmentToolStripMenuItem
         '
         Me.PhysicalAssessmentToolStripMenuItem.Name = "PhysicalAssessmentToolStripMenuItem"
-        Me.PhysicalAssessmentToolStripMenuItem.Size = New System.Drawing.Size(127, 20)
-        Me.PhysicalAssessmentToolStripMenuItem.Text = "Physical Assessment"
+        Me.PhysicalAssessmentToolStripMenuItem.Size = New System.Drawing.Size(117, 31)
+        Me.PhysicalAssessmentToolStripMenuItem.Text = "Symptom Checker"
         '
         'GroupBox2
         '
@@ -309,6 +321,16 @@ Partial Class BMICalc
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Health Tips"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label18.Location = New System.Drawing.Point(54, 371)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(561, 180)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = resources.GetString("Label18.Text")
         '
         'Label17
         '
@@ -483,16 +505,6 @@ Partial Class BMICalc
         Me.Label16.Text = "Overweight"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label18.Location = New System.Drawing.Point(54, 371)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(561, 180)
-        Me.Label18.TabIndex = 2
-        Me.Label18.Text = resources.GetString("Label18.Text")
-        '
         'BMICalc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -504,7 +516,7 @@ Partial Class BMICalc
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "BMICalc"
-        Me.Text = "Physical Assessment"
+        Me.Text = " "
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.pnlWeight.ResumeLayout(False)
@@ -520,7 +532,6 @@ Partial Class BMICalc
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
