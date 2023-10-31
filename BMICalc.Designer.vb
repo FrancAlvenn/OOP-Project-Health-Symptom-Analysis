@@ -31,19 +31,17 @@ Partial Class BMICalc
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
-        Me.pnlWeight = New System.Windows.Forms.Panel()
         Me.lblWeight = New System.Windows.Forms.Label()
-        Me.txtHeight = New System.Windows.Forms.TextBox()
-        Me.pnlHeight = New System.Windows.Forms.Panel()
         Me.txtWeight = New System.Windows.Forms.TextBox()
+        Me.txtHeight = New System.Windows.Forms.TextBox()
         Me.lblHeight = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.rdbImperial = New System.Windows.Forms.RadioButton()
+        Me.rdbMetric = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.BMICalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PhysicalAssessmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SymptomCheckerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -60,9 +58,9 @@ Partial Class BMICalc
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.lblInch = New System.Windows.Forms.Label()
+        Me.txtInch = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
-        Me.pnlWeight.SuspendLayout()
-        Me.pnlHeight.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -74,6 +72,12 @@ Partial Class BMICalc
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.GroupBox1.Controls.Add(Me.lblInch)
+        Me.GroupBox1.Controls.Add(Me.txtInch)
+        Me.GroupBox1.Controls.Add(Me.lblWeight)
+        Me.GroupBox1.Controls.Add(Me.lblHeight)
+        Me.GroupBox1.Controls.Add(Me.txtWeight)
+        Me.GroupBox1.Controls.Add(Me.txtHeight)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -81,16 +85,14 @@ Partial Class BMICalc
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.btnSubmit)
         Me.GroupBox1.Controls.Add(Me.btnReset)
-        Me.GroupBox1.Controls.Add(Me.pnlWeight)
-        Me.GroupBox1.Controls.Add(Me.pnlHeight)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.rdbImperial)
+        Me.GroupBox1.Controls.Add(Me.rdbMetric)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox1.Location = New System.Drawing.Point(31, 48)
+        Me.GroupBox1.Location = New System.Drawing.Point(30, 78)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(342, 629)
         Me.GroupBox1.TabIndex = 0
@@ -177,67 +179,45 @@ Partial Class BMICalc
         Me.btnReset.Text = "Reset"
         Me.btnReset.UseVisualStyleBackColor = False
         '
-        'pnlWeight
-        '
-        Me.pnlWeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.pnlWeight.Controls.Add(Me.lblWeight)
-        Me.pnlWeight.Controls.Add(Me.txtHeight)
-        Me.pnlWeight.Location = New System.Drawing.Point(48, 264)
-        Me.pnlWeight.Name = "pnlWeight"
-        Me.pnlWeight.Padding = New System.Windows.Forms.Padding(1)
-        Me.pnlWeight.Size = New System.Drawing.Size(265, 27)
-        Me.pnlWeight.TabIndex = 8
-        '
         'lblWeight
         '
         Me.lblWeight.AutoSize = True
-        Me.lblWeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.lblWeight.BackColor = System.Drawing.Color.White
         Me.lblWeight.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWeight.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblWeight.Location = New System.Drawing.Point(236, 6)
+        Me.lblWeight.Location = New System.Drawing.Point(160, 275)
         Me.lblWeight.Name = "lblWeight"
         Me.lblWeight.Size = New System.Drawing.Size(23, 17)
         Me.lblWeight.TabIndex = 5
         Me.lblWeight.Text = "kg"
         '
-        'txtHeight
-        '
-        Me.txtHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.txtHeight.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtHeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHeight.Location = New System.Drawing.Point(4, 6)
-        Me.txtHeight.Name = "txtHeight"
-        Me.txtHeight.Size = New System.Drawing.Size(226, 14)
-        Me.txtHeight.TabIndex = 6
-        '
-        'pnlHeight
-        '
-        Me.pnlHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.pnlHeight.Controls.Add(Me.txtWeight)
-        Me.pnlHeight.Controls.Add(Me.lblHeight)
-        Me.pnlHeight.Location = New System.Drawing.Point(48, 182)
-        Me.pnlHeight.Name = "pnlHeight"
-        Me.pnlHeight.Padding = New System.Windows.Forms.Padding(1)
-        Me.pnlHeight.Size = New System.Drawing.Size(265, 27)
-        Me.pnlHeight.TabIndex = 7
-        '
         'txtWeight
         '
         Me.txtWeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.txtWeight.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtWeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtWeight.Location = New System.Drawing.Point(4, 6)
+        Me.txtWeight.Location = New System.Drawing.Point(48, 271)
         Me.txtWeight.Name = "txtWeight"
-        Me.txtWeight.Size = New System.Drawing.Size(226, 14)
+        Me.txtWeight.Size = New System.Drawing.Size(105, 21)
         Me.txtWeight.TabIndex = 6
+        '
+        'txtHeight
+        '
+        Me.txtHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.txtHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtHeight.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHeight.Location = New System.Drawing.Point(48, 180)
+        Me.txtHeight.Name = "txtHeight"
+        Me.txtHeight.Size = New System.Drawing.Size(105, 21)
+        Me.txtHeight.TabIndex = 6
         '
         'lblHeight
         '
         Me.lblHeight.AutoSize = True
-        Me.lblHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.lblHeight.BackColor = System.Drawing.Color.White
         Me.lblHeight.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeight.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblHeight.Location = New System.Drawing.Point(235, 5)
+        Me.lblHeight.Location = New System.Drawing.Point(159, 184)
         Me.lblHeight.Name = "lblHeight"
         Me.lblHeight.Size = New System.Drawing.Size(25, 17)
         Me.lblHeight.TabIndex = 5
@@ -263,51 +243,57 @@ Partial Class BMICalc
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Height"
         '
-        'RadioButton2
+        'rdbImperial
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(39, 92)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(76, 23)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Imperial"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rdbImperial.AutoSize = True
+        Me.rdbImperial.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbImperial.Location = New System.Drawing.Point(39, 92)
+        Me.rdbImperial.Name = "rdbImperial"
+        Me.rdbImperial.Size = New System.Drawing.Size(76, 23)
+        Me.rdbImperial.TabIndex = 1
+        Me.rdbImperial.TabStop = True
+        Me.rdbImperial.Text = "Imperial"
+        Me.rdbImperial.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'rdbMetric
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(39, 51)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(67, 23)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Metric"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rdbMetric.AutoSize = True
+        Me.rdbMetric.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbMetric.Location = New System.Drawing.Point(39, 51)
+        Me.rdbMetric.Name = "rdbMetric"
+        Me.rdbMetric.Size = New System.Drawing.Size(67, 23)
+        Me.rdbMetric.TabIndex = 0
+        Me.rdbMetric.TabStop = True
+        Me.rdbMetric.Text = "Metric"
+        Me.rdbMetric.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
         Me.MenuStrip1.AutoSize = False
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BMICalculatorToolStripMenuItem, Me.PhysicalAssessmentToolStripMenuItem})
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BMICalculatorToolStripMenuItem, Me.SymptomCheckerToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1093, 35)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1093, 40)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'BMICalculatorToolStripMenuItem
         '
+        Me.BMICalculatorToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BMICalculatorToolStripMenuItem.Name = "BMICalculatorToolStripMenuItem"
-        Me.BMICalculatorToolStripMenuItem.Size = New System.Drawing.Size(97, 31)
+        Me.BMICalculatorToolStripMenuItem.Padding = New System.Windows.Forms.Padding(20, 0, 5, 0)
+        Me.BMICalculatorToolStripMenuItem.Size = New System.Drawing.Size(129, 36)
         Me.BMICalculatorToolStripMenuItem.Text = "BMI Calculator"
         '
-        'PhysicalAssessmentToolStripMenuItem
+        'SymptomCheckerToolStripMenuItem
         '
-        Me.PhysicalAssessmentToolStripMenuItem.Name = "PhysicalAssessmentToolStripMenuItem"
-        Me.PhysicalAssessmentToolStripMenuItem.Size = New System.Drawing.Size(117, 31)
-        Me.PhysicalAssessmentToolStripMenuItem.Text = "Symptom Checker"
+        Me.SymptomCheckerToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SymptomCheckerToolStripMenuItem.Name = "SymptomCheckerToolStripMenuItem"
+        Me.SymptomCheckerToolStripMenuItem.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.SymptomCheckerToolStripMenuItem.Size = New System.Drawing.Size(137, 36)
+        Me.SymptomCheckerToolStripMenuItem.Text = "Symptom Checker"
         '
         'GroupBox2
         '
@@ -315,7 +301,7 @@ Partial Class BMICalc
         Me.GroupBox2.Controls.Add(Me.Label17)
         Me.GroupBox2.Controls.Add(Me.TableLayoutPanel1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.GroupBox2.Location = New System.Drawing.Point(410, 48)
+        Me.GroupBox2.Location = New System.Drawing.Point(409, 78)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(651, 629)
         Me.GroupBox2.TabIndex = 2
@@ -505,6 +491,30 @@ Partial Class BMICalc
         Me.Label16.Text = "Overweight"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'lblInch
+        '
+        Me.lblInch.AutoSize = True
+        Me.lblInch.BackColor = System.Drawing.Color.White
+        Me.lblInch.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInch.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblInch.Location = New System.Drawing.Point(301, 184)
+        Me.lblInch.Name = "lblInch"
+        Me.lblInch.Size = New System.Drawing.Size(18, 17)
+        Me.lblInch.TabIndex = 16
+        Me.lblInch.Text = "in"
+        Me.lblInch.Visible = False
+        '
+        'txtInch
+        '
+        Me.txtInch.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.txtInch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtInch.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInch.Location = New System.Drawing.Point(190, 180)
+        Me.txtInch.Name = "txtInch"
+        Me.txtInch.Size = New System.Drawing.Size(105, 21)
+        Me.txtInch.TabIndex = 17
+        Me.txtInch.Visible = False
+        '
         'BMICalc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -519,10 +529,6 @@ Partial Class BMICalc
         Me.Text = " "
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.pnlWeight.ResumeLayout(False)
-        Me.pnlWeight.PerformLayout()
-        Me.pnlHeight.ResumeLayout(False)
-        Me.pnlHeight.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -538,24 +544,22 @@ Partial Class BMICalc
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents rdbImperial As RadioButton
+    Friend WithEvents rdbMetric As RadioButton
     Friend WithEvents lblHeight As Label
     Friend WithEvents lblWeight As Label
-    Friend WithEvents txtWeight As TextBox
     Friend WithEvents txtHeight As TextBox
+    Friend WithEvents txtWeight As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents btnSubmit As Button
     Friend WithEvents btnReset As Button
-    Friend WithEvents pnlWeight As Panel
-    Friend WithEvents pnlHeight As Panel
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents BMICalculatorToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PhysicalAssessmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SymptomCheckerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
@@ -572,4 +576,6 @@ Partial Class BMICalc
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label18 As Label
+    Friend WithEvents lblInch As Label
+    Friend WithEvents txtInch As TextBox
 End Class

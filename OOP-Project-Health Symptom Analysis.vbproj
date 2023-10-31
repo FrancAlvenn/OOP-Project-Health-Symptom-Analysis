@@ -143,6 +143,42 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mental Health Tests\AddictionTest.Designer.vb">
+      <DependentUpon>AddictionTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\AddictionTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mental Health Tests\ADHDTest.Designer.vb">
+      <DependentUpon>ADHDTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\ADHDTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mental Health Tests\Anxiety.Designer.vb">
+      <DependentUpon>Anxiety.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\Anxiety.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mental Health Tests\DepressionTest.Designer.vb">
+      <DependentUpon>DepressionTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\DepressionTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mental Health Tests\EatingDisorder.Designer.vb">
+      <DependentUpon>EatingDisorder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\EatingDisorder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mental Health Tests\PTSDTest.Designer.vb">
+      <DependentUpon>PTSDTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\PTSDTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PhysicalAssessment.Designer.vb">
       <DependentUpon>PhysicalAssessment.vb</DependentUpon>
     </Compile>
@@ -195,6 +231,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\AddictionTest.resx">
+      <DependentUpon>AddictionTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\ADHDTest.resx">
+      <DependentUpon>ADHDTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\Anxiety.resx">
+      <DependentUpon>Anxiety.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\DepressionTest.resx">
+      <DependentUpon>DepressionTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\EatingDisorder.resx">
+      <DependentUpon>EatingDisorder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\PTSDTest.resx">
+      <DependentUpon>PTSDTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

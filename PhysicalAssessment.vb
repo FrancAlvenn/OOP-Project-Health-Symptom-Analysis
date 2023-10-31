@@ -44,7 +44,7 @@
         button.Region = New Region(rad)
     End Sub
 
-    Private Sub PhysicalAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PhysicalAssessmentToolStripMenuItem.Click
+    Private Sub PhysicalAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SymptomCheckerToolStripMenuItem.Click
         'fucntion call to get childform
         Form1.childForm(Me)
     End Sub
@@ -95,5 +95,15 @@
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
         TableLayoutPanel1.Controls.Remove(clickedLabel)
         clickedLabel.Dispose()
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+        If BMICalculatorToolStripMenuItem.Checked Then
+            BMICalculatorToolStripMenuItem.Font = New Font(BMICalculatorToolStripMenuItem.Font, FontStyle.Bold)
+            BMICalculatorToolStripMenuItem.ForeColor = Color.FromArgb(137, 207, 240)
+        ElseIf SymptomCheckerToolStripMenuItem.Checked Then
+            SymptomCheckerToolStripMenuItem.Font = New Font(SymptomCheckerToolStripMenuItem.Font, FontStyle.Bold)
+            SymptomCheckerToolStripMenuItem.ForeColor = Color.FromArgb(137, 207, 240)
+        End If
     End Sub
 End Class

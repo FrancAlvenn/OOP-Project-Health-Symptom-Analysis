@@ -24,8 +24,8 @@ Partial Class MentalAssessment
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MentalAssessment))
         Me.pnlHeader = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblSubHeader = New System.Windows.Forms.Label()
+        Me.lblHeader = New System.Windows.Forms.Label()
         Me.btnDepressionTest = New System.Windows.Forms.Label()
         Me.btnADHDTest = New System.Windows.Forms.Label()
         Me.btnAnxietyTest = New System.Windows.Forms.Label()
@@ -34,49 +34,53 @@ Partial Class MentalAssessment
         Me.btnAddictionTest = New System.Windows.Forms.Label()
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.tabControl = New System.Windows.Forms.TabControl()
+        Me.LandingPanel = New System.Windows.Forms.TabPage()
+        Me.DepressionTestPanel = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.ADHDTestPanel = New System.Windows.Forms.TabPage()
         Me.AnxietyTestPanel = New System.Windows.Forms.TabPage()
         Me.PTSDTestPanel = New System.Windows.Forms.TabPage()
         Me.EatingDisorderTestPanel = New System.Windows.Forms.TabPage()
         Me.AddictionTestPanel = New System.Windows.Forms.TabPage()
-        Me.LandingPanel = New System.Windows.Forms.TabPage()
-        Me.DepressionTestPanel = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.tabControl.SuspendLayout()
+        Me.DepressionTestPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlHeader
         '
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.pnlHeader.Controls.Add(Me.Label3)
-        Me.pnlHeader.Controls.Add(Me.Label1)
+        Me.pnlHeader.Controls.Add(Me.lblSubHeader)
+        Me.pnlHeader.Controls.Add(Me.lblHeader)
         Me.pnlHeader.Location = New System.Drawing.Point(46, 22)
         Me.pnlHeader.Name = "pnlHeader"
         Me.pnlHeader.Size = New System.Drawing.Size(1011, 147)
         Me.pnlHeader.TabIndex = 0
         '
-        'Label3
+        'lblSubHeader
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(69, 84)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(729, 42)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Conditions like depression or anxiety are not only real and widespread, but they'" &
+        Me.lblSubHeader.AutoSize = True
+        Me.lblSubHeader.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSubHeader.ForeColor = System.Drawing.Color.Black
+        Me.lblSubHeader.Location = New System.Drawing.Point(69, 84)
+        Me.lblSubHeader.Name = "lblSubHeader"
+        Me.lblSubHeader.Size = New System.Drawing.Size(729, 42)
+        Me.lblSubHeader.TabIndex = 2
+        Me.lblSubHeader.Text = "Conditions like depression or anxiety are not only real and widespread, but they'" &
     "re also highly treatable. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The good news? Recovery is absolutely within reach!"
         '
-        'Label1
+        'lblHeader
         '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Tai Le", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(28, 14)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(692, 56)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Take a Mental Health Test"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblHeader.Font = New System.Drawing.Font("Microsoft Tai Le", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeader.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.lblHeader.Location = New System.Drawing.Point(28, 14)
+        Me.lblHeader.Name = "lblHeader"
+        Me.lblHeader.Size = New System.Drawing.Size(971, 56)
+        Me.lblHeader.TabIndex = 0
+        Me.lblHeader.Text = "Take a Mental Health Test"
+        Me.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnDepressionTest
         '
@@ -176,10 +180,11 @@ Partial Class MentalAssessment
         Me.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
         Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.Location = New System.Drawing.Point(890, 650)
+        Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnSubmit.Location = New System.Drawing.Point(884, 661)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(155, 35)
+        Me.btnSubmit.Size = New System.Drawing.Size(161, 35)
         Me.btnSubmit.TabIndex = 25
         Me.btnSubmit.Text = "Take the Test"
         Me.btnSubmit.UseVisualStyleBackColor = False
@@ -203,65 +208,22 @@ Partial Class MentalAssessment
         Me.tabControl.Size = New System.Drawing.Size(734, 437)
         Me.tabControl.TabIndex = 26
         '
-        'ADHDTestPanel
-        '
-        Me.ADHDTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.ADHDTestPanel.Name = "ADHDTestPanel"
-        Me.ADHDTestPanel.Padding = New System.Windows.Forms.Padding(3)
-        Me.ADHDTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.ADHDTestPanel.TabIndex = 1
-        Me.ADHDTestPanel.Text = "ADHD Test"
-        Me.ADHDTestPanel.UseVisualStyleBackColor = True
-        '
-        'AnxietyTestPanel
-        '
-        Me.AnxietyTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.AnxietyTestPanel.Name = "AnxietyTestPanel"
-        Me.AnxietyTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.AnxietyTestPanel.TabIndex = 2
-        Me.AnxietyTestPanel.Text = "AnxietyTest"
-        Me.AnxietyTestPanel.UseVisualStyleBackColor = True
-        '
-        'PTSDTestPanel
-        '
-        Me.PTSDTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.PTSDTestPanel.Name = "PTSDTestPanel"
-        Me.PTSDTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.PTSDTestPanel.TabIndex = 3
-        Me.PTSDTestPanel.Text = "PTSD Test"
-        Me.PTSDTestPanel.UseVisualStyleBackColor = True
-        '
-        'EatingDisorderTestPanel
-        '
-        Me.EatingDisorderTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.EatingDisorderTestPanel.Name = "EatingDisorderTestPanel"
-        Me.EatingDisorderTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.EatingDisorderTestPanel.TabIndex = 4
-        Me.EatingDisorderTestPanel.Text = "EatingDisorder Test"
-        Me.EatingDisorderTestPanel.UseVisualStyleBackColor = True
-        '
-        'AddictionTestPanel
-        '
-        Me.AddictionTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.AddictionTestPanel.Name = "AddictionTestPanel"
-        Me.AddictionTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.AddictionTestPanel.TabIndex = 5
-        Me.AddictionTestPanel.Text = "Addiction Test"
-        Me.AddictionTestPanel.UseVisualStyleBackColor = True
-        '
         'LandingPanel
         '
+        Me.LandingPanel.BackColor = System.Drawing.Color.White
+        Me.LandingPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
+        Me.LandingPanel.ForeColor = System.Drawing.Color.Black
         Me.LandingPanel.Location = New System.Drawing.Point(4, 24)
         Me.LandingPanel.Name = "LandingPanel"
         Me.LandingPanel.Size = New System.Drawing.Size(726, 409)
         Me.LandingPanel.TabIndex = 6
         Me.LandingPanel.Text = "Landing Page"
-        Me.LandingPanel.UseVisualStyleBackColor = True
         '
         'DepressionTestPanel
         '
         Me.DepressionTestPanel.AutoScroll = True
         Me.DepressionTestPanel.BackColor = System.Drawing.Color.White
+        Me.DepressionTestPanel.Controls.Add(Me.Label1)
         Me.DepressionTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DepressionTestPanel.ForeColor = System.Drawing.Color.Black
         Me.DepressionTestPanel.Location = New System.Drawing.Point(4, 24)
@@ -271,12 +233,95 @@ Partial Class MentalAssessment
         Me.DepressionTestPanel.TabIndex = 0
         Me.DepressionTestPanel.Text = "Depression Test"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(69, 29)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(586, 624)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = resources.GetString("Label1.Text")
+        '
+        'ADHDTestPanel
+        '
+        Me.ADHDTestPanel.BackColor = System.Drawing.Color.White
+        Me.ADHDTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
+        Me.ADHDTestPanel.ForeColor = System.Drawing.Color.Black
+        Me.ADHDTestPanel.Location = New System.Drawing.Point(4, 24)
+        Me.ADHDTestPanel.Name = "ADHDTestPanel"
+        Me.ADHDTestPanel.Padding = New System.Windows.Forms.Padding(3)
+        Me.ADHDTestPanel.Size = New System.Drawing.Size(726, 409)
+        Me.ADHDTestPanel.TabIndex = 1
+        Me.ADHDTestPanel.Text = "ADHD Test"
+        '
+        'AnxietyTestPanel
+        '
+        Me.AnxietyTestPanel.BackColor = System.Drawing.Color.White
+        Me.AnxietyTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
+        Me.AnxietyTestPanel.ForeColor = System.Drawing.Color.Black
+        Me.AnxietyTestPanel.Location = New System.Drawing.Point(4, 24)
+        Me.AnxietyTestPanel.Name = "AnxietyTestPanel"
+        Me.AnxietyTestPanel.Size = New System.Drawing.Size(726, 409)
+        Me.AnxietyTestPanel.TabIndex = 2
+        Me.AnxietyTestPanel.Text = "AnxietyTest"
+        '
+        'PTSDTestPanel
+        '
+        Me.PTSDTestPanel.BackColor = System.Drawing.Color.White
+        Me.PTSDTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
+        Me.PTSDTestPanel.ForeColor = System.Drawing.Color.Black
+        Me.PTSDTestPanel.Location = New System.Drawing.Point(4, 24)
+        Me.PTSDTestPanel.Name = "PTSDTestPanel"
+        Me.PTSDTestPanel.Size = New System.Drawing.Size(726, 409)
+        Me.PTSDTestPanel.TabIndex = 3
+        Me.PTSDTestPanel.Text = "PTSD Test"
+        '
+        'EatingDisorderTestPanel
+        '
+        Me.EatingDisorderTestPanel.BackColor = System.Drawing.Color.White
+        Me.EatingDisorderTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
+        Me.EatingDisorderTestPanel.ForeColor = System.Drawing.Color.Black
+        Me.EatingDisorderTestPanel.Location = New System.Drawing.Point(4, 24)
+        Me.EatingDisorderTestPanel.Name = "EatingDisorderTestPanel"
+        Me.EatingDisorderTestPanel.Size = New System.Drawing.Size(726, 409)
+        Me.EatingDisorderTestPanel.TabIndex = 4
+        Me.EatingDisorderTestPanel.Text = "EatingDisorder Test"
+        '
+        'AddictionTestPanel
+        '
+        Me.AddictionTestPanel.BackColor = System.Drawing.Color.White
+        Me.AddictionTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddictionTestPanel.ForeColor = System.Drawing.Color.Black
+        Me.AddictionTestPanel.Location = New System.Drawing.Point(4, 24)
+        Me.AddictionTestPanel.Name = "AddictionTestPanel"
+        Me.AddictionTestPanel.Size = New System.Drawing.Size(726, 409)
+        Me.AddictionTestPanel.TabIndex = 5
+        Me.AddictionTestPanel.Text = "Addiction Test"
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(62, 779)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(979, 549)
+        Me.Panel1.TabIndex = 27
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(71, 740)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(950, 1)
+        Me.Label2.TabIndex = 28
+        '
         'MentalAssessment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1093, 719)
+        Me.ClientSize = New System.Drawing.Size(1110, 719)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnAddictionTest)
         Me.Controls.Add(Me.btnEatingDisorderTest)
         Me.Controls.Add(Me.btnPTSDTest)
@@ -291,13 +336,15 @@ Partial Class MentalAssessment
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
         Me.tabControl.ResumeLayout(False)
+        Me.DepressionTestPanel.ResumeLayout(False)
+        Me.DepressionTestPanel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents pnlHeader As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblHeader As Label
+    Friend WithEvents lblSubHeader As Label
     Friend WithEvents btnDepressionTest As Label
     Friend WithEvents btnADHDTest As Label
     Friend WithEvents btnAnxietyTest As Label
@@ -313,4 +360,7 @@ Partial Class MentalAssessment
     Friend WithEvents LandingPanel As TabPage
     Friend WithEvents btnPTSDTest As Label
     Friend WithEvents DepressionTestPanel As TabPage
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label2 As Label
 End Class

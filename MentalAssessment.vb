@@ -63,6 +63,15 @@
         button.Region = New Region(rad)
     End Sub
 
+    Sub childForm(ByVal panel As Form)
+        Form1.pnlChangeable.Controls.Clear()
+        panel.TopLevel = False
+        panel.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        panel.Dock = DockStyle.Fill
+        Form1.pnlChangeable.Controls.Add(panel)
+        panel.Show()
+    End Sub
+
     '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
     Private Sub MentalAssessment_Load(sender As Object, e As EventArgs) Handles Me.Load
         RoundCornerPanel(pnlHeader)
@@ -77,8 +86,92 @@
 
     Private Sub DepressionTestPanel_Scroll(sender As Object, e As ScrollEventArgs) Handles DepressionTestPanel.Scroll
         If e.ScrollOrientation = ScrollOrientation.VerticalScroll Then
-
             DepressionTestPanel.VerticalScroll.Value = e.NewValue
         End If
+    End Sub
+
+    Private Sub btnDepressionTest_Click(sender As Object, e As EventArgs) Handles btnDepressionTest.Click
+        lblHeader.Text = "What is Depression?"
+        lblHeader.Dock = DockStyle.Left
+        lblHeader.Padding = New Padding(30, 0, 0, 0)
+        lblSubHeader.Text = ""
+
+        tabControl.SelectedTab() = DepressionTestPanel
+    End Sub
+
+    Private Sub btnADHDTest_Click(sender As Object, e As EventArgs) Handles btnADHDTest.Click
+        lblHeader.Text = "What is ADHD?"
+        lblHeader.Dock = DockStyle.Left
+        lblHeader.Padding = New Padding(30, 0, 0, 0)
+        lblSubHeader.Text = ""
+
+        tabControl.SelectedTab() = ADHDTestPanel
+    End Sub
+
+    Private Sub btnAnxietyTest_Click(sender As Object, e As EventArgs) Handles btnAnxietyTest.Click
+        lblHeader.Text = "What is Anxiety?"
+        lblHeader.Dock = DockStyle.Left
+        lblHeader.Padding = New Padding(30, 0, 0, 0)
+        lblSubHeader.Text = ""
+
+        tabControl.SelectedTab() = AnxietyTestPanel
+    End Sub
+
+    Private Sub btnPTSDTest_Click(sender As Object, e As EventArgs) Handles btnPTSDTest.Click
+        lblHeader.Text = "What is PTSD?"
+        lblHeader.Dock = DockStyle.Left
+        lblHeader.Padding = New Padding(30, 0, 0, 0)
+        lblSubHeader.Text = ""
+
+        tabControl.SelectedTab() = PTSDTestPanel
+    End Sub
+
+    Private Sub btnEatingDisorderTest_Click(sender As Object, e As EventArgs) Handles btnEatingDisorderTest.Click
+        lblHeader.Text = "What is Eating Disorder?"
+        lblHeader.Dock = DockStyle.Left
+        lblHeader.Padding = New Padding(30, 0, 0, 0)
+        lblSubHeader.Text = ""
+
+        tabControl.SelectedTab() = EatingDisorderTestPanel
+    End Sub
+
+    Private Sub btnAddictionTest_Click(sender As Object, e As EventArgs) Handles btnAddictionTest.Click
+        lblHeader.Text = "What is Addiction?"
+        lblHeader.Dock = DockStyle.Left
+        lblHeader.Padding = New Padding(30, 0, 0, 0)
+        lblSubHeader.Text = ""
+
+        tabControl.SelectedTab() = AddictionTestPanel
+    End Sub
+
+    Private Sub MentalAssessment_Click(sender As Object, e As EventArgs) Handles Me.Click
+        lblHeader.Text = "Take a Mental Health Test?"
+        lblHeader.Dock = DockStyle.None
+        lblHeader.Padding = New Padding(0, 0, 0, 0)
+        lblSubHeader.Text = "Conditions like depression or anxiety are not only real and widespread, but they're also highly treatable. 
+The good news? Recovery is absolutely within reach!
+"
+        tabControl.SelectedTab() = LandingPanel
+    End Sub
+
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+
+        If tabControl.SelectedTab Is DepressionTestPanel Then
+            childForm(DepressionTest)
+        ElseIf tabControl.SelectedTab Is ADHDTestPanel Then
+
+        ElseIf tabControl.SelectedTab Is AnxietyTestPanel Then
+
+        ElseIf tabControl.SelectedTab Is PTSDTestPanel Then
+
+        ElseIf tabControl.SelectedTab Is EatingDisorderTestPanel Then
+
+        ElseIf tabControl.SelectedTab Is AddictionTestPanel Then
+
+        Else
+            MsgBox("Please Select a Mental Disorder to test!", vbOK, "No Test Selected! ")
+
+        End If
+
     End Sub
 End Class

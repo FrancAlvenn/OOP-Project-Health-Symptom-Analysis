@@ -24,7 +24,7 @@ Partial Class PhysicalAssessment
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.BMICalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PhysicalAssessmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SymptomCheckerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -58,24 +58,30 @@ Partial Class PhysicalAssessment
         'MenuStrip1
         '
         Me.MenuStrip1.AutoSize = False
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BMICalculatorToolStripMenuItem, Me.PhysicalAssessmentToolStripMenuItem})
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BMICalculatorToolStripMenuItem, Me.SymptomCheckerToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1093, 35)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1093, 40)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'BMICalculatorToolStripMenuItem
         '
+        Me.BMICalculatorToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BMICalculatorToolStripMenuItem.Name = "BMICalculatorToolStripMenuItem"
-        Me.BMICalculatorToolStripMenuItem.Size = New System.Drawing.Size(97, 31)
+        Me.BMICalculatorToolStripMenuItem.Padding = New System.Windows.Forms.Padding(20, 0, 5, 0)
+        Me.BMICalculatorToolStripMenuItem.Size = New System.Drawing.Size(129, 36)
         Me.BMICalculatorToolStripMenuItem.Text = "BMI Calculator"
         '
-        'PhysicalAssessmentToolStripMenuItem
+        'SymptomCheckerToolStripMenuItem
         '
-        Me.PhysicalAssessmentToolStripMenuItem.Name = "PhysicalAssessmentToolStripMenuItem"
-        Me.PhysicalAssessmentToolStripMenuItem.Size = New System.Drawing.Size(117, 31)
-        Me.PhysicalAssessmentToolStripMenuItem.Text = "Symptom Checker"
+        Me.SymptomCheckerToolStripMenuItem.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SymptomCheckerToolStripMenuItem.Name = "SymptomCheckerToolStripMenuItem"
+        Me.SymptomCheckerToolStripMenuItem.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.SymptomCheckerToolStripMenuItem.Size = New System.Drawing.Size(137, 36)
+        Me.SymptomCheckerToolStripMenuItem.Text = "Symptom Checker"
         '
         'GroupBox1
         '
@@ -98,7 +104,7 @@ Partial Class PhysicalAssessment
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox1.Location = New System.Drawing.Point(25, 58)
+        Me.GroupBox1.Location = New System.Drawing.Point(27, 78)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(342, 629)
         Me.GroupBox1.TabIndex = 1
@@ -290,7 +296,7 @@ Partial Class PhysicalAssessment
         Me.GroupBox2.Controls.Add(Me.btnSubmit)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox2.Location = New System.Drawing.Point(400, 58)
+        Me.GroupBox2.Location = New System.Drawing.Point(400, 78)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(662, 629)
         Me.GroupBox2.TabIndex = 24
@@ -397,7 +403,7 @@ Partial Class PhysicalAssessment
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents BMICalculatorToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PhysicalAssessmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SymptomCheckerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label4 As Label
     Friend WithEvents btnAddSymptom As Button

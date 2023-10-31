@@ -29,7 +29,7 @@
     'Event Handlers
 
 
-    Private Sub PhysicalAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PhysicalAssessmentToolStripMenuItem.Click
+    Private Sub PhysicalAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SymptomCheckerToolStripMenuItem.Click
         'fucntion call to get childform
         Form1.childForm(PhysicalAssessment)
     End Sub
@@ -42,5 +42,22 @@
     Private Sub BMICalc_Load(sender As Object, e As EventArgs) Handles Me.Load
         RoundCornerButton(btnReset)
         RoundCornerButton(btnSubmit)
+        rdbMetric.Select()
     End Sub
+
+    Private Sub rdbImperial_CheckedChanged(sender As Object, e As EventArgs) Handles rdbImperial.CheckedChanged
+        lblHeight.Text = "ft"
+        lblWeight.Text = "lbs"
+        txtInch.Visible = True
+        lblInch.Visible = True
+    End Sub
+
+    Private Sub rdbMetric_CheckedChanged(sender As Object, e As EventArgs) Handles rdbMetric.CheckedChanged
+        lblHeight.Text = "cm"
+        lblWeight.Text = "kg"
+        txtInch.Visible = False
+        lblInch.Visible = False
+    End Sub
+
+
 End Class
