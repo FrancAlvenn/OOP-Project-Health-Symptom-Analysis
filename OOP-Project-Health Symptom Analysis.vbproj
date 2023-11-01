@@ -123,24 +123,27 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.Designer.vb">
+    <Compile Include="NavbarForms\About.Designer.vb">
       <DependentUpon>About.vb</DependentUpon>
     </Compile>
-    <Compile Include="About.vb">
+    <Compile Include="NavbarForms\About.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\CircularPictureBox.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="databaseConnection.vb" />
-    <Compile Include="BMICalc.Designer.vb">
+    <Compile Include="Physical Test\BMICalc.Designer.vb">
       <DependentUpon>BMICalc.vb</DependentUpon>
     </Compile>
-    <Compile Include="BMICalc.vb">
+    <Compile Include="Physical Test\BMICalc.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="NavbarForms\MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="NavbarForms\MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mental Health Tests\AddictionTest.Designer.vb">
@@ -155,10 +158,10 @@
     <Compile Include="Mental Health Tests\ADHDTest.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mental Health Tests\Anxiety.Designer.vb">
-      <DependentUpon>Anxiety.vb</DependentUpon>
+    <Compile Include="Mental Health Tests\AnxietyTest.Designer.vb">
+      <DependentUpon>AnxietyTest.vb</DependentUpon>
     </Compile>
-    <Compile Include="Mental Health Tests\Anxiety.vb">
+    <Compile Include="Mental Health Tests\AnxietyTest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mental Health Tests\DepressionTest.Designer.vb">
@@ -167,10 +170,10 @@
     <Compile Include="Mental Health Tests\DepressionTest.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mental Health Tests\EatingDisorder.Designer.vb">
-      <DependentUpon>EatingDisorder.vb</DependentUpon>
+    <Compile Include="Mental Health Tests\EatingDisorderTest.Designer.vb">
+      <DependentUpon>EatingDisorderTest.vb</DependentUpon>
     </Compile>
-    <Compile Include="Mental Health Tests\EatingDisorder.vb">
+    <Compile Include="Mental Health Tests\EatingDisorderTest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mental Health Tests\PTSDTest.Designer.vb">
@@ -179,16 +182,16 @@
     <Compile Include="Mental Health Tests\PTSDTest.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhysicalAssessment.Designer.vb">
+    <Compile Include="Physical Test\PhysicalAssessment.Designer.vb">
       <DependentUpon>PhysicalAssessment.vb</DependentUpon>
     </Compile>
-    <Compile Include="PhysicalAssessment.vb">
+    <Compile Include="Physical Test\PhysicalAssessment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.vb">
+    <Compile Include="NavbarForms\Home.Designer.vb">
       <DependentUpon>Home.vb</DependentUpon>
     </Compile>
-    <Compile Include="Home.vb">
+    <Compile Include="NavbarForms\Home.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -206,30 +209,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ContactUs.Designer.vb">
+    <Compile Include="NavbarForms\ContactUs.Designer.vb">
       <DependentUpon>ContactUs.vb</DependentUpon>
     </Compile>
-    <Compile Include="ContactUs.vb">
+    <Compile Include="NavbarForms\ContactUs.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MentalAssessment.Designer.vb">
+    <Compile Include="NavbarForms\MentalAssessment.Designer.vb">
       <DependentUpon>MentalAssessment.vb</DependentUpon>
     </Compile>
-    <Compile Include="MentalAssessment.vb">
+    <Compile Include="NavbarForms\MentalAssessment.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="About.resx">
+    <EmbeddedResource Include="NavbarForms\About.resx">
       <DependentUpon>About.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BMICalc.resx">
+    <EmbeddedResource Include="Physical Test\BMICalc.resx">
       <DependentUpon>BMICalc.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="NavbarForms\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
+    <EmbeddedResource Include="NavbarForms\Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\AddictionTest.resx">
@@ -238,14 +241,14 @@
     <EmbeddedResource Include="Mental Health Tests\ADHDTest.resx">
       <DependentUpon>ADHDTest.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mental Health Tests\Anxiety.resx">
-      <DependentUpon>Anxiety.vb</DependentUpon>
+    <EmbeddedResource Include="Mental Health Tests\AnxietyTest.resx">
+      <DependentUpon>AnxietyTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\DepressionTest.resx">
       <DependentUpon>DepressionTest.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mental Health Tests\EatingDisorder.resx">
-      <DependentUpon>EatingDisorder.vb</DependentUpon>
+    <EmbeddedResource Include="Mental Health Tests\EatingDisorderTest.resx">
+      <DependentUpon>EatingDisorderTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\PTSDTest.resx">
       <DependentUpon>PTSDTest.vb</DependentUpon>
@@ -256,13 +259,13 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ContactUs.resx">
+    <EmbeddedResource Include="NavbarForms\ContactUs.resx">
       <DependentUpon>ContactUs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MentalAssessment.resx">
+    <EmbeddedResource Include="NavbarForms\MentalAssessment.resx">
       <DependentUpon>MentalAssessment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhysicalAssessment.resx">
+    <EmbeddedResource Include="Physical Test\PhysicalAssessment.resx">
       <DependentUpon>PhysicalAssessment.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -297,6 +300,7 @@
   <ItemGroup>
     <None Include="Icons\plus.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

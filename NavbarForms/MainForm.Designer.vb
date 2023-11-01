@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -35,15 +35,21 @@ Partial Class Form1
         Me.lblMentalAssessment = New System.Windows.Forms.Label()
         Me.lblPhysicalAssessment = New System.Windows.Forms.Label()
         Me.lblHome = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.pnlUserInfo = New System.Windows.Forms.Panel()
         Me.pnlChangeable = New System.Windows.Forms.Panel()
         Me.pnlMenu = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Label()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
+        Me.CircularPictureBox1 = New OOP_Project_Health_Symptom_Analysis.CircularPictureBox()
+        Me.CircularPictureBox2 = New OOP_Project_Health_Symptom_Analysis.CircularPictureBox()
+        Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.lblLastName = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        Me.pnlUserInfo.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
+        CType(Me.CircularPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CircularPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -58,6 +64,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.CircularPictureBox2)
         Me.Panel1.Controls.Add(Me.btnMenu)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -68,7 +75,6 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.lblMentalAssessment)
         Me.Panel1.Controls.Add(Me.lblPhysicalAssessment)
         Me.Panel1.Controls.Add(Me.lblHome)
-        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
@@ -182,17 +188,13 @@ Partial Class Form1
         Me.lblHome.TabIndex = 4
         Me.lblHome.Text = "Home"
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(34, 10)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(42, 42)
-        Me.Panel3.TabIndex = 2
-        '
         'pnlUserInfo
         '
         Me.pnlUserInfo.BackColor = System.Drawing.Color.White
+        Me.pnlUserInfo.Controls.Add(Me.lblLastName)
+        Me.pnlUserInfo.Controls.Add(Me.lblFirstName)
+        Me.pnlUserInfo.Controls.Add(Me.CircularPictureBox1)
+        Me.pnlUserInfo.Font = New System.Drawing.Font("Microsoft Tai Le", 10.0!)
         Me.pnlUserInfo.Location = New System.Drawing.Point(34, 100)
         Me.pnlUserInfo.Name = "pnlUserInfo"
         Me.pnlUserInfo.Size = New System.Drawing.Size(271, 729)
@@ -220,9 +222,10 @@ Partial Class Form1
         'btnClose
         '
         Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClose.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.close
         Me.btnClose.Location = New System.Drawing.Point(3, 9)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(40, 29)
+        Me.btnClose.Size = New System.Drawing.Size(40, 42)
         Me.btnClose.TabIndex = 14
         '
         'TimerPanelIncrease
@@ -232,6 +235,46 @@ Partial Class Form1
         'TimerPanelDecrease
         '
         Me.TimerPanelDecrease.Interval = 10
+        '
+        'CircularPictureBox1
+        '
+        Me.CircularPictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.CircularPictureBox1.Location = New System.Drawing.Point(69, 45)
+        Me.CircularPictureBox1.Name = "CircularPictureBox1"
+        Me.CircularPictureBox1.Size = New System.Drawing.Size(130, 130)
+        Me.CircularPictureBox1.TabIndex = 0
+        Me.CircularPictureBox1.TabStop = False
+        '
+        'CircularPictureBox2
+        '
+        Me.CircularPictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.CircularPictureBox2.Location = New System.Drawing.Point(22, 10)
+        Me.CircularPictureBox2.Name = "CircularPictureBox2"
+        Me.CircularPictureBox2.Size = New System.Drawing.Size(40, 40)
+        Me.CircularPictureBox2.TabIndex = 14
+        Me.CircularPictureBox2.TabStop = False
+        '
+        'lblFirstName
+        '
+        Me.lblFirstName.Font = New System.Drawing.Font("Microsoft Tai Le", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFirstName.ForeColor = System.Drawing.Color.Black
+        Me.lblFirstName.Location = New System.Drawing.Point(7, 194)
+        Me.lblFirstName.Name = "lblFirstName"
+        Me.lblFirstName.Size = New System.Drawing.Size(261, 52)
+        Me.lblFirstName.TabIndex = 1
+        Me.lblFirstName.Text = "Franc Alvenn"
+        Me.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblLastName
+        '
+        Me.lblLastName.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLastName.ForeColor = System.Drawing.Color.Black
+        Me.lblLastName.Location = New System.Drawing.Point(13, 246)
+        Me.lblLastName.Name = "lblLastName"
+        Me.lblLastName.Size = New System.Drawing.Size(255, 39)
+        Me.lblLastName.TabIndex = 2
+        Me.lblLastName.Text = "Dela Cruz"
+        Me.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
         '
@@ -250,7 +293,10 @@ Partial Class Form1
         Me.Text = " "
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.pnlUserInfo.ResumeLayout(False)
         Me.pnlMenu.ResumeLayout(False)
+        CType(Me.CircularPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CircularPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -273,5 +319,8 @@ Partial Class Form1
     Friend WithEvents btnClose As Label
     Friend WithEvents TimerPanelIncrease As Timer
     Friend WithEvents TimerPanelDecrease As Timer
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents CircularPictureBox1 As CircularPictureBox
+    Friend WithEvents CircularPictureBox2 As CircularPictureBox
+    Friend WithEvents lblFirstName As Label
+    Friend WithEvents lblLastName As Label
 End Class

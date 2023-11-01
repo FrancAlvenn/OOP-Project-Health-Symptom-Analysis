@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class MainForm
     Inherits Windows.Forms.Form
     Private selectedLabel As Label = Nothing
 
@@ -151,12 +151,21 @@
 
     'lblMentalAssessment_Click
     Private Sub lblMentalAssessment_Click(sender As Object, e As EventArgs) Handles lblMentalAssessment.Click
+        MentalAssessment.lblHeader.Text = "Take a Mental Health Test?"
+        MentalAssessment.lblHeader.Dock = DockStyle.None
+        MentalAssessment.lblHeader.Padding = New Padding(0, 0, 0, 0)
+        MentalAssessment.lblSubHeader.Text = "Conditions like depression or anxiety are not only real and widespread, but they're also highly treatable. 
+The good news? Recovery is absolutely within reach!
+"
+        MentalAssessment.tabControl.SelectedTab() = MentalAssessment.LandingPanel
         'fucntion call to get childform
         childForm(MentalAssessment)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
         'Close Menubar if open
         CloseMenuBar()
+
+
     End Sub
 
 

@@ -31,12 +31,12 @@
 
     Private Sub PhysicalAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SymptomCheckerToolStripMenuItem.Click
         'fucntion call to get childform
-        Form1.childForm(PhysicalAssessment)
+        MainForm.childForm(PhysicalAssessment)
     End Sub
 
     Private Sub BMICalculatorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BMICalculatorToolStripMenuItem.Click
         'fucntion call to get childform
-        Form1.childForm(Me)
+        MainForm.childForm(Me)
     End Sub
 
     Private Sub BMICalc_Load(sender As Object, e As EventArgs) Handles Me.Load

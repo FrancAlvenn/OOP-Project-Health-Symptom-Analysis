@@ -64,11 +64,11 @@
     End Sub
 
     Sub childForm(ByVal panel As Form)
-        Form1.pnlChangeable.Controls.Clear()
+        MainForm.pnlChangeable.Controls.Clear()
         panel.TopLevel = False
         panel.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         panel.Dock = DockStyle.Fill
-        Form1.pnlChangeable.Controls.Add(panel)
+        MainForm.pnlChangeable.Controls.Add(panel)
         panel.Show()
     End Sub
 
@@ -81,6 +81,8 @@
         RoundCornerLabel(btnDepressionTest)
         RoundCornerLabel(btnPTSDTest)
         RoundCornerLabel(btnEatingDisorderTest)
+
+
 
     End Sub
 
@@ -159,15 +161,15 @@ The good news? Recovery is absolutely within reach!
         If tabControl.SelectedTab Is DepressionTestPanel Then
             childForm(DepressionTest)
         ElseIf tabControl.SelectedTab Is ADHDTestPanel Then
-
+            childForm(ADHDTest)
         ElseIf tabControl.SelectedTab Is AnxietyTestPanel Then
-
+            childForm(AnxietyTest)
         ElseIf tabControl.SelectedTab Is PTSDTestPanel Then
-
+            childForm(DepressionTest)
         ElseIf tabControl.SelectedTab Is EatingDisorderTestPanel Then
-
+            childForm(EatingDisorderTest)
         ElseIf tabControl.SelectedTab Is AddictionTestPanel Then
-
+            childForm(PTSDTest)
         Else
             MsgBox("Please Select a Mental Disorder to test!", vbOK, "No Test Selected! ")
 
