@@ -123,6 +123,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\MainFrame.Designer.vb">
+      <DependentUpon>MainFrame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MainFrame.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NavbarForms\About.Designer.vb">
       <DependentUpon>About.vb</DependentUpon>
     </Compile>
@@ -223,6 +229,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\MainFrame.resx">
+      <DependentUpon>MainFrame.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NavbarForms\About.resx">
       <DependentUpon>About.vb</DependentUpon>
     </EmbeddedResource>
@@ -300,7 +309,36 @@
   <ItemGroup>
     <None Include="Icons\plus.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Icons\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\information-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\profit-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\home%28big%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\user%28small%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

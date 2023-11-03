@@ -117,46 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Feeling sad is a normal human experience, but feeling too much sadness can cause distress and 
-life problems. When too much sadness affects your life, you might have depression.
-
-Depression is a type of mental health condition called a mood disorder. Mood disorders occur 
-when changes in mood go beyond the normal ups and downs we all experience from day to day.
-Episodes of depression last at least two weeks at a time, but sometimes they can last for months 
-or even years.
-
-Depression goes way beyond just feeling sad. Some of the symptoms that people with depression 
-experience include:
-
-     • Feeling or appearing low, empty inside, or irritable most of the day every day
-
-     • Losing interest in activities you would normally enjoy
-
-     • Changes in appetite or weight—eating more or less; gaining or losing weight
-
-     • Changes in sleep—either not being able to sleep or sleeping too much
-
-     • Changes in activity—feeling restless inside or feeling sluggish
-
-     • Feeling exhausted even when you seem to be getting enough sleep
-
-     • Speaking or moving slowly, fidgeting, or pacing
-
-     • Feelings of worthlessness or guilt
-
-     • Difficulty thinking, concentrating, or making decisions
-
-     • Thoughts of death or suicide
-
-
-You don't have to experience all of these to be depressed. Everyone’s experience of depression
-is slightly different.
-
-Think you might have depression, take this test and find out!
-
-
-
-</value>
-  </data>
+  <metadata name="TimerPanelIncrease.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>57, 23</value>
+  </metadata>
+  <metadata name="TimerPanelDecrease.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>214, 23</value>
+  </metadata>
+  <metadata name="DataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>376, 23</value>
+  </metadata>
 </root>

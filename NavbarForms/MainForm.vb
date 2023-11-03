@@ -117,7 +117,8 @@
 
 
         RoundCornerPanel(pnlChangeable)
-        RoundCornerPanel(pnlUserInfo)
+        'RoundCornerPanel(pnlUserInfo)
+
         'fucntion call to get childform
         childForm(Home)
         'function call to change Fore Color of MenuBar
@@ -192,7 +193,7 @@ The good news? Recovery is absolutely within reach!
     'btnMenu_Click
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
 
-        If pnlMenu.Width > 230 Then
+        If pnlMenu.Height > 230 Then
             TimerPanelDecrease.Enabled = True
         Else
             TimerPanelIncrease.Enabled = True
@@ -200,21 +201,21 @@ The good news? Recovery is absolutely within reach!
     End Sub
 
     'btnClose
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs)
         CloseMenuBar()
     End Sub
 
     Private Sub TimerPanelDecrease_Tick(sender As Object, e As EventArgs) Handles TimerPanelDecrease.Tick
-        If pnlMenu.Width > 0 Then
-            pnlMenu.Width -= 10
+        If pnlMenu.Height > 0 Then
+            pnlMenu.Height -= 320
         Else
             TimerPanelDecrease.Enabled = False
         End If
     End Sub
 
     Private Sub TimerPanelIncrease_Tick(sender As Object, e As EventArgs) Handles TimerPanelIncrease.Tick
-        If pnlMenu.Width < 230 Then
-            pnlMenu.Width += 10
+        If pnlMenu.Height < 450 Then
+            pnlMenu.Height += 100
         Else
             TimerPanelIncrease.Enabled = False
         End If
@@ -227,5 +228,10 @@ The good news? Recovery is absolutely within reach!
 
     Private Sub Form1_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         DrawFormGradient(Color.FromArgb(1, 27, 80), Color.FromArgb(63, 86, 187))
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MainFrame.Show()
+        Me.Hide()
     End Sub
 End Class
