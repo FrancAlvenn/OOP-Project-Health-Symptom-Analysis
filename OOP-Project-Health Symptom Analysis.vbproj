@@ -227,6 +227,18 @@
     <Compile Include="NavbarForms\MentalAssessment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserAuthentication\UserLogin.Designer.vb">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuthentication\UserLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAuthentication\UserSignUp.Designer.vb">
+      <DependentUpon>UserSignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuthentication\UserSignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Admin\MainFrame.resx">
@@ -276,6 +288,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Physical Test\PhysicalAssessment.resx">
       <DependentUpon>PhysicalAssessment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthentication\UserLogin.resx">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthentication\UserSignUp.resx">
+      <DependentUpon>UserSignUp.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -338,6 +356,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\user%28small%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\why-is-sky-blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="systemDatabase\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,6 +1,7 @@
 ﻿Public Class MainForm
     Inherits Windows.Forms.Form
     Private selectedLabel As Label = Nothing
+    Public hasAccount As Boolean
 
     'Funtions and Methods
 
@@ -142,6 +143,14 @@
 
     'PhysicalAssessment_Click
     Private Sub lblPhysicalAssessment_Click(sender As Object, e As EventArgs) Handles lblPhysicalAssessment.Click
+
+        'check if user has account if not open login Form
+        If hasAccount = False Then
+            Dim loginForm As DialogResult = UserLogin.ShowDialog()
+        End If
+
+
+
         'fucntion call to get childform
         childForm(BMICalc)
         'function call to change Fore Color of MenuBar
@@ -152,6 +161,13 @@
 
     'lblMentalAssessment_Click
     Private Sub lblMentalAssessment_Click(sender As Object, e As EventArgs) Handles lblMentalAssessment.Click
+
+        'check if user has account if not open login Form
+        If hasAccount = False Then
+            Dim loginForm As DialogResult = UserLogin.ShowDialog()
+        End If
+
+
         MentalAssessment.lblHeader.Text = "Take a Mental Health Test?"
         MentalAssessment.lblHeader.Dock = DockStyle.None
         MentalAssessment.lblHeader.Padding = New Padding(0, 0, 0, 0)
