@@ -1,4 +1,4 @@
-﻿Public Class MainFrame
+﻿Public Class AdminForm
 
     Private Sub TimerPanelDecrease_Tick(sender As Object, e As EventArgs) Handles TimerPanelDecrease.Tick
         If pnlMenu.Width > 65 Then

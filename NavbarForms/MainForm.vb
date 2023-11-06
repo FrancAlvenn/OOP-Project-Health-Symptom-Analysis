@@ -15,6 +15,8 @@
         panel.Show()
     End Sub
 
+
+
     'Round Button Function
     Private Sub RoundCornerButton(button As Button)
         button.FlatStyle = FlatStyle.Flat
@@ -246,8 +248,5 @@ The good news? Recovery is absolutely within reach!
         DrawFormGradient(Color.FromArgb(1, 27, 80), Color.FromArgb(63, 86, 187))
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        MainFrame.Show()
-        Me.Hide()
-    End Sub
+
 End Class

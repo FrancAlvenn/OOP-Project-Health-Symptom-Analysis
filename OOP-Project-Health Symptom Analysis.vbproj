@@ -123,10 +123,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\MainFrame.Designer.vb">
-      <DependentUpon>MainFrame.vb</DependentUpon>
+    <Compile Include="Admin\AdminForm.Designer.vb">
+      <DependentUpon>AdminForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Admin\MainFrame.vb">
+    <Compile Include="Admin\AdminForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NavbarForms\About.Designer.vb">
@@ -227,6 +227,12 @@
     <Compile Include="NavbarForms\MentalAssessment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserAuthentication\AdminLogin.Designer.vb">
+      <DependentUpon>AdminLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuthentication\AdminLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserAuthentication\UserLogin.Designer.vb">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
@@ -241,8 +247,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Admin\MainFrame.resx">
-      <DependentUpon>MainFrame.vb</DependentUpon>
+    <EmbeddedResource Include="Admin\AdminForm.resx">
+      <DependentUpon>AdminForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavbarForms\About.resx">
       <DependentUpon>About.vb</DependentUpon>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Physical Test\PhysicalAssessment.resx">
       <DependentUpon>PhysicalAssessment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuthentication\AdminLogin.resx">
+      <DependentUpon>AdminLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAuthentication\UserLogin.resx">
       <DependentUpon>UserLogin.vb</DependentUpon>

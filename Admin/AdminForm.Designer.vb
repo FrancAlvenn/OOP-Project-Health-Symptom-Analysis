@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MainFrame
+Partial Class AdminForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -122,7 +122,7 @@ Partial Class MainFrame
         Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.profit_report
         Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(14, 405)
+        Me.Label12.Location = New System.Drawing.Point(16, 405)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(238, 45)
         Me.Label12.TabIndex = 8
@@ -134,7 +134,7 @@ Partial Class MainFrame
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.logout
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(11, 801)
+        Me.Label6.Location = New System.Drawing.Point(16, 801)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(238, 40)
         Me.Label6.TabIndex = 6
@@ -156,7 +156,7 @@ Partial Class MainFrame
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.information_button
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(14, 492)
+        Me.Label5.Location = New System.Drawing.Point(16, 492)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(238, 45)
         Me.Label5.TabIndex = 5
@@ -178,7 +178,7 @@ Partial Class MainFrame
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.user_small_
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(14, 322)
+        Me.Label4.Location = New System.Drawing.Point(16, 322)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(238, 45)
         Me.Label4.TabIndex = 4
@@ -374,7 +374,7 @@ Partial Class MainFrame
         '
         Me.DataSet1.DataSetName = "NewDataSet"
         '
-        'MainFrame
+        'AdminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -382,7 +382,7 @@ Partial Class MainFrame
         Me.ClientSize = New System.Drawing.Size(1284, 861)
         Me.Controls.Add(Me.SubPanel)
         Me.Controls.Add(Me.pnlMenu)
-        Me.Name = "MainFrame"
+        Me.Name = "AdminForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainFrame"
         Me.pnlMenu.ResumeLayout(False)

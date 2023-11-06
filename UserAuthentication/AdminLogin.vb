@@ -1,10 +1,9 @@
 ﻿Imports System.Data.SQLite
 
-Public Class UserLogin
-
+Public Class AdminLogin
     Public tries As Integer = 0
     Public setTries As Integer = 0
-    Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;Version=3;"
+    Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\adminAuthentication.sqlite;Version=3;"
     Public connection As New SQLiteConnection(connectionName)
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
@@ -22,7 +21,7 @@ Public Class UserLogin
             timeOutTimer.Stop()
             MessageBox.Show("Login is now enabled.", "Countdown Finished", MessageBoxButtons.OK, MessageBoxIcon.Information)
             lblTimer.Visible = False
-            btnSignUp.Enabled = True
+
             btnClose.Enabled = True
             ' Reset countdown for next use
             tries = 0
@@ -30,7 +29,7 @@ Public Class UserLogin
         Else
             ' Show the countdown in a message box
             lblTimer.Visible = True
-            btnSignUp.Enabled = False
+
             btnClose.Enabled = False
             lblTimer.Text = "Time remaining: " & countdown & " seconds"
 
@@ -48,7 +47,7 @@ Public Class UserLogin
             setTriesTimer.Stop()
             MessageBox.Show("Login is now enabled.", "Countdown Finished", MessageBoxButtons.OK, MessageBoxIcon.Information)
             lblTimer.Visible = False
-            btnSignUp.Enabled = True
+
             btnClose.Enabled = True
             ' Reset countdown for next use
             tries = 0
@@ -56,7 +55,7 @@ Public Class UserLogin
         Else
             ' Show the countdown in a message box
             lblTimer.Visible = True
-            btnSignUp.Enabled = False
+
             btnClose.Enabled = False
             lblTimer.Text = "Time remaining: " & countdown & " seconds"
 
@@ -105,7 +104,7 @@ Public Class UserLogin
 
     Public Function logincheck()
         'Selects user from database
-        Dim selectUserString As String = "SELECT * FROM user_accounts WHERE
+        Dim selectUserString As String = "SELECT * FROM admin_accounts WHERE
                                                    Username = @Username AND Password = @Password;"
 
         ' Execute the query
@@ -127,10 +126,10 @@ Public Class UserLogin
         If reader.Read() Then
             ' Successful login
             MessageBox.Show("Login successful!")
-            MainForm.hasAccount = True
+
+            AdminForm.Show()
             Me.Dispose()
-            MainForm.Enabled = True
-            MainForm.Show()
+            MainForm.Hide()
         Else
             ' Invalid credentials
             MessageBox.Show("Invalid username or password.")
@@ -145,25 +144,17 @@ Public Class UserLogin
         Return 0
     End Function
 
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
-        ' Open the signup form or perform signup logic here
-        Dim signUpForm As New UserSignUp()
-        signUpForm.ShowDialog()
-        Me.Dispose()
-    End Sub
-
-    Private Sub btnClose_Click_1(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Dispose()
 
         MainForm.Enabled = True
         MainForm.Show()
     End Sub
 
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+    Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
         ' Open the signup form or perform signup logic here
-        Dim adminForm As New AdminLogin()
-        adminForm.ShowDialog()
+        Dim loginForm As New UserLogin()
+        loginForm.ShowDialog()
         Me.Dispose()
     End Sub
 End Class

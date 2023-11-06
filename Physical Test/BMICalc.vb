@@ -42,7 +42,7 @@
     Private Sub BMICalc_Load(sender As Object, e As EventArgs) Handles Me.Load
         RoundCornerButton(btnReset)
         RoundCornerButton(btnSubmit)
-        rdbMetric.Select()
+        'rdbMetric.Select()
     End Sub
 
     Private Sub rdbImperial_CheckedChanged(sender As Object, e As EventArgs) Handles rdbImperial.CheckedChanged
