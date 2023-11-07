@@ -370,7 +370,16 @@
     <None Include="Icons\why-is-sky-blue.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="systemDatabase\" />
+    <None Include="Icons\ContactUsheader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\telephone-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\AboutUsHeader.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

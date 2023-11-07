@@ -117,4 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Developed by a team of four dedicated second-year BSIT students from Dr. Yanga's Colleges Inc., the Health Analysis 
+
+System is a user-friendly platform designed to offer individuals preliminary assessments of their physical and mental 
+
+health conditions. It provides informative content and assessment tools to aid in understanding potential health concerns. 
+
+Originating from Dr. Yanga's Colleges Inc., our team strives to make a positive impact on health awareness within our community.
+
+The project was initiated during our second year of BSIT studies, and after months of diligent work, we are excited to present it to you. 
+
+By combining our passion for IT with a commitment to health, we've created a platform that empowers users with valuable health
+
+insights. While we aim to assist, it's important to remember that consulting healthcare professionals is crucial for accurate and
+
+ personalized advice. Together, let's embark on a journey towards a healthier and more informed you!</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>・Lazaro, Christine P.   - Team Leader and UI/UX Designer
+
+・Dela Cruz, Franc Alvenn T. -  Full Stack Developer, Database Manager,  UI/UX Designer
+
+・Gonzales, Nathaniel - Content Writer and Researcher
+
+・Casili, Tristan James - Content Writer and Researcher
+
+
+</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>Our mission is to empower individuals with accessible and informative health assessments, while emphasizing the 
+
+importance of seeking professional advice for accurate diagnosis and treatment. We believe that everyone deserves
+
+ to have a reliable resource to aid them in their journey toward better health.</value>
+  </data>
 </root>
