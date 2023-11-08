@@ -1,4 +1,6 @@
 ﻿Public Class BMICalc
+    Dim itemCount As Integer = 0
+    Dim clickedLabel As Label
     'Functions and Methods
 
     'Round Corner Button
@@ -22,6 +24,21 @@
         panel.Region = New Region(rad)
     End Sub
 
+    'clicked label funtion
+    Private Sub Label_Click(sender As Object, e As EventArgs)
+        ' Cast sender to Label
+        clickedLabel = DirectCast(sender, Label)
+
+        For Each control As Control In TableLayoutPanel12.Controls
+            If TypeOf control Is Label Then
+                control.BackColor = Color.Transparent ' Set the default background color (Transparent)
+                control.Font = New Font("Microsoft Tai Le", 10, FontStyle.Regular)
+            End If
+        Next
+
+        clickedLabel.Font = New Font("Microsoft Tai Le", 10, FontStyle.Bold)
+        clickedLabel.BackColor = Color.FromArgb(162, 220, 245)
+    End Sub
 
 
 
@@ -29,20 +46,17 @@
     'Event Handlers
 
 
-    Private Sub PhysicalAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SymptomCheckerToolStripMenuItem.Click
+    Private Sub PhysicalAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs)
         'fucntion call to get childform
         MainForm.childForm(PhysicalAssessment)
     End Sub
 
-    Private Sub BMICalculatorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BMICalculatorToolStripMenuItem.Click
-        'fucntion call to get childform
-        MainForm.childForm(Me)
-    End Sub
 
     Private Sub BMICalc_Load(sender As Object, e As EventArgs) Handles Me.Load
         RoundCornerButton(btnReset)
         RoundCornerButton(btnSubmit)
         'rdbMetric.Select()
+
     End Sub
 
     Private Sub rdbImperial_CheckedChanged(sender As Object, e As EventArgs) Handles rdbImperial.CheckedChanged
@@ -60,4 +74,80 @@
     End Sub
 
 
+    '==============================================================='
+    'Scroll Behavior
+
+    Public targetScrollValue As Integer
+    Public currentScrollValue As Integer
+    Private Sub scrollTimer_Tick(sender As Object, e As EventArgs) Handles scrollTimer.Tick
+        If currentScrollValue < targetScrollValue Then
+            currentScrollValue += 25
+            Me.VerticalScroll.Value = currentScrollValue
+        Else
+            scrollTimer.Stop()
+        End If
+    End Sub
+
+    Private Sub btnBMICalc_Click(sender As Object, e As EventArgs) Handles btnBMICalc.Click
+        targetScrollValue = 800 ' Set the target scroll value
+        currentScrollValue = Me.VerticalScroll.Value
+        scrollTimer.Interval = 10 ' Set the interval for the timer (adjust as needed)
+        scrollTimer.Start()
+    End Sub
+    Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
+        targetScrollValue = 800 ' Set the target scroll value
+        currentScrollValue = Me.VerticalScroll.Value
+        scrollTimer.Interval = 10 ' Set the interval for the timer (adjust as needed)
+        scrollTimer.Start()
+    End Sub
+
+    Private Sub btnSymptomChecker_Click(sender As Object, e As EventArgs) Handles btnSymptomChecker.Click
+        targetScrollValue = 1700 ' Set the target scroll value
+        currentScrollValue = Me.VerticalScroll.Value
+        scrollTimer.Interval = 15 ' Set the interval for the timer (adjust as needed)
+        scrollTimer.Start()
+    End Sub
+
+    Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
+        targetScrollValue = 1700 ' Set the target scroll value
+        currentScrollValue = Me.VerticalScroll.Value
+        scrollTimer.Interval = 15 ' Set the interval for the timer (adjust as needed)
+        scrollTimer.Start()
+    End Sub
+
+
+
+    '==============================================================='
+
+    'Symptom Checker handler
+
+    Private Sub btnAddSymptom_Click(sender As Object, e As EventArgs) Handles btnAddSymptom.Click
+        If itemCount < 15 Then
+            Dim newLabel As New Label()
+            newLabel.Text = "Dynamic Label"
+            newLabel.AutoSize = True
+            newLabel.Font = New Font("Microsoft Tai Le", 10, FontStyle.Regular)
+            newLabel.Dock = DockStyle.Fill
+            newLabel.TextAlign = ContentAlignment.MiddleLeft
+
+            AddHandler newLabel.Click, AddressOf Label_Click
+
+            Dim row As Integer = 0
+            Dim column As Integer = 0
+
+            tableLayoutSymptoms.Controls.Add(newLabel, column, row)
+            itemCount += 1
+        Else
+            MsgBox("Too many symptoms!")
+        End If
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        tableLayoutSymptoms.Controls.Clear()
+    End Sub
+
+    Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
+        tableLayoutSymptoms.Controls.Remove(clickedLabel)
+        clickedLabel.Dispose()
+    End Sub
 End Class

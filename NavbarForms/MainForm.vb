@@ -43,7 +43,7 @@
     End Sub
 
     'Funtion to Change ForeColor
-    Private Sub changeForeColor(sender As Object)
+    Public Sub changeForeColor(sender As Object)
         Dim clickedLabel As Label = DirectCast(sender, Label)
 
         ' Reset the properties of the previously selected label (if any)
@@ -169,14 +169,6 @@
             Dim loginForm As DialogResult = UserLogin.ShowDialog()
         End If
 
-
-        MentalAssessment.lblHeader.Text = "Take a Mental Health Test?"
-        MentalAssessment.lblHeader.Dock = DockStyle.None
-        MentalAssessment.lblHeader.Padding = New Padding(0, 0, 0, 0)
-        MentalAssessment.lblSubHeader.Text = "Conditions like depression or anxiety are not only real and widespread, but they're also highly treatable. 
-The good news? Recovery is absolutely within reach!
-"
-        MentalAssessment.tabControl.SelectedTab() = MentalAssessment.LandingPanel
         'fucntion call to get childform
         childForm(MentalAssessment)
         'function call to change Fore Color of MenuBar

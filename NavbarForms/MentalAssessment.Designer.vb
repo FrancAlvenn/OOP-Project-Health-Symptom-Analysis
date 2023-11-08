@@ -23,289 +23,351 @@ Partial Class MentalAssessment
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MentalAssessment))
-        Me.pnlHeader = New System.Windows.Forms.Panel()
-        Me.lblSubHeader = New System.Windows.Forms.Label()
-        Me.lblHeader = New System.Windows.Forms.Label()
-        Me.btnSubmit = New System.Windows.Forms.Button()
-        Me.tabControl = New System.Windows.Forms.TabControl()
-        Me.LandingPanel = New System.Windows.Forms.TabPage()
-        Me.DepressionTestPanel = New System.Windows.Forms.TabPage()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ADHDTestPanel = New System.Windows.Forms.TabPage()
-        Me.AnxietyTestPanel = New System.Windows.Forms.TabPage()
-        Me.PTSDTestPanel = New System.Windows.Forms.TabPage()
-        Me.EatingDisorderTestPanel = New System.Windows.Forms.TabPage()
-        Me.AddictionTestPanel = New System.Windows.Forms.TabPage()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnSymptomChecker = New System.Windows.Forms.Label()
+        Me.btnBMICalc = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnAddictionTest = New System.Windows.Forms.Label()
-        Me.btnEatingDisorderTest = New System.Windows.Forms.Label()
-        Me.btnPTSDTest = New System.Windows.Forms.Label()
-        Me.btnAnxietyTest = New System.Windows.Forms.Label()
-        Me.btnADHDTest = New System.Windows.Forms.Label()
-        Me.btnDepressionTest = New System.Windows.Forms.Label()
-        Me.pnlHeader.SuspendLayout()
-        Me.tabControl.SuspendLayout()
-        Me.DepressionTestPanel.SuspendLayout()
+        Me.btnDepressionTest = New System.Windows.Forms.Button()
+        Me.btnADHDTest = New System.Windows.Forms.Button()
+        Me.btnAnxietyTest = New System.Windows.Forms.Button()
+        Me.btnPTSDTest = New System.Windows.Forms.Button()
+        Me.btnEatingDisorderTest = New System.Windows.Forms.Button()
+        Me.btnAddictionTest = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'pnlHeader
+        'Label21
         '
-        Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.pnlHeader.Controls.Add(Me.lblSubHeader)
-        Me.pnlHeader.Controls.Add(Me.lblHeader)
-        Me.pnlHeader.Location = New System.Drawing.Point(62, 22)
-        Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(995, 147)
-        Me.pnlHeader.TabIndex = 0
+        Me.Label21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label21.Location = New System.Drawing.Point(275, 513)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(121, 58)
+        Me.Label21.TabIndex = 35
+        Me.Label21.Text = "ADHD"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblSubHeader
+        'Label20
         '
-        Me.lblSubHeader.AutoSize = True
-        Me.lblSubHeader.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSubHeader.ForeColor = System.Drawing.Color.Black
-        Me.lblSubHeader.Location = New System.Drawing.Point(36, 84)
-        Me.lblSubHeader.Name = "lblSubHeader"
-        Me.lblSubHeader.Size = New System.Drawing.Size(729, 42)
-        Me.lblSubHeader.TabIndex = 2
-        Me.lblSubHeader.Text = "Conditions like depression or anxiety are not only real and widespread, but they'" &
-    "re also highly treatable. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "The good news? Recovery is absolutely within reach!"
+        Me.Label20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label20.Location = New System.Drawing.Point(275, 274)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(194, 58)
+        Me.Label20.TabIndex = 34
+        Me.Label20.Text = "Depression"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblHeader
+        'Label23
         '
-        Me.lblHeader.Font = New System.Drawing.Font("Microsoft Tai Le", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHeader.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.lblHeader.Location = New System.Drawing.Point(4, 14)
-        Me.lblHeader.Name = "lblHeader"
-        Me.lblHeader.Size = New System.Drawing.Size(730, 56)
-        Me.lblHeader.TabIndex = 0
-        Me.lblHeader.Text = "Take a Mental Health Test"
-        Me.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
+        Me.Label23.ForeColor = System.Drawing.Color.Black
+        Me.Label23.Location = New System.Drawing.Point(296, 583)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(622, 57)
+        Me.Label23.TabIndex = 33
+        Me.Label23.Text = "For those individuals who may have difficulty with attention, hyperactivity, or i" &
+    "mpulsivity, potentially" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " indicating symptoms of Attention-Deficit/Hyperactivi" &
+    "ty Disorder (ADHD)."
         '
-        'btnSubmit
+        'Label22
         '
-        Me.btnSubmit.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSubmit.FlatAppearance.BorderSize = 0
-        Me.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnSubmit.Location = New System.Drawing.Point(884, 661)
-        Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(161, 35)
-        Me.btnSubmit.TabIndex = 25
-        Me.btnSubmit.Text = "Take the Test"
-        Me.btnSubmit.UseVisualStyleBackColor = False
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
+        Me.Label22.ForeColor = System.Drawing.Color.Black
+        Me.Label22.Location = New System.Drawing.Point(296, 344)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(629, 57)
+        Me.Label22.TabIndex = 32
+        Me.Label22.Text = "For those individuals who may be experiencing persistent feelings of sadness, hop" &
+    "elessness, or a loss " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "of interest in daily activities, potentially indicating" &
+    " symptoms of depression."
         '
-        'tabControl
+        'Label4
         '
-        Me.tabControl.Controls.Add(Me.LandingPanel)
-        Me.tabControl.Controls.Add(Me.DepressionTestPanel)
-        Me.tabControl.Controls.Add(Me.ADHDTestPanel)
-        Me.tabControl.Controls.Add(Me.AnxietyTestPanel)
-        Me.tabControl.Controls.Add(Me.PTSDTestPanel)
-        Me.tabControl.Controls.Add(Me.EatingDisorderTestPanel)
-        Me.tabControl.Controls.Add(Me.AddictionTestPanel)
-        Me.tabControl.HotTrack = True
-        Me.tabControl.ItemSize = New System.Drawing.Size(1, 20)
-        Me.tabControl.Location = New System.Drawing.Point(311, 196)
-        Me.tabControl.Multiline = True
-        Me.tabControl.Name = "tabControl"
-        Me.tabControl.SelectedIndex = 0
-        Me.tabControl.ShowToolTips = True
-        Me.tabControl.Size = New System.Drawing.Size(734, 437)
-        Me.tabControl.TabIndex = 26
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(264, 988)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(121, 58)
+        Me.Label4.TabIndex = 41
+        Me.Label4.Text = "PTSD"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'LandingPanel
+        'Label5
         '
-        Me.LandingPanel.BackColor = System.Drawing.Color.White
-        Me.LandingPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
-        Me.LandingPanel.ForeColor = System.Drawing.Color.Black
-        Me.LandingPanel.Location = New System.Drawing.Point(4, 24)
-        Me.LandingPanel.Name = "LandingPanel"
-        Me.LandingPanel.Size = New System.Drawing.Size(726, 409)
-        Me.LandingPanel.TabIndex = 6
-        Me.LandingPanel.Text = "Landing Page"
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(264, 747)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(134, 58)
+        Me.Label5.TabIndex = 40
+        Me.Label5.Text = "Anxiety"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'DepressionTestPanel
+        'Label6
         '
-        Me.DepressionTestPanel.AutoScroll = True
-        Me.DepressionTestPanel.BackColor = System.Drawing.Color.White
-        Me.DepressionTestPanel.Controls.Add(Me.Label1)
-        Me.DepressionTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DepressionTestPanel.ForeColor = System.Drawing.Color.Black
-        Me.DepressionTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.DepressionTestPanel.Name = "DepressionTestPanel"
-        Me.DepressionTestPanel.Padding = New System.Windows.Forms.Padding(3)
-        Me.DepressionTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.DepressionTestPanel.TabIndex = 0
-        Me.DepressionTestPanel.Text = "Depression Test"
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(285, 1057)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(645, 95)
+        Me.Label6.TabIndex = 39
+        Me.Label6.Text = resources.GetString("Label6.Text")
         '
-        'Label1
+        'Label7
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(69, 29)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(586, 624)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = resources.GetString("Label1.Text")
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(285, 817)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(635, 57)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "For those individuals who may be experiencing excessive worry, fear, or physical " &
+    "symptoms related to " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "anxiety, potentially indicating symptoms of an anxiety d" &
+    "isorder."
         '
-        'ADHDTestPanel
+        'Label10
         '
-        Me.ADHDTestPanel.BackColor = System.Drawing.Color.White
-        Me.ADHDTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
-        Me.ADHDTestPanel.ForeColor = System.Drawing.Color.Black
-        Me.ADHDTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.ADHDTestPanel.Name = "ADHDTestPanel"
-        Me.ADHDTestPanel.Padding = New System.Windows.Forms.Padding(3)
-        Me.ADHDTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.ADHDTestPanel.TabIndex = 1
-        Me.ADHDTestPanel.Text = "ADHD Test"
+        Me.Label10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(267, 1486)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(187, 58)
+        Me.Label10.TabIndex = 47
+        Me.Label10.Text = "Addiction"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'AnxietyTestPanel
+        'Label11
         '
-        Me.AnxietyTestPanel.BackColor = System.Drawing.Color.White
-        Me.AnxietyTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
-        Me.AnxietyTestPanel.ForeColor = System.Drawing.Color.Black
-        Me.AnxietyTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.AnxietyTestPanel.Name = "AnxietyTestPanel"
-        Me.AnxietyTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.AnxietyTestPanel.TabIndex = 2
-        Me.AnxietyTestPanel.Text = "AnxietyTest"
+        Me.Label11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(264, 1249)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(272, 58)
+        Me.Label11.TabIndex = 46
+        Me.Label11.Text = "Eating Disorder"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'PTSDTestPanel
+        'Label12
         '
-        Me.PTSDTestPanel.BackColor = System.Drawing.Color.White
-        Me.PTSDTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
-        Me.PTSDTestPanel.ForeColor = System.Drawing.Color.Black
-        Me.PTSDTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.PTSDTestPanel.Name = "PTSDTestPanel"
-        Me.PTSDTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.PTSDTestPanel.TabIndex = 3
-        Me.PTSDTestPanel.Text = "PTSD Test"
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(288, 1556)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(645, 57)
+        Me.Label12.TabIndex = 45
+        Me.Label12.Text = "For those individuals who may be struggling with compulsive drug-seeking or behav" &
+    "ior, despite harmful" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " consequences, potentially indicating symptoms of addict" &
+    "ion."
         '
-        'EatingDisorderTestPanel
+        'Label13
         '
-        Me.EatingDisorderTestPanel.BackColor = System.Drawing.Color.White
-        Me.EatingDisorderTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!)
-        Me.EatingDisorderTestPanel.ForeColor = System.Drawing.Color.Black
-        Me.EatingDisorderTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.EatingDisorderTestPanel.Name = "EatingDisorderTestPanel"
-        Me.EatingDisorderTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.EatingDisorderTestPanel.TabIndex = 4
-        Me.EatingDisorderTestPanel.Text = "EatingDisorder Test"
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
+        Me.Label13.ForeColor = System.Drawing.Color.Black
+        Me.Label13.Location = New System.Drawing.Point(285, 1319)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(644, 57)
+        Me.Label13.TabIndex = 44
+        Me.Label13.Text = "For those individuals who may be exhibiting abnormal eating behaviors or have a d" &
+    "istorted body image," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "potentially indicating symptoms of an eating disorder."
         '
-        'AddictionTestPanel
+        'Label16
         '
-        Me.AddictionTestPanel.BackColor = System.Drawing.Color.White
-        Me.AddictionTestPanel.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddictionTestPanel.ForeColor = System.Drawing.Color.Black
-        Me.AddictionTestPanel.Location = New System.Drawing.Point(4, 24)
-        Me.AddictionTestPanel.Name = "AddictionTestPanel"
-        Me.AddictionTestPanel.Size = New System.Drawing.Size(726, 409)
-        Me.AddictionTestPanel.TabIndex = 5
-        Me.AddictionTestPanel.Text = "Addiction Test"
+        Me.Label16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label16.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.eatingdisorderIcon1
+        Me.Label16.Location = New System.Drawing.Point(110, 1240)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(150, 150)
+        Me.Label16.TabIndex = 48
+        '
+        'Label14
+        '
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label14.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.addictionIcon
+        Me.Label14.Location = New System.Drawing.Point(110, 1486)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(150, 150)
+        Me.Label14.TabIndex = 43
+        '
+        'Label8
+        '
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label8.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.ptsdIcon
+        Me.Label8.Location = New System.Drawing.Point(110, 988)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(150, 150)
+        Me.Label8.TabIndex = 37
+        '
+        'Label9
+        '
+        Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label9.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.anxietyIcon
+        Me.Label9.Location = New System.Drawing.Point(110, 747)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(150, 150)
+        Me.Label9.TabIndex = 36
+        '
+        'btnSymptomChecker
+        '
+        Me.btnSymptomChecker.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSymptomChecker.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.adhdIcon
+        Me.btnSymptomChecker.Location = New System.Drawing.Point(110, 513)
+        Me.btnSymptomChecker.Name = "btnSymptomChecker"
+        Me.btnSymptomChecker.Size = New System.Drawing.Size(150, 150)
+        Me.btnSymptomChecker.TabIndex = 31
+        '
+        'btnBMICalc
+        '
+        Me.btnBMICalc.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBMICalc.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.depressionIcon
+        Me.btnBMICalc.Location = New System.Drawing.Point(110, 274)
+        Me.btnBMICalc.Name = "btnBMICalc"
+        Me.btnBMICalc.Size = New System.Drawing.Size(150, 150)
+        Me.btnBMICalc.TabIndex = 30
+        '
+        'Label3
+        '
+        Me.Label3.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.mentalAssessmentHeader
+        Me.Label3.Location = New System.Drawing.Point(-5, -42)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(1061, 297)
+        Me.Label3.TabIndex = 29
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(62, 779)
+        Me.Panel1.Location = New System.Drawing.Point(377, 1747)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(979, 549)
-        Me.Panel1.TabIndex = 27
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(71, 740)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(950, 1)
-        Me.Label2.TabIndex = 28
-        '
-        'btnAddictionTest
-        '
-        Me.btnAddictionTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnAddictionTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddictionTest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnAddictionTest.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAddictionTest.Location = New System.Drawing.Point(59, 586)
-        Me.btnAddictionTest.Name = "btnAddictionTest"
-        Me.btnAddictionTest.Padding = New System.Windows.Forms.Padding(0, 0, 15, 0)
-        Me.btnAddictionTest.Size = New System.Drawing.Size(220, 43)
-        Me.btnAddictionTest.TabIndex = 8
-        Me.btnAddictionTest.Text = "    ADDICTION TEST"
-        Me.btnAddictionTest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnEatingDisorderTest
-        '
-        Me.btnEatingDisorderTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnEatingDisorderTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEatingDisorderTest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnEatingDisorderTest.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEatingDisorderTest.Location = New System.Drawing.Point(59, 512)
-        Me.btnEatingDisorderTest.Name = "btnEatingDisorderTest"
-        Me.btnEatingDisorderTest.Padding = New System.Windows.Forms.Padding(0, 0, 15, 0)
-        Me.btnEatingDisorderTest.Size = New System.Drawing.Size(220, 43)
-        Me.btnEatingDisorderTest.TabIndex = 9
-        Me.btnEatingDisorderTest.Text = "    EATING DISORDER TEST"
-        Me.btnEatingDisorderTest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnPTSDTest
-        '
-        Me.btnPTSDTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnPTSDTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPTSDTest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnPTSDTest.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPTSDTest.Location = New System.Drawing.Point(59, 436)
-        Me.btnPTSDTest.Name = "btnPTSDTest"
-        Me.btnPTSDTest.Padding = New System.Windows.Forms.Padding(0, 0, 15, 0)
-        Me.btnPTSDTest.Size = New System.Drawing.Size(220, 43)
-        Me.btnPTSDTest.TabIndex = 7
-        Me.btnPTSDTest.Text = "    PTSD TEST"
-        Me.btnPTSDTest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnAnxietyTest
-        '
-        Me.btnAnxietyTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnAnxietyTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnxietyTest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnAnxietyTest.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAnxietyTest.Location = New System.Drawing.Point(59, 359)
-        Me.btnAnxietyTest.Name = "btnAnxietyTest"
-        Me.btnAnxietyTest.Padding = New System.Windows.Forms.Padding(0, 0, 15, 0)
-        Me.btnAnxietyTest.Size = New System.Drawing.Size(220, 43)
-        Me.btnAnxietyTest.TabIndex = 6
-        Me.btnAnxietyTest.Text = "    ANXIETY TEST"
-        Me.btnAnxietyTest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnADHDTest
-        '
-        Me.btnADHDTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnADHDTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnADHDTest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnADHDTest.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnADHDTest.Location = New System.Drawing.Point(59, 280)
-        Me.btnADHDTest.Name = "btnADHDTest"
-        Me.btnADHDTest.Padding = New System.Windows.Forms.Padding(0, 0, 15, 0)
-        Me.btnADHDTest.Size = New System.Drawing.Size(220, 43)
-        Me.btnADHDTest.TabIndex = 5
-        Me.btnADHDTest.Text = "    ADHD TEST"
-        Me.btnADHDTest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Panel1.Size = New System.Drawing.Size(91, 184)
+        Me.Panel1.TabIndex = 49
         '
         'btnDepressionTest
         '
-        Me.btnDepressionTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnDepressionTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDepressionTest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnDepressionTest.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnDepressionTest.Location = New System.Drawing.Point(59, 200)
+        Me.btnDepressionTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnDepressionTest.FlatAppearance.BorderSize = 0
+        Me.btnDepressionTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnDepressionTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnDepressionTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDepressionTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDepressionTest.ForeColor = System.Drawing.Color.Black
+        Me.btnDepressionTest.Location = New System.Drawing.Point(724, 423)
         Me.btnDepressionTest.Name = "btnDepressionTest"
-        Me.btnDepressionTest.Padding = New System.Windows.Forms.Padding(0, 0, 15, 0)
-        Me.btnDepressionTest.Size = New System.Drawing.Size(220, 43)
-        Me.btnDepressionTest.TabIndex = 4
-        Me.btnDepressionTest.Text = "    DEPRESSION TEST"
-        Me.btnDepressionTest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDepressionTest.Size = New System.Drawing.Size(201, 37)
+        Me.btnDepressionTest.TabIndex = 50
+        Me.btnDepressionTest.Text = "Take Depression Test"
+        Me.btnDepressionTest.UseVisualStyleBackColor = False
+        '
+        'btnADHDTest
+        '
+        Me.btnADHDTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnADHDTest.FlatAppearance.BorderSize = 0
+        Me.btnADHDTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnADHDTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnADHDTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnADHDTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnADHDTest.ForeColor = System.Drawing.Color.Black
+        Me.btnADHDTest.Location = New System.Drawing.Point(724, 662)
+        Me.btnADHDTest.Name = "btnADHDTest"
+        Me.btnADHDTest.Size = New System.Drawing.Size(201, 37)
+        Me.btnADHDTest.TabIndex = 51
+        Me.btnADHDTest.Text = "Take ADHD Test"
+        Me.btnADHDTest.UseVisualStyleBackColor = False
+        '
+        'btnAnxietyTest
+        '
+        Me.btnAnxietyTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnAnxietyTest.FlatAppearance.BorderSize = 0
+        Me.btnAnxietyTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnAnxietyTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnAnxietyTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnxietyTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnxietyTest.ForeColor = System.Drawing.Color.Black
+        Me.btnAnxietyTest.Location = New System.Drawing.Point(724, 902)
+        Me.btnAnxietyTest.Name = "btnAnxietyTest"
+        Me.btnAnxietyTest.Size = New System.Drawing.Size(201, 37)
+        Me.btnAnxietyTest.TabIndex = 52
+        Me.btnAnxietyTest.Text = "Take Anxiety Test"
+        Me.btnAnxietyTest.UseVisualStyleBackColor = False
+        '
+        'btnPTSDTest
+        '
+        Me.btnPTSDTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnPTSDTest.FlatAppearance.BorderSize = 0
+        Me.btnPTSDTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPTSDTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPTSDTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPTSDTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPTSDTest.ForeColor = System.Drawing.Color.Black
+        Me.btnPTSDTest.Location = New System.Drawing.Point(724, 1167)
+        Me.btnPTSDTest.Name = "btnPTSDTest"
+        Me.btnPTSDTest.Size = New System.Drawing.Size(201, 37)
+        Me.btnPTSDTest.TabIndex = 53
+        Me.btnPTSDTest.Text = "Take PTSD Test"
+        Me.btnPTSDTest.UseVisualStyleBackColor = False
+        '
+        'btnEatingDisorderTest
+        '
+        Me.btnEatingDisorderTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnEatingDisorderTest.FlatAppearance.BorderSize = 0
+        Me.btnEatingDisorderTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnEatingDisorderTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnEatingDisorderTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEatingDisorderTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEatingDisorderTest.ForeColor = System.Drawing.Color.Black
+        Me.btnEatingDisorderTest.Location = New System.Drawing.Point(724, 1405)
+        Me.btnEatingDisorderTest.Name = "btnEatingDisorderTest"
+        Me.btnEatingDisorderTest.Size = New System.Drawing.Size(201, 37)
+        Me.btnEatingDisorderTest.TabIndex = 54
+        Me.btnEatingDisorderTest.Text = "Take Eating Disorder Test"
+        Me.btnEatingDisorderTest.UseVisualStyleBackColor = False
+        '
+        'btnAddictionTest
+        '
+        Me.btnAddictionTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnAddictionTest.FlatAppearance.BorderSize = 0
+        Me.btnAddictionTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnAddictionTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnAddictionTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddictionTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddictionTest.ForeColor = System.Drawing.Color.Black
+        Me.btnAddictionTest.Location = New System.Drawing.Point(724, 1658)
+        Me.btnAddictionTest.Name = "btnAddictionTest"
+        Me.btnAddictionTest.Size = New System.Drawing.Size(201, 37)
+        Me.btnAddictionTest.TabIndex = 55
+        Me.btnAddictionTest.Text = "Take Addiction Test"
+        Me.btnAddictionTest.UseVisualStyleBackColor = False
         '
         'MentalAssessment
         '
@@ -313,48 +375,63 @@ Partial Class MentalAssessment
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1178, 719)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(1093, 719)
         Me.Controls.Add(Me.btnAddictionTest)
         Me.Controls.Add(Me.btnEatingDisorderTest)
         Me.Controls.Add(Me.btnPTSDTest)
         Me.Controls.Add(Me.btnAnxietyTest)
         Me.Controls.Add(Me.btnADHDTest)
         Me.Controls.Add(Me.btnDepressionTest)
-        Me.Controls.Add(Me.tabControl)
-        Me.Controls.Add(Me.btnSubmit)
-        Me.Controls.Add(Me.pnlHeader)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.btnSymptomChecker)
+        Me.Controls.Add(Me.btnBMICalc)
+        Me.Controls.Add(Me.Label3)
         Me.Name = "MentalAssessment"
         Me.Text = " "
-        Me.pnlHeader.ResumeLayout(False)
-        Me.pnlHeader.PerformLayout()
-        Me.tabControl.ResumeLayout(False)
-        Me.DepressionTestPanel.ResumeLayout(False)
-        Me.DepressionTestPanel.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents pnlHeader As Panel
-    Friend WithEvents lblHeader As Label
-    Friend WithEvents lblSubHeader As Label
-    Friend WithEvents btnDepressionTest As Label
-    Friend WithEvents btnADHDTest As Label
-    Friend WithEvents btnAnxietyTest As Label
-    Friend WithEvents btnEatingDisorderTest As Label
-    Friend WithEvents btnAddictionTest As Label
-    Friend WithEvents btnSubmit As Button
-    Friend WithEvents tabControl As TabControl
-    Friend WithEvents ADHDTestPanel As TabPage
-    Friend WithEvents AnxietyTestPanel As TabPage
-    Friend WithEvents PTSDTestPanel As TabPage
-    Friend WithEvents EatingDisorderTestPanel As TabPage
-    Friend WithEvents AddictionTestPanel As TabPage
-    Friend WithEvents LandingPanel As TabPage
-    Friend WithEvents btnPTSDTest As Label
-    Friend WithEvents DepressionTestPanel As TabPage
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents btnSymptomChecker As Label
+    Friend WithEvents btnBMICalc As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label16 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label2 As Label
+    Friend WithEvents btnDepressionTest As Button
+    Friend WithEvents btnADHDTest As Button
+    Friend WithEvents btnAnxietyTest As Button
+    Friend WithEvents btnPTSDTest As Button
+    Friend WithEvents btnEatingDisorderTest As Button
+    Friend WithEvents btnAddictionTest As Button
 End Class

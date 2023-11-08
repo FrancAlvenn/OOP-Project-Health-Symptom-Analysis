@@ -381,6 +381,36 @@
   <ItemGroup>
     <None Include="Icons\AboutUsHeader.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\physicalAssessmentHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\mentalAssessmentHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\symptomchecker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\anxietyIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\adhdIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\depressionIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ptsdIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\eatingdisorderIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\addictionIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Welcome to SymptoMedic.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
