@@ -162,7 +162,7 @@
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
-    '---------SET 7------------------------------------------------------------------------------------------------------'
+    '---------SET 8------------------------------------------------------------------------------------------------------'
 
     Private Sub rdb_H1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_H1.CheckedChanged
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
@@ -183,7 +183,7 @@
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
-    '---------SET 8------------------------------------------------------------------------------------------------------'
+    '---------SET 9------------------------------------------------------------------------------------------------------'
 
 
     Private Sub rdb_I1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_I1.CheckedChanged
@@ -205,7 +205,7 @@
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
-    '---------SET 9------------------------------------------------------------------------------------------------------'
+    '---------SET 10------------------------------------------------------------------------------------------------------'
 
 
     Private Sub rdb_J1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_J1.CheckedChanged
@@ -227,4 +227,182 @@
     Private Sub rdb_J5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_J5.CheckedChanged
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
+
+
+
+    '---------SET 11------------------------------------------------------------------------------------------------------'
+    Private Sub rdb_K1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_K1.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_K2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_K2.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_K3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_K3.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_K4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_K4.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_K5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_K5.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    '---------SET 12------------------------------------------------------------------------------------------------------'
+
+    Private Sub rdb_L1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_L1.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_L2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_L2.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_L3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_L3.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_L4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_L4.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_L5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_L5.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    '---------SET 13------------------------------------------------------------------------------------------------------'
+
+    Private Sub rdb_M1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_M1.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_M2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_M2.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_M3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_M3.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_M4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_M4.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_M5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_M5.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    '---------SET 14------------------------------------------------------------------------------------------------------'
+
+    Private Sub rdb_N1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_N1.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_N2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_N2.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_N3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_N3.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_N4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_N4.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_N5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_N5.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    '---------SET 15------------------------------------------------------------------------------------------------------'
+
+    Private Sub rdb_O1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_O1.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_O2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_O2.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_O3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_O3.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_O4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_O4.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_O5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_O5.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    '---------SET 16------------------------------------------------------------------------------------------------------'
+
+    Private Sub rdb_P1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_P1.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_P2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_P2.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_P3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_P3.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_P4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_P4.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_P5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_P5.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    '---------SET 17------------------------------------------------------------------------------------------------------'
+
+    Private Sub rdb_Q1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_Q1.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_Q2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_Q2.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_Q3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_Q3.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_Q4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_Q4.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_Q5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_Q5.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    '---------SET 18------------------------------------------------------------------------------------------------------'
+
+    Private Sub rdb_R1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_R1.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_R2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_R2.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_R3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_R3.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_R4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_R4.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
+
+    Private Sub rdb_R5_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_R5.CheckedChanged
+        UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
+    End Sub
 End Class
+
