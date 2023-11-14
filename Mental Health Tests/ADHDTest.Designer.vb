@@ -1887,6 +1887,7 @@ Partial Class ADHDTest
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ADHDTest"
         Me.Text = " "
