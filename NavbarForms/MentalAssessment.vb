@@ -81,6 +81,14 @@
         RoundCornerButton(btnAddictionTest)
     End Sub
 
+    Private Sub btnDepressionTest_Click(sender As Object, e As EventArgs) Handles btnDepressionTest.Click
+        childForm(DepressionTest)
+    End Sub
+
+    Private Sub btnADHDTest_Click(sender As Object, e As EventArgs) Handles btnADHDTest.Click
+        childForm(ADHDTest)
+    End Sub
+
 
 
     '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------'

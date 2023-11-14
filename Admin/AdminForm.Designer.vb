@@ -383,8 +383,8 @@ Partial Class AdminForm
         Me.Controls.Add(Me.SubPanel)
         Me.Controls.Add(Me.pnlMenu)
         Me.Name = "AdminForm"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MainFrame"
         Me.pnlMenu.ResumeLayout(False)
         CType(Me.logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)

@@ -93,6 +93,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property AnxietyHeader() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AnxietyHeader", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property anxietyIcon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("anxietyIcon", resourceCulture)
@@ -126,6 +136,16 @@ Namespace My.Resources
         Friend ReadOnly Property ContactUsheader() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ContactUsheader", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property DepressionHeader() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("DepressionHeader", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -413,9 +433,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property why_is_sky_blue() As System.Drawing.Bitmap
+        Friend ReadOnly Property Welcome_to_SymptoMedicHeader() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("why-is-sky-blue", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Welcome to SymptoMedicHeader", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

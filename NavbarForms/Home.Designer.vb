@@ -44,7 +44,7 @@ Partial Class Home
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.Welcome_to_SymptoMedic
+        Me.BackgroundImage = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.Welcome_to_SymptoMedicHeader
         Me.ClientSize = New System.Drawing.Size(1110, 724)
         Me.Controls.Add(Me.btnGetStarted)
         Me.Name = "Home"

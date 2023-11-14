@@ -240,5 +240,8 @@
         DrawFormGradient(Color.FromArgb(1, 27, 80), Color.FromArgb(63, 86, 187))
     End Sub
 
-
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+        'fucntion call to get childform
+        childForm(Home)
+    End Sub
 End Class

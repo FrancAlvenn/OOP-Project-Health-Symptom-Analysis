@@ -25,6 +25,8 @@ Partial Class MainForm
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnMenu = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -36,23 +38,20 @@ Partial Class MainForm
         Me.lblHome = New System.Windows.Forms.Label()
         Me.pnlChangeable = New System.Windows.Forms.Panel()
         Me.pnlMenu = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnMenu = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.CircularPictureBox3 = New OOP_Project_Health_Symptom_Analysis.CircularPictureBox()
-        Me.CircularPictureBox2 = New OOP_Project_Health_Symptom_Analysis.CircularPictureBox()
+        Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
         CType(Me.CircularPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CircularPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -67,7 +66,7 @@ Partial Class MainForm
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.CircularPictureBox2)
+        Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.btnMenu)
         Me.Panel1.Controls.Add(Me.Label11)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -83,6 +82,25 @@ Partial Class MainForm
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1290, 61)
         Me.Panel1.TabIndex = 1
+        '
+        'Label13
+        '
+        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label13.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.Welcome_to_SymptoMedic
+        Me.Label13.Location = New System.Drawing.Point(28, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(61, 59)
+        Me.Label13.TabIndex = 0
+        '
+        'btnMenu
+        '
+        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
+        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu1
+        Me.btnMenu.Location = New System.Drawing.Point(1223, 10)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(49, 42)
+        Me.btnMenu.TabIndex = 0
         '
         'Label11
         '
@@ -209,45 +227,6 @@ Partial Class MainForm
         Me.pnlMenu.Size = New System.Drawing.Size(300, 0)
         Me.pnlMenu.TabIndex = 0
         '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.White
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(29, 377)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(250, 1)
-        Me.Label10.TabIndex = 7
-        Me.Label10.Text = "Label10"
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(29, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(250, 1)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Label2"
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(66, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(213, 35)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Franc Alvenn Dela Cruz"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TimerPanelIncrease
-        '
-        Me.TimerPanelIncrease.Interval = 10
-        '
-        'TimerPanelDecrease
-        '
-        Me.TimerPanelDecrease.Interval = 10
-        '
         'Label12
         '
         Me.Label12.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.profit_report
@@ -258,6 +237,16 @@ Partial Class MainForm
         Me.Label12.TabIndex = 8
         Me.Label12.Text = "            Reports"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.White
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(29, 377)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(250, 1)
+        Me.Label10.TabIndex = 7
+        Me.Label10.Text = "Label10"
         '
         'Label6
         '
@@ -303,15 +292,26 @@ Partial Class MainForm
         Me.Label3.Text = "            Home"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'btnMenu
+        'Label2
         '
-        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
-        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu1
-        Me.btnMenu.Location = New System.Drawing.Point(1223, 10)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(49, 42)
-        Me.btnMenu.TabIndex = 0
+        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(29, 73)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(250, 1)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Label2"
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(66, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(213, 35)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Franc Alvenn Dela Cruz"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'CircularPictureBox3
         '
@@ -322,14 +322,13 @@ Partial Class MainForm
         Me.CircularPictureBox3.TabIndex = 0
         Me.CircularPictureBox3.TabStop = False
         '
-        'CircularPictureBox2
+        'TimerPanelIncrease
         '
-        Me.CircularPictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.CircularPictureBox2.Location = New System.Drawing.Point(22, 10)
-        Me.CircularPictureBox2.Name = "CircularPictureBox2"
-        Me.CircularPictureBox2.Size = New System.Drawing.Size(40, 40)
-        Me.CircularPictureBox2.TabIndex = 14
-        Me.CircularPictureBox2.TabStop = False
+        Me.TimerPanelIncrease.Interval = 10
+        '
+        'TimerPanelDecrease
+        '
+        Me.TimerPanelDecrease.Interval = 10
         '
         'MainForm
         '
@@ -343,13 +342,13 @@ Partial Class MainForm
         Me.Controls.Add(Me.Button1)
         Me.ForeColor = System.Drawing.Color.White
         Me.Name = "MainForm"
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.pnlMenu.ResumeLayout(False)
         CType(Me.CircularPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CircularPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -370,7 +369,6 @@ Partial Class MainForm
     Friend WithEvents btnMenu As Label
     Friend WithEvents TimerPanelIncrease As Timer
     Friend WithEvents TimerPanelDecrease As Timer
-    Friend WithEvents CircularPictureBox2 As CircularPictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents CircularPictureBox3 As CircularPictureBox
@@ -380,4 +378,5 @@ Partial Class MainForm
     Friend WithEvents Label4 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
 End Class

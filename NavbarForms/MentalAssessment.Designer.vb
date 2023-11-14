@@ -35,13 +35,6 @@ Partial Class MentalAssessment
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.btnSymptomChecker = New System.Windows.Forms.Label()
-        Me.btnBMICalc = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnDepressionTest = New System.Windows.Forms.Button()
         Me.btnADHDTest = New System.Windows.Forms.Button()
@@ -49,6 +42,13 @@ Partial Class MentalAssessment
         Me.btnPTSDTest = New System.Windows.Forms.Button()
         Me.btnEatingDisorderTest = New System.Windows.Forms.Button()
         Me.btnAddictionTest = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnSymptomChecker = New System.Windows.Forms.Label()
+        Me.btnBMICalc = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label21
@@ -204,68 +204,6 @@ Partial Class MentalAssessment
         Me.Label13.Text = "For those individuals who may be exhibiting abnormal eating behaviors or have a d" &
     "istorted body image," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "potentially indicating symptoms of an eating disorder."
         '
-        'Label16
-        '
-        Me.Label16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label16.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.eatingdisorderIcon1
-        Me.Label16.Location = New System.Drawing.Point(110, 1240)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(150, 150)
-        Me.Label16.TabIndex = 48
-        '
-        'Label14
-        '
-        Me.Label14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label14.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.addictionIcon
-        Me.Label14.Location = New System.Drawing.Point(110, 1486)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(150, 150)
-        Me.Label14.TabIndex = 43
-        '
-        'Label8
-        '
-        Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label8.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.ptsdIcon
-        Me.Label8.Location = New System.Drawing.Point(110, 988)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(150, 150)
-        Me.Label8.TabIndex = 37
-        '
-        'Label9
-        '
-        Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label9.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.anxietyIcon
-        Me.Label9.Location = New System.Drawing.Point(110, 747)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(150, 150)
-        Me.Label9.TabIndex = 36
-        '
-        'btnSymptomChecker
-        '
-        Me.btnSymptomChecker.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSymptomChecker.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.adhdIcon
-        Me.btnSymptomChecker.Location = New System.Drawing.Point(110, 513)
-        Me.btnSymptomChecker.Name = "btnSymptomChecker"
-        Me.btnSymptomChecker.Size = New System.Drawing.Size(150, 150)
-        Me.btnSymptomChecker.TabIndex = 31
-        '
-        'btnBMICalc
-        '
-        Me.btnBMICalc.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBMICalc.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.depressionIcon
-        Me.btnBMICalc.Location = New System.Drawing.Point(110, 274)
-        Me.btnBMICalc.Name = "btnBMICalc"
-        Me.btnBMICalc.Size = New System.Drawing.Size(150, 150)
-        Me.btnBMICalc.TabIndex = 30
-        '
-        'Label3
-        '
-        Me.Label3.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.mentalAssessmentHeader
-        Me.Label3.Location = New System.Drawing.Point(-5, -42)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(1061, 297)
-        Me.Label3.TabIndex = 29
-        '
         'Panel1
         '
         Me.Panel1.Location = New System.Drawing.Point(377, 1747)
@@ -369,13 +307,75 @@ Partial Class MentalAssessment
         Me.btnAddictionTest.Text = "Take Addiction Test"
         Me.btnAddictionTest.UseVisualStyleBackColor = False
         '
+        'Label16
+        '
+        Me.Label16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label16.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.eatingdisorderIcon1
+        Me.Label16.Location = New System.Drawing.Point(110, 1240)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(150, 150)
+        Me.Label16.TabIndex = 48
+        '
+        'Label14
+        '
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label14.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.addictionIcon
+        Me.Label14.Location = New System.Drawing.Point(110, 1486)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(150, 150)
+        Me.Label14.TabIndex = 43
+        '
+        'Label8
+        '
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label8.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.ptsdIcon
+        Me.Label8.Location = New System.Drawing.Point(110, 988)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(150, 150)
+        Me.Label8.TabIndex = 37
+        '
+        'Label9
+        '
+        Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label9.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.anxietyIcon
+        Me.Label9.Location = New System.Drawing.Point(110, 747)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(150, 150)
+        Me.Label9.TabIndex = 36
+        '
+        'btnSymptomChecker
+        '
+        Me.btnSymptomChecker.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSymptomChecker.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.adhdIcon
+        Me.btnSymptomChecker.Location = New System.Drawing.Point(110, 513)
+        Me.btnSymptomChecker.Name = "btnSymptomChecker"
+        Me.btnSymptomChecker.Size = New System.Drawing.Size(150, 150)
+        Me.btnSymptomChecker.TabIndex = 31
+        '
+        'btnBMICalc
+        '
+        Me.btnBMICalc.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBMICalc.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.depressionIcon
+        Me.btnBMICalc.Location = New System.Drawing.Point(110, 274)
+        Me.btnBMICalc.Name = "btnBMICalc"
+        Me.btnBMICalc.Size = New System.Drawing.Size(150, 150)
+        Me.btnBMICalc.TabIndex = 30
+        '
+        'Label3
+        '
+        Me.Label3.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.mentalAssessmentHeader
+        Me.Label3.Location = New System.Drawing.Point(-5, -42)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(1061, 297)
+        Me.Label3.TabIndex = 29
+        '
         'MentalAssessment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1093, 719)
+        Me.ClientSize = New System.Drawing.Size(1144, 719)
         Me.Controls.Add(Me.btnAddictionTest)
         Me.Controls.Add(Me.btnEatingDisorderTest)
         Me.Controls.Add(Me.btnPTSDTest)
