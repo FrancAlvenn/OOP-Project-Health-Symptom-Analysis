@@ -420,6 +420,9 @@
   <ItemGroup>
     <None Include="Icons\AnxietyHeader.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ADHDHeader.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

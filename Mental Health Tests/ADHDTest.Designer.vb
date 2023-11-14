@@ -101,7 +101,6 @@ Partial Class ADHDTest
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.rdb_K5 = New System.Windows.Forms.RadioButton()
         Me.rdb_K4 = New System.Windows.Forms.RadioButton()
@@ -158,6 +157,7 @@ Partial Class ADHDTest
         Me.rdb_R2 = New System.Windows.Forms.RadioButton()
         Me.rdb_R1 = New System.Windows.Forms.RadioButton()
         Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -1132,14 +1132,6 @@ Partial Class ADHDTest
         Me.Label4.TabIndex = 126
         Me.Label4.Text = resources.GetString("Label4.Text")
         '
-        'Label1
-        '
-        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.AnxietyHeader
-        Me.Label1.Location = New System.Drawing.Point(1, 1)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1097, 218)
-        Me.Label1.TabIndex = 123
-        '
         'Panel11
         '
         Me.Panel11.Controls.Add(Me.rdb_K5)
@@ -1834,13 +1826,21 @@ Partial Class ADHDTest
         Me.Label23.TabIndex = 163
         Me.Label23.Text = "18. How often do you interrupt others when they are busy?"
         '
+        'Label1
+        '
+        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.ADHDHeader
+        Me.Label1.Location = New System.Drawing.Point(1, 1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1152, 218)
+        Me.Label1.TabIndex = 123
+        '
         'ADHDTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1178, 719)
+        Me.ClientSize = New System.Drawing.Size(1195, 719)
         Me.Controls.Add(Me.Panel16)
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Panel18)
