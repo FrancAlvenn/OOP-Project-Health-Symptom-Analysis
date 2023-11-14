@@ -31,24 +31,20 @@ Partial Class MentalAssessment
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnDepressionTest = New System.Windows.Forms.Button()
         Me.btnADHDTest = New System.Windows.Forms.Button()
         Me.btnAnxietyTest = New System.Windows.Forms.Button()
         Me.btnPTSDTest = New System.Windows.Forms.Button()
-        Me.btnEatingDisorderTest = New System.Windows.Forms.Button()
-        Me.btnAddictionTest = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.btnSymptomChecker = New System.Windows.Forms.Label()
         Me.btnBMICalc = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnAddictionTest = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label21
@@ -153,62 +149,11 @@ Partial Class MentalAssessment
     "symptoms related to " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "anxiety, potentially indicating symptoms of an anxiety d" &
     "isorder."
         '
-        'Label10
-        '
-        Me.Label10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(267, 1486)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(187, 58)
-        Me.Label10.TabIndex = 47
-        Me.Label10.Text = "Addiction"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label11
-        '
-        Me.Label11.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(264, 1249)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(272, 58)
-        Me.Label11.TabIndex = 46
-        Me.Label11.Text = "Eating Disorder"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
-        Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(288, 1556)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(645, 57)
-        Me.Label12.TabIndex = 45
-        Me.Label12.Text = "For those individuals who may be struggling with compulsive drug-seeking or behav" &
-    "ior, despite harmful" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " consequences, potentially indicating symptoms of addict" &
-    "ion."
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(285, 1319)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(644, 57)
-        Me.Label13.TabIndex = 44
-        Me.Label13.Text = "For those individuals who may be exhibiting abnormal eating behaviors or have a d" &
-    "istorted body image," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "potentially indicating symptoms of an eating disorder."
-        '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(377, 1747)
+        Me.Panel1.Location = New System.Drawing.Point(372, 1495)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(91, 184)
+        Me.Panel1.Size = New System.Drawing.Size(91, 67)
         Me.Panel1.TabIndex = 49
         '
         'btnDepressionTest
@@ -275,56 +220,6 @@ Partial Class MentalAssessment
         Me.btnPTSDTest.Text = "Take PTSD Test"
         Me.btnPTSDTest.UseVisualStyleBackColor = False
         '
-        'btnEatingDisorderTest
-        '
-        Me.btnEatingDisorderTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnEatingDisorderTest.FlatAppearance.BorderSize = 0
-        Me.btnEatingDisorderTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnEatingDisorderTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnEatingDisorderTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEatingDisorderTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEatingDisorderTest.ForeColor = System.Drawing.Color.Black
-        Me.btnEatingDisorderTest.Location = New System.Drawing.Point(724, 1405)
-        Me.btnEatingDisorderTest.Name = "btnEatingDisorderTest"
-        Me.btnEatingDisorderTest.Size = New System.Drawing.Size(201, 37)
-        Me.btnEatingDisorderTest.TabIndex = 54
-        Me.btnEatingDisorderTest.Text = "Take Eating Disorder Test"
-        Me.btnEatingDisorderTest.UseVisualStyleBackColor = False
-        '
-        'btnAddictionTest
-        '
-        Me.btnAddictionTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnAddictionTest.FlatAppearance.BorderSize = 0
-        Me.btnAddictionTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnAddictionTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnAddictionTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddictionTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddictionTest.ForeColor = System.Drawing.Color.Black
-        Me.btnAddictionTest.Location = New System.Drawing.Point(724, 1658)
-        Me.btnAddictionTest.Name = "btnAddictionTest"
-        Me.btnAddictionTest.Size = New System.Drawing.Size(201, 37)
-        Me.btnAddictionTest.TabIndex = 55
-        Me.btnAddictionTest.Text = "Take Addiction Test"
-        Me.btnAddictionTest.UseVisualStyleBackColor = False
-        '
-        'Label16
-        '
-        Me.Label16.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label16.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.eatingdisorderIcon1
-        Me.Label16.Location = New System.Drawing.Point(110, 1240)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(150, 150)
-        Me.Label16.TabIndex = 48
-        '
-        'Label14
-        '
-        Me.Label14.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label14.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.addictionIcon
-        Me.Label14.Location = New System.Drawing.Point(110, 1486)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(150, 150)
-        Me.Label14.TabIndex = 43
-        '
         'Label8
         '
         Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
@@ -369,6 +264,57 @@ Partial Class MentalAssessment
         Me.Label3.Size = New System.Drawing.Size(1061, 297)
         Me.Label3.TabIndex = 29
         '
+        'Label14
+        '
+        Me.Label14.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label14.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.addictionIcon
+        Me.Label14.Location = New System.Drawing.Point(110, 1258)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(150, 150)
+        Me.Label14.TabIndex = 43
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(288, 1328)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(645, 57)
+        Me.Label12.TabIndex = 45
+        Me.Label12.Text = "For those individuals who may be struggling with compulsive drug-seeking or behav" &
+    "ior, despite harmful" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " consequences, potentially indicating symptoms of addict" &
+    "ion."
+        '
+        'Label10
+        '
+        Me.Label10.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Tai Le", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(267, 1258)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(187, 58)
+        Me.Label10.TabIndex = 47
+        Me.Label10.Text = "Addiction"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnAddictionTest
+        '
+        Me.btnAddictionTest.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnAddictionTest.FlatAppearance.BorderSize = 0
+        Me.btnAddictionTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnAddictionTest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnAddictionTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddictionTest.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddictionTest.ForeColor = System.Drawing.Color.Black
+        Me.btnAddictionTest.Location = New System.Drawing.Point(724, 1430)
+        Me.btnAddictionTest.Name = "btnAddictionTest"
+        Me.btnAddictionTest.Size = New System.Drawing.Size(201, 37)
+        Me.btnAddictionTest.TabIndex = 55
+        Me.btnAddictionTest.Text = "Take Addiction Test"
+        Me.btnAddictionTest.UseVisualStyleBackColor = False
+        '
         'MentalAssessment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,17 +323,13 @@ Partial Class MentalAssessment
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1144, 719)
         Me.Controls.Add(Me.btnAddictionTest)
-        Me.Controls.Add(Me.btnEatingDisorderTest)
         Me.Controls.Add(Me.btnPTSDTest)
         Me.Controls.Add(Me.btnAnxietyTest)
         Me.Controls.Add(Me.btnADHDTest)
         Me.Controls.Add(Me.btnDepressionTest)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
@@ -421,17 +363,13 @@ Partial Class MentalAssessment
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label16 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnDepressionTest As Button
     Friend WithEvents btnADHDTest As Button
     Friend WithEvents btnAnxietyTest As Button
     Friend WithEvents btnPTSDTest As Button
-    Friend WithEvents btnEatingDisorderTest As Button
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label10 As Label
     Friend WithEvents btnAddictionTest As Button
 End Class

@@ -77,15 +77,14 @@
         RoundCornerButton(btnADHDTest)
         RoundCornerButton(btnAnxietyTest)
         RoundCornerButton(btnPTSDTest)
-        RoundCornerButton(btnEatingDisorderTest)
         RoundCornerButton(btnAddictionTest)
     End Sub
 
-    Private Sub btnDepressionTest_Click(sender As Object, e As EventArgs) Handles btnDepressionTest.Click
+    Private Sub btnDepressionTest_Click(sender As Object, e As EventArgs)
         childForm(DepressionTest)
     End Sub
 
-    Private Sub btnADHDTest_Click(sender As Object, e As EventArgs) Handles btnADHDTest.Click
+    Private Sub btnADHDTest_Click(sender As Object, e As EventArgs)
         childForm(ADHDTest)
     End Sub
 

@@ -181,12 +181,6 @@
     <Compile Include="Mental Health Tests\DepressionTest.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mental Health Tests\EatingDisorderTest.Designer.vb">
-      <DependentUpon>EatingDisorderTest.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Mental Health Tests\EatingDisorderTest.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Mental Health Tests\PTSDTest.Designer.vb">
       <DependentUpon>PTSDTest.vb</DependentUpon>
     </Compile>
@@ -273,9 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\DepressionTest.resx">
       <DependentUpon>DepressionTest.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mental Health Tests\EatingDisorderTest.resx">
-      <DependentUpon>EatingDisorderTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\PTSDTest.resx">
       <DependentUpon>PTSDTest.vb</DependentUpon>
