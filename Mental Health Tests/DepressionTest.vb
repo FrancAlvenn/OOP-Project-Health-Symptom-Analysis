@@ -144,7 +144,7 @@
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
-    '---------SET 7------------------------------------------------------------------------------------------------------'
+    '---------SET 8------------------------------------------------------------------------------------------------------'
 
     Private Sub rdb_H1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_H1.CheckedChanged
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
@@ -163,7 +163,7 @@
     End Sub
 
 
-    '---------SET 8------------------------------------------------------------------------------------------------------'
+    '---------SET 9------------------------------------------------------------------------------------------------------'
 
 
     Private Sub rdb_I1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_I1.CheckedChanged
@@ -182,7 +182,7 @@
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
-    '---------SET 9------------------------------------------------------------------------------------------------------'
+    '---------SET 10------------------------------------------------------------------------------------------------------'
 
 
     Private Sub rdb_J1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_J1.CheckedChanged

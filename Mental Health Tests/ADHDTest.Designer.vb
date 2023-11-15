@@ -968,7 +968,7 @@ Partial Class ADHDTest
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(161, 3625)
+        Me.Label18.Location = New System.Drawing.Point(161, 3620)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(78, 17)
         Me.Label18.TabIndex = 142
@@ -977,7 +977,7 @@ Partial Class ADHDTest
         'Label19
         '
         Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei Light", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(171, 3625)
+        Me.Label19.Location = New System.Drawing.Point(164, 3620)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(863, 119)
         Me.Label19.TabIndex = 141
@@ -987,22 +987,23 @@ Partial Class ADHDTest
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(158, 3550)
+        Me.LinkLabel1.Location = New System.Drawing.Point(650, 3547)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(499, 19)
+        Me.LinkLabel1.Size = New System.Drawing.Size(296, 19)
         Me.LinkLabel1.TabIndex = 140
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "http://onlinelibrary.wiley.com/doi/10.1046/j.1525-1497.2001.016009606.x/pdf"
+        Me.LinkLabel1.Text = "https://doi.org/10.1017/s0033291704002892"
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(158, 3509)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(721, 19)
+        Me.Label17.Size = New System.Drawing.Size(677, 57)
         Me.Label17.TabIndex = 139
-        Me.Label17.Text = "Kroenke, Spitzer, & Williams. (2001). The PHQ‐9. Journal of General Internal Medi" &
-    "cine 16(9), 606-613. Retrieved from "
+        Me.Label17.Text = "Kessler et al. (2005). The World Health Organization Adult ADHD Self-Report Scale" &
+    " (ASRS): a short screening " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "scale for use in the general population. Psycholo" &
+    "gical medicine, 35(2), 245–256"
         '
         'Label16
         '
@@ -1829,9 +1830,9 @@ Partial Class ADHDTest
         'Label1
         '
         Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.ADHDHeader
-        Me.Label1.Location = New System.Drawing.Point(1, 1)
+        Me.Label1.Location = New System.Drawing.Point(-5, -3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1152, 218)
+        Me.Label1.Size = New System.Drawing.Size(1104, 218)
         Me.Label1.TabIndex = 123
         '
         'ADHDTest
@@ -1840,7 +1841,7 @@ Partial Class ADHDTest
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1195, 719)
+        Me.ClientSize = New System.Drawing.Size(1123, 719)
         Me.Controls.Add(Me.Panel16)
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Panel18)

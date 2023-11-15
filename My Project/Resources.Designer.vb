@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property AddictionHeader() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AddictionHeader", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property addictionIcon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("addictionIcon", resourceCulture)
@@ -106,6 +116,16 @@ Namespace My.Resources
         Friend ReadOnly Property AnxietyHeader() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("AnxietyHeader", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AnxietyHeader1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AnxietyHeader1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -336,6 +356,16 @@ Namespace My.Resources
         Friend ReadOnly Property profit_report() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("profit-report", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property PTSDHeader() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("PTSDHeader", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

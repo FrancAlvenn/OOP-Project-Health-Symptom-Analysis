@@ -130,6 +130,9 @@
   <data name="Temporary Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Temporary Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ADHDHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\ADHDHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="DepressionHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\DepressionHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,9 +163,6 @@
   <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AnxietyHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\AnxietyHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Welcome to SymptoMedicHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Welcome to SymptoMedicHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +172,8 @@
   <data name="user(small)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\user(small).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="information-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\information-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AnxietyHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\AnxietyHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,8 +190,8 @@
   <data name="plus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home(big)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\home(big).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,8 +199,14 @@
   <data name="addictionIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\addictionIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AnxietyHeader1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\AnxietyHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="feedback" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\feedback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PTSDHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\PTSDHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,16 +229,19 @@
   <data name="clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="information-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\information-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="depressionIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\depressionIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="home(big)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\home(big).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ContactUsheader" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\ContactUsheader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ADHDHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\ADHDHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddictionHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\AddictionHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

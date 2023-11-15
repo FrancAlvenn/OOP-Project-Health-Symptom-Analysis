@@ -414,6 +414,12 @@
   <ItemGroup>
     <None Include="Icons\ADHDHeader.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\PTSDHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\AddictionHeader.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

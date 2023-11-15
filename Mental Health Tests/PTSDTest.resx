@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Sometimes things happen to people that are unusually or especially frightening, - horrible, or traumatic. For example:
+
+
+- a serious accident or fire
+- a physical or sexual assault or abuse
+- an earthquake or flood
+- a war
+- seeing someone be killed or seriously injured
+- having a loved one die through homicide or suicide.
+
+
+Have you ever experienced this kind of event?</value>
+  </data>
+  <data name="Label19.Text" xml:space="preserve">
+    <value>                  This mental assessment is not diagnostic instruments. You are encouraged to share your results with a physician or healthcare provider. 
+SymptoMedic disclaim any liability, loss, or risk incurred as a consequence, directly or indirectly, from the use and application of these screens.</value>
+  </data>
 </root>

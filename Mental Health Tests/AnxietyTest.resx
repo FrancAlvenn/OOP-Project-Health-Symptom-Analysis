@@ -117,4 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label19.Text" xml:space="preserve">
+    <value>                  This mental assessment is not diagnostic instruments. You are encouraged to share your results with a physician or healthcare provider. 
+SymptoMedic disclaim any liability, loss, or risk incurred as a consequence, directly or indirectly, from the use and application of these screens.</value>
+  </data>
 </root>
