@@ -94,6 +94,8 @@ Partial Class DepressionTest
         Me.rdb_J3 = New System.Windows.Forms.RadioButton()
         Me.rdb_J2 = New System.Windows.Forms.RadioButton()
         Me.rdb_J1 = New System.Windows.Forms.RadioButton()
+        Me.backButton = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -104,6 +106,7 @@ Partial Class DepressionTest
         Me.Panel8.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel10.SuspendLayout()
+        Me.Panel11.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -943,6 +946,23 @@ Partial Class DepressionTest
         Me.rdb_J1.Text = "NOT AT ALL"
         Me.rdb_J1.UseVisualStyleBackColor = False
         '
+        'backButton
+        '
+        Me.backButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.backButton.Image = CType(resources.GetObject("backButton.Image"), System.Drawing.Image)
+        Me.backButton.Location = New System.Drawing.Point(17, 0)
+        Me.backButton.Name = "backButton"
+        Me.backButton.Size = New System.Drawing.Size(42, 38)
+        Me.backButton.TabIndex = 155
+        '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.backButton)
+        Me.Panel11.Location = New System.Drawing.Point(-5, 12)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(73, 120)
+        Me.Panel11.TabIndex = 156
+        '
         'DepressionTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -950,6 +970,7 @@ Partial Class DepressionTest
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1127, 719)
+        Me.Controls.Add(Me.Panel11)
         Me.Controls.Add(Me.Panel10)
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel8)
@@ -995,6 +1016,7 @@ Partial Class DepressionTest
         Me.Panel8.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
         Me.Panel10.ResumeLayout(False)
+        Me.Panel11.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1071,4 +1093,6 @@ Partial Class DepressionTest
     Friend WithEvents rdb_J3 As RadioButton
     Friend WithEvents rdb_J2 As RadioButton
     Friend WithEvents rdb_J1 As RadioButton
+    Friend WithEvents backButton As Label
+    Friend WithEvents Panel11 As Panel
 End Class

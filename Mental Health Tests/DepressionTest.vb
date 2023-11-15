@@ -200,4 +200,8 @@
     Private Sub rdb_J4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_J4.CheckedChanged
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
+
+    Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
+        MainForm.childForm(MentalAssessment)
+    End Sub
 End Class

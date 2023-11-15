@@ -24,7 +24,6 @@ Partial Class PTSDTest
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PTSDTest))
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -55,6 +54,8 @@ Partial Class PTSDTest
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button40 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.backButton = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -65,25 +66,17 @@ Partial Class PTSDTest
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(102, 274)
+        Me.Label3.Location = New System.Drawing.Point(100, 274)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(728, 228)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = resources.GetString("Label3.Text")
         '
-        'Label1
-        '
-        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.PTSDHeader
-        Me.Label1.Location = New System.Drawing.Point(0, -1)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1068, 218)
-        Me.Label1.TabIndex = 4
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(102, 534)
+        Me.Label2.Location = New System.Drawing.Point(100, 534)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(294, 19)
         Me.Label2.TabIndex = 5
@@ -92,7 +85,7 @@ Partial Class PTSDTest
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(106, 587)
+        Me.Label4.Location = New System.Drawing.Point(104, 587)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(195, 19)
         Me.Label4.TabIndex = 6
@@ -102,7 +95,7 @@ Partial Class PTSDTest
         '
         Me.Panel1.Controls.Add(Me.rdb_A2)
         Me.Panel1.Controls.Add(Me.rdb_A1)
-        Me.Panel1.Location = New System.Drawing.Point(155, 701)
+        Me.Panel1.Location = New System.Drawing.Point(153, 701)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(271, 68)
         Me.Panel1.TabIndex = 119
@@ -136,7 +129,7 @@ Partial Class PTSDTest
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(106, 659)
+        Me.Label5.Location = New System.Drawing.Point(104, 659)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(592, 19)
         Me.Label5.TabIndex = 118
@@ -147,7 +140,7 @@ Partial Class PTSDTest
         '
         Me.Panel3.Controls.Add(Me.rdb_B2)
         Me.Panel3.Controls.Add(Me.rdb_B1)
-        Me.Panel3.Location = New System.Drawing.Point(155, 848)
+        Me.Panel3.Location = New System.Drawing.Point(153, 848)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(271, 68)
         Me.Panel3.TabIndex = 121
@@ -181,7 +174,7 @@ Partial Class PTSDTest
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(106, 806)
+        Me.Label6.Location = New System.Drawing.Point(104, 806)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(764, 19)
         Me.Label6.TabIndex = 120
@@ -192,7 +185,7 @@ Partial Class PTSDTest
         '
         Me.Panel4.Controls.Add(Me.rdb_C2)
         Me.Panel4.Controls.Add(Me.rdb_C1)
-        Me.Panel4.Location = New System.Drawing.Point(155, 995)
+        Me.Panel4.Location = New System.Drawing.Point(153, 995)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(271, 68)
         Me.Panel4.TabIndex = 123
@@ -226,7 +219,7 @@ Partial Class PTSDTest
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(106, 953)
+        Me.Label7.Location = New System.Drawing.Point(104, 953)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(355, 19)
         Me.Label7.TabIndex = 122
@@ -236,7 +229,7 @@ Partial Class PTSDTest
         '
         Me.Panel5.Controls.Add(Me.rdb_D2)
         Me.Panel5.Controls.Add(Me.rdb_D1)
-        Me.Panel5.Location = New System.Drawing.Point(155, 1150)
+        Me.Panel5.Location = New System.Drawing.Point(153, 1150)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(271, 68)
         Me.Panel5.TabIndex = 125
@@ -270,7 +263,7 @@ Partial Class PTSDTest
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(106, 1108)
+        Me.Label8.Location = New System.Drawing.Point(104, 1108)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(444, 19)
         Me.Label8.TabIndex = 124
@@ -280,7 +273,7 @@ Partial Class PTSDTest
         '
         Me.Panel6.Controls.Add(Me.rdb_E2)
         Me.Panel6.Controls.Add(Me.rdb_E1)
-        Me.Panel6.Location = New System.Drawing.Point(155, 1310)
+        Me.Panel6.Location = New System.Drawing.Point(153, 1310)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(271, 68)
         Me.Panel6.TabIndex = 123
@@ -314,7 +307,7 @@ Partial Class PTSDTest
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(106, 1268)
+        Me.Label9.Location = New System.Drawing.Point(104, 1268)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(752, 19)
         Me.Label9.TabIndex = 122
@@ -325,7 +318,7 @@ Partial Class PTSDTest
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(145, 1765)
+        Me.Label18.Location = New System.Drawing.Point(143, 1765)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(78, 17)
         Me.Label18.TabIndex = 131
@@ -334,7 +327,7 @@ Partial Class PTSDTest
         'Label19
         '
         Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei Light", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(155, 1765)
+        Me.Label19.Location = New System.Drawing.Point(153, 1765)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(863, 119)
         Me.Label19.TabIndex = 130
@@ -344,7 +337,7 @@ Partial Class PTSDTest
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(459, 1695)
+        Me.LinkLabel1.Location = New System.Drawing.Point(457, 1695)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(448, 19)
         Me.LinkLabel1.TabIndex = 129
@@ -354,7 +347,7 @@ Partial Class PTSDTest
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(142, 1649)
+        Me.Label17.Location = New System.Drawing.Point(140, 1649)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(666, 19)
         Me.Label17.TabIndex = 128
@@ -364,7 +357,7 @@ Partial Class PTSDTest
         'Label16
         '
         Me.Label16.BackColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(90, 1549)
+        Me.Label16.Location = New System.Drawing.Point(88, 1549)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(900, 1)
         Me.Label16.TabIndex = 127
@@ -375,7 +368,7 @@ Partial Class PTSDTest
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(105, 1580)
+        Me.Label15.Location = New System.Drawing.Point(103, 1580)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(86, 28)
         Me.Label15.TabIndex = 126
@@ -390,7 +383,7 @@ Partial Class PTSDTest
         Me.Button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button40.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button40.ForeColor = System.Drawing.Color.Black
-        Me.Button40.Location = New System.Drawing.Point(780, 1423)
+        Me.Button40.Location = New System.Drawing.Point(778, 1423)
         Me.Button40.Name = "Button40"
         Me.Button40.Size = New System.Drawing.Size(157, 37)
         Me.Button40.TabIndex = 132
@@ -400,11 +393,28 @@ Partial Class PTSDTest
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(146, 1695)
+        Me.Label10.Location = New System.Drawing.Point(144, 1695)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(317, 19)
         Me.Label10.TabIndex = 133
         Me.Label10.Text = "PC-PTSSD is in the Public Domain and available at"
+        '
+        'Label1
+        '
+        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.PTSDHeader
+        Me.Label1.Location = New System.Drawing.Point(-2, -1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1068, 218)
+        Me.Label1.TabIndex = 4
+        '
+        'backButton
+        '
+        Me.backButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.backButton.Image = CType(resources.GetObject("backButton.Image"), System.Drawing.Image)
+        Me.backButton.Location = New System.Drawing.Point(12, 9)
+        Me.backButton.Name = "backButton"
+        Me.backButton.Size = New System.Drawing.Size(42, 38)
+        Me.backButton.TabIndex = 155
         '
         'PTSDTest
         '
@@ -412,7 +422,8 @@ Partial Class PTSDTest
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1127, 719)
+        Me.ClientSize = New System.Drawing.Size(1178, 719)
+        Me.Controls.Add(Me.backButton)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Button40)
         Me.Controls.Add(Me.Label18)
@@ -437,7 +448,7 @@ Partial Class PTSDTest
         Me.Controls.Add(Me.Label3)
         Me.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
         Me.ForeColor = System.Drawing.Color.Black
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "PTSDTest"
         Me.Text = "PTSDTest"
         Me.Panel1.ResumeLayout(False)
@@ -482,4 +493,5 @@ Partial Class PTSDTest
     Friend WithEvents Label15 As Label
     Friend WithEvents Button40 As Button
     Friend WithEvents Label10 As Label
+    Friend WithEvents backButton As Label
 End Class

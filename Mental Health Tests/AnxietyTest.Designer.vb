@@ -76,6 +76,8 @@ Partial Class AnxietyTest
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.backButton = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -83,6 +85,7 @@ Partial Class AnxietyTest
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.Panel8.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel7
@@ -702,6 +705,23 @@ Partial Class AnxietyTest
         Me.Label1.Size = New System.Drawing.Size(1093, 218)
         Me.Label1.TabIndex = 123
         '
+        'backButton
+        '
+        Me.backButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.backButton.Image = CType(resources.GetObject("backButton.Image"), System.Drawing.Image)
+        Me.backButton.Location = New System.Drawing.Point(21, 9)
+        Me.backButton.Name = "backButton"
+        Me.backButton.Size = New System.Drawing.Size(42, 38)
+        Me.backButton.TabIndex = 155
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.backButton)
+        Me.Panel8.Location = New System.Drawing.Point(-9, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(111, 82)
+        Me.Panel8.TabIndex = 156
+        '
         'AnxietyTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -709,6 +729,7 @@ Partial Class AnxietyTest
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1144, 719)
+        Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
@@ -736,7 +757,7 @@ Partial Class AnxietyTest
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
         Me.ForeColor = System.Drawing.Color.Black
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AnxietyTest"
         Me.Text = "Anxiety"
         Me.Panel7.ResumeLayout(False)
@@ -746,6 +767,7 @@ Partial Class AnxietyTest
         Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -804,4 +826,6 @@ Partial Class AnxietyTest
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents backButton As Label
+    Friend WithEvents Panel8 As Panel
 End Class

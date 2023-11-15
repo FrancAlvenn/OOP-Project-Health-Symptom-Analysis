@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AddictionTest
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,9 @@ Partial Class AddictionTest
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddictionTest))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -61,19 +60,13 @@ Partial Class AddictionTest
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.backButton = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.AddictionHeader
-        Me.Label1.Location = New System.Drawing.Point(-2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1068, 218)
-        Me.Label1.TabIndex = 1
         '
         'Label3
         '
@@ -459,13 +452,31 @@ Partial Class AddictionTest
         Me.Label15.TabIndex = 147
         Me.Label15.Text = "Source:"
         '
+        'backButton
+        '
+        Me.backButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.backButton.Image = CType(resources.GetObject("backButton.Image"), System.Drawing.Image)
+        Me.backButton.Location = New System.Drawing.Point(23, 9)
+        Me.backButton.Name = "backButton"
+        Me.backButton.Size = New System.Drawing.Size(42, 36)
+        Me.backButton.TabIndex = 154
+        '
+        'Label1
+        '
+        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.AddictionHeader
+        Me.Label1.Location = New System.Drawing.Point(-2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1068, 218)
+        Me.Label1.TabIndex = 1
+        '
         'AddictionTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1161, 719)
+        Me.ClientSize = New System.Drawing.Size(1246, 719)
+        Me.Controls.Add(Me.backButton)
         Me.Controls.Add(Me.Button40)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label19)
@@ -548,4 +559,5 @@ Partial Class AddictionTest
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents backButton As Label
 End Class

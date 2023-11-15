@@ -126,4 +126,20 @@ SymptoMedic disclaim any liability, loss, or risk incurred as a consequence, dir
 
 how you have felt and conducted yourself over the past 6 months.</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="backButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCw8EBCXARxlCAAACF0lEQVRYR8WXzUrDQBDHV8EvtIog
+        iEc/bnrwZRR9AJ9DEIqehbambbYinnwKPdSvS8U30Fv1aAttL+P8k20tyaTdNAkO/MiSzFc2u7MTZS0u
+        5ZSmY1WlCo9fmS+mZ8D4hSkzR0zOWKUgDm2wwxLTZsiStpdolXaMlwnkjhbY0RnTGnIclx7P2oW6pDnj
+        1VKQuUvvAWdJqKsKrRvvY6RG+2zQDDhIg09mz0SJEP/Nswjuo+kjeiZqNM9KjZBR+jzKa8JfcJJBFpyb
+        qEb8rZZktWt1S8t8PQncj6KrrmnbRGfx97mkOB7s91Oa9vwUaVXUkSl7NjzIMXGKzB/DwXHFTEh6Mi1V
+        oCXllVdZYTTB4H6JlnWjOcTWi2+YTnDg4BPgYJEeymhyB8GJpvheMaRji6YnJPAdehBNNaU379NEAt3A
+        zSgaKQcHnTgJvGWVwL9/gmSLUFNB1LPBLEK0UbJCFHjzNGZC0xUSQA8nK4wijSSqdIAE/qcUa/pRN7To
+        2U48hWA4iXiHEVfBvvidENprSdEGzUf6Cl9tj+MOd0abJroRdK+ychbkTdQhcWiGHzwEFLOgHt2mo2H0
+        u1fJMDkjm9K+oHXOIgkEL9OuiTJGHFpjo/uQk8mJ8WPSF3wndK/2h5UEbPP8mzdrvE4gmrbYCcq1fdeM
+        IoN9HtpqSQQNJHo41G+Xnhn8QeENAca4V/LK66DCjROlfgGYuTDvD4bZ8wAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

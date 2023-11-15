@@ -158,6 +158,7 @@ Partial Class ADHDTest
         Me.rdb_R1 = New System.Windows.Forms.RadioButton()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.backButton = New System.Windows.Forms.Label()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -1835,13 +1836,23 @@ Partial Class ADHDTest
         Me.Label1.Size = New System.Drawing.Size(1104, 218)
         Me.Label1.TabIndex = 123
         '
+        'backButton
+        '
+        Me.backButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.backButton.Image = CType(resources.GetObject("backButton.Image"), System.Drawing.Image)
+        Me.backButton.Location = New System.Drawing.Point(12, 9)
+        Me.backButton.Name = "backButton"
+        Me.backButton.Size = New System.Drawing.Size(42, 38)
+        Me.backButton.TabIndex = 165
+        '
         'ADHDTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1123, 719)
+        Me.ClientSize = New System.Drawing.Size(1191, 719)
+        Me.Controls.Add(Me.backButton)
         Me.Controls.Add(Me.Panel16)
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Panel18)
@@ -2050,4 +2061,5 @@ Partial Class ADHDTest
     Friend WithEvents rdb_R2 As RadioButton
     Friend WithEvents rdb_R1 As RadioButton
     Friend WithEvents Label23 As Label
+    Friend WithEvents backButton As Label
 End Class
