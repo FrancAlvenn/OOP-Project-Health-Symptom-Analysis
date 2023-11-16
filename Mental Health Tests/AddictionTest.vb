@@ -1,4 +1,5 @@
 ﻿Public Class AddictionTest
+    Public looper As Integer = 0
     Private Sub CustomPaintCheckBox(checkbox As CheckBox, g As Graphics)
         Dim checkBoxRect As Rectangle = New Rectangle(0, 0, checkbox.Width, checkbox.Height)
 
@@ -15,43 +16,64 @@
             g.FillEllipse(Brushes.LightGray, circleRect)
         End If
     End Sub
-    Private Sub CheckBox1_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox1.Paint
+
+    Private Sub UpdateLabel()
+        ' Clear the label text
+        Dim items As String = "Checked items: "
+
+        ' Iterate through all controls in the form
+        For Each ctrl As Control In Me.Controls
+            ' Check if the control is a CheckBox
+            If TypeOf ctrl Is CheckBox Then
+                Dim checkbox As CheckBox = DirectCast(ctrl, CheckBox)
+
+                ' If the checkbox is checked, append its text to the label
+                If checkbox.Checked Then
+                    items &= checkbox.Text & ", "
+                End If
+            End If
+        Next
+
+        ' Remove the trailing comma and space
+        items = items.TrimEnd(", ".ToCharArray())
+    End Sub
+    Private Sub CheckBox1_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox2_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox2.Paint
+    Private Sub CheckBox2_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox3_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox3.Paint
+    Private Sub CheckBox3_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox4_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox4.Paint
+    Private Sub CheckBox4_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox5_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox5.Paint
+    Private Sub CheckBox5_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox6_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox6.Paint
+    Private Sub CheckBox6_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox7_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox7.Paint
+    Private Sub CheckBox7_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox8_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox8.Paint
+    Private Sub CheckBox8_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox9_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox9.Paint
+    Private Sub CheckBox9_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
-    Private Sub CheckBox10_Paint(sender As Object, e As PaintEventArgs) Handles CheckBox10.Paint
+    Private Sub CheckBox10_Paint(sender As Object, e As PaintEventArgs)
         CustomPaintCheckBox(DirectCast(sender, CheckBox), e.Graphics)
     End Sub
 
@@ -117,4 +139,27 @@
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
         MainForm.childForm(MentalAssessment)
     End Sub
+
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+        If looper < 4 Then
+            IsAnyRadioButtonSelected(Panel1)
+            IsAnyRadioButtonSelected(Panel3)
+            IsAnyRadioButtonSelected(Panel4)
+            IsAnyRadioButtonSelected(Panel5)
+        Else
+            MainForm.childForm(AddictionResultForm)
+        End If
+    End Sub
+
+    Private Function IsAnyRadioButtonSelected(panel As Panel) As Boolean
+        For Each radioButton As RadioButton In panel.Controls.OfType(Of RadioButton)()
+            If radioButton.Checked Then
+                looper += 1
+                Return True
+            End If
+        Next
+
+        MsgBox("Please answer all the questions!", vbInformation, "Message!")
+        Return False
+    End Function
 End Class

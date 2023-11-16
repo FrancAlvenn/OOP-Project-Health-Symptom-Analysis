@@ -43,17 +43,7 @@ Partial Class AddictionTest
         Me.rdb_A2 = New System.Windows.Forms.RadioButton()
         Me.rdb_A1 = New System.Windows.Forms.RadioButton()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
-        Me.Button40 = New System.Windows.Forms.Button()
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
@@ -62,6 +52,7 @@ Partial Class AddictionTest
         Me.Label15 = New System.Windows.Forms.Label()
         Me.backButton = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtConcern = New System.Windows.Forms.TextBox()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -106,9 +97,9 @@ Partial Class AddictionTest
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(102, 1094)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(351, 57)
+        Me.Label9.Size = New System.Drawing.Size(351, 19)
         Me.Label9.TabIndex = 130
-        Me.Label9.Text = "What substance or addiction are you concerned about?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Select all that apply." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label9.Text = "What substance or addiction are you concerned about?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Panel5
         '
@@ -287,117 +278,27 @@ Partial Class AddictionTest
         Me.Label5.TabIndex = 126
         Me.Label5.Text = "Have you ever felt that you ought to cut down on your drinking or drug use?"
         '
-        'CheckBox1
+        'btnSubmit
         '
-        Me.CheckBox1.Location = New System.Drawing.Point(135, 1188)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox1.TabIndex = 137
-        Me.CheckBox1.Text = "     Alcohol"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.Location = New System.Drawing.Point(135, 1236)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox2.TabIndex = 138
-        Me.CheckBox2.Text = "     Marijuana"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.Location = New System.Drawing.Point(135, 1284)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox3.TabIndex = 139
-        Me.CheckBox3.Text = "     Cocaine/Crack"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.Location = New System.Drawing.Point(135, 1332)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox4.TabIndex = 140
-        Me.CheckBox4.Text = "     Heroin"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.Location = New System.Drawing.Point(135, 1380)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox5.TabIndex = 141
-        Me.CheckBox5.Text = "     Prescription Opioids"
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.Location = New System.Drawing.Point(135, 1428)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox6.TabIndex = 142
-        Me.CheckBox6.Text = "     Stimulants (e.g. Speed, Meth, Prescription Stims)"
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'CheckBox7
-        '
-        Me.CheckBox7.Location = New System.Drawing.Point(135, 1476)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox7.TabIndex = 143
-        Me.CheckBox7.Text = "     Benzodiazepines (e.g. Xanax, Valium)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.CheckBox7.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.Location = New System.Drawing.Point(135, 1524)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox8.TabIndex = 144
-        Me.CheckBox8.Text = "     Tobacco"
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
-        'CheckBox9
-        '
-        Me.CheckBox9.Location = New System.Drawing.Point(135, 1572)
-        Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox9.TabIndex = 145
-        Me.CheckBox9.Text = "     Self-harm" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.CheckBox9.UseVisualStyleBackColor = True
-        '
-        'CheckBox10
-        '
-        Me.CheckBox10.Location = New System.Drawing.Point(135, 1620)
-        Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(446, 42)
-        Me.CheckBox10.TabIndex = 146
-        Me.CheckBox10.Text = "     Other (e.g. gambling, sex, internet, shopping, food, etc.)"
-        Me.CheckBox10.UseVisualStyleBackColor = True
-        '
-        'Button40
-        '
-        Me.Button40.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.Button40.FlatAppearance.BorderSize = 0
-        Me.Button40.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button40.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button40.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button40.ForeColor = System.Drawing.Color.Black
-        Me.Button40.Location = New System.Drawing.Point(840, 1742)
-        Me.Button40.Name = "Button40"
-        Me.Button40.Size = New System.Drawing.Size(157, 37)
-        Me.Button40.TabIndex = 153
-        Me.Button40.Text = "SUBMIT"
-        Me.Button40.UseVisualStyleBackColor = False
+        Me.btnSubmit.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnSubmit.FlatAppearance.BorderSize = 0
+        Me.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubmit.ForeColor = System.Drawing.Color.Black
+        Me.btnSubmit.Location = New System.Drawing.Point(818, 1263)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(157, 37)
+        Me.btnSubmit.TabIndex = 153
+        Me.btnSubmit.Text = "SUBMIT"
+        Me.btnSubmit.UseVisualStyleBackColor = False
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(168, 2062)
+        Me.Label18.Location = New System.Drawing.Point(150, 1608)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(78, 17)
         Me.Label18.TabIndex = 152
@@ -406,7 +307,7 @@ Partial Class AddictionTest
         'Label19
         '
         Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei Light", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(178, 2062)
+        Me.Label19.Location = New System.Drawing.Point(160, 1608)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(863, 119)
         Me.Label19.TabIndex = 151
@@ -416,7 +317,7 @@ Partial Class AddictionTest
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(551, 1984)
+        Me.LinkLabel1.Location = New System.Drawing.Point(533, 1530)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(288, 19)
         Me.LinkLabel1.TabIndex = 150
@@ -426,7 +327,7 @@ Partial Class AddictionTest
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(165, 1946)
+        Me.Label17.Location = New System.Drawing.Point(147, 1492)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(843, 57)
         Me.Label17.TabIndex = 149
@@ -435,7 +336,7 @@ Partial Class AddictionTest
         'Label16
         '
         Me.Label16.BackColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(113, 1846)
+        Me.Label16.Location = New System.Drawing.Point(95, 1392)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(900, 1)
         Me.Label16.TabIndex = 148
@@ -446,7 +347,7 @@ Partial Class AddictionTest
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(128, 1877)
+        Me.Label15.Location = New System.Drawing.Point(110, 1423)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(86, 28)
         Me.Label15.TabIndex = 147
@@ -469,31 +370,29 @@ Partial Class AddictionTest
         Me.Label1.Size = New System.Drawing.Size(1068, 218)
         Me.Label1.TabIndex = 1
         '
+        'txtConcern
+        '
+        Me.txtConcern.Location = New System.Drawing.Point(151, 1138)
+        Me.txtConcern.Name = "txtConcern"
+        Me.txtConcern.Size = New System.Drawing.Size(271, 25)
+        Me.txtConcern.TabIndex = 155
+        '
         'AddictionTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1246, 719)
+        Me.ClientSize = New System.Drawing.Size(1152, 719)
+        Me.Controls.Add(Me.txtConcern)
         Me.Controls.Add(Me.backButton)
-        Me.Controls.Add(Me.Button40)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.CheckBox10)
-        Me.Controls.Add(Me.CheckBox9)
-        Me.Controls.Add(Me.CheckBox8)
-        Me.Controls.Add(Me.CheckBox7)
-        Me.Controls.Add(Me.CheckBox6)
-        Me.Controls.Add(Me.CheckBox5)
-        Me.Controls.Add(Me.CheckBox4)
-        Me.Controls.Add(Me.CheckBox3)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Label8)
@@ -542,17 +441,7 @@ Partial Class AddictionTest
     Friend WithEvents rdb_A2 As RadioButton
     Friend WithEvents rdb_A1 As RadioButton
     Friend WithEvents Label5 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox7 As CheckBox
-    Friend WithEvents CheckBox8 As CheckBox
-    Friend WithEvents CheckBox9 As CheckBox
-    Friend WithEvents CheckBox10 As CheckBox
-    Friend WithEvents Button40 As Button
+    Friend WithEvents btnSubmit As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
@@ -560,4 +449,5 @@ Partial Class AddictionTest
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents backButton As Label
+    Friend WithEvents txtConcern As TextBox
 End Class

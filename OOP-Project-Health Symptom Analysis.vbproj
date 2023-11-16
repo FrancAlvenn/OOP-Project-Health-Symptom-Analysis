@@ -129,6 +129,12 @@
     <Compile Include="Admin\AdminForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mental Health Tests\AddictionResultForm.Designer.vb">
+      <DependentUpon>AddictionResultForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\AddictionResultForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -243,6 +249,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin\AdminForm.resx">
       <DependentUpon>AdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\AddictionResultForm.resx">
+      <DependentUpon>AddictionResultForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavbarForms\About.resx">
       <DependentUpon>About.vb</DependentUpon>
@@ -422,6 +431,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\TestResultHeader.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
