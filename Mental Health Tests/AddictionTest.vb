@@ -1,5 +1,6 @@
 ﻿Public Class AddictionTest
     Public looper As Integer = 0
+    Public scorer As Integer = 0
     Private Sub CustomPaintCheckBox(checkbox As CheckBox, g As Graphics)
         Dim checkBoxRect As Rectangle = New Rectangle(0, 0, checkbox.Width, checkbox.Height)
 
@@ -149,6 +150,27 @@
         Else
             MainForm.childForm(AddictionResultForm)
         End If
+
+        If rdb_A2.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_B2.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_C2.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_D2.Checked Then
+            scorer += 1
+        End If
+
+
+
+
+
     End Sub
 
     Private Function IsAnyRadioButtonSelected(panel As Panel) As Boolean

@@ -26,7 +26,7 @@ Partial Class AddictionResultForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.backButton = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.testResult = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -74,22 +74,22 @@ Partial Class AddictionResultForm
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.testResult)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(117, 254)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(804, 165)
         Me.Panel1.TabIndex = 156
         '
-        'Label3
+        'testResult
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(48, 74)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(604, 36)
-        Me.Label3.TabIndex = 158
-        Me.Label3.Text = "Unlikely Alcohol or Substance Use Problem" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.testResult.AutoSize = True
+        Me.testResult.Font = New System.Drawing.Font("Microsoft YaHei", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.testResult.Location = New System.Drawing.Point(48, 74)
+        Me.testResult.Name = "testResult"
+        Me.testResult.Size = New System.Drawing.Size(72, 36)
+        Me.testResult.TabIndex = 158
+        Me.testResult.Text = "Null"
         '
         'Label2
         '
@@ -357,7 +357,7 @@ Partial Class AddictionResultForm
     Friend WithEvents Label1 As Label
     Friend WithEvents backButton As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label3 As Label
+    Friend WithEvents testResult As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label

@@ -1,4 +1,6 @@
 ﻿Public Class AddictionResultForm
+    Public underTwo As String = "Unlikely Alcohol or Substance Use Problem"
+    Public aboveTwo As String = "Likely Alcohol or Substance Use Problem"
     Private Sub AddictionResultForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         If AddictionTest.rdb_A1.Checked Then
             q1.Text = AddictionTest.rdb_A1.Text
@@ -24,6 +26,23 @@
             q4.Text = AddictionTest.rdb_D2.Text
         End If
 
+
+
         q5.Text = AddictionTest.txtConcern.Text
+
+        If AddictionTest.scorer <= 2 Then
+            testResult.Text = underTwo
+        Else
+            testResult.Text = aboveTwo
+        End If
+
+    End Sub
+
+    Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
+        MainForm.childForm(MentalAssessment)
+    End Sub
+
+    Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+        MainForm.childForm(MentalAssessment)
     End Sub
 End Class
