@@ -1,4 +1,6 @@
 ﻿Public Class DepressionTest
+    Public looper As Integer = 0
+    Public scorer As Integer = 0
     Private Sub UpdateRadioButtonAppearance(selectedRadioButton As RadioButton)
         If selectedRadioButton.Checked Then
             ' Change the color for the selected radio button
@@ -185,23 +187,145 @@
     '---------SET 10------------------------------------------------------------------------------------------------------'
 
 
-    Private Sub rdb_J1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_J1.CheckedChanged
+    Private Sub rdb_J1_CheckedChanged(sender As Object, e As EventArgs)
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
-    Private Sub rdb_J2_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_J2.CheckedChanged
+    Private Sub rdb_J2_CheckedChanged(sender As Object, e As EventArgs)
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
-    Private Sub rdb_J3_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_J3.CheckedChanged
+    Private Sub rdb_J3_CheckedChanged(sender As Object, e As EventArgs)
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
-    Private Sub rdb_J4_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_J4.CheckedChanged
+    Private Sub rdb_J4_CheckedChanged(sender As Object, e As EventArgs)
         UpdateRadioButtonAppearance(DirectCast(sender, RadioButton))
     End Sub
 
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
         MainForm.childForm(MentalAssessment)
+
+
     End Sub
+
+    Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+        If looper < 9 Then
+            IsAnyRadioButtonSelected(Panel1)
+            IsAnyRadioButtonSelected(Panel2)
+            IsAnyRadioButtonSelected(Panel3)
+            IsAnyRadioButtonSelected(Panel4)
+            IsAnyRadioButtonSelected(Panel5)
+            IsAnyRadioButtonSelected(Panel6)
+            IsAnyRadioButtonSelected(Panel7)
+            IsAnyRadioButtonSelected(Panel8)
+            IsAnyRadioButtonSelected(Panel9)
+        Else
+            MainForm.childForm(DepressionResultForm)
+        End If
+
+
+        If rdb_A1.Checked Then
+            scorer += 0
+        ElseIf rdb_A2.Checked Then
+            scorer += 1
+        ElseIf rdb_A3.Checked Then
+            scorer += 2
+        ElseIf rdb_A4.Checked Then
+            scorer += 3
+        End If
+
+        If rdb_B1.Checked Then
+            scorer += 0
+        ElseIf rdb_B2.Checked Then
+            scorer += 1
+        ElseIf rdb_B3.Checked Then
+            scorer += 2
+        ElseIf rdb_B4.Checked Then
+            scorer += 3
+        End If
+
+        If rdb_C1.Checked Then
+            scorer += 0
+        ElseIf rdb_C2.Checked Then
+            scorer += 1
+        ElseIf rdb_C3.Checked Then
+            scorer += 2
+        ElseIf rdb_C4.Checked Then
+            scorer += 3
+        End If
+
+        If rdb_D1.Checked Then
+            scorer += 0
+        ElseIf rdb_D2.Checked Then
+            scorer += 1
+        ElseIf rdb_D3.Checked Then
+            scorer += 2
+        ElseIf rdb_D4.Checked Then
+            scorer += 3
+        End If
+
+        If rdb_E1.Checked Then
+            scorer += 0
+        ElseIf rdb_E2.Checked Then
+            scorer += 1
+        ElseIf rdb_E3.Checked Then
+            scorer += 2
+        ElseIf rdb_E4.Checked Then
+            scorer += 3
+        End If
+
+        If rdb_F1.Checked Then
+            scorer += 0
+        ElseIf rdb_F2.Checked Then
+            scorer += 1
+        ElseIf rdb_F3.Checked Then
+            scorer += 2
+        ElseIf rdb_F4.Checked Then
+            scorer += 3
+        End If
+
+        If rdb_G1.Checked Then
+            scorer += 0
+        ElseIf rdb_G2.Checked Then
+            scorer += 1
+        ElseIf rdb_G3.Checked Then
+            scorer += 2
+        ElseIf rdb_G4.Checked Then
+            scorer += 3
+        End If
+
+        If rdb_H1.Checked Then
+            scorer += 0
+        ElseIf rdb_H2.Checked Then
+            scorer += 1
+        ElseIf rdb_H3.Checked Then
+            scorer += 2
+        ElseIf rdb_H4.Checked Then
+            scorer += 3
+        End If
+
+        If rdb_I1.Checked Then
+            scorer += 0
+        ElseIf rdb_I2.Checked Then
+            scorer += 1
+        ElseIf rdb_I3.Checked Then
+            scorer += 2
+        ElseIf rdb_I4.Checked Then
+            scorer += 3
+        End If
+    End Sub
+
+
+    Private Function IsAnyRadioButtonSelected(panel As Panel) As Boolean
+        For Each radioButton As RadioButton In panel.Controls.OfType(Of RadioButton)()
+            If radioButton.Checked Then
+                looper += 1
+                Return True
+            End If
+        Next
+
+        MsgBox("Please answer all the questions!", vbInformation, "Message!")
+        Return False
+    End Function
 End Class

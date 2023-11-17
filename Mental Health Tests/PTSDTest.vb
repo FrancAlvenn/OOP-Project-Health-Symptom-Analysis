@@ -1,4 +1,6 @@
 ﻿Public Class PTSDTest
+    Public looper As Integer = 0
+    Public scorer As Integer = 0
     Private Sub UpdateRadioButtonAppearance(selectedRadioButton As RadioButton)
         If selectedRadioButton.Checked Then
             ' Change the color for the selected radio button
@@ -71,4 +73,64 @@
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
         MainForm.childForm(MentalAssessment)
     End Sub
+
+    Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+        If looper < 5 Then
+            IsAnyRadioButtonSelected(Panel1)
+            IsAnyRadioButtonSelected(Panel3)
+            IsAnyRadioButtonSelected(Panel4)
+            IsAnyRadioButtonSelected(Panel5)
+            IsAnyRadioButtonSelected(Panel6)
+
+        Else
+            MainForm.childForm(PTSDResultForm)
+        End If
+
+
+        If rdb_A1.Checked Then
+            scorer += 0
+        ElseIf rdb_A2.Checked Then
+            scorer += 1
+        End If
+
+
+        If rdb_B1.Checked Then
+            scorer += 0
+        ElseIf rdb_B2.Checked Then
+            scorer += 1
+
+            End If
+
+        If rdb_C1.Checked Then
+            scorer += 0
+        ElseIf rdb_C2.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_D1.Checked Then
+            scorer += 0
+        ElseIf rdb_D2.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_E1.Checked Then
+            scorer += 0
+        ElseIf rdb_E2.Checked Then
+            scorer += 1
+
+        End If
+    End Sub
+
+
+    Private Function IsAnyRadioButtonSelected(panel As Panel) As Boolean
+        For Each radioButton As RadioButton In panel.Controls.OfType(Of RadioButton)()
+            If radioButton.Checked Then
+                looper += 1
+                Return True
+            End If
+        Next
+
+        MsgBox("Please answer all the questions!", vbInformation, "Message!")
+        Return False
+    End Function
 End Class

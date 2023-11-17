@@ -422,7 +422,7 @@ Partial Class PTSDTest
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1178, 719)
+        Me.ClientSize = New System.Drawing.Size(1085, 719)
         Me.Controls.Add(Me.backButton)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Button40)

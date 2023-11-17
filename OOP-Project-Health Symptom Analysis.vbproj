@@ -135,6 +135,30 @@
     <Compile Include="Mental Health Tests\AddictionResultForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mental Health Tests\ADHDResultForm.Designer.vb">
+      <DependentUpon>ADHDResultForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\ADHDResultForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mental Health Tests\AnxietyResultForm.Designer.vb">
+      <DependentUpon>AnxietyResultForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\AnxietyResultForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mental Health Tests\DepressionResultForm.Designer.vb">
+      <DependentUpon>DepressionResultForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\DepressionResultForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mental Health Tests\PTSDResultForm.Designer.vb">
+      <DependentUpon>PTSDResultForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mental Health Tests\PTSDResultForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -252,6 +276,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\AddictionResultForm.resx">
       <DependentUpon>AddictionResultForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\ADHDResultForm.resx">
+      <DependentUpon>ADHDResultForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\AnxietyResultForm.resx">
+      <DependentUpon>AnxietyResultForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\DepressionResultForm.resx">
+      <DependentUpon>DepressionResultForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mental Health Tests\PTSDResultForm.resx">
+      <DependentUpon>PTSDResultForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavbarForms\About.resx">
       <DependentUpon>About.vb</DependentUpon>

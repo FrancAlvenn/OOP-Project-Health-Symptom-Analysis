@@ -843,7 +843,7 @@ Partial Class ADHDTest
         Me.rdb_D3.Size = New System.Drawing.Size(134, 37)
         Me.rdb_D3.TabIndex = 119
         Me.rdb_D3.TabStop = True
-        Me.rdb_D3.Text = "MORE THAN HALF THE DAYS"
+        Me.rdb_D3.Text = "SOMETIMES"
         Me.rdb_D3.UseVisualStyleBackColor = False
         '
         'rdb_D2

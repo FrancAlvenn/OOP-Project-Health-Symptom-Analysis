@@ -75,9 +75,9 @@ Partial Class AnxietyTest
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.backButton = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.backButton = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -697,13 +697,13 @@ Partial Class AnxietyTest
         Me.Label2.TabIndex = 124
         Me.Label2.Text = "Over the last 2 weeks,"
         '
-        'Label1
+        'Panel8
         '
-        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.AnxietyHeader1
-        Me.Label1.Location = New System.Drawing.Point(-1, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1093, 218)
-        Me.Label1.TabIndex = 123
+        Me.Panel8.Controls.Add(Me.backButton)
+        Me.Panel8.Location = New System.Drawing.Point(-9, 0)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(111, 82)
+        Me.Panel8.TabIndex = 156
         '
         'backButton
         '
@@ -714,13 +714,13 @@ Partial Class AnxietyTest
         Me.backButton.Size = New System.Drawing.Size(42, 38)
         Me.backButton.TabIndex = 155
         '
-        'Panel8
+        'Label1
         '
-        Me.Panel8.Controls.Add(Me.backButton)
-        Me.Panel8.Location = New System.Drawing.Point(-9, 0)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(111, 82)
-        Me.Panel8.TabIndex = 156
+        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.AnxietyHeader1
+        Me.Label1.Location = New System.Drawing.Point(-1, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1093, 218)
+        Me.Label1.TabIndex = 123
         '
         'AnxietyTest
         '
@@ -728,7 +728,7 @@ Partial Class AnxietyTest
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1144, 719)
+        Me.ClientSize = New System.Drawing.Size(1161, 719)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel6)

@@ -23,7 +23,6 @@ Partial Class DepressionTest
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DepressionTest))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -36,7 +35,6 @@ Partial Class DepressionTest
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -89,13 +87,9 @@ Partial Class DepressionTest
         Me.rdb_I3 = New System.Windows.Forms.RadioButton()
         Me.rdb_I2 = New System.Windows.Forms.RadioButton()
         Me.rdb_I1 = New System.Windows.Forms.RadioButton()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.rdb_J4 = New System.Windows.Forms.RadioButton()
-        Me.rdb_J3 = New System.Windows.Forms.RadioButton()
-        Me.rdb_J2 = New System.Windows.Forms.RadioButton()
-        Me.rdb_J1 = New System.Windows.Forms.RadioButton()
-        Me.backButton = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.backButton = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -105,17 +99,8 @@ Partial Class DepressionTest
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel9.SuspendLayout()
-        Me.Panel10.SuspendLayout()
         Me.Panel11.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.DepressionHeader
-        Me.Label1.Location = New System.Drawing.Point(1, -1)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1068, 218)
-        Me.Label1.TabIndex = 0
         '
         'Label2
         '
@@ -230,22 +215,12 @@ Partial Class DepressionTest
         Me.Label13.TabIndex = 91
         Me.Label13.Text = "9. Thoughts that you would be better off dead, or of hurting yourself"
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(100, 1778)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(776, 19)
-        Me.Label14.TabIndex = 96
-        Me.Label14.Text = "10. If you checked off any problems, how difficult have these problems made it fo" &
-    "r you at work, home, or with other people?"
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft YaHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label15.Location = New System.Drawing.Point(99, 2091)
+        Me.Label15.Location = New System.Drawing.Point(99, 2001)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(86, 28)
         Me.Label15.TabIndex = 101
@@ -254,7 +229,7 @@ Partial Class DepressionTest
         'Label16
         '
         Me.Label16.BackColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(84, 2060)
+        Me.Label16.Location = New System.Drawing.Point(84, 1970)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(900, 1)
         Me.Label16.TabIndex = 102
@@ -263,7 +238,7 @@ Partial Class DepressionTest
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(136, 2160)
+        Me.Label17.Location = New System.Drawing.Point(136, 2070)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(721, 19)
         Me.Label17.TabIndex = 103
@@ -274,7 +249,7 @@ Partial Class DepressionTest
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(136, 2201)
+        Me.LinkLabel1.Location = New System.Drawing.Point(136, 2111)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(499, 19)
         Me.LinkLabel1.TabIndex = 104
@@ -284,7 +259,7 @@ Partial Class DepressionTest
         'Label19
         '
         Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei Light", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(149, 2276)
+        Me.Label19.Location = New System.Drawing.Point(149, 2186)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(863, 119)
         Me.Label19.TabIndex = 105
@@ -294,7 +269,7 @@ Partial Class DepressionTest
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(139, 2276)
+        Me.Label18.Location = New System.Drawing.Point(139, 2186)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(78, 17)
         Me.Label18.TabIndex = 107
@@ -309,7 +284,7 @@ Partial Class DepressionTest
         Me.Button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button40.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button40.ForeColor = System.Drawing.Color.Black
-        Me.Button40.Location = New System.Drawing.Point(811, 1956)
+        Me.Button40.Location = New System.Drawing.Point(834, 1853)
         Me.Button40.Name = "Button40"
         Me.Button40.Size = New System.Drawing.Size(157, 37)
         Me.Button40.TabIndex = 108
@@ -883,68 +858,13 @@ Partial Class DepressionTest
         Me.rdb_I1.Text = "NOT AT ALL"
         Me.rdb_I1.UseVisualStyleBackColor = False
         '
-        'Panel10
+        'Panel11
         '
-        Me.Panel10.Controls.Add(Me.rdb_J4)
-        Me.Panel10.Controls.Add(Me.rdb_J3)
-        Me.Panel10.Controls.Add(Me.rdb_J2)
-        Me.Panel10.Controls.Add(Me.rdb_J1)
-        Me.Panel10.Location = New System.Drawing.Point(149, 1832)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(842, 68)
-        Me.Panel10.TabIndex = 122
-        '
-        'rdb_J4
-        '
-        Me.rdb_J4.BackColor = System.Drawing.Color.Gainsboro
-        Me.rdb_J4.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!)
-        Me.rdb_J4.Location = New System.Drawing.Point(618, 16)
-        Me.rdb_J4.Name = "rdb_J4"
-        Me.rdb_J4.Padding = New System.Windows.Forms.Padding(15, 0, 15, 0)
-        Me.rdb_J4.Size = New System.Drawing.Size(192, 37)
-        Me.rdb_J4.TabIndex = 120
-        Me.rdb_J4.TabStop = True
-        Me.rdb_J4.Text = "NEARLY EVERY DAY"
-        Me.rdb_J4.UseVisualStyleBackColor = False
-        '
-        'rdb_J3
-        '
-        Me.rdb_J3.BackColor = System.Drawing.Color.Gainsboro
-        Me.rdb_J3.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!)
-        Me.rdb_J3.Location = New System.Drawing.Point(354, 16)
-        Me.rdb_J3.Name = "rdb_J3"
-        Me.rdb_J3.Padding = New System.Windows.Forms.Padding(15, 0, 15, 0)
-        Me.rdb_J3.Size = New System.Drawing.Size(242, 37)
-        Me.rdb_J3.TabIndex = 119
-        Me.rdb_J3.TabStop = True
-        Me.rdb_J3.Text = "MORE THAN HALF THE DAYS"
-        Me.rdb_J3.UseVisualStyleBackColor = False
-        '
-        'rdb_J2
-        '
-        Me.rdb_J2.BackColor = System.Drawing.Color.Gainsboro
-        Me.rdb_J2.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!)
-        Me.rdb_J2.Location = New System.Drawing.Point(180, 16)
-        Me.rdb_J2.Name = "rdb_J2"
-        Me.rdb_J2.Padding = New System.Windows.Forms.Padding(15, 0, 15, 0)
-        Me.rdb_J2.Size = New System.Drawing.Size(152, 37)
-        Me.rdb_J2.TabIndex = 118
-        Me.rdb_J2.TabStop = True
-        Me.rdb_J2.Text = "SEVERAL DAYS"
-        Me.rdb_J2.UseVisualStyleBackColor = False
-        '
-        'rdb_J1
-        '
-        Me.rdb_J1.BackColor = System.Drawing.Color.Gainsboro
-        Me.rdb_J1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!)
-        Me.rdb_J1.Location = New System.Drawing.Point(18, 16)
-        Me.rdb_J1.Name = "rdb_J1"
-        Me.rdb_J1.Padding = New System.Windows.Forms.Padding(15, 0, 15, 0)
-        Me.rdb_J1.Size = New System.Drawing.Size(137, 37)
-        Me.rdb_J1.TabIndex = 117
-        Me.rdb_J1.TabStop = True
-        Me.rdb_J1.Text = "NOT AT ALL"
-        Me.rdb_J1.UseVisualStyleBackColor = False
+        Me.Panel11.Controls.Add(Me.backButton)
+        Me.Panel11.Location = New System.Drawing.Point(-5, 12)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(73, 120)
+        Me.Panel11.TabIndex = 156
         '
         'backButton
         '
@@ -955,13 +875,13 @@ Partial Class DepressionTest
         Me.backButton.Size = New System.Drawing.Size(42, 38)
         Me.backButton.TabIndex = 155
         '
-        'Panel11
+        'Label1
         '
-        Me.Panel11.Controls.Add(Me.backButton)
-        Me.Panel11.Location = New System.Drawing.Point(-5, 12)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(73, 120)
-        Me.Panel11.TabIndex = 156
+        Me.Label1.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.DepressionHeader
+        Me.Label1.Location = New System.Drawing.Point(1, -1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(1068, 218)
+        Me.Label1.TabIndex = 0
         '
         'DepressionTest
         '
@@ -971,7 +891,6 @@ Partial Class DepressionTest
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1127, 719)
         Me.Controls.Add(Me.Panel11)
-        Me.Controls.Add(Me.Panel10)
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel7)
@@ -988,7 +907,6 @@ Partial Class DepressionTest
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
@@ -1015,7 +933,6 @@ Partial Class DepressionTest
         Me.Panel7.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
-        Me.Panel10.ResumeLayout(False)
         Me.Panel11.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1035,7 +952,6 @@ Partial Class DepressionTest
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
@@ -1088,11 +1004,6 @@ Partial Class DepressionTest
     Friend WithEvents rdb_I3 As RadioButton
     Friend WithEvents rdb_I2 As RadioButton
     Friend WithEvents rdb_I1 As RadioButton
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents rdb_J4 As RadioButton
-    Friend WithEvents rdb_J3 As RadioButton
-    Friend WithEvents rdb_J2 As RadioButton
-    Friend WithEvents rdb_J1 As RadioButton
     Friend WithEvents backButton As Label
     Friend WithEvents Panel11 As Panel
 End Class

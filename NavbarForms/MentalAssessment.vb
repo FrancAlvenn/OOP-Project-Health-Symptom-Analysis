@@ -90,7 +90,7 @@
     End Sub
 
     Private Sub btnAnxietyTest_Click(sender As Object, e As EventArgs) Handles btnAnxietyTest.Click
-        childForm(ADHDTest)
+        childForm(AnxietyTest)
     End Sub
 
     Private Sub btnPTSDTest_Click(sender As Object, e As EventArgs) Handles btnPTSDTest.Click

@@ -1,4 +1,7 @@
 ﻿Public Class ADHDTest
+
+    Public looper As Integer = 0
+    Public scorer As Integer = 0
     Private Sub UpdateRadioButtonAppearance(selectedRadioButton As RadioButton)
         If selectedRadioButton.Checked Then
             ' Change the color for the selected radio button
@@ -408,5 +411,69 @@
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
         MainForm.childForm(MentalAssessment)
     End Sub
+
+    Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click
+        If looper < 18 Then
+            IsAnyRadioButtonSelected(Panel1)
+            IsAnyRadioButtonSelected(Panel2)
+            IsAnyRadioButtonSelected(Panel3)
+            IsAnyRadioButtonSelected(Panel4)
+            IsAnyRadioButtonSelected(Panel5)
+            IsAnyRadioButtonSelected(Panel6)
+            IsAnyRadioButtonSelected(Panel7)
+            IsAnyRadioButtonSelected(Panel8)
+            IsAnyRadioButtonSelected(Panel9)
+            IsAnyRadioButtonSelected(Panel10)
+            IsAnyRadioButtonSelected(Panel11)
+            IsAnyRadioButtonSelected(Panel12)
+            IsAnyRadioButtonSelected(Panel13)
+            IsAnyRadioButtonSelected(Panel14)
+            IsAnyRadioButtonSelected(Panel15)
+            IsAnyRadioButtonSelected(Panel16)
+            IsAnyRadioButtonSelected(Panel17)
+            IsAnyRadioButtonSelected(Panel18)
+        Else
+            MainForm.childForm(ADHDResultForm)
+        End If
+
+
+        If rdb_A3.Checked Or rdb_A4.Checked Or rdb_A5.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_B3.Checked Or rdb_B4.Checked Or rdb_B5.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_C3.Checked Or rdb_C4.Checked Or rdb_C5.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_D3.Checked Or rdb_D4.Checked Or rdb_D5.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_E3.Checked Or rdb_E4.Checked Or rdb_E5.Checked Then
+            scorer += 1
+        End If
+
+        If rdb_F3.Checked Or rdb_F4.Checked Or rdb_F5.Checked Then
+            scorer += 1
+        End If
+
+
+    End Sub
+
+    Private Function IsAnyRadioButtonSelected(panel As Panel) As Boolean
+        For Each radioButton As RadioButton In panel.Controls.OfType(Of RadioButton)()
+            If radioButton.Checked Then
+                looper += 1
+                Return True
+            End If
+        Next
+
+        MsgBox("Please answer all the questions!", vbInformation, "Message!")
+        Return False
+    End Function
 End Class
 
