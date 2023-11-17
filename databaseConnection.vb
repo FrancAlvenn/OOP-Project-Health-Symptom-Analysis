@@ -6,6 +6,7 @@ Imports Newtonsoft.Json.Linq
 Module databaseConnection
 
     Public symptomName As String
+    Public bodyLocationName As String
     Public Function APISymptoms()
         Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
         Dim connection As New SQLiteConnection(connectionString)
@@ -31,11 +32,11 @@ Module databaseConnection
                 'Home.cmbSymptoms.Items.Add(symptomName)
 
                 'Insert Data into SQLite
-                Dim query As String = $"INSERT INTO tblSymptoms (ID, Name) VALUES (@id, @name)"
-                Dim command As New SQLiteCommand(query, connection)
-                command.Parameters.AddWithValue("@id", symptomID)
-                command.Parameters.AddWithValue("@name", symptomName)
-                command.ExecuteNonQuery()
+                'Dim query As String = $"INSERT INTO tblSymptoms (ID, Name) VALUES (@id, @name)"
+                'Dim command As New SQLiteCommand(query, connection)
+                'command.Parameters.AddWithValue("@id", symptomID)
+                'command.Parameters.AddWithValue("@name", symptomName)
+                'command.ExecuteNonQuery()
             Next
 
         Else
@@ -165,13 +166,14 @@ Module databaseConnection
                 Dim bodyLocationsID As Integer = user.GetProperty("ID").GetInt32()
                 Dim bodyLocationName As String = user.GetProperty("Name").GetString()
 
+                PhysicalAssessment.ComboBox2.Items.Add(bodyLocationName)
 
                 'Insert Data into SQLite
-                Dim query As String = $"INSERT INTO tblBodyLocations (ID, Name) VALUES (@id, @name)"
-                Dim command As New SQLiteCommand(query, connection)
-                command.Parameters.AddWithValue("@id", bodyLocationsID)
-                command.Parameters.AddWithValue("@name", bodyLocationName)
-                command.ExecuteNonQuery()
+                'Dim query As String = $"INSERT INTO tblBodyLocations (ID, Name) VALUES (@id, @name)"
+                'Dim command As New SQLiteCommand(query, connection)
+                'command.Parameters.AddWithValue("@id", bodyLocationsID)
+                'command.Parameters.AddWithValue("@name", bodyLocationName)
+                'command.ExecuteNonQuery()
             Next
 
         Else
