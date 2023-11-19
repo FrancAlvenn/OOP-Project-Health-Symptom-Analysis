@@ -69,7 +69,7 @@ Partial Class BMICalc
         Me.tableLayoutSymptoms = New System.Windows.Forms.TableLayoutPanel()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnRemove = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSymptomSubmit = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.cmb_BodyLocation = New System.Windows.Forms.ComboBox()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -78,14 +78,14 @@ Partial Class BMICalc
         Me.Label27 = New System.Windows.Forms.Label()
         Me.cmb_Symptoms = New System.Windows.Forms.ComboBox()
         Me.cmb_SpecificBodyLocation = New System.Windows.Forms.ComboBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.rdb_Female = New System.Windows.Forms.RadioButton()
+        Me.rdb_Male = New System.Windows.Forms.RadioButton()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.btnAddSymptom = New System.Windows.Forms.Button()
         Me.pnlWeight = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.pnlHeight = New System.Windows.Forms.Panel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtAge = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
@@ -597,7 +597,7 @@ Partial Class BMICalc
         Me.GroupBox3.Controls.Add(Me.tableLayoutSymptoms)
         Me.GroupBox3.Controls.Add(Me.btnClear)
         Me.GroupBox3.Controls.Add(Me.btnRemove)
-        Me.GroupBox3.Controls.Add(Me.Button1)
+        Me.GroupBox3.Controls.Add(Me.btnSymptomSubmit)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox3.Location = New System.Drawing.Point(401, 1747)
@@ -664,21 +664,21 @@ Partial Class BMICalc
         Me.btnRemove.Text = "Remove"
         Me.btnRemove.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnSymptomSubmit
         '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(486, 564)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(155, 35)
-        Me.Button1.TabIndex = 24
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnSymptomSubmit.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnSymptomSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnSymptomSubmit.FlatAppearance.BorderSize = 0
+        Me.btnSymptomSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnSymptomSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnSymptomSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSymptomSubmit.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSymptomSubmit.Location = New System.Drawing.Point(486, 564)
+        Me.btnSymptomSubmit.Name = "btnSymptomSubmit"
+        Me.btnSymptomSubmit.Size = New System.Drawing.Size(155, 35)
+        Me.btnSymptomSubmit.TabIndex = 24
+        Me.btnSymptomSubmit.Text = "Submit"
+        Me.btnSymptomSubmit.UseVisualStyleBackColor = False
         '
         'GroupBox4
         '
@@ -691,8 +691,8 @@ Partial Class BMICalc
         Me.GroupBox4.Controls.Add(Me.Label27)
         Me.GroupBox4.Controls.Add(Me.cmb_Symptoms)
         Me.GroupBox4.Controls.Add(Me.cmb_SpecificBodyLocation)
-        Me.GroupBox4.Controls.Add(Me.RadioButton2)
-        Me.GroupBox4.Controls.Add(Me.RadioButton1)
+        Me.GroupBox4.Controls.Add(Me.rdb_Female)
+        Me.GroupBox4.Controls.Add(Me.rdb_Male)
         Me.GroupBox4.Controls.Add(Me.Label28)
         Me.GroupBox4.Controls.Add(Me.btnAddSymptom)
         Me.GroupBox4.Controls.Add(Me.pnlWeight)
@@ -775,29 +775,29 @@ Partial Class BMICalc
         Me.cmb_SpecificBodyLocation.Size = New System.Drawing.Size(265, 23)
         Me.cmb_SpecificBodyLocation.TabIndex = 19
         '
-        'RadioButton2
+        'rdb_Female
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(180, 77)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(67, 20)
-        Me.RadioButton2.TabIndex = 17
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Female"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rdb_Female.AutoSize = True
+        Me.rdb_Female.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_Female.Location = New System.Drawing.Point(180, 77)
+        Me.rdb_Female.Name = "rdb_Female"
+        Me.rdb_Female.Size = New System.Drawing.Size(67, 20)
+        Me.rdb_Female.TabIndex = 17
+        Me.rdb_Female.TabStop = True
+        Me.rdb_Female.Text = "Female"
+        Me.rdb_Female.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'rdb_Male
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(180, 47)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(55, 20)
-        Me.RadioButton1.TabIndex = 16
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Male"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rdb_Male.AutoSize = True
+        Me.rdb_Male.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_Male.Location = New System.Drawing.Point(180, 47)
+        Me.rdb_Male.Name = "rdb_Male"
+        Me.rdb_Male.Size = New System.Drawing.Size(55, 20)
+        Me.rdb_Male.TabIndex = 16
+        Me.rdb_Male.TabStop = True
+        Me.rdb_Male.Text = "Male"
+        Me.rdb_Male.UseVisualStyleBackColor = True
         '
         'Label28
         '
@@ -846,22 +846,22 @@ Partial Class BMICalc
         'pnlHeight
         '
         Me.pnlHeight.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.pnlHeight.Controls.Add(Me.TextBox3)
+        Me.pnlHeight.Controls.Add(Me.txtAge)
         Me.pnlHeight.Location = New System.Drawing.Point(38, 68)
         Me.pnlHeight.Name = "pnlHeight"
         Me.pnlHeight.Padding = New System.Windows.Forms.Padding(1)
         Me.pnlHeight.Size = New System.Drawing.Size(85, 27)
         Me.pnlHeight.TabIndex = 7
         '
-        'TextBox3
+        'txtAge
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(4, 6)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(75, 14)
-        Me.TextBox3.TabIndex = 6
+        Me.txtAge.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAge.Location = New System.Drawing.Point(4, 6)
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.Size = New System.Drawing.Size(75, 14)
+        Me.txtAge.TabIndex = 6
         '
         'Label29
         '
@@ -915,7 +915,7 @@ Partial Class BMICalc
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1143, 719)
+        Me.ClientSize = New System.Drawing.Size(1211, 719)
         Me.Controls.Add(Me.Label31)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox4)
@@ -998,7 +998,7 @@ Partial Class BMICalc
     Friend WithEvents tableLayoutSymptoms As TableLayoutPanel
     Friend WithEvents btnClear As Button
     Friend WithEvents btnRemove As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSymptomSubmit As Button
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
@@ -1006,14 +1006,14 @@ Partial Class BMICalc
     Friend WithEvents Label27 As Label
     Friend WithEvents cmb_Symptoms As ComboBox
     Friend WithEvents cmb_SpecificBodyLocation As ComboBox
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents rdb_Female As RadioButton
+    Friend WithEvents rdb_Male As RadioButton
     Friend WithEvents Label28 As Label
     Friend WithEvents btnAddSymptom As Button
     Friend WithEvents pnlWeight As Panel
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents pnlHeight As Panel
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtAge As TextBox
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label

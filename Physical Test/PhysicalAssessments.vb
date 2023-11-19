@@ -6,7 +6,8 @@ Public Class BMICalc
     Dim itemCount As Integer = 0
     Dim clickedLabel As Label
     Public bodyLocationID As Integer
-    Public queueSymptomID As New Queue()
+    Public queueSymptomName As New Queue()
+    Public IssueName As New Queue()
 
     'Functions and Methods
 
@@ -154,24 +155,8 @@ Public Class BMICalc
                 itemCount += 1
 
 
-                Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
-                'get symptoms
-                Using connection As New SQLiteConnection(connectionString)
-                    connection.Open()
 
-                    ' Your SQL query to retrieve data
-                    Dim query As String = "SELECT ID FROM tblBodySymptoms WHERE Name LIKE '" & cmb_Symptoms.Text & "';"
-
-                    ' Create a command and execute the query
-                    Using command As New SQLiteCommand(query, connection)
-                        Using reader As SQLiteDataReader = command.ExecuteReader()
-                            ' Read data and add it to ComboBox
-                            While reader.Read()
-                                queueSymptomID.Enqueue(reader("ID").ToString)
-                            End While
-                        End Using
-                    End Using
-                End Using
+                queueSymptomName.Enqueue(cmb_Symptoms.Text)
 
                 cmb_BodyLocation.Items.Clear()
                 cmb_Symptoms.Items.Clear()
@@ -233,7 +218,7 @@ Public Class BMICalc
             connection.Open()
 
             ' Your SQL query to retrieve data
-            Dim query As String = "SELECT Name FROM tblBodyLocationSpecific WHERE BodyLocationID LIKE '%" & bodyLocationID & "%';"
+            Dim query As String = "SELECT Name FROM tblBodyLocationSpecific WHERE BodyLocationID LIKE '" & bodyLocationID & "';"
 
             ' Create a command and execute the query
             Using command As New SQLiteCommand(query, connection)
@@ -283,11 +268,13 @@ Public Class BMICalc
             connection.Open()
 
             ' Your SQL query to retrieve data
-            Dim query As String = "SELECT ID FROM tblBodyLocationSpecific WHERE Name = ""%" & cmb_SpecificBodyLocation.SelectedItem & "%"";"
+            Dim query As String = "SELECT ID FROM tblBodyLocationSpecific WHERE Name = """ & cmb_SpecificBodyLocation.SelectedItem & """;"
 
             ' Create a command and execute the query
             Using command As New SQLiteCommand(query, connection)
                 Using reader As SQLiteDataReader = command.ExecuteReader()
+
+
                     ' Read data and add it to ComboBox
                     While reader.Read()
                         specificBodyLocation = reader("ID").ToString()
@@ -302,11 +289,13 @@ Public Class BMICalc
             connection.Open()
 
             ' Your SQL query to retrieve data
-            Dim query As String = "SELECT Name FROM tblBodySymptoms WHERE HealthSymptomLocationID LIKE  '%" & bodylocationID & "%'  OR HealthSymptomLocationID LIKE '%" & specificBodyLocation & "%';"
+            Dim query As String = "SELECT Name FROM tblBodySymptoms WHERE HealthSymptomLocationID LIKE  '" & bodylocationID & "%'  OR HealthSymptomLocationID LIKE '" & specificBodyLocation & "%';"
 
             ' Create a command and execute the query
             Using command As New SQLiteCommand(query, connection)
                 Using reader As SQLiteDataReader = command.ExecuteReader()
+                    cmb_Symptoms.Items.Clear()
+
                     ' Read data and add it to ComboBox
                     While reader.Read()
                         cmb_Symptoms.Items.Add(reader("Name").ToString())
@@ -348,5 +337,65 @@ Public Class BMICalc
 
     Private Sub cmb_SpecificBodyLocation_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_SpecificBodyLocation.SelectedIndexChanged
         APIBodySymptom()
+    End Sub
+
+    Private Sub btnSymptomSubmit_Click(sender As Object, e As EventArgs) Handles btnSymptomSubmit.Click
+        If rdb_Male.Checked OrElse rdb_Female.Checked Then
+            diagnosis()
+        Else
+            MsgBox("Please select a gender", vbInformation, "Invalid Gender")
+        End If
+
+
+    End Sub
+
+    Public Function diagnosis()
+        Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
+        Dim gender As String = "male"
+        Dim age As Integer = 2000
+        Dim tempAge As Integer
+
+        If rdb_Male.Checked Then
+            gender = "male"
+        ElseIf rdb_Female.Checked Then
+            gender = "female"
+        End If
+
+        If Integer.TryParse(txtAge.Text, tempAge) Then
+            age = 2023 - tempAge
+        Else
+            MsgBox("Please enter you age", vbInformation, "Invalid Input")
+        End If
+
+
+        For Each item As Object In queueSymptomName
+            'specific bodylocation
+            Using connection As New SQLiteConnection(connectionString)
+                connection.Open()
+
+
+
+                ' Your SQL query to retrieve data
+                Dim query As String = "SELECT Name FROM tblIssueSpecific WHERE PossibleSymptoms LIKE '%" & item & "%';"
+
+                ' Create a command and execute the query
+                Using command As New SQLiteCommand(query, connection)
+                    Using reader As SQLiteDataReader = command.ExecuteReader()
+                        ' Read data and add it to ComboBox
+                        While reader.Read()
+                            IssueName.Enqueue(reader("Name").ToString())
+                        End While
+                    End Using
+                End Using
+
+
+            End Using
+        Next
+
+        MainForm.childForm(SymptomCheckerResult)
+
+    End Function
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_Male.CheckedChanged
     End Sub
 End Class
