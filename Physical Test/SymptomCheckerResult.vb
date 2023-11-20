@@ -106,40 +106,45 @@ Public Class SymptomCheckerResult
     Private Sub btnConfirmSelection_Click(sender As Object, e As EventArgs) Handles btnConfirmSelection.Click
         Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
 
-        'bodylocations
-        ' Create a new connection
-        If clickedLabel.Text <> "" Then
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
+        Try
+            'bodylocations
+            ' Create a new connection
+            If clickedLabel.Text <> "" Then
+                Using connection As New SQLiteConnection(connectionString)
+                    connection.Open()
 
-                ' Your SQL query to retrieve data
-                Dim query As String = "SELECT * FROM tblIssueSpecific WHERE Name = '" & clickedLabel.Text & "';"
+                    ' Your SQL query to retrieve data
+                    Dim query As String = "SELECT * FROM tblIssueSpecific WHERE Name = '" & clickedLabel.Text & "';"
 
-                ' Create a command and execute the query
-                Using command As New SQLiteCommand(query, connection)
-                    Using reader As SQLiteDataReader = command.ExecuteReader()
-                        ' Read data and add it to ComboBox
-                        While reader.Read()
-                            description = reader("Description").ToString()
-                            medicalCondition = reader("MedicalCondition").ToString()
-                            possibleSymptoms = reader("PossibleSymptoms").ToString()
-                            profName = reader("ProfName").ToString()
-                            treatmentDescription = reader("TreatmentDescription").ToString()
-                        End While
+                    ' Create a command and execute the query
+                    Using command As New SQLiteCommand(query, connection)
+                        Using reader As SQLiteDataReader = command.ExecuteReader()
+                            ' Read data and add it to ComboBox
+                            While reader.Read()
+                                description = reader("Description").ToString()
+                                medicalCondition = reader("MedicalCondition").ToString()
+                                possibleSymptoms = reader("PossibleSymptoms").ToString()
+                                profName = reader("ProfName").ToString()
+                                treatmentDescription = reader("TreatmentDescription").ToString()
+                            End While
+                        End Using
                     End Using
                 End Using
-            End Using
-            IssueInformationForm.txtName.Text = clickedLabel.Text
-            IssueInformationForm.txtProfname.Text = profName
-            IssueInformationForm.txtDesc.Text = description
-            IssueInformationForm.txtMedicalCondition.Text = medicalCondition
-            IssueInformationForm.txtPossibleSymtoms.Text = possibleSymptoms
-            IssueInformationForm.txtTreatmentDesc.Text = treatmentDescription
-            MainForm.childForm(IssueInformationForm)
+                IssueInformationForm.txtName.Text = clickedLabel.Text
+                IssueInformationForm.txtProfname.Text = profName
+                IssueInformationForm.txtDesc.Text = description
+                IssueInformationForm.txtMedicalCondition.Text = medicalCondition
+                IssueInformationForm.txtPossibleSymtoms.Text = possibleSymptoms
+                IssueInformationForm.txtTreatmentDesc.Text = treatmentDescription
+                MainForm.childForm(IssueInformationForm)
 
-        Else
-            MsgBox("Please select an Issue to check!", vbInformation, "No Issue Selected")
-        End If
+            Else
+                MsgBox("Please select an Issue to check!", vbInformation, "No Issue Selected")
+            End If
+        Catch ex As Exception
+            MsgBox("Bad Connection, try again later!", vbInformation, "Error! ")
+        End Try
+
 
     End Sub
 End Class
