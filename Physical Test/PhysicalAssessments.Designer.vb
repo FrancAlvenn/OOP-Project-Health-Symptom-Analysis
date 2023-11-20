@@ -33,7 +33,7 @@ Partial Class BMICalc
         Me.txtHeight = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtBMIResult = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnSubmit = New System.Windows.Forms.Button()
@@ -114,7 +114,7 @@ Partial Class BMICalc
         Me.GroupBox1.Controls.Add(Me.txtHeight)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.txtBMIResult)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.btnSubmit)
@@ -225,15 +225,15 @@ Partial Class BMICalc
         Me.Label7.Size = New System.Drawing.Size(33, 29)
         Me.Label7.TabIndex = 14
         '
-        'Label6
+        'txtBMIResult
         '
-        Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("Sans Serif Collection", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(27, 491)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(143, 60)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "21.0"
+        Me.txtBMIResult.BackColor = System.Drawing.Color.White
+        Me.txtBMIResult.Font = New System.Drawing.Font("Sans Serif Collection", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBMIResult.Location = New System.Drawing.Point(27, 491)
+        Me.txtBMIResult.Name = "txtBMIResult"
+        Me.txtBMIResult.Size = New System.Drawing.Size(143, 60)
+        Me.txtBMIResult.TabIndex = 13
+        Me.txtBMIResult.Text = "21.0"
         '
         'Label5
         '
@@ -961,7 +961,7 @@ Partial Class BMICalc
     Friend WithEvents txtHeight As TextBox
     Friend WithEvents txtWeight As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents txtBMIResult As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents btnSubmit As Button

@@ -77,6 +77,10 @@ Public Class BMICalc
     Private Sub rdbImperial_CheckedChanged(sender As Object, e As EventArgs) Handles rdbImperial.CheckedChanged
         lblHeight.Text = "ft"
         lblWeight.Text = "lbs"
+        txtBMIResult.Text = ""
+        txtHeight.Text = ""
+        txtWeight.Text = ""
+        txtInch.Text = ""
         txtInch.Visible = True
         lblInch.Visible = True
     End Sub
@@ -84,6 +88,9 @@ Public Class BMICalc
     Private Sub rdbMetric_CheckedChanged(sender As Object, e As EventArgs) Handles rdbMetric.CheckedChanged
         lblHeight.Text = "cm"
         lblWeight.Text = "kg"
+        txtBMIResult.Text = ""
+        txtHeight.Text = ""
+        txtWeight.Text = ""
         txtInch.Visible = False
         lblInch.Visible = False
     End Sub
@@ -289,7 +296,7 @@ Public Class BMICalc
             connection.Open()
 
             ' Your SQL query to retrieve data
-            Dim query As String = "SELECT Name FROM tblBodySymptoms WHERE HealthSymptomLocationID LIKE  '" & bodylocationID & "%'  OR HealthSymptomLocationID LIKE '" & specificBodyLocation & "%';"
+            Dim query As String = "SELECT Name FROM tblBodySymptoms WHERE HealthSymptomLocationID LIKE  '%" & bodylocationID & "%'  AND HealthSymptomLocationID LIKE '%" & specificBodyLocation & "%';"
 
             ' Create a command and execute the query
             Using command As New SQLiteCommand(query, connection)
@@ -312,7 +319,10 @@ Public Class BMICalc
     Private Sub BMICalc_Load(sender As Object, e As EventArgs) Handles Me.Load
         RoundCornerButton(btnReset)
         RoundCornerButton(btnSubmit)
-        'rdbMetric.Select()
+        rdbMetric.Checked = True
+        txtHeight.Text = 180
+        txtWeight.Text = 65
+        txtBMIResult.Text = 20.1
         BodyLocations()
     End Sub
 
@@ -396,6 +406,34 @@ Public Class BMICalc
 
     End Function
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_Male.CheckedChanged
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+        If rdbMetric.Checked Then
+            Dim height As Integer
+            Dim weight As Integer
+            Dim bmi As Double
+
+            height = Integer.Parse(txtHeight.Text)
+            weight = Integer.Parse(txtWeight.Text)
+
+            bmi = weight / (height / 100) ^ 2
+
+            txtBMIResult.Text = Math.Ceiling(bmi * 10D) / 10D
+
+        ElseIf rdbImperial.Checked Then
+            Dim height As Integer
+            Dim inch As Integer
+            Dim weight As Integer
+            Dim bmi As Double
+
+            height = Integer.Parse(txtHeight.Text)
+            inch = Integer.Parse(txtInch.Text)
+            weight = Integer.Parse(txtWeight.Text)
+
+            bmi = 703 * (weight / (((height * 12) + inch) ^ 2))
+
+            txtBMIResult.Text = Math.Ceiling(bmi * 10D) / 10D
+
+
+        End If
     End Sub
 End Class

@@ -117,20 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label9.Text" xml:space="preserve">
-    <value>Please note: This screening tool is validated for both adults and youth between the ages of 12 and 18. 
-By using this screen, you acknowledge that the screen is not a diagnostic instrument and is only to be 
-used by you if you are 12 years or older. You are encouraged to share your results with a physician or 
-healthcare provider. Mental Health America Inc., sponsors, partners, and advertisers disclaim any liability, 
-loss, or risk incurred as a consequence, directly or indirectly, from the use and application of these screens.</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>The displayed result is derived from the added symptoms, with priority given to the initial symptom. 
-
-The outcomes presented represent the initial 20 issues considered in accordance with the provided symptom.
-
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="backButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

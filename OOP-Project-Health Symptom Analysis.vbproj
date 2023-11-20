@@ -174,6 +174,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="databaseConnection.vb" />
+    <Compile Include="Physical Test\IssueInformationForm.Designer.vb">
+      <DependentUpon>IssueInformationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Physical Test\IssueInformationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Physical Test\PhysicalAssessments.Designer.vb">
       <DependentUpon>PhysicalAssessments.vb</DependentUpon>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NavbarForms\About.resx">
       <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Physical Test\IssueInformationForm.resx">
+      <DependentUpon>IssueInformationForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Physical Test\PhysicalAssessments.resx">
       <DependentUpon>PhysicalAssessments.vb</DependentUpon>
