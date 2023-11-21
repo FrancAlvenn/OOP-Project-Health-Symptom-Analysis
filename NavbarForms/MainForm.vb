@@ -244,4 +244,25 @@
         'fucntion call to get childform
         childForm(Home)
     End Sub
+
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        childForm(Home)
+    End Sub
+
+    Private Sub btnFeedback_Click(sender As Object, e As EventArgs) Handles btnFeedback.Click
+        childForm(ContactUs)
+    End Sub
+
+    Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
+        childForm(About)
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Dim result As DialogResult = MessageBox.Show("Do you want to logout of SymptoMedic?", "CONFIRMATION",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            Me.Dispose()
+        End If
+    End Sub
 End Class

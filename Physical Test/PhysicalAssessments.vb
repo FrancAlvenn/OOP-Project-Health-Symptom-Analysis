@@ -3,7 +3,9 @@ Imports System.Net.Http
 Imports System.Text.Json
 
 Public Class BMICalc
-    Dim itemCount As Integer = 0
+    Public itemCount As Integer = 0
+    Public symptomCount As Integer = 0
+    Public itemCount2 As Integer = 0
     Dim clickedLabel As Label
     Public bodyLocationID As Integer
     Public queueSymptomName As New Queue()
@@ -58,6 +60,60 @@ Public Class BMICalc
 
         ' Update the reference to the previously clicked label
         previousClickedLabel = clickedLabel
+    End Sub
+
+    Private Sub Add_Label()
+        For i As Integer = 1 To 20
+            If itemCount < 20 Then
+                Dim newLabel As New Label()
+
+                If IssueName.Count > 0 And itemCount < 20 Then
+                    newLabel.Text = IssueName.Dequeue
+                    newLabel.AutoSize = True
+                    newLabel.Font = New Font("Microsoft Tai Le", 10, FontStyle.Regular)
+                    newLabel.Dock = DockStyle.Fill
+                    newLabel.TextAlign = ContentAlignment.MiddleLeft
+
+                    AddHandler newLabel.Click, AddressOf Label_Click
+
+                    Dim row As Integer = 0
+                    Dim column As Integer = 0
+
+                    SymptomCheckerResult.tableDiagnosis.Controls.Add(newLabel, column, row)
+                    itemCount += 1
+
+                End If
+            Else
+                Return
+            End If
+        Next
+
+
+        For i As Integer = 1 To 15
+            If itemCount2 < 15 Then
+                Dim newLabel As New Label()
+
+                If queueSymptomName.Count > 0 And itemCount2 < 15 Then
+                    newLabel.Text = queueSymptomName.Dequeue
+                    newLabel.AutoSize = True
+                    newLabel.Font = New Font("Microsoft Tai Le", 10, FontStyle.Regular)
+                    newLabel.Dock = DockStyle.Fill
+                    newLabel.TextAlign = ContentAlignment.MiddleLeft
+
+                    AddHandler newLabel.Click, AddressOf Label_Click
+
+                    Dim row As Integer = 0
+                    Dim column As Integer = 0
+
+                    SymptomCheckerResult.tblSymptoms.Controls.Add(newLabel, column, row)
+                    itemCount2 += 1
+
+                End If
+            Else
+                MsgBox("Too many symptoms!")
+            End If
+        Next
+
     End Sub
 
 
@@ -145,7 +201,7 @@ Public Class BMICalc
 
     Private Sub btnAddSymptom_Click(sender As Object, e As EventArgs) Handles btnAddSymptom.Click
         If cmb_Symptoms.SelectedIndex <> -1 Then
-            If itemCount < 15 Then
+            If symptomCount < 15 Then
                 Dim newLabel As New Label()
                 newLabel.Text = cmb_Symptoms.Text
                 newLabel.AutoSize = True
@@ -159,7 +215,7 @@ Public Class BMICalc
                 Dim column As Integer = 0
 
                 tableLayoutSymptoms.Controls.Add(newLabel, column, row)
-                itemCount += 1
+                symptomCount += 1
 
 
 
@@ -174,13 +230,17 @@ Public Class BMICalc
                 MsgBox("Too many symptoms!")
             End If
         Else
-            MsgBox("Please select a symptom to check!", vbInformation, "No Symptom Selected")
+            MsgBox("Please select a symptom!", vbInformation, "No Symptom Selected")
         End If
 
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         tableLayoutSymptoms.Controls.Clear()
+
+
+        symptomCount = 0
+
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
@@ -323,6 +383,11 @@ Public Class BMICalc
         txtHeight.Text = 180
         txtWeight.Text = 65
         txtBMIResult.Text = 20.1
+
+        symptomCount = 0
+        itemCount = 0
+        itemCount2 = 0
+
         BodyLocations()
     End Sub
 
@@ -356,6 +421,7 @@ Public Class BMICalc
             MsgBox("Please select a gender", vbInformation, "Invalid Gender")
         End If
 
+        Add_Label()
 
     End Sub
 
@@ -393,7 +459,10 @@ Public Class BMICalc
                     Using reader As SQLiteDataReader = command.ExecuteReader()
                         ' Read data and add it to ComboBox
                         While reader.Read()
-                            IssueName.Enqueue(reader("Name").ToString())
+                            If IssueName.Count < 20 Then
+                                IssueName.Enqueue(reader("Name").ToString())
+                            End If
+
                         End While
                     End Using
                 End Using
@@ -435,5 +504,9 @@ Public Class BMICalc
 
 
         End If
+    End Sub
+
+    Private Sub cmb_Symptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_Symptoms.SelectedIndexChanged
+
     End Sub
 End Class

@@ -1,8 +1,9 @@
-﻿Imports System.Data.SQLite
+﻿Imports System.Data.SqlClient
+Imports System.Data.SQLite
 
 Public Class UserSignUp
 
-    Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;Version=3;"
+    Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
     Public connection As New SQLiteConnection(connectionName)
 
     Public random As New Random()
@@ -87,16 +88,43 @@ Public Class UserSignUp
     End Sub
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
-        If Not String.IsNullOrEmpty(txtUsername.Text) And Not String.IsNullOrEmpty(txtPassword.Text) Then
-            connectDB()
-            Me.Dispose()
-            MainForm.Enabled = True
-            MainForm.Show()
+
+        Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
+        If userExists Then
+            MsgBox("Already Exists")
         Else
-            MsgBox("Textbox is empty. Please enter a value.", vbInformation, "Empty Value!")
+            If Not String.IsNullOrEmpty(txtUsername.Text) And Not String.IsNullOrEmpty(txtPassword.Text) Then
+                connectDB()
+                Me.Dispose()
+                MainForm.Enabled = True
+                MainForm.Show()
+            Else
+                MsgBox("Textbox is empty. Please enter a value.", vbInformation, "Empty Value!")
+            End If
         End If
-
-
-
     End Sub
+
+    Public Function IsUsernameExists(username As String) As Boolean
+        Try
+            connection.Open()
+
+            If connection.State = ConnectionState.Open Then
+                Dim usernames As String = txtUsername.Text
+                Dim insertQuery As String = "SELECT * FROM user_accounts WHERE Username = @Username"
+
+                Dim command As New SQLiteCommand(insertQuery, connection)
+                command.Parameters.AddWithValue("@Username", usernames)
+
+                Dim a = command.ExecuteReader()
+
+                If a.ToString <> "" Then
+                    Return True
+                End If
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+    End Function
 End Class

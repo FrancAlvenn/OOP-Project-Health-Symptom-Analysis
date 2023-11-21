@@ -38,12 +38,12 @@ Partial Class MainForm
         Me.lblHome = New System.Windows.Forms.Label()
         Me.pnlChangeable = New System.Windows.Forms.Panel()
         Me.pnlMenu = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.btnReports = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnLogout = New System.Windows.Forms.Label()
+        Me.btnAbout = New System.Windows.Forms.Label()
+        Me.btnFeedback = New System.Windows.Forms.Label()
+        Me.btnHome = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CircularPictureBox3 = New OOP_Project_Health_Symptom_Analysis.CircularPictureBox()
@@ -211,12 +211,12 @@ Partial Class MainForm
         '
         Me.pnlMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.pnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.pnlMenu.Controls.Add(Me.Label12)
+        Me.pnlMenu.Controls.Add(Me.btnReports)
         Me.pnlMenu.Controls.Add(Me.Label10)
-        Me.pnlMenu.Controls.Add(Me.Label6)
-        Me.pnlMenu.Controls.Add(Me.Label5)
-        Me.pnlMenu.Controls.Add(Me.Label4)
-        Me.pnlMenu.Controls.Add(Me.Label3)
+        Me.pnlMenu.Controls.Add(Me.btnLogout)
+        Me.pnlMenu.Controls.Add(Me.btnAbout)
+        Me.pnlMenu.Controls.Add(Me.btnFeedback)
+        Me.pnlMenu.Controls.Add(Me.btnHome)
         Me.pnlMenu.Controls.Add(Me.Label2)
         Me.pnlMenu.Controls.Add(Me.Label1)
         Me.pnlMenu.Controls.Add(Me.CircularPictureBox3)
@@ -224,19 +224,19 @@ Partial Class MainForm
         Me.pnlMenu.Location = New System.Drawing.Point(985, 60)
         Me.pnlMenu.MaximumSize = New System.Drawing.Size(300, 450)
         Me.pnlMenu.Name = "pnlMenu"
-        Me.pnlMenu.Size = New System.Drawing.Size(300, 0)
+        Me.pnlMenu.Size = New System.Drawing.Size(300, 450)
         Me.pnlMenu.TabIndex = 0
         '
-        'Label12
+        'btnReports
         '
-        Me.Label12.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.profit_report
-        Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(31, 224)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(238, 45)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "            Reports"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReports.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.profit_report
+        Me.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReports.Location = New System.Drawing.Point(31, 224)
+        Me.btnReports.Name = "btnReports"
+        Me.btnReports.Size = New System.Drawing.Size(238, 45)
+        Me.btnReports.TabIndex = 8
+        Me.btnReports.Text = "            Reports"
+        Me.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label10
         '
@@ -248,49 +248,49 @@ Partial Class MainForm
         Me.Label10.TabIndex = 7
         Me.Label10.Text = "Label10"
         '
-        'Label6
+        'btnLogout
         '
-        Me.Label6.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.logout
-        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(31, 400)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(238, 25)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "            Home"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLogout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.logout
+        Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLogout.Location = New System.Drawing.Point(31, 391)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(238, 46)
+        Me.btnLogout.TabIndex = 6
+        Me.btnLogout.Text = "            Logout"
+        Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label5
+        'btnAbout
         '
-        Me.Label5.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.information_button
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(29, 280)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(238, 45)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "            About"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.information_button
+        Me.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbout.Location = New System.Drawing.Point(29, 280)
+        Me.btnAbout.Name = "btnAbout"
+        Me.btnAbout.Size = New System.Drawing.Size(238, 45)
+        Me.btnAbout.TabIndex = 5
+        Me.btnAbout.Text = "            About"
+        Me.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label4
+        'btnFeedback
         '
-        Me.Label4.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.feedback
-        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(29, 170)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(238, 45)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "            Feedback"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFeedback.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.feedback
+        Me.btnFeedback.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFeedback.Location = New System.Drawing.Point(29, 170)
+        Me.btnFeedback.Name = "btnFeedback"
+        Me.btnFeedback.Size = New System.Drawing.Size(238, 45)
+        Me.btnFeedback.TabIndex = 4
+        Me.btnFeedback.Text = "            Feedback"
+        Me.btnFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label3
+        'btnHome
         '
-        Me.Label3.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.home
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(29, 115)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(238, 45)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "            Home"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHome.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.home
+        Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHome.Location = New System.Drawing.Point(29, 115)
+        Me.btnHome.Name = "btnHome"
+        Me.btnHome.Size = New System.Drawing.Size(238, 45)
+        Me.btnHome.TabIndex = 3
+        Me.btnHome.Text = "            Home"
+        Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
         '
@@ -372,11 +372,11 @@ Partial Class MainForm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents CircularPictureBox3 As CircularPictureBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents btnHome As Label
+    Friend WithEvents btnLogout As Label
+    Friend WithEvents btnAbout As Label
+    Friend WithEvents btnFeedback As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents btnReports As Label
     Friend WithEvents Label13 As Label
 End Class
