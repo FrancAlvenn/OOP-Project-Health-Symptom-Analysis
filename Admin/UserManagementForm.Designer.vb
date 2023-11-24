@@ -152,7 +152,7 @@ Partial Class UserManagementForm
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(224, 37)
         Me.btnDelete.TabIndex = 175
-        Me.btnDelete.Text = " "
+        Me.btnDelete.Text = " Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
         'btnUpdate
