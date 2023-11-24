@@ -27,13 +27,12 @@ Partial Class AdminForm
         Me.seperator1 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlMenu = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnReport = New System.Windows.Forms.Label()
+        Me.btnLogout = New System.Windows.Forms.Label()
         Me.btnMenu = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.logo = New OOP_Project_Health_Symptom_Analysis.CircularPictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnAbout = New System.Windows.Forms.Label()
+        Me.btnUserManagement = New System.Windows.Forms.Label()
+        Me.btnHome = New System.Windows.Forms.Label()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -51,14 +50,12 @@ Partial Class AdminForm
         Me.lblHome = New System.Windows.Forms.Label()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.lblTime = New System.Windows.Forms.Label()
-        Me.DataSet1 = New System.Data.DataSet()
+        Me.Timerupdater = New System.Windows.Forms.Timer(Me.components)
         Me.pnlMenu.SuspendLayout()
-        CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SubPanel.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'seperator2
@@ -98,15 +95,14 @@ Partial Class AdminForm
         '
         Me.pnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.pnlMenu.Controls.Add(Me.seperator2)
-        Me.pnlMenu.Controls.Add(Me.Label12)
-        Me.pnlMenu.Controls.Add(Me.Label6)
+        Me.pnlMenu.Controls.Add(Me.btnReport)
+        Me.pnlMenu.Controls.Add(Me.btnLogout)
         Me.pnlMenu.Controls.Add(Me.btnMenu)
-        Me.pnlMenu.Controls.Add(Me.Label5)
-        Me.pnlMenu.Controls.Add(Me.logo)
+        Me.pnlMenu.Controls.Add(Me.btnAbout)
         Me.pnlMenu.Controls.Add(Me.Label1)
         Me.pnlMenu.Controls.Add(Me.seperator1)
-        Me.pnlMenu.Controls.Add(Me.Label4)
-        Me.pnlMenu.Controls.Add(Me.Label3)
+        Me.pnlMenu.Controls.Add(Me.btnUserManagement)
+        Me.pnlMenu.Controls.Add(Me.btnHome)
         Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlMenu.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!)
         Me.pnlMenu.ForeColor = System.Drawing.Color.White
@@ -117,29 +113,31 @@ Partial Class AdminForm
         Me.pnlMenu.Size = New System.Drawing.Size(65, 860)
         Me.pnlMenu.TabIndex = 1
         '
-        'Label12
+        'btnReport
         '
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.profit_report
-        Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(16, 405)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(238, 45)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "                 Reports"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReport.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnReport.ForeColor = System.Drawing.Color.White
+        Me.btnReport.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.profit_report
+        Me.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReport.Location = New System.Drawing.Point(16, 405)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Size = New System.Drawing.Size(238, 45)
+        Me.btnReport.TabIndex = 8
+        Me.btnReport.Text = "                 Reports"
+        Me.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label6
+        'btnLogout
         '
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.logout
-        Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(16, 801)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(238, 40)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "                 Logout"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLogout.ForeColor = System.Drawing.Color.White
+        Me.btnLogout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.logout
+        Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLogout.Location = New System.Drawing.Point(16, 801)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(238, 40)
+        Me.btnLogout.TabIndex = 6
+        Me.btnLogout.Text = "                 Logout"
+        Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnMenu
         '
@@ -151,52 +149,45 @@ Partial Class AdminForm
         Me.btnMenu.Size = New System.Drawing.Size(66, 42)
         Me.btnMenu.TabIndex = 0
         '
-        'Label5
+        'btnAbout
         '
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.information_button
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(16, 492)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(238, 45)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "                 About"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAbout.ForeColor = System.Drawing.Color.White
+        Me.btnAbout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.information_button
+        Me.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAbout.Location = New System.Drawing.Point(16, 492)
+        Me.btnAbout.Name = "btnAbout"
+        Me.btnAbout.Size = New System.Drawing.Size(238, 45)
+        Me.btnAbout.TabIndex = 5
+        Me.btnAbout.Text = "                 About"
+        Me.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'logo
+        'btnUserManagement
         '
-        Me.logo.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.logo.Location = New System.Drawing.Point(21, 73)
-        Me.logo.Name = "logo"
-        Me.logo.Size = New System.Drawing.Size(40, 40)
-        Me.logo.TabIndex = 0
-        Me.logo.TabStop = False
-        Me.logo.Visible = False
+        Me.btnUserManagement.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnUserManagement.ForeColor = System.Drawing.Color.White
+        Me.btnUserManagement.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.user_small_
+        Me.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUserManagement.Location = New System.Drawing.Point(16, 322)
+        Me.btnUserManagement.Name = "btnUserManagement"
+        Me.btnUserManagement.Size = New System.Drawing.Size(238, 45)
+        Me.btnUserManagement.TabIndex = 4
+        Me.btnUserManagement.Text = "                 User Management"
+        Me.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label4
+        'btnHome
         '
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.user_small_
-        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(16, 322)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(238, 45)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "                 User Management"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label3
-        '
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.home
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(16, 242)
-        Me.Label3.MinimumSize = New System.Drawing.Size(65, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(238, 45)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "                 Home"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHome.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnHome.ForeColor = System.Drawing.Color.White
+        Me.btnHome.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.home
+        Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHome.Location = New System.Drawing.Point(16, 242)
+        Me.btnHome.MinimumSize = New System.Drawing.Size(65, 0)
+        Me.btnHome.Name = "btnHome"
+        Me.btnHome.Size = New System.Drawing.Size(238, 45)
+        Me.btnHome.TabIndex = 3
+        Me.btnHome.Text = "                 Home"
+        Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TimerPanelIncrease
         '
@@ -341,7 +332,7 @@ Partial Class AdminForm
         Me.GroupBox1.Size = New System.Drawing.Size(1080, 523)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "User Details"
+        Me.GroupBox1.Text = "Assessments"
         '
         'lblHome
         '
@@ -370,10 +361,6 @@ Partial Class AdminForm
         Me.lblTime.Size = New System.Drawing.Size(60, 60)
         Me.lblTime.TabIndex = 6
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "NewDataSet"
-        '
         'AdminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -386,26 +373,23 @@ Partial Class AdminForm
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.pnlMenu.ResumeLayout(False)
-        CType(Me.logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.SubPanel.ResumeLayout(False)
         Me.SubPanel.PerformLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Label12 As Label
+    Friend WithEvents btnReport As Label
     Friend WithEvents seperator2 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents btnLogout As Label
+    Friend WithEvents btnAbout As Label
+    Friend WithEvents btnUserManagement As Label
+    Friend WithEvents btnHome As Label
     Friend WithEvents seperator1 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents logo As CircularPictureBox
     Friend WithEvents pnlMenu As Panel
     Friend WithEvents btnMenu As Label
     Friend WithEvents TimerPanelIncrease As Timer
@@ -425,5 +409,5 @@ Partial Class AdminForm
     Friend WithEvents lblHome As Label
     Friend WithEvents SubPanel As Panel
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DataSet1 As DataSet
+    Friend WithEvents Timerupdater As Timer
 End Class

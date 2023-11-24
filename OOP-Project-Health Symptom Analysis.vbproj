@@ -129,6 +129,12 @@
     <Compile Include="Admin\AdminForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\UserManagementForm.Designer.vb">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserManagementForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mental Health Tests\AddictionResultForm.Designer.vb">
       <DependentUpon>AddictionResultForm.vb</DependentUpon>
     </Compile>
@@ -245,6 +251,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -285,6 +292,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin\AdminForm.resx">
       <DependentUpon>AdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\AddictionResultForm.resx">
       <DependentUpon>AddictionResultForm.vb</DependentUpon>

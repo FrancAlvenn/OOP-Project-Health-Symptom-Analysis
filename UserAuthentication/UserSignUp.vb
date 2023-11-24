@@ -21,9 +21,9 @@ Public Class UserSignUp
     'FUNCTIONS AND METHODS
 
 
-    Public Function connectDB()
+    Public Function insertUser()
         Try
-            connection.Open()
+            'connection.Open()
 
             If connection.State = ConnectionState.Open Then
                 'Create Table if not exists in the database
@@ -56,14 +56,16 @@ Public Class UserSignUp
 
 
 
-                MsgBox("Account Created Successfully!", vbOK, "Welcome to SymptoMedic!")
+                MsgBox("Account Created Successfully! Proceed to LogIn!", vbOK, "Welcome to SymptoMedic!")
+
+
             Else
                 Console.WriteLine("Bad Connection")
             End If
             ' Connection is successful
         Catch ex As Exception
 
-            MsgBox("Connection Exception!", vbOK)
+            MsgBox(ex.Message, vbOK)
         Finally
             connection.Close()
         End Try
@@ -91,10 +93,10 @@ Public Class UserSignUp
 
         Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
         If userExists Then
-            MsgBox("Already Exists")
+            MsgBox("Username already used!", vbOK, "Username Exists")
         Else
             If Not String.IsNullOrEmpty(txtUsername.Text) And Not String.IsNullOrEmpty(txtPassword.Text) Then
-                connectDB()
+                insertUser()
                 Me.Dispose()
                 MainForm.Enabled = True
                 MainForm.Show()
@@ -115,11 +117,15 @@ Public Class UserSignUp
                 Dim command As New SQLiteCommand(insertQuery, connection)
                 command.Parameters.AddWithValue("@Username", usernames)
 
-                Dim a = command.ExecuteReader()
-
-                If a.ToString <> "" Then
-                    Return True
-                End If
+                Using reader As SQLiteDataReader = command.ExecuteReader()
+                    If reader.HasRows Then
+                        ' Username exists
+                        Return True
+                    Else
+                        ' Username does not exist
+                        Return False
+                    End If
+                End Using
             End If
 
         Catch ex As Exception

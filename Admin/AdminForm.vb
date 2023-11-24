@@ -1,11 +1,19 @@
 ﻿Public Class AdminForm
 
+    Sub childForm(ByVal panel As Form)
+        SubPanel.Controls.Clear()
+        panel.TopLevel = False
+        panel.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        panel.Dock = DockStyle.Fill
+        SubPanel.Controls.Add(panel)
+        panel.Show()
+    End Sub
+
     Private Sub TimerPanelDecrease_Tick(sender As Object, e As EventArgs) Handles TimerPanelDecrease.Tick
         If pnlMenu.Width > 65 Then
             pnlMenu.Width -= 50
             seperator1.Visible = False
             seperator2.Visible = False
-            logo.Visible = False
             SubPanel.Enabled = True
         Else
             TimerPanelDecrease.Enabled = False
@@ -17,7 +25,6 @@
             pnlMenu.Width += 50
             seperator1.Visible = True
             seperator2.Visible = True
-            logo.Visible = True
             SubPanel.Enabled = False
         Else
             TimerPanelIncrease.Enabled = False
@@ -59,5 +66,7 @@
         RoundCornerLabel(lblUser)
     End Sub
 
-
+    Private Sub btnUserManagement_Click(sender As Object, e As EventArgs) Handles btnUserManagement.Click
+        childForm(UserManagementForm)
+    End Sub
 End Class

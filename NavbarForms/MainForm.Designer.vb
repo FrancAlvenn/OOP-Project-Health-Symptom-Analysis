@@ -224,7 +224,7 @@ Partial Class MainForm
         Me.pnlMenu.Location = New System.Drawing.Point(985, 60)
         Me.pnlMenu.MaximumSize = New System.Drawing.Size(300, 450)
         Me.pnlMenu.Name = "pnlMenu"
-        Me.pnlMenu.Size = New System.Drawing.Size(300, 450)
+        Me.pnlMenu.Size = New System.Drawing.Size(300, 0)
         Me.pnlMenu.TabIndex = 0
         '
         'btnReports
