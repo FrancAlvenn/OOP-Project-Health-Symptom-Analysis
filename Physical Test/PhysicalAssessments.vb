@@ -6,7 +6,7 @@ Public Class BMICalc
     Public itemCount As Integer = 0
     Public symptomCount As Integer = 0
     Public itemCount2 As Integer = 0
-    Dim clickedLabel As Label
+    Dim clickedLabelPhysicalAssessment As Label
     Public bodyLocationID As Integer
     Public queueSymptomName As New Queue()
     Public IssueName As New Queue()
@@ -39,7 +39,7 @@ Public Class BMICalc
 
     Private Sub Label_Click(sender As Object, e As EventArgs)
         ' Cast sender to Label
-        clickedLabel = DirectCast(sender, Label)
+        clickedLabelPhysicalAssessment = DirectCast(sender, Label)
 
         ' Reset styles for the previousClickedLabel if it exists
         If previousClickedLabel IsNot Nothing Then
@@ -55,11 +55,11 @@ Public Class BMICalc
             End If
         Next
 
-        clickedLabel.Font = New Font("Microsoft Tai Le", 10, FontStyle.Bold)
-        clickedLabel.BackColor = Color.FromArgb(162, 220, 245)
+        clickedLabelPhysicalAssessment.Font = New Font("Microsoft Tai Le", 10, FontStyle.Bold)
+        clickedLabelPhysicalAssessment.BackColor = Color.FromArgb(162, 220, 245)
 
         ' Update the reference to the previously clicked label
-        previousClickedLabel = clickedLabel
+        previousClickedLabel = clickedLabelPhysicalAssessment
     End Sub
 
     Private Sub Add_Label()
@@ -74,7 +74,7 @@ Public Class BMICalc
                     newLabel.Dock = DockStyle.Fill
                     newLabel.TextAlign = ContentAlignment.MiddleLeft
 
-                    AddHandler newLabel.Click, AddressOf Label_Click
+                    AddHandler newLabel.Click, AddressOf SymptomCheckerResult.Label_Click
 
                     Dim row As Integer = 0
                     Dim column As Integer = 0
@@ -178,14 +178,12 @@ Public Class BMICalc
         scrollTimer.Interval = 10 ' Set the interval for the timer (adjust as needed)
         scrollTimer.Start()
     End Sub
-
     Private Sub btnSymptomChecker_Click(sender As Object, e As EventArgs) Handles btnSymptomChecker.Click
         targetScrollValue = 1700 ' Set the target scroll value
         currentScrollValue = Me.VerticalScroll.Value
         scrollTimer.Interval = 15 ' Set the interval for the timer (adjust as needed)
         scrollTimer.Start()
     End Sub
-
     Private Sub Label21_Click(sender As Object, e As EventArgs) Handles Label21.Click
         targetScrollValue = 1700 ' Set the target scroll value
         currentScrollValue = Me.VerticalScroll.Value
@@ -244,10 +242,9 @@ Public Class BMICalc
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-        tableLayoutSymptoms.Controls.Remove(clickedLabel)
-        clickedLabel.Dispose()
+        tableLayoutSymptoms.Controls.Remove(clickedLabelPhysicalAssessment)
+        clickedLabelPhysicalAssessment.Dispose()
     End Sub
-
 
     Public Function BodyLocations()
         Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
@@ -466,8 +463,6 @@ Public Class BMICalc
                         End While
                     End Using
                 End Using
-
-
             End Using
         Next
 

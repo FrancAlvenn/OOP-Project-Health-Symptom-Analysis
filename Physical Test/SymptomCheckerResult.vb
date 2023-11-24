@@ -6,7 +6,7 @@ Public Class SymptomCheckerResult
 
     'clicked label funtion
     Private previousClickedLabel As Label
-    Private Sub Label_Click(sender As Object, e As EventArgs)
+    Public Sub Label_Click(sender As Object, e As EventArgs)
         ' Cast sender to Label
         clickedLabel = DirectCast(sender, Label)
 
