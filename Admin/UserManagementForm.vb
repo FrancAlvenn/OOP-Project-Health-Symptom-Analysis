@@ -11,17 +11,18 @@ Public Class UserManagementForm
             connection.Open()
         End If
 
-        Using connection As New SQLiteConnection(userAuthenticationString)
-            ' connection.Open()
+        Using Localconnection As New SQLiteConnection(userAuthenticationString)
 
             Dim query As String = "SELECT * FROM user_accounts"
-            Using adapter As New SQLiteDataAdapter(query, connection)
+            Using adapter As New SQLiteDataAdapter(query, Localconnection)
                 adapter.Fill(dataTable)
+
             End Using
         End Using
 
         dvgUsers.DataSource = dataTable
         dvgUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
     End Sub
 
     Private Sub Clear()
@@ -33,8 +34,9 @@ Public Class UserManagementForm
 
     Public Function IsUsernameExists(username As String) As Boolean
         Try
-            ' connection.Open()
-
+            If connection.State <> ConnectionState.Open Then
+                connection.Open()
+            End If
             If connection.State = ConnectionState.Open Then
                 Dim usernames As String = txtUsername.Text
                 Dim insertQuery As String = "SELECT * FROM user_accounts WHERE Username = @Username"
@@ -56,6 +58,8 @@ Public Class UserManagementForm
 
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            connection.Close()
         End Try
 
     End Function
@@ -73,8 +77,9 @@ Public Class UserManagementForm
 
     Public Function insertUser()
         Try
-            'connection.Open()
-
+            If connection.State <> ConnectionState.Open Then
+                connection.Open()
+            End If
             If connection.State = ConnectionState.Open Then
                 GenerateUniqueRandom()
                 Dim accountNumber As Integer = "800" & randomNum.ToString
@@ -104,13 +109,14 @@ Public Class UserManagementForm
         Catch ex As Exception
 
             MsgBox(ex.Message, vbOK)
+        Finally
+            connection.Close()
         End Try
         Return 0
     End Function
 
     Private Sub UserManagementForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadData()
-        updateTimer.Enabled = True
     End Sub
 
     Private Sub dvgUsers_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dvgUsers.CellClick
@@ -129,7 +135,9 @@ Public Class UserManagementForm
     End Sub
 
     Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
-
+        If connection.State <> ConnectionState.Open Then
+            connection.Open()
+        End If
         Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
         If userExists Then
             MsgBox("Username already used!", vbOK, "Username Exists")
@@ -140,6 +148,7 @@ Public Class UserManagementForm
                 MsgBox("Textbox is empty. Please enter a value.", vbInformation, "Empty Value!")
             End If
         End If
+        connection.Close()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -148,49 +157,57 @@ Public Class UserManagementForm
         txtUsername.Text = ""
         txtPassword.Text = ""
     End Sub
-    Dim reset As Integer = 60
-    Dim timer As Integer = 0
-    Private Sub updateTimer_Tick(sender As Object, e As EventArgs) Handles updateTimer.Tick
-        timer += 1
-        If timer = reset Then
-            LoadData()
-            timer = 0
-        End If
-    End Sub
+
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim userAuthenticationString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/userAuthentication.sqlite;"
+        'Dim connection As New SQLiteConnection(userAuthenticationString)
         If txtID.Text <> "" AndAlso txtName.Text <> "" AndAlso txtUsername.Text <> "" AndAlso txtPassword.Text <> "" Then
             Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
             If userExists Then
                 MsgBox("Username already used!", vbOK, "Username Exists")
             Else
-                Try
-                    If connection.State = ConnectionState.Open Then
-                        Dim updateQuery As String = "UPDATE user_accounts SET Name = @Name, Username = @Username, Password = @Password WHERE ID = @ID;"
+                Using LocalConnection As New SQLiteConnection(userAuthenticationString)
+                    Try
+                        If LocalConnection.State <> ConnectionState.Open Then
+                            LocalConnection.Open()
+                        End If
+                        If LocalConnection.State = ConnectionState.Open Then
+                            Dim updateQuery As String = "UPDATE user_accounts SET Name = @Name, Username = @Username, Password = @Password WHERE ID = @ID;"
 
-                        Dim command As New SQLiteCommand(updateQuery, connection)
-                        command.Parameters.AddWithValue("@Name", txtName.Text)
-                        command.Parameters.AddWithValue("@Username", txtUsername.Text)
-                        command.Parameters.AddWithValue("@Password", txtPassword.Text)
-                        command.Parameters.AddWithValue("@ID", txtID.Text)
+                            Dim command As New SQLiteCommand(updateQuery, LocalConnection)
+                            command.Parameters.AddWithValue("@Name", txtName.Text)
+                            command.Parameters.AddWithValue("@Username", txtUsername.Text)
+                            command.Parameters.AddWithValue("@Password", txtPassword.Text)
+                            command.Parameters.AddWithValue("@ID", txtID.Text)
 
-                        ' Execute the update query
-                        command.ExecuteNonQuery()
+                            ' Execute the update query
+                            command.ExecuteNonQuery()
 
-                        MsgBox("Account updated successfully.", vbOK, "Update Complete!")
-                        LoadData()
-                        Clear()
-                    Else
-                        MsgBox("Please select a record to update and complete all the inputs!", vbInformation, "Error!")
-                    End If
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
+                            MsgBox("Account updated successfully.", vbOK, "Update Complete!")
+                            LoadData()
+                            Clear()
+                        Else
+                            MsgBox("Please select a record to update and complete all the inputs!", vbInformation, "Error!")
+                        End If
+
+                    Catch ex As Exception
+                        MsgBox("ERROR:" & ex.Message)
+                        Console.WriteLine(ex.Message)
+                    Finally
+                        LocalConnection.Close()
+
+                    End Try
+                End Using
             End If
         End If
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        If connection.State <> ConnectionState.Open Then
+            connection.Open()
+        End If
+
         If txtID.Text <> "" Then
             Try
                 If connection.State = ConnectionState.Open Then
@@ -202,7 +219,6 @@ Public Class UserManagementForm
                     MsgBox("User deleted successfully.", vbOK, "Account Deleted")
                     LoadData()
                     Clear()
-
                 End If
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -211,5 +227,10 @@ Public Class UserManagementForm
         Else
             MsgBox("Please select a record to delete!", vbInformation, "Error!")
         End If
+
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        UserReportForm.Show()
     End Sub
 End Class

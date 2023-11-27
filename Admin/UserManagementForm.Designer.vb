@@ -39,6 +39,7 @@ Partial Class UserManagementForm
         Me.dvgUsers = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.updateTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.btnPrint = New System.Windows.Forms.Button()
         CType(Me.dvgUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,7 +70,7 @@ Partial Class UserManagementForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(93, 191)
+        Me.Label2.Location = New System.Drawing.Point(93, 195)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 19)
@@ -80,7 +81,7 @@ Partial Class UserManagementForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(93, 242)
+        Me.Label4.Location = New System.Drawing.Point(93, 251)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(71, 19)
@@ -91,7 +92,7 @@ Partial Class UserManagementForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(93, 291)
+        Me.Label5.Location = New System.Drawing.Point(93, 305)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 19)
@@ -119,21 +120,21 @@ Partial Class UserManagementForm
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(213, 187)
+        Me.txtName.Location = New System.Drawing.Point(213, 191)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(269, 27)
         Me.txtName.TabIndex = 168
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(213, 238)
+        Me.txtUsername.Location = New System.Drawing.Point(213, 247)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(269, 27)
         Me.txtUsername.TabIndex = 169
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(213, 287)
+        Me.txtPassword.Location = New System.Drawing.Point(213, 301)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(269, 27)
@@ -148,7 +149,7 @@ Partial Class UserManagementForm
         Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.Color.Black
-        Me.btnDelete.Location = New System.Drawing.Point(863, 224)
+        Me.btnDelete.Location = New System.Drawing.Point(863, 207)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(224, 37)
         Me.btnDelete.TabIndex = 175
@@ -164,7 +165,7 @@ Partial Class UserManagementForm
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.Color.Black
-        Me.btnUpdate.Location = New System.Drawing.Point(863, 177)
+        Me.btnUpdate.Location = New System.Drawing.Point(863, 164)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(224, 37)
         Me.btnUpdate.TabIndex = 176
@@ -180,7 +181,7 @@ Partial Class UserManagementForm
         Me.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnInsert.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnInsert.ForeColor = System.Drawing.Color.Black
-        Me.btnInsert.Location = New System.Drawing.Point(863, 132)
+        Me.btnInsert.Location = New System.Drawing.Point(863, 121)
         Me.btnInsert.Name = "btnInsert"
         Me.btnInsert.Size = New System.Drawing.Size(224, 37)
         Me.btnInsert.TabIndex = 177
@@ -190,7 +191,7 @@ Partial Class UserManagementForm
         'dvgUsers
         '
         Me.dvgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dvgUsers.Location = New System.Drawing.Point(97, 380)
+        Me.dvgUsers.Location = New System.Drawing.Point(97, 403)
         Me.dvgUsers.Name = "dvgUsers"
         Me.dvgUsers.Size = New System.Drawing.Size(990, 391)
         Me.dvgUsers.TabIndex = 178
@@ -204,7 +205,7 @@ Partial Class UserManagementForm
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(863, 267)
+        Me.Button1.Location = New System.Drawing.Point(863, 294)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(224, 37)
         Me.Button1.TabIndex = 179
@@ -215,12 +216,29 @@ Partial Class UserManagementForm
         '
         Me.updateTimer.Interval = 1000
         '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.Black
+        Me.btnPrint.Location = New System.Drawing.Point(863, 251)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(224, 37)
+        Me.btnPrint.TabIndex = 180
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = False
+        '
         'UserManagementForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1202, 822)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dvgUsers)
         Me.Controls.Add(Me.btnInsert)
@@ -262,4 +280,5 @@ Partial Class UserManagementForm
     Friend WithEvents dvgUsers As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents updateTimer As Timer
+    Friend WithEvents btnPrint As Button
 End Class

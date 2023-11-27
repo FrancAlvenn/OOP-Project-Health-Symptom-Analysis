@@ -476,32 +476,34 @@ Public Class BMICalc
             Dim weight As Integer
             Dim bmi As Double
 
-            height = Integer.Parse(txtHeight.Text)
-            weight = Integer.Parse(txtWeight.Text)
 
-            bmi = weight / (height / 100) ^ 2
+            If Integer.TryParse(txtHeight.Text, height) AndAlso Integer.TryParse(txtWeight.Text, weight) Then
+                height = Integer.Parse(txtHeight.Text)
+                weight = Integer.Parse(txtWeight.Text)
+                bmi = weight / (height / 100) ^ 2
+                txtBMIResult.Text = Math.Ceiling(bmi * 10D) / 10D
+            Else
+                MsgBox("Please input a number!", vbOK, "Invalid Input!")
+            End If
 
-            txtBMIResult.Text = Math.Ceiling(bmi * 10D) / 10D
 
         ElseIf rdbImperial.Checked Then
             Dim height As Integer
             Dim inch As Integer
             Dim weight As Integer
             Dim bmi As Double
+            If Integer.TryParse(txtHeight.Text, height) AndAlso Integer.TryParse(txtInch.Text, inch) AndAlso Integer.TryParse(txtWeight.Text, weight) Then
+                height = Integer.Parse(txtHeight.Text)
+                inch = Integer.Parse(txtInch.Text)
+                weight = Integer.Parse(txtWeight.Text)
 
-            height = Integer.Parse(txtHeight.Text)
-            inch = Integer.Parse(txtInch.Text)
-            weight = Integer.Parse(txtWeight.Text)
+                bmi = 703 * (weight / (((height * 12) + inch) ^ 2))
 
-            bmi = 703 * (weight / (((height * 12) + inch) ^ 2))
-
-            txtBMIResult.Text = Math.Ceiling(bmi * 10D) / 10D
-
-
+                txtBMIResult.Text = Math.Ceiling(bmi * 10D) / 10D
+            Else
+                MsgBox("Please input a number!", vbOK, "Invalid Input!")
+            End If
         End If
     End Sub
 
-    Private Sub cmb_Symptoms_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_Symptoms.SelectedIndexChanged
-
-    End Sub
 End Class

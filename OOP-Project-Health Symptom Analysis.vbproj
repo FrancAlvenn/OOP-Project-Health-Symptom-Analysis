@@ -51,6 +51,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -69,6 +73,9 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Odbc, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.Odbc.8.0.0\lib\net462\System.Data.Odbc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
     </Reference>
@@ -102,6 +109,8 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -129,10 +138,28 @@
     <Compile Include="Admin\AdminForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\AdminHome.Designer.vb">
+      <DependentUpon>AdminHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\UserManagementForm.Designer.vb">
       <DependentUpon>UserManagementForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Admin\UserManagementForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\UserManagementReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserManagementReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\UserReportForm.Designer.vb">
+      <DependentUpon>UserReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mental Health Tests\AddictionResultForm.Designer.vb">
@@ -293,8 +320,18 @@
     <EmbeddedResource Include="Admin\AdminForm.resx">
       <DependentUpon>AdminForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminHome.resx">
+      <DependentUpon>AdminHome.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\UserManagementForm.resx">
       <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserManagementReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UserManagementReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserReportForm.resx">
+      <DependentUpon>UserReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\AddictionResultForm.resx">
       <DependentUpon>AddictionResultForm.vb</DependentUpon>
@@ -498,6 +535,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\TestResultHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

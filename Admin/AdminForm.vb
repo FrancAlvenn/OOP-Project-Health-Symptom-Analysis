@@ -40,33 +40,16 @@
         End If
     End Sub
 
-    Private Sub RoundCornerLabel(label As Label)
-        label.BorderStyle = FlatStyle.Flat
-
-        Dim rad As New Drawing2D.GraphicsPath
-        rad.StartFigure()
-        'top left
-        rad.AddArc(New Rectangle(0, 0, 20, 20), 180, 90)
-        rad.AddLine(10, 0, label.Width - 20, 0)
-        'top right
-        rad.AddArc(New Rectangle(label.Width - 20, 0, 20, 20), -90, 90)
-        rad.AddLine(label.Width, 20, label.Width, label.Height - 20)
-        'bottom right
-        'to change the bottom right the x,y,width,height must be same
-        rad.AddArc(New Rectangle(label.Width - 25, label.Height - 25, 25, 25), 0, 90)
-        rad.AddLine(label.Width - 10, label.Height, 20, label.Height)
-        'bottom left
-        rad.AddArc(New Rectangle(0, label.Height - 20, 20, 20), 90, 90)
-        label.Region = New Region(rad)
-    End Sub
 
     Private Sub MainFrame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RoundCornerLabel(lblHome)
-        RoundCornerLabel(lblTime)
-        RoundCornerLabel(lblUser)
+        childForm(AdminHome)
     End Sub
 
     Private Sub btnUserManagement_Click(sender As Object, e As EventArgs) Handles btnUserManagement.Click
         childForm(UserManagementForm)
+    End Sub
+
+    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        childForm(AdminHome)
     End Sub
 End Class

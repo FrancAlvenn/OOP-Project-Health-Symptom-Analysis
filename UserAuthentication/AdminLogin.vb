@@ -130,6 +130,7 @@ Public Class AdminLogin
             AdminForm.Show()
             Me.Dispose()
             MainForm.Hide()
+
         Else
             ' Invalid credentials
             MessageBox.Show("Invalid username or password.")
