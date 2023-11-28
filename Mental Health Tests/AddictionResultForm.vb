@@ -36,6 +36,11 @@
             testResult.Text = aboveTwo
         End If
 
+
+        Dim labelArray() As Label = {q1, q2, q3, q4, q5}
+        AddLabelsToQueue(labelArray)
+        addRecord(testResult.Text)
+
     End Sub
 
     Private Sub backButton_Click(sender As Object, e As EventArgs) Handles backButton.Click

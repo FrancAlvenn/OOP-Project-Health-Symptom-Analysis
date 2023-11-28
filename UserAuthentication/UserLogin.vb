@@ -6,6 +6,7 @@ Public Class UserLogin
     Public setTries As Integer = 0
     Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;Version=3;"
     Public connection As New SQLiteConnection(connectionName)
+    Public Shared userID As String
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         attemptCheck()
@@ -122,15 +123,17 @@ Public Class UserLogin
         Dim reader As SQLiteDataReader = command.ExecuteReader()
 
         'check if the username and password are in the database
-
-
         If reader.Read() Then
             ' Successful login
+            userID = reader("ID")
+
+            MsgBox(userID)
             MessageBox.Show("Login successful!")
             MainForm.hasAccount = True
             Me.Dispose()
             MainForm.Enabled = True
             MainForm.Show()
+
         Else
             ' Invalid credentials
             MessageBox.Show("Invalid username or password.")
