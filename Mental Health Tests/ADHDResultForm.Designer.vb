@@ -79,6 +79,7 @@ Partial Class ADHDResultForm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.backButton = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -681,6 +682,22 @@ Partial Class ADHDResultForm
         Me.Label1.Size = New System.Drawing.Size(1063, 218)
         Me.Label1.TabIndex = 166
         '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.Black
+        Me.btnPrint.Location = New System.Drawing.Point(522, 450)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(124, 37)
+        Me.btnPrint.TabIndex = 174
+        Me.btnPrint.Text = "Print Report"
+        Me.btnPrint.UseVisualStyleBackColor = False
+        '
         'ADHDResultForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -688,6 +705,7 @@ Partial Class ADHDResultForm
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1118, 658)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Panel3)
@@ -767,4 +785,5 @@ Partial Class ADHDResultForm
     Friend WithEvents q2 As Label
     Friend WithEvents q3 As Label
     Friend WithEvents q1 As Label
+    Friend WithEvents btnPrint As Button
 End Class

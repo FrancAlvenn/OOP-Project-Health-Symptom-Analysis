@@ -55,6 +55,16 @@ Public Class UserSignUp
                 command.ExecuteNonQuery()
 
 
+                Dim createUserHistory As String = "CREATE TABLE IF NOT EXISTS _" & UserLogin.userID & " (ID INTEGER PRIMARY KEY AUTOINCREMENT," &
+                                                   "AssessmentCategory TEXT," &
+                                                   "TestResult TEXT," &
+                                                   "PatientResponse TEXT," &
+                                                   "DateTaken TEXT);"
+                ' Execute the query
+                Dim createUserHistoryCommand As New SQLiteCommand(createTableString, connection)
+                createUserHistoryCommand.ExecuteNonQuery()
+
+
 
                 MsgBox("Account Created Successfully! Proceed to LogIn!", vbOK, "Welcome to SymptoMedic!")
 

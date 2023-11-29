@@ -53,6 +53,7 @@ Partial Class PTSDResultForm
         Me.backButton = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -374,12 +375,29 @@ Partial Class PTSDResultForm
         'Label14
         '
         Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
         Me.Label14.Location = New System.Drawing.Point(162, 491)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(133, 41)
         Me.Label14.TabIndex = 197
         Me.Label14.Text = "Your Answers"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.Black
+        Me.btnPrint.Location = New System.Drawing.Point(583, 443)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(124, 37)
+        Me.btnPrint.TabIndex = 181
+        Me.btnPrint.Text = "Print Report"
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'PTSDResultForm
         '
@@ -388,6 +406,7 @@ Partial Class PTSDResultForm
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1146, 740)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.backButton)
@@ -437,4 +456,5 @@ Partial Class PTSDResultForm
     Friend WithEvents Label11 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
+    Friend WithEvents btnPrint As Button
 End Class

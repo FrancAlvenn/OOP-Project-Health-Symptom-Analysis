@@ -1,5 +1,5 @@
 ﻿Public Class MentalAssessment
-
+    Public assessmentCategory As String
 
     'Funtions and Methods
 
@@ -83,22 +83,27 @@
 
     Private Sub btnDepressionTest_Click_1(sender As Object, e As EventArgs) Handles btnDepressionTest.Click
         childForm(DepressionTest)
+        assessmentCategory = "DepressionTest"
     End Sub
 
     Private Sub btnADHDTest_Click(sender As Object, e As EventArgs) Handles btnADHDTest.Click
         childForm(ADHDTest)
+        assessmentCategory = "ADHDTest"
     End Sub
 
     Private Sub btnAnxietyTest_Click(sender As Object, e As EventArgs) Handles btnAnxietyTest.Click
         childForm(AnxietyTest)
+        assessmentCategory = "AnxietyTest"
     End Sub
 
     Private Sub btnPTSDTest_Click(sender As Object, e As EventArgs) Handles btnPTSDTest.Click
         childForm(PTSDTest)
+        assessmentCategory = "PTSDTest"
     End Sub
 
     Private Sub btnAddictionTest_Click(sender As Object, e As EventArgs) Handles btnAddictionTest.Click
         childForm(AddictionTest)
+        assessmentCategory = "AddictionTest"
     End Sub
 
 

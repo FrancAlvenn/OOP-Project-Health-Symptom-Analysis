@@ -38,6 +38,7 @@ Partial Class DepressionResultForm
         Me.q3 = New System.Windows.Forms.Label()
         Me.q1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.q6 = New System.Windows.Forms.Label()
         Me.q9 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.q8 = New System.Windows.Forms.Label()
@@ -57,7 +58,7 @@ Partial Class DepressionResultForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button40 = New System.Windows.Forms.Button()
-        Me.q6 = New System.Windows.Forms.Label()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -239,6 +240,16 @@ Partial Class DepressionResultForm
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(804, 670)
         Me.Panel3.TabIndex = 187
+        '
+        'q6
+        '
+        Me.q6.AutoSize = True
+        Me.q6.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.q6.Location = New System.Drawing.Point(234, 335)
+        Me.q6.Name = "q6"
+        Me.q6.Size = New System.Drawing.Size(33, 19)
+        Me.q6.TabIndex = 193
+        Me.q6.Text = "null"
         '
         'q9
         '
@@ -427,15 +438,21 @@ Partial Class DepressionResultForm
         Me.Button40.Text = "Take another Mental Assessment"
         Me.Button40.UseVisualStyleBackColor = False
         '
-        'q6
+        'btnPrint
         '
-        Me.q6.AutoSize = True
-        Me.q6.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.q6.Location = New System.Drawing.Point(234, 335)
-        Me.q6.Name = "q6"
-        Me.q6.Size = New System.Drawing.Size(33, 19)
-        Me.q6.TabIndex = 193
-        Me.q6.Text = "null"
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.Black
+        Me.btnPrint.Location = New System.Drawing.Point(523, 451)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(124, 37)
+        Me.btnPrint.TabIndex = 190
+        Me.btnPrint.Text = "Print Report"
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'DepressionResultForm
         '
@@ -444,6 +461,7 @@ Partial Class DepressionResultForm
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1086, 719)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Panel3)
@@ -501,4 +519,5 @@ Partial Class DepressionResultForm
     Friend WithEvents q9 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents q6 As Label
+    Friend WithEvents btnPrint As Button
 End Class

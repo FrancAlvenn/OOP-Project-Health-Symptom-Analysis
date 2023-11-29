@@ -126,8 +126,6 @@ Public Class UserLogin
         If reader.Read() Then
             ' Successful login
             userID = reader("ID")
-
-            MsgBox(userID)
             MessageBox.Show("Login successful!")
             MainForm.hasAccount = True
             Me.Dispose()

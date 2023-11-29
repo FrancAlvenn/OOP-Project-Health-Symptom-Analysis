@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class AddictionTestReport
+Public Class DepressionTestReport
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class AddictionTestReport
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "AddictionTestReport.rpt"
+            Return "DepressionTestReport.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class AddictionTestReport
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "OOP_Project_Health_Symptom_Analysis.AddictionTestReport.rpt"
+            Return "OOP_Project_Health_Symptom_Analysis.DepressionTestReport.rpt"
         End Get
         Set
             'Do nothing
@@ -94,7 +94,7 @@ Public Class AddictionTestReport
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_TestResult() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_PatientResponses() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(0)
         End Get
@@ -102,7 +102,7 @@ Public Class AddictionTestReport
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_q1() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_TestResult() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(1)
         End Get
@@ -110,7 +110,7 @@ Public Class AddictionTestReport
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_q2() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_q1() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(2)
         End Get
@@ -118,7 +118,7 @@ Public Class AddictionTestReport
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_q3() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_q2() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(3)
         End Get
@@ -126,7 +126,7 @@ Public Class AddictionTestReport
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_q4() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_q3() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(4)
         End Get
@@ -134,7 +134,7 @@ Public Class AddictionTestReport
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_q5() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_q4() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(5)
         End Get
@@ -142,15 +142,47 @@ Public Class AddictionTestReport
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_PatientResponses() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_q5() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(6)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_q6() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(7)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_q7() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(8)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_q8() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(9)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Parameter_q9() As CrystalDecisions.[Shared].IParameterField
+        Get
+            Return Me.DataDefinition.ParameterFields(10)
         End Get
     End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedAddictionTestReport
+Public Class CachedDepressionTestReport
     Inherits Component
     Implements ICachedReport
     
@@ -192,7 +224,7 @@ Public Class CachedAddictionTestReport
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As AddictionTestReport = New AddictionTestReport()
+        Dim rpt As DepressionTestReport = New DepressionTestReport()
         rpt.Site = Me.Site
         Return rpt
     End Function

@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SQLite
 Imports System.Collections.Generic
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
 
 Module MentalHealthRecorder
     Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
@@ -28,8 +30,8 @@ Module MentalHealthRecorder
                 connection.Open()
                 If connection.State = ConnectionState.Open Then
                     'Create Table if not exists in the database
-                    MsgBox(UserLogin.userID)
                     Dim createTableString As String = "CREATE TABLE IF NOT EXISTS _" & UserLogin.userID & " (ID INTEGER PRIMARY KEY AUTOINCREMENT," &
+                                                      "AssessmentCategory TEXT," &
                                                       "TestResult TEXT," &
                                                       "PatientResponse TEXT," &
                                                       "DateTaken TEXT);"
@@ -38,12 +40,13 @@ Module MentalHealthRecorder
                     createTableCommand.ExecuteNonQuery()
 
                     ' Get value from form
-                    Dim insertQuery As String = "INSERT INTO _" & UserLogin.userID & " (TestResult, PatientResponse, DateTaken) VALUES (@TestResult, @PatientResponse, @DateTaken)"
+                    Dim insertQuery As String = "INSERT INTO _" & UserLogin.userID & " (AssessmentCategory, TestResult, PatientResponse, DateTaken) VALUES (@AssessmentCategory ,@TestResult, @PatientResponse, @DateTaken)"
                     Dim command As New SQLiteCommand(insertQuery, connection)
 
 
 
                     ' Add parameters
+                    command.Parameters.AddWithValue("@AssessmentCategory", MentalAssessment.assessmentCategory)
                     command.Parameters.AddWithValue("@TestResult", testResult)
                     command.Parameters.AddWithValue("@PatientResponse", patientResponseString)
                     command.Parameters.AddWithValue("@DateTaken", Date.Today)
@@ -77,5 +80,125 @@ Module MentalHealthRecorder
 
 
 
+    End Sub
+
+    Public Sub generateReport(testType As String)
+        ' Connection string for SQLite in-memory database
+        Dim connectionString As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
+        Dim report As ReportClass
+        ' Create an SQLite connection
+        Using connection As New SQLiteConnection(connectionString)
+            connection.Open()
+
+
+            ' Load the data from the database into a DataTable
+            Dim dataTable As New System.Data.DataTable()
+            Using adapter As New SQLiteDataAdapter("SELECT * FROM _" & UserLogin.userID & " WHERE AssessmentCategory = """ & testType & """ ORDER BY DateTaken DESC LIMIT 1;", connection)
+                adapter.Fill(dataTable)
+            End Using
+
+            Select Case testType
+                Case "AddictionTest"
+                    report = New AddictionTestReport()
+                Case "ADHDTest"
+                    report = New ADHDTestReport()
+                Case "AnxietyTest"
+                    report = New AnxietyTestReport()
+                Case "DepressionTest"
+                    report = New DepressionTestReport()
+                Case "PTSDTest"
+                    report = New PTSDTestReport()
+            End Select
+
+            ' Set parameters from DataTable values
+            If dataTable.Rows.Count > 0 Then
+                report.SetParameterValue("TestResult", dataTable.Rows(0)("TestResult").ToString())
+                report.SetParameterValue("PatientResponses", dataTable.Rows(0)("PatientResponse").ToString())
+
+                Select Case testType
+                    Case "AddictionTest"
+                        'get patient responses
+                        Dim patientResponseString As String = dataTable.Rows(0)("PatientResponse").ToString()
+                        Dim responsesArray As String() = patientResponseString.Split(","c)
+                        report.SetParameterValue("q1", responsesArray(0))
+                        report.SetParameterValue("q2", responsesArray(1))
+                        report.SetParameterValue("q3", responsesArray(2))
+                        report.SetParameterValue("q4", responsesArray(3))
+                        report.SetParameterValue("q5", responsesArray(4))
+                    Case "ADHDTest"
+                        'get patient responses
+                        Dim patientResponseString As String = dataTable.Rows(0)("PatientResponse").ToString()
+                        Dim responsesArray As String() = patientResponseString.Split(","c)
+                        report.SetParameterValue("q1", responsesArray(0))
+                        report.SetParameterValue("q2", responsesArray(1))
+                        report.SetParameterValue("q3", responsesArray(2))
+                        report.SetParameterValue("q4", responsesArray(3))
+                        report.SetParameterValue("q5", responsesArray(4))
+                        report.SetParameterValue("q6", responsesArray(5))
+                        report.SetParameterValue("q7", responsesArray(6))
+                        report.SetParameterValue("q8", responsesArray(7))
+                        report.SetParameterValue("q9", responsesArray(8))
+                        report.SetParameterValue("q10", responsesArray(9))
+                        report.SetParameterValue("q11", responsesArray(10))
+                        report.SetParameterValue("q12", responsesArray(11))
+                        report.SetParameterValue("q13", responsesArray(12))
+                        report.SetParameterValue("q14", responsesArray(13))
+                        report.SetParameterValue("q15", responsesArray(14))
+                        report.SetParameterValue("q16", responsesArray(15))
+                        report.SetParameterValue("q17", responsesArray(16))
+                        report.SetParameterValue("q18", responsesArray(17))
+                    Case "AnxietyTest"
+                        'get patient responses
+                        Dim patientResponseString As String = dataTable.Rows(0)("PatientResponse").ToString()
+                        Dim responsesArray As String() = patientResponseString.Split(","c)
+                        report.SetParameterValue("q1", responsesArray(0))
+                        report.SetParameterValue("q2", responsesArray(1))
+                        report.SetParameterValue("q3", responsesArray(2))
+                        report.SetParameterValue("q4", responsesArray(3))
+                        report.SetParameterValue("q5", responsesArray(4))
+                        report.SetParameterValue("q6", responsesArray(5))
+                        report.SetParameterValue("q7", responsesArray(6))
+                    Case "DepressionTest"
+                        'get patient responses
+                        Dim patientResponseString As String = dataTable.Rows(0)("PatientResponse").ToString()
+                        Dim responsesArray As String() = patientResponseString.Split(","c)
+                        report.SetParameterValue("q1", responsesArray(0))
+                        report.SetParameterValue("q2", responsesArray(1))
+                        report.SetParameterValue("q3", responsesArray(2))
+                        report.SetParameterValue("q4", responsesArray(3))
+                        report.SetParameterValue("q5", responsesArray(4))
+                        report.SetParameterValue("q6", responsesArray(5))
+                        report.SetParameterValue("q7", responsesArray(6))
+                        report.SetParameterValue("q8", responsesArray(7))
+                        report.SetParameterValue("q9", responsesArray(8))
+                    Case "PTSDTest"
+                        'get patient responses
+                        Dim patientResponseString As String = dataTable.Rows(0)("PatientResponse").ToString()
+                        Dim responsesArray As String() = patientResponseString.Split(","c)
+                        report.SetParameterValue("q1", responsesArray(0))
+                        report.SetParameterValue("q2", responsesArray(1))
+                        report.SetParameterValue("q3", responsesArray(2))
+                        report.SetParameterValue("q4", responsesArray(3))
+                        report.SetParameterValue("q5", responsesArray(4))
+                End Select
+
+            End If
+            ' Set the report to the CrystalReportViewer
+            mentalTestReportForm.CrystalReportViewer1.ReportSource = report
+            ShowReport(report)
+            connection.Close()
+
+        End Using
+    End Sub
+
+    Private Sub ShowReport(report As ReportClass)
+        ' Create an instance of the CrystalReportViewerForm
+        Dim viewerForm As New mentalTestReportForm()
+
+        ' Set the report to the CrystalReportViewer in the form
+        viewerForm.SetReport(report)
+
+        ' Show the CrystalReportViewerForm
+        viewerForm.ShowDialog()
     End Sub
 End Module

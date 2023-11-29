@@ -82,5 +82,24 @@
             q7.Text = selectedText
         End If
 
+
+        Dim labelArray() As Label = {q1, q2, q3, q4, q5, q6, q7}
+        AddLabelsToQueue(labelArray)
+        addRecord(testResult.Text)
+
+
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        If MainForm.hasAccount Then
+            generateReport("AnxietyTest")
+        Else
+            Dim result As DialogResult = MessageBox.Show("You cannot print your report as you are not logged in, to print result please LogIn!", "CONFIRMATION",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If result = DialogResult.Yes Then
+                Dim loginForm As DialogResult = UserLogin.ShowDialog()
+            End If
+        End If
     End Sub
 End Class
