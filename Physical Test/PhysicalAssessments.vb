@@ -105,7 +105,7 @@ Public Class BMICalc
                     Dim row As Integer = 0
                     Dim column As Integer = 0
 
-                    SymptomCheckerResult.tblSymptoms.Controls.Add(newLabel, column, row)
+                    SymptomCheckerResult.tableSymptoms.Controls.Add(newLabel, column, row)
                     itemCount2 += 1
 
                 End If
@@ -124,7 +124,7 @@ Public Class BMICalc
 
     Private Sub PhysicalAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs)
         'fucntion call to get childform
-        MainForm.childForm(PhysicalAssessment)
+        MainForm.childForm(Me)
     End Sub
 
 

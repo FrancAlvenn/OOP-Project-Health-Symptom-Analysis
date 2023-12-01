@@ -23,10 +23,9 @@ Partial Class SymptomCheckerResult
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SymptomCheckerResult))
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.tblSymptoms = New System.Windows.Forms.TableLayoutPanel()
+        Me.tableSymptoms = New System.Windows.Forms.TableLayoutPanel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button40 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -42,22 +41,16 @@ Partial Class SymptomCheckerResult
         Me.btnConfirmSelection = New System.Windows.Forms.Button()
         Me.backButton = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label15
-        '
-        Me.Label15.Location = New System.Drawing.Point(943, 1605)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(45, 121)
-        Me.Label15.TabIndex = 173
-        '
         'Label14
         '
         Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(139, 960)
+        Me.Label14.Location = New System.Drawing.Point(135, 752)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(133, 41)
         Me.Label14.TabIndex = 172
@@ -67,38 +60,38 @@ Partial Class SymptomCheckerResult
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.tblSymptoms)
+        Me.Panel3.Controls.Add(Me.tableSymptoms)
         Me.Panel3.Controls.Add(Me.Label13)
-        Me.Panel3.Location = New System.Drawing.Point(120, 989)
+        Me.Panel3.Location = New System.Drawing.Point(116, 781)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(831, 427)
         Me.Panel3.TabIndex = 171
         '
-        'tblSymptoms
+        'tableSymptoms
         '
-        Me.tblSymptoms.AutoScroll = True
-        Me.tblSymptoms.ColumnCount = 1
-        Me.tblSymptoms.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tblSymptoms.Location = New System.Drawing.Point(40, 90)
-        Me.tblSymptoms.Name = "tblSymptoms"
-        Me.tblSymptoms.RowCount = 15
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tblSymptoms.Size = New System.Drawing.Size(749, 297)
-        Me.tblSymptoms.TabIndex = 161
+        Me.tableSymptoms.AutoScroll = True
+        Me.tableSymptoms.ColumnCount = 1
+        Me.tableSymptoms.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tableSymptoms.Location = New System.Drawing.Point(40, 90)
+        Me.tableSymptoms.Name = "tableSymptoms"
+        Me.tableSymptoms.RowCount = 15
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tableSymptoms.Size = New System.Drawing.Size(749, 297)
+        Me.tableSymptoms.TabIndex = 161
         '
         'Label13
         '
@@ -120,7 +113,7 @@ Partial Class SymptomCheckerResult
         Me.Button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button40.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button40.ForeColor = System.Drawing.Color.Black
-        Me.Button40.Location = New System.Drawing.Point(492, 828)
+        Me.Button40.Location = New System.Drawing.Point(521, 650)
         Me.Button40.Name = "Button40"
         Me.Button40.Size = New System.Drawing.Size(248, 37)
         Me.Button40.TabIndex = 170
@@ -134,7 +127,7 @@ Partial Class SymptomCheckerResult
         Me.Label9.ForeColor = System.Drawing.Color.DimGray
         Me.Label9.Location = New System.Drawing.Point(67, 451)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(665, 95)
+        Me.Label9.Size = New System.Drawing.Size(689, 76)
         Me.Label9.TabIndex = 162
         Me.Label9.Text = resources.GetString("Label9.Text")
         '
@@ -167,9 +160,9 @@ Partial Class SymptomCheckerResult
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Location = New System.Drawing.Point(120, 1477)
+        Me.Panel2.Location = New System.Drawing.Point(116, 1272)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(800, 625)
+        Me.Panel2.Size = New System.Drawing.Size(831, 625)
         Me.Panel2.TabIndex = 169
         '
         'Label7
@@ -211,7 +204,7 @@ Partial Class SymptomCheckerResult
         Me.Panel1.Controls.Add(Me.tableDiagnosis)
         Me.Panel1.Location = New System.Drawing.Point(120, 258)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(831, 541)
+        Me.Panel1.Size = New System.Drawing.Size(831, 374)
         Me.Panel1.TabIndex = 168
         '
         'Label3
@@ -219,7 +212,7 @@ Partial Class SymptomCheckerResult
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(45, 33)
+        Me.Label3.Location = New System.Drawing.Point(45, 19)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(451, 26)
         Me.Label3.TabIndex = 160
@@ -230,7 +223,7 @@ Partial Class SymptomCheckerResult
         Me.tableDiagnosis.AutoScroll = True
         Me.tableDiagnosis.ColumnCount = 1
         Me.tableDiagnosis.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tableDiagnosis.Location = New System.Drawing.Point(50, 99)
+        Me.tableDiagnosis.Location = New System.Drawing.Point(50, 61)
         Me.tableDiagnosis.Name = "tableDiagnosis"
         Me.tableDiagnosis.RowCount = 20
         Me.tableDiagnosis.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
@@ -253,7 +246,7 @@ Partial Class SymptomCheckerResult
         Me.tableDiagnosis.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tableDiagnosis.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tableDiagnosis.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tableDiagnosis.Size = New System.Drawing.Size(740, 395)
+        Me.tableDiagnosis.Size = New System.Drawing.Size(740, 280)
         Me.tableDiagnosis.TabIndex = 159
         '
         'btnConfirmSelection
@@ -265,7 +258,7 @@ Partial Class SymptomCheckerResult
         Me.btnConfirmSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfirmSelection.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirmSelection.ForeColor = System.Drawing.Color.Black
-        Me.btnConfirmSelection.Location = New System.Drawing.Point(786, 828)
+        Me.btnConfirmSelection.Location = New System.Drawing.Point(786, 650)
         Me.btnConfirmSelection.Name = "btnConfirmSelection"
         Me.btnConfirmSelection.Size = New System.Drawing.Size(165, 37)
         Me.btnConfirmSelection.TabIndex = 174
@@ -289,6 +282,22 @@ Partial Class SymptomCheckerResult
         Me.Label1.Size = New System.Drawing.Size(1045, 218)
         Me.Label1.TabIndex = 166
         '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.Black
+        Me.btnPrint.Location = New System.Drawing.Point(120, 650)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(113, 37)
+        Me.btnPrint.TabIndex = 175
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = False
+        '
         'SymptomCheckerResult
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -296,8 +305,8 @@ Partial Class SymptomCheckerResult
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1125, 719)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnConfirmSelection)
-        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Button40)
@@ -319,8 +328,6 @@ Partial Class SymptomCheckerResult
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button40 As Button
@@ -337,6 +344,7 @@ Partial Class SymptomCheckerResult
     Friend WithEvents tableDiagnosis As TableLayoutPanel
     Friend WithEvents btnConfirmSelection As Button
     Friend WithEvents Label13 As Label
-    Friend WithEvents tblSymptoms As TableLayoutPanel
+    Friend WithEvents tableSymptoms As TableLayoutPanel
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnPrint As Button
 End Class

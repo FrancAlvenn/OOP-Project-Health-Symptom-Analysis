@@ -118,11 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Label9.Text" xml:space="preserve">
-    <value>Please note: This screening tool is validated for both adults and youth between the ages of 12 and 18. 
-By using this screen, you acknowledge that the screen is not a diagnostic instrument and is only to be 
-used by you if you are 12 years or older. You are encouraged to share your results with a physician or 
-healthcare provider. Mental Health America Inc., sponsors, partners, and advertisers disclaim any liability, 
-loss, or risk incurred as a consequence, directly or indirectly, from the use and application of these screens.</value>
+    <value>Please note: This screening tool is may contain some errors and is only viable as a guide to help you further
+understand your symptoms. You are encouraged to share your results with a physician or healthcare provider. 
+SymptoMedic: Health Analysis System, sponsors, partners, and advertisers disclaim any liability, loss, or risk 
+incurred as a consequence, directly or indirectly, from the use and application of these results.</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
     <value>The displayed result is derived from the added symptoms, with priority given to the initial symptom. 

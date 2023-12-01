@@ -30,6 +30,14 @@ Public Class SymptomCheckerResult
         ' Update the reference to the previously clicked label
         previousClickedLabel = clickedLabel
     End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        AddDiagnosisToQueue(tableDiagnosis)
+        AddSymptomsToQueue(tableSymptoms)
+        addRecordSymptom()
+        generateSymptomCheckerReport()
+    End Sub
+
     Private Sub SymptomCheckerResult_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 

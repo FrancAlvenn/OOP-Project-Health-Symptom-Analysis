@@ -184,7 +184,141 @@ Module MentalHealthRecorder
 
             End If
             ' Set the report to the CrystalReportViewer
-            mentalTestReportForm.CrystalReportViewer1.ReportSource = report
+            TestReportForm.CrystalReportViewer1.ReportSource = report
+            ShowReport(report)
+            connection.Close()
+
+        End Using
+    End Sub
+
+    '--------------------------------------------------------------------------------------------------------------------------------
+    'Symptom Checker Code Block
+
+    Public symptomCheckerResultString As String
+
+    Public Function AddDiagnosisToQueue(tableLayout As TableLayoutPanel) As String
+        For Each control As Control In tableLayout.Controls
+            If TypeOf control Is Label Then
+                ' Get the text from each label
+                Dim labelText As String = DirectCast(control, Label).Text
+
+                ' Add the label value to the queue
+                symptomCheckerResultString &= labelText & ","
+            End If
+        Next
+
+        ' Remove the trailing comma, if any
+        If symptomCheckerResultString.EndsWith(",") Then
+            symptomCheckerResultString = symptomCheckerResultString.Substring(0, symptomCheckerResultString.Length - 1)
+        End If
+        Return symptomCheckerResultString
+    End Function
+
+    Public symptomCheckerResponseString As String
+
+    Public Function AddSymptomsToQueue(tableLayout As TableLayoutPanel) As String
+        For Each control As Control In tableLayout.Controls
+            If TypeOf control Is Label Then
+                ' Get the text from each label
+                Dim labelText As String = DirectCast(control, Label).Text
+
+                ' Add the label value to the queue
+                symptomCheckerResponseString &= labelText & ","
+            End If
+        Next
+
+        ' Remove the trailing comma, if any
+        If symptomCheckerResponseString.EndsWith(",") Then
+            symptomCheckerResponseString = symptomCheckerResponseString.Substring(0, symptomCheckerResponseString.Length - 1)
+        End If
+        Return symptomCheckerResponseString
+    End Function
+
+    Public Sub addRecordSymptom()
+        If MainForm.hasAccount Then
+            Try
+                connection.Open()
+                If connection.State = ConnectionState.Open Then
+                    'Create Table if not exists in the database
+                    Dim createTableString As String = "CREATE TABLE IF NOT EXISTS _" & UserLogin.userID & " (ID INTEGER PRIMARY KEY AUTOINCREMENT," &
+                                                      "AssessmentCategory TEXT," &
+                                                      "TestResult TEXT," &
+                                                      "PatientResponse TEXT," &
+                                                      "DateTaken TEXT);"
+                    ' Execute the query
+                    Dim createTableCommand As New SQLiteCommand(createTableString, connection)
+                    createTableCommand.ExecuteNonQuery()
+
+                    ' Get value from form
+                    Dim insertQuery As String = "INSERT INTO _" & UserLogin.userID & " (AssessmentCategory, TestResult, PatientResponse, DateTaken) VALUES (@AssessmentCategory ,@TestResult, @PatientResponse, @DateTaken)"
+                    Dim command As New SQLiteCommand(insertQuery, connection)
+
+
+
+                    ' Add parameters
+                    command.Parameters.AddWithValue("@AssessmentCategory", "SymptomChecker")
+                    command.Parameters.AddWithValue("@TestResult", symptomCheckerResultString)
+                    command.Parameters.AddWithValue("@PatientResponse", symptomCheckerResponseString)
+                    command.Parameters.AddWithValue("@DateTaken", Date.Today)
+
+
+                    ' Execute the query
+                    command.ExecuteNonQuery()
+
+                    MsgBox("Record Inserted Successfully!", vbOK, "Record Added")
+
+                Else
+                    Console.WriteLine("Bad Connection")
+                End If
+                ' Connection is successful
+            Catch ex As Exception
+
+                MsgBox(ex.Message, vbOK)
+            Finally
+                connection.Close()
+            End Try
+        Else
+            Dim result As DialogResult = MessageBox.Show("Test Result Not Saved, to save result please LogIn!", "CONFIRMATION",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If result = DialogResult.Yes Then
+                Dim loginForm As DialogResult = UserLogin.ShowDialog()
+            End If
+        End If
+    End Sub
+
+
+    Public Sub generateSymptomCheckerReport()
+        ' Connection string for SQLite in-memory database
+        Dim connectionString As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
+        Dim report As ReportClass
+        ' Create an SQLite connection
+        Using connection As New SQLiteConnection(connectionString)
+            connection.Open()
+
+
+            ' Load the data from the database into a DataTable
+            Dim dataTable As New System.Data.DataTable()
+            Using adapter As New SQLiteDataAdapter("SELECT * FROM _" & UserLogin.userID & " WHERE AssessmentCategory = """ & "SymptomChecker" & """ ORDER BY DateTaken DESC LIMIT 1;", connection)
+                adapter.Fill(dataTable)
+            End Using
+
+            report = New SymptomCheckerResultReport()
+
+
+            ' Set parameters from DataTable values
+            If dataTable.Rows.Count > 0 Then
+                report.SetParameterValue("TestResult", dataTable.Rows(0)("TestResult").ToString())
+                report.SetParameterValue("PatientResponses", dataTable.Rows(0)("PatientResponse").ToString())
+
+
+                'get patient responses
+                Dim patientResponseString As String = dataTable.Rows(0)("PatientResponse").ToString()
+                Dim responsesArray As String() = patientResponseString.Split(","c)
+
+            End If
+            ' Set the report to the CrystalReportViewer
+            TestReportForm.CrystalReportViewer1.ReportSource = report
             ShowReport(report)
             connection.Close()
 
@@ -193,7 +327,7 @@ Module MentalHealthRecorder
 
     Private Sub ShowReport(report As ReportClass)
         ' Create an instance of the CrystalReportViewerForm
-        Dim viewerForm As New mentalTestReportForm()
+        Dim viewerForm As New TestReportForm()
 
         ' Set the report to the CrystalReportViewer in the form
         viewerForm.SetReport(report)

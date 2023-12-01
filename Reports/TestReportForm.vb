@@ -1,7 +1,7 @@
 ﻿Imports CrystalDecisions.CrystalReports.Engine
 
 
-Public Class mentalTestReportForm
+Public Class TestReportForm
 
 
     Public Sub SetReport(report As ReportClass)

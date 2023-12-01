@@ -166,7 +166,7 @@ Module databaseConnection
                 Dim bodyLocationsID As Integer = user.GetProperty("ID").GetInt32()
                 Dim bodyLocationName As String = user.GetProperty("Name").GetString()
 
-                PhysicalAssessment.ComboBox2.Items.Add(bodyLocationName)
+                'PhysicalAssessment.ComboBox2.Items.Add(bodyLocationName)
 
                 'Insert Data into SQLite
                 'Dim query As String = $"INSERT INTO tblBodyLocations (ID, Name) VALUES (@id, @name)"

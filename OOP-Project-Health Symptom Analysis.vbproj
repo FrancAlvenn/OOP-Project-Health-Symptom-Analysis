@@ -190,16 +190,22 @@
       <DependentUpon>DepressionTestReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\mentalTestReportForm.Designer.vb">
-      <DependentUpon>mentalTestReportForm.vb</DependentUpon>
+    <Compile Include="Reports\TestReportForm.Designer.vb">
+      <DependentUpon>TestReportForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reports\mentalTestReportForm.vb">
+    <Compile Include="Reports\TestReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\PTSDTestReport.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PTSDTestReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SymptomCheckerResultReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SymptomCheckerResultReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\UserManagementReport.vb">
@@ -320,12 +326,6 @@
     <Compile Include="Physical Test\SymptomCheckerResult.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Physical Test\Syptom Checker Tesy.Designer.vb">
-      <DependentUpon>Syptom Checker Tesy.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Physical Test\Syptom Checker Tesy.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="NavbarForms\Home.Designer.vb">
       <DependentUpon>Home.vb</DependentUpon>
     </Compile>
@@ -396,12 +396,16 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DepressionTestReport.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\mentalTestReportForm.resx">
-      <DependentUpon>mentalTestReportForm.vb</DependentUpon>
+    <EmbeddedResource Include="Reports\TestReportForm.resx">
+      <DependentUpon>TestReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PTSDTestReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PTSDTestReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SymptomCheckerResultReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SymptomCheckerResultReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserManagementReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -473,9 +477,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Physical Test\SymptomCheckerResult.resx">
       <DependentUpon>SymptomCheckerResult.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Physical Test\Syptom Checker Tesy.resx">
-      <DependentUpon>Syptom Checker Tesy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAuthentication\AdminLogin.resx">
       <DependentUpon>AdminLogin.vb</DependentUpon>
