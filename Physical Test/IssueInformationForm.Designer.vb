@@ -37,6 +37,7 @@ Partial Class IssueInformationForm
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.Label()
         Me.txtProfname = New System.Windows.Forms.Label()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'backButton
@@ -61,7 +62,7 @@ Partial Class IssueInformationForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(72, 282)
+        Me.Label3.Location = New System.Drawing.Point(66, 331)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 26)
         Me.Label3.TabIndex = 170
@@ -72,7 +73,7 @@ Partial Class IssueInformationForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(73, 341)
+        Me.Label2.Location = New System.Drawing.Point(67, 390)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(155, 19)
         Me.Label2.TabIndex = 171
@@ -83,7 +84,7 @@ Partial Class IssueInformationForm
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(72, 425)
+        Me.Label4.Location = New System.Drawing.Point(66, 455)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(122, 26)
         Me.Label4.TabIndex = 172
@@ -91,9 +92,9 @@ Partial Class IssueInformationForm
         '
         'txtDesc
         '
-        Me.txtDesc.Location = New System.Drawing.Point(112, 468)
+        Me.txtDesc.Location = New System.Drawing.Point(106, 491)
         Me.txtDesc.Name = "txtDesc"
-        Me.txtDesc.Size = New System.Drawing.Size(851, 227)
+        Me.txtDesc.Size = New System.Drawing.Size(851, 233)
         Me.txtDesc.TabIndex = 173
         '
         'txtMedicalCondition
@@ -155,7 +156,7 @@ Partial Class IssueInformationForm
         Me.txtName.AutoSize = True
         Me.txtName.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.txtName.Location = New System.Drawing.Point(175, 282)
+        Me.txtName.Location = New System.Drawing.Point(169, 331)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(69, 26)
         Me.txtName.TabIndex = 180
@@ -166,11 +167,27 @@ Partial Class IssueInformationForm
         Me.txtProfname.AutoSize = True
         Me.txtProfname.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProfname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.txtProfname.Location = New System.Drawing.Point(251, 334)
+        Me.txtProfname.Location = New System.Drawing.Point(245, 383)
         Me.txtProfname.Name = "txtProfname"
         Me.txtProfname.Size = New System.Drawing.Size(51, 26)
         Me.txtProfname.TabIndex = 181
         Me.txtProfname.Text = "N/A"
+        '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.Black
+        Me.btnPrint.Location = New System.Drawing.Point(834, 273)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(113, 37)
+        Me.btnPrint.TabIndex = 182
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'IssueInformationForm
         '
@@ -179,6 +196,7 @@ Partial Class IssueInformationForm
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1074, 719)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.txtProfname)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.txtTreatmentDesc)
@@ -195,7 +213,7 @@ Partial Class IssueInformationForm
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!)
         Me.ForeColor = System.Drawing.Color.Black
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "IssueInformationForm"
         Me.Text = "IssueInformationForm"
         Me.ResumeLayout(False)
@@ -217,4 +235,5 @@ Partial Class IssueInformationForm
     Friend WithEvents Label10 As Label
     Friend WithEvents txtName As Label
     Friend WithEvents txtProfname As Label
+    Friend WithEvents btnPrint As Button
 End Class

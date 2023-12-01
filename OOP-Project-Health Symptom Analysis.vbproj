@@ -190,6 +190,12 @@
       <DependentUpon>DepressionTestReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\IssueSpecificReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueSpecificReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\TestReportForm.Designer.vb">
       <DependentUpon>TestReportForm.vb</DependentUpon>
     </Compile>
@@ -395,6 +401,10 @@
     <EmbeddedResource Include="Reports\DepressionTestReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DepressionTestReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IssueSpecificReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IssueSpecificReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TestReportForm.resx">
       <DependentUpon>TestReportForm.vb</DependentUpon>

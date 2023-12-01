@@ -325,6 +325,53 @@ Module MentalHealthRecorder
         End Using
     End Sub
 
+    Public Sub generateIssueSpecificReport()
+        If MainForm.hasAccount Then
+            ' Connection string for SQLite in-memory database
+            Dim connectionString As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
+            Dim report As ReportClass
+            ' Create an SQLite connection
+            Using connection As New SQLiteConnection(connectionString)
+                connection.Open()
+
+
+                ' Load the data from the database into a DataTable
+                Dim dataTable As New System.Data.DataTable()
+                Using adapter As New SQLiteDataAdapter("SELECT * FROM _" & UserLogin.userID & " WHERE AssessmentCategory = """ & "SymptomChecker" & """ ORDER BY DateTaken DESC LIMIT 1;", connection)
+                    adapter.Fill(dataTable)
+                End Using
+
+                report = New IssueSpecificReport()
+
+
+                ' Set parameters from DataTable values
+                If dataTable.Rows.Count > 0 Then
+                    report.SetParameterValue("Name", IssueInformationForm.txtName.Text)
+                    report.SetParameterValue("PatientResponses", dataTable.Rows(0)("PatientResponse").ToString())
+                    report.SetParameterValue("ProfessionalName", IssueInformationForm.txtProfname.Text)
+                    report.SetParameterValue("Description", IssueInformationForm.txtDesc.Text)
+                    report.SetParameterValue("MedicalCondition", IssueInformationForm.txtMedicalCondition.Text)
+                    report.SetParameterValue("PossibleSymptoms", IssueInformationForm.txtPossibleSymtoms.Text)
+                    report.SetParameterValue("Treatment Description", IssueInformationForm.txtTreatmentDesc.Text)
+
+                End If
+                ' Set the report to the CrystalReportViewer
+                TestReportForm.CrystalReportViewer1.ReportSource = report
+                ShowReport(report)
+                connection.Close()
+
+            End Using
+
+        Else
+            Dim result As DialogResult = MessageBox.Show("Test Result Not Saved, to save result please LogIn!", "CONFIRMATION",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If result = DialogResult.Yes Then
+                Dim loginForm As DialogResult = UserLogin.ShowDialog()
+            End If
+        End If
+    End Sub
+
     Private Sub ShowReport(report As ReportClass)
         ' Create an instance of the CrystalReportViewerForm
         Dim viewerForm As New TestReportForm()
