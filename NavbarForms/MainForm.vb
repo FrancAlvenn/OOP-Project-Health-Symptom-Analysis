@@ -262,7 +262,20 @@
               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If result = DialogResult.Yes Then
-            Me.Dispose()
+            hasAccount = False
+        End If
+    End Sub
+
+    Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
+        If hasAccount Then
+            childForm(UserReportForm)
+        Else
+            Dim result As DialogResult = MessageBox.Show("Test Result Not Saved, to save result please LogIn!", "CONFIRMATION",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If result = DialogResult.Yes Then
+                Dim loginForm As DialogResult = UserLogin.ShowDialog()
+            End If
         End If
     End Sub
 End Class

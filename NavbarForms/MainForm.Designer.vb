@@ -46,12 +46,10 @@ Partial Class MainForm
         Me.btnHome = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CircularPictureBox3 = New OOP_Project_Health_Symptom_Analysis.CircularPictureBox()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
-        CType(Me.CircularPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -80,7 +78,7 @@ Partial Class MainForm
         Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1290, 61)
+        Me.Panel1.Size = New System.Drawing.Size(1290, 60)
         Me.Panel1.TabIndex = 1
         '
         'Label13
@@ -219,7 +217,6 @@ Partial Class MainForm
         Me.pnlMenu.Controls.Add(Me.btnHome)
         Me.pnlMenu.Controls.Add(Me.Label2)
         Me.pnlMenu.Controls.Add(Me.Label1)
-        Me.pnlMenu.Controls.Add(Me.CircularPictureBox3)
         Me.pnlMenu.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlMenu.Location = New System.Drawing.Point(985, 60)
         Me.pnlMenu.MaximumSize = New System.Drawing.Size(300, 450)
@@ -229,13 +226,14 @@ Partial Class MainForm
         '
         'btnReports
         '
-        Me.btnReports.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.profit_report
+        Me.btnReports.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnReports.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.user_small_
         Me.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReports.Location = New System.Drawing.Point(31, 224)
+        Me.btnReports.Location = New System.Drawing.Point(31, 170)
         Me.btnReports.Name = "btnReports"
         Me.btnReports.Size = New System.Drawing.Size(238, 45)
         Me.btnReports.TabIndex = 8
-        Me.btnReports.Text = "            Reports"
+        Me.btnReports.Text = "            Profile"
         Me.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label10
@@ -250,6 +248,7 @@ Partial Class MainForm
         '
         'btnLogout
         '
+        Me.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.logout
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLogout.Location = New System.Drawing.Point(31, 391)
@@ -261,9 +260,10 @@ Partial Class MainForm
         '
         'btnAbout
         '
+        Me.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAbout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.information_button
         Me.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAbout.Location = New System.Drawing.Point(29, 280)
+        Me.btnAbout.Location = New System.Drawing.Point(31, 284)
         Me.btnAbout.Name = "btnAbout"
         Me.btnAbout.Size = New System.Drawing.Size(238, 45)
         Me.btnAbout.TabIndex = 5
@@ -272,9 +272,10 @@ Partial Class MainForm
         '
         'btnFeedback
         '
+        Me.btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnFeedback.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.feedback
         Me.btnFeedback.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFeedback.Location = New System.Drawing.Point(29, 170)
+        Me.btnFeedback.Location = New System.Drawing.Point(31, 229)
         Me.btnFeedback.Name = "btnFeedback"
         Me.btnFeedback.Size = New System.Drawing.Size(238, 45)
         Me.btnFeedback.TabIndex = 4
@@ -283,6 +284,7 @@ Partial Class MainForm
         '
         'btnHome
         '
+        Me.btnHome.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnHome.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.home
         Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHome.Location = New System.Drawing.Point(29, 115)
@@ -306,21 +308,12 @@ Partial Class MainForm
         '
         Me.Label1.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(66, 22)
+        Me.Label1.Location = New System.Drawing.Point(3, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(213, 35)
+        Me.Label1.Size = New System.Drawing.Size(294, 35)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Franc Alvenn Dela Cruz"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'CircularPictureBox3
-        '
-        Me.CircularPictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.CircularPictureBox3.Location = New System.Drawing.Point(16, 22)
-        Me.CircularPictureBox3.Name = "CircularPictureBox3"
-        Me.CircularPictureBox3.Size = New System.Drawing.Size(35, 35)
-        Me.CircularPictureBox3.TabIndex = 0
-        Me.CircularPictureBox3.TabStop = False
+        Me.Label1.Text = "Welcome to SymptoMedic"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TimerPanelIncrease
         '
@@ -348,7 +341,6 @@ Partial Class MainForm
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.pnlMenu.ResumeLayout(False)
-        CType(Me.CircularPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -371,7 +363,6 @@ Partial Class MainForm
     Friend WithEvents TimerPanelDecrease As Timer
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents CircularPictureBox3 As CircularPictureBox
     Friend WithEvents btnHome As Label
     Friend WithEvents btnLogout As Label
     Friend WithEvents btnAbout As Label

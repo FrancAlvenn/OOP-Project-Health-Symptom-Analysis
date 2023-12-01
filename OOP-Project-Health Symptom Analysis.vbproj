@@ -226,6 +226,12 @@
     <Compile Include="Reports\UserReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\UserReportViewerForm.Designer.vb">
+      <DependentUpon>UserReportViewerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserReportViewerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mental Health Tests\AddictionResultForm.Designer.vb">
       <DependentUpon>AddictionResultForm.vb</DependentUpon>
     </Compile>
@@ -367,6 +373,7 @@
     <Compile Include="UserAuthentication\AdminLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DatabaseConfiguration.vb" />
     <Compile Include="UserAuthentication\UserLogin.Designer.vb">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
@@ -423,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserReportForm.resx">
       <DependentUpon>UserReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserReportViewerForm.resx">
+      <DependentUpon>UserReportViewerForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mental Health Tests\AddictionResultForm.resx">
       <DependentUpon>AddictionResultForm.vb</DependentUpon>
@@ -632,6 +642,8 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\ProfileHeader.png" />
+    <None Include="Icons\exchange.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

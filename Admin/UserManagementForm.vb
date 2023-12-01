@@ -2,7 +2,7 @@
 
 Public Class UserManagementForm
 
-    Public userAuthenticationString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/userAuthentication.sqlite;"
+    Public userAuthenticationString As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(userAuthenticationString)
 
     Private Sub LoadData()
@@ -231,6 +231,6 @@ Public Class UserManagementForm
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-        UserReportForm.Show()
+        UserReportViewerForm.Show()
     End Sub
 End Class
