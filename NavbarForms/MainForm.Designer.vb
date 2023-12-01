@@ -25,8 +25,6 @@ Partial Class MainForm
         Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.btnMenu = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -38,16 +36,18 @@ Partial Class MainForm
         Me.lblHome = New System.Windows.Forms.Label()
         Me.pnlChangeable = New System.Windows.Forms.Panel()
         Me.pnlMenu = New System.Windows.Forms.Panel()
-        Me.btnReports = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.btnLogout = New System.Windows.Forms.Label()
-        Me.btnAbout = New System.Windows.Forms.Label()
-        Me.btnFeedback = New System.Windows.Forms.Label()
-        Me.btnHome = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
         Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
+        Me.btnReports = New System.Windows.Forms.Label()
+        Me.btnLogout = New System.Windows.Forms.Label()
+        Me.btnAbout = New System.Windows.Forms.Label()
+        Me.btnFeedback = New System.Windows.Forms.Label()
+        Me.btnHome = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnMenu = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.pnlMenu.SuspendLayout()
         Me.SuspendLayout()
@@ -78,27 +78,8 @@ Partial Class MainForm
         Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1290, 60)
+        Me.Panel1.Size = New System.Drawing.Size(1290, 63)
         Me.Panel1.TabIndex = 1
-        '
-        'Label13
-        '
-        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label13.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.Welcome_to_SymptoMedic
-        Me.Label13.Location = New System.Drawing.Point(28, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(61, 59)
-        Me.Label13.TabIndex = 0
-        '
-        'btnMenu
-        '
-        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
-        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu1
-        Me.btnMenu.Location = New System.Drawing.Point(1223, 10)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(49, 42)
-        Me.btnMenu.TabIndex = 0
         '
         'Label11
         '
@@ -221,8 +202,47 @@ Partial Class MainForm
         Me.pnlMenu.Location = New System.Drawing.Point(985, 60)
         Me.pnlMenu.MaximumSize = New System.Drawing.Size(300, 450)
         Me.pnlMenu.Name = "pnlMenu"
-        Me.pnlMenu.Size = New System.Drawing.Size(300, 0)
+        Me.pnlMenu.Size = New System.Drawing.Size(300, 10)
         Me.pnlMenu.TabIndex = 0
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.White
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(29, 377)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(250, 1)
+        Me.Label10.TabIndex = 7
+        Me.Label10.Text = "Label10"
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(29, 73)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(250, 1)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Label2"
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(3, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(294, 35)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Welcome to SymptoMedic"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TimerPanelIncrease
+        '
+        Me.TimerPanelIncrease.Interval = 10
+        '
+        'TimerPanelDecrease
+        '
+        Me.TimerPanelDecrease.Interval = 10
         '
         'btnReports
         '
@@ -235,16 +255,6 @@ Partial Class MainForm
         Me.btnReports.TabIndex = 8
         Me.btnReports.Text = "            Profile"
         Me.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.White
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(29, 377)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(250, 1)
-        Me.Label10.TabIndex = 7
-        Me.Label10.Text = "Label10"
         '
         'btnLogout
         '
@@ -294,34 +304,24 @@ Partial Class MainForm
         Me.btnHome.Text = "            Home"
         Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label2
+        'Label13
         '
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(29, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(250, 1)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Label2"
+        Me.Label13.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label13.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.Welcome_to_SymptoMedic
+        Me.Label13.Location = New System.Drawing.Point(28, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(61, 59)
+        Me.Label13.TabIndex = 0
         '
-        'Label1
+        'btnMenu
         '
-        Me.Label1.Font = New System.Drawing.Font("Sans Serif Collection", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(294, 35)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Welcome to SymptoMedic"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TimerPanelIncrease
-        '
-        Me.TimerPanelIncrease.Interval = 10
-        '
-        'TimerPanelDecrease
-        '
-        Me.TimerPanelDecrease.Interval = 10
+        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
+        Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMenu.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.menu1
+        Me.btnMenu.Location = New System.Drawing.Point(1223, 10)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(49, 42)
+        Me.btnMenu.TabIndex = 0
         '
         'MainForm
         '

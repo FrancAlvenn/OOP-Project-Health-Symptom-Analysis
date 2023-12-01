@@ -117,4 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>© 2023 SymptoMedic: Health Analysis System. All rights reserved. Confidential and for individual use only. This mental health assessment report is not a substitute for professional medical advice. 
+Please consult with a qualified healthcare professional for accurate diagnosis and personalized treatment.</value>
+  </data>
 </root>

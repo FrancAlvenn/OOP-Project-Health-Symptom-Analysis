@@ -644,6 +644,7 @@
   <ItemGroup>
     <None Include="Icons\ProfileHeader.png" />
     <None Include="Icons\exchange.png" />
+    <None Include="Icons\log-in.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

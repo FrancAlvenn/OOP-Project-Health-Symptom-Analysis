@@ -22,6 +22,7 @@ Partial Class UserReportForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserReportForm))
         Me.dgvReports = New System.Windows.Forms.DataGridView()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
@@ -44,6 +45,8 @@ Partial Class UserReportForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnPrint = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.dgvReports, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -286,9 +289,9 @@ Partial Class UserReportForm
         '
         'Panel1
         '
-        Me.Panel1.Location = New System.Drawing.Point(1035, 1282)
+        Me.Panel1.Location = New System.Drawing.Point(954, 1441)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(66, 384)
+        Me.Panel1.Size = New System.Drawing.Size(66, 42)
         Me.Panel1.TabIndex = 188
         '
         'btnPrint
@@ -307,6 +310,27 @@ Partial Class UserReportForm
         Me.btnPrint.Text = "Print Selection"
         Me.btnPrint.UseVisualStyleBackColor = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(101, 1398)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(919, 26)
+        Me.Label3.TabIndex = 190
+        Me.Label3.Text = resources.GetString("Label3.Text")
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Black
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(201, 1378)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(700, 1)
+        Me.Label7.TabIndex = 191
+        Me.Label7.Text = "Label2"
+        Me.Label7.Visible = False
+        '
         'UserReportForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -315,6 +339,8 @@ Partial Class UserReportForm
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1098, 719)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label6)
@@ -368,4 +394,6 @@ Partial Class UserReportForm
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnPrint As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label7 As Label
 End Class

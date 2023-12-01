@@ -3,7 +3,7 @@
 Public Class AdminLogin
     Public tries As Integer = 0
     Public setTries As Integer = 0
-    Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\adminAuthentication.sqlite;Version=3;"
+    Public connectionName As String = DatabaseConfiguration.DataSourceAdminAuthentication
     Public connection As New SQLiteConnection(connectionName)
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click

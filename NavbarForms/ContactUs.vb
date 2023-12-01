@@ -5,7 +5,7 @@ Public Class ContactUs
     Public random As New Random()
     Public generatedNumbers As New HashSet(Of Integer)()
     Public randomNum As Integer
-    Public connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/adminAuthentication.sqlite;"
+    Public connectionString As String = DatabaseConfiguration.DataSourceAdminAuthentication
     Public connection As New SQLiteConnection(connectionString)
 
 
@@ -24,7 +24,7 @@ Public Class ContactUs
 
                 ' Get value from form
                 GenerateUniqueRandom()
-                Dim accountNumber As Integer = "800" & randomNum.ToString
+                Dim accountNumber As Integer = "100" & randomNum.ToString
                 Dim insertQuery As String = "INSERT INTO feedback (ID, Fullname, Email, Message) VALUES (@ID, @Fullname, @Email, @Message);"
                 Dim command As New SQLiteCommand(insertQuery, connection)
 

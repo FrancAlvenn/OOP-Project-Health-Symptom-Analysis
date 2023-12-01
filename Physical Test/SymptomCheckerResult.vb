@@ -61,7 +61,7 @@ Public Class SymptomCheckerResult
     End Sub
 
     Private Sub btnConfirmSelection_Click(sender As Object, e As EventArgs) Handles btnConfirmSelection.Click
-        Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
+        Dim connectionString As String = DatabaseConfiguration.DataSourceSystemDatabase
 
         Try
             'bodylocations

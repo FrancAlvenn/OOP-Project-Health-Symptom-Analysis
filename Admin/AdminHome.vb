@@ -2,7 +2,7 @@
 
 Public Class AdminHome
 
-    Public userAuthenticationString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/userAuthentication.sqlite;"
+    Public userAuthenticationString As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(userAuthenticationString)
     Private Sub RoundCornerLabel(label As Label)
         label.BorderStyle = FlatStyle.Flat

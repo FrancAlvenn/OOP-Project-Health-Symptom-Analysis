@@ -160,7 +160,7 @@ Public Class UserManagementForm
 
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim userAuthenticationString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/userAuthentication.sqlite;"
+        Dim userAuthenticationString As String = DatabaseConfiguration.DataSourceUserAuthentication
         'Dim connection As New SQLiteConnection(userAuthenticationString)
         If txtID.Text <> "" AndAlso txtName.Text <> "" AndAlso txtUsername.Text <> "" AndAlso txtPassword.Text <> "" Then
             Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)

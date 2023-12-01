@@ -247,7 +247,7 @@ Public Class BMICalc
     End Sub
 
     Public Function BodyLocations()
-        Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
+        Dim connectionString As String = DatabaseConfiguration.DataSourceSystemDatabase
         'Dim connection As New SQLiteConnection(connectionString)
 
         ' Create a new connection
@@ -275,7 +275,7 @@ Public Class BMICalc
     End Function
 
     Public Function BodyLocationSpecific()
-        Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
+        Dim connectionString As String = DatabaseConfiguration.DataSourceSystemDatabase
 
         ' Create a new connection
         Using connection As New SQLiteConnection(connectionString)
@@ -304,7 +304,7 @@ Public Class BMICalc
     End Function
 
     Public Function APIBodySymptom()
-        Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
+        Dim connectionString As String = DatabaseConfiguration.DataSourceSystemDatabase
         Dim bodylocationID As String = "0"
         Dim specificBodyLocation As String = "0"
         'bodylocations
@@ -423,7 +423,7 @@ Public Class BMICalc
     End Sub
 
     Public Function diagnosis()
-        Dim connectionString As String = "Data Source=C:/Users/Administrator/source/repos/OOP-Project-Health Symptom Analysis/database/systemDatabase.sqlite;"
+        Dim connectionString As String = DatabaseConfiguration.DataSourceSystemDatabase
         Dim gender As String = "male"
         Dim age As Integer = 2000
         Dim tempAge As Integer

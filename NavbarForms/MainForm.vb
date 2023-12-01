@@ -202,6 +202,14 @@
 
     'btnMenu_Click
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
+        If hasAccount = True Then
+            btnLogout.Text = "            Logout"
+            btnLogout.Image = My.Resources.logout
+        Else
+            btnLogout.Text = "            Login"
+            btnLogout.Image = My.Resources.log_in
+        End If
+
 
         If pnlMenu.Height > 230 Then
             TimerPanelDecrease.Enabled = True
@@ -243,39 +251,61 @@
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
         'fucntion call to get childform
         childForm(Home)
+        CloseMenuBar()
     End Sub
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         childForm(Home)
+        CloseMenuBar()
     End Sub
 
     Private Sub btnFeedback_Click(sender As Object, e As EventArgs) Handles btnFeedback.Click
         childForm(ContactUs)
+        CloseMenuBar()
     End Sub
 
     Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
         childForm(About)
+        CloseMenuBar()
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Dim result As DialogResult = MessageBox.Show("Do you want to logout of SymptoMedic?", "CONFIRMATION",
+
+        If hasAccount = True Then
+            Dim result As DialogResult = MessageBox.Show("Do you want to logout of SymptoMedic?", "CONFIRMATION",
               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-        If result = DialogResult.Yes Then
-            hasAccount = False
+            If result = DialogResult.Yes Then
+                hasAccount = False
+                childForm(Home)
+            End If
+        Else
+            Dim result As DialogResult = MessageBox.Show("Not logged in, please LogIn!", "CONFIRMATION",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If result = DialogResult.Yes Then
+                Dim loginForm As DialogResult = UserSignUp.ShowDialog()
+            End If
         End If
+
+
+
+
     End Sub
 
     Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
         If hasAccount Then
             childForm(UserReportForm)
+            CloseMenuBar()
         Else
-            Dim result As DialogResult = MessageBox.Show("Test Result Not Saved, to save result please LogIn!", "CONFIRMATION",
+            Dim result As DialogResult = MessageBox.Show("Not logged in to access profile please LogIn!", "CONFIRMATION",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If result = DialogResult.Yes Then
                 Dim loginForm As DialogResult = UserLogin.ShowDialog()
+                CloseMenuBar()
             End If
         End If
+        CloseMenuBar()
     End Sub
 End Class

@@ -3,7 +3,7 @@ Imports System.Data.SQLite
 
 Public Class UserSignUp
 
-    Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
+    Public connectionName As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(connectionName)
 
     Public random As New Random()

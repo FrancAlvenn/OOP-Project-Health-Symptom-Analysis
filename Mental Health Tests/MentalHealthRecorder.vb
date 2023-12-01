@@ -4,7 +4,7 @@ Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
 
 Module MentalHealthRecorder
-    Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
+    Public connectionName As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(connectionName)
     Public patientResponseString As String
     Public Function AddLabelsToQueue(labels As Label()) As String
@@ -49,7 +49,7 @@ Module MentalHealthRecorder
                     command.Parameters.AddWithValue("@AssessmentCategory", MentalAssessment.assessmentCategory)
                     command.Parameters.AddWithValue("@TestResult", testResult)
                     command.Parameters.AddWithValue("@PatientResponse", patientResponseString)
-                    command.Parameters.AddWithValue("@DateTaken", Date.Today)
+                    command.Parameters.AddWithValue("@DateTaken", DateTime.Now)
 
 
                     ' Execute the query
@@ -290,7 +290,7 @@ Module MentalHealthRecorder
 
     Public Sub generateSymptomCheckerReport()
         ' Connection string for SQLite in-memory database
-        Dim connectionString As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
+        Dim connectionString As String = DatabaseConfiguration.DataSourceUserAuthentication
         Dim report As ReportClass
         ' Create an SQLite connection
         Using connection As New SQLiteConnection(connectionString)
@@ -328,7 +328,7 @@ Module MentalHealthRecorder
     Public Sub generateIssueSpecificReport()
         If MainForm.hasAccount Then
             ' Connection string for SQLite in-memory database
-            Dim connectionString As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
+            Dim connectionString As String = DatabaseConfiguration.DataSourceUserAuthentication
             Dim report As ReportClass
             ' Create an SQLite connection
             Using connection As New SQLiteConnection(connectionString)

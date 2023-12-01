@@ -4,7 +4,7 @@ Public Class UserLogin
 
     Public tries As Integer = 0
     Public setTries As Integer = 0
-    Public connectionName As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;Version=3;"
+    Public connectionName As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(connectionName)
     Public Shared userID As String
 

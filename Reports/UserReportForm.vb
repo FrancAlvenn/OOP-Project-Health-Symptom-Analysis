@@ -144,56 +144,23 @@ Public Class UserReportForm
     End Sub
 
     Private Sub btnChangeName_Click(sender As Object, e As EventArgs) Handles btnChangeName.Click
-        If txtName.Text <> "" Then
-            'Dim connection As New SQLiteConnection(userAuthenticationString)
-            Using LocalConnection As New SQLiteConnection(userAuthenticationString)
-                Try
-                    If LocalConnection.State <> ConnectionState.Open Then
-                        LocalConnection.Open()
-                    End If
-                    If LocalConnection.State = ConnectionState.Open Then
-                        Dim updateQuery As String = "UPDATE user_accounts SET Name = @Name WHERE ID = @ID;"
 
-                        Dim command As New SQLiteCommand(updateQuery, LocalConnection)
-                        command.Parameters.AddWithValue("@Name", txtName.Text)
-                        command.Parameters.AddWithValue("@ID", txtID.Text)
+        Dim result As DialogResult = MessageBox.Show("Do you want to change Name?", "CONFIRMATION",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                        ' Execute the update query
-                        command.ExecuteNonQuery()
-
-                        MsgBox("Account updated successfully.", vbOK, "Update Complete!")
-                        LoadData()
-
-                    Else
-                        MsgBox("Please complete all the inputs!", vbInformation, "Error!")
-                    End If
-
-                Catch ex As Exception
-                    MsgBox("ERROR:" & ex.Message)
-                Finally
-                    LocalConnection.Close()
-
-                End Try
-            End Using
-        End If
-    End Sub
-
-    Private Sub btnChangeUsername_Click(sender As Object, e As EventArgs) Handles btnChangeUsername.Click
-        If txtUsername.Text <> "" Then
-            Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
-            If userExists Then
-                MsgBox("Username already used!", vbOK, "Username Exists")
-            Else
+        If result = DialogResult.Yes Then
+            If txtName.Text <> "" Then
+                'Dim connection As New SQLiteConnection(userAuthenticationString)
                 Using LocalConnection As New SQLiteConnection(userAuthenticationString)
                     Try
                         If LocalConnection.State <> ConnectionState.Open Then
                             LocalConnection.Open()
                         End If
                         If LocalConnection.State = ConnectionState.Open Then
-                            Dim updateQuery As String = "UPDATE user_accounts SET Username = @Username WHERE ID = @ID;"
+                            Dim updateQuery As String = "UPDATE user_accounts SET Name = @Name WHERE ID = @ID;"
 
                             Dim command As New SQLiteCommand(updateQuery, LocalConnection)
-                            command.Parameters.AddWithValue("@Username", txtUsername.Text)
+                            command.Parameters.AddWithValue("@Name", txtName.Text)
                             command.Parameters.AddWithValue("@ID", txtID.Text)
 
                             ' Execute the update query
@@ -214,43 +181,107 @@ Public Class UserReportForm
                     End Try
                 End Using
             End If
+        Else
+            LoadData()
+            reset()
         End If
+
+    End Sub
+
+    Private Sub btnChangeUsername_Click(sender As Object, e As EventArgs) Handles btnChangeUsername.Click
+
+        Dim result As DialogResult = MessageBox.Show("Do you want to change Username?", "CONFIRMATION",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            If txtUsername.Text <> "" Then
+                Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
+                If userExists Then
+                    MsgBox("Username already used!", vbOK, "Username Exists")
+                Else
+                    Using LocalConnection As New SQLiteConnection(userAuthenticationString)
+                        Try
+                            If LocalConnection.State <> ConnectionState.Open Then
+                                LocalConnection.Open()
+                            End If
+                            If LocalConnection.State = ConnectionState.Open Then
+                                Dim updateQuery As String = "UPDATE user_accounts SET Username = @Username WHERE ID = @ID;"
+
+                                Dim command As New SQLiteCommand(updateQuery, LocalConnection)
+                                command.Parameters.AddWithValue("@Username", txtUsername.Text)
+                                command.Parameters.AddWithValue("@ID", txtID.Text)
+
+                                ' Execute the update query
+                                command.ExecuteNonQuery()
+
+                                MsgBox("Account updated successfully.", vbOK, "Update Complete!")
+                                LoadData()
+
+                            Else
+                                MsgBox("Please complete all the inputs!", vbInformation, "Error!")
+                            End If
+
+                        Catch ex As Exception
+                            MsgBox("ERROR:" & ex.Message)
+                        Finally
+                            LocalConnection.Close()
+
+                        End Try
+                    End Using
+                End If
+            End If
+        Else
+            LoadData()
+            reset()
+        End If
+
+
     End Sub
 
     Private Sub btnChangePassword_Click(sender As Object, e As EventArgs) Handles btnChangePassword.Click
-        If txtPassword.Text <> "" AndAlso txtPassword.Text = txtConfirmPassword.Text Then
-            Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
-            Using LocalConnection As New SQLiteConnection(userAuthenticationString)
-                Try
-                    If LocalConnection.State <> ConnectionState.Open Then
-                        LocalConnection.Open()
-                    End If
-                    If LocalConnection.State = ConnectionState.Open Then
-                        Dim updateQuery As String = "UPDATE user_accounts SET Password = @Password WHERE ID = @ID;"
 
-                        Dim command As New SQLiteCommand(updateQuery, LocalConnection)
-                        command.Parameters.AddWithValue("@Password", txtPassword.Text)
-                        command.Parameters.AddWithValue("@ID", txtID.Text)
+        Dim result As DialogResult = MessageBox.Show("Do you want to change Password?", "CONFIRMATION",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                        ' Execute the update query
-                        command.ExecuteNonQuery()
+        If result = DialogResult.Yes Then
 
-                        MsgBox("Account updated successfully.", vbOK, "Update Complete!")
-                        LoadData()
+            If txtPassword.Text <> "" AndAlso txtPassword.Text = txtConfirmPassword.Text Then
+                Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
+                Using LocalConnection As New SQLiteConnection(userAuthenticationString)
+                    Try
+                        If LocalConnection.State <> ConnectionState.Open Then
+                            LocalConnection.Open()
+                        End If
+                        If LocalConnection.State = ConnectionState.Open Then
+                            Dim updateQuery As String = "UPDATE user_accounts SET Password = @Password WHERE ID = @ID;"
 
-                    Else
-                        MsgBox("Please complete all the inputs!", vbInformation, "Error!")
-                    End If
+                            Dim command As New SQLiteCommand(updateQuery, LocalConnection)
+                            command.Parameters.AddWithValue("@Password", txtPassword.Text)
+                            command.Parameters.AddWithValue("@ID", txtID.Text)
 
-                Catch ex As Exception
-                    MsgBox("ERROR:" & ex.Message)
-                Finally
-                    LocalConnection.Close()
+                            ' Execute the update query
+                            command.ExecuteNonQuery()
 
-                End Try
-            End Using
+                            MsgBox("Account updated successfully.", vbOK, "Update Complete!")
+                            LoadData()
+
+                        Else
+                            MsgBox("Please complete all the inputs!", vbInformation, "Error!")
+                        End If
+
+                    Catch ex As Exception
+                        MsgBox("ERROR:" & ex.Message)
+                    Finally
+                        LocalConnection.Close()
+
+                    End Try
+                End Using
+            Else
+                MsgBox("Textbox is empty or password not the same, please try again!", vbOK, "Empty or Mismatch Values")
+            End If
         Else
-            MsgBox("Textbox is empty or password not the same, please try again!", vbOK, "Empty or Mismatch Values")
+            LoadData()
+            reset()
         End If
     End Sub
 
