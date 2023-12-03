@@ -67,7 +67,6 @@
             MainForm.Show()
             Me.Dispose()
         End If
-
     End Sub
 
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
