@@ -72,6 +72,7 @@
 
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
         childForm(UserReportFormAll)
+
     End Sub
 
     Private Sub btnAbout_Click(sender As Object, e As EventArgs) Handles btnAbout.Click
