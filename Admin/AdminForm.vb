@@ -52,4 +52,21 @@
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         childForm(AdminHome)
     End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        childForm(ViewFeedbackForm)
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to logout?", "CONFIRMATION",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            MainForm.hasAccount = False
+            MainForm.Show()
+            Me.Dispose()
+        End If
+
+    End Sub
 End Class

@@ -171,6 +171,12 @@
     <Compile Include="Admin\UserManagementForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\ViewFeedbackForm.Designer.vb">
+      <DependentUpon>ViewFeedbackForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewFeedbackForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mental Health Tests\MentalHealthRecorder.vb" />
     <Compile Include="Reports\ADHDTestReport.vb">
       <AutoGen>True</AutoGen>
@@ -188,6 +194,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DepressionTestReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FeedbackReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeedbackReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\IssueSpecificReport.vb">
@@ -220,10 +232,10 @@
       <DependentUpon>UserManagementReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\UserReportForm.Designer.vb">
+    <Compile Include="UserAuthentication\UserReportForm.Designer.vb">
       <DependentUpon>UserReportForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reports\UserReportForm.vb">
+    <Compile Include="UserAuthentication\UserReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\UserReportViewerForm.Designer.vb">
@@ -397,6 +409,9 @@
     <EmbeddedResource Include="Admin\UserManagementForm.resx">
       <DependentUpon>UserManagementForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ViewFeedbackForm.resx">
+      <DependentUpon>ViewFeedbackForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ADHDTestReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ADHDTestReport.vb</LastGenOutput>
@@ -408,6 +423,10 @@
     <EmbeddedResource Include="Reports\DepressionTestReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DepressionTestReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FeedbackReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FeedbackReport.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\IssueSpecificReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -428,7 +447,7 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>UserManagementReport.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\UserReportForm.resx">
+    <EmbeddedResource Include="UserAuthentication\UserReportForm.resx">
       <DependentUpon>UserReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserReportViewerForm.resx">

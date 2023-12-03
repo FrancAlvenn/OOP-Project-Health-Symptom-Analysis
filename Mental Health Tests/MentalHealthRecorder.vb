@@ -372,6 +372,20 @@ Module MentalHealthRecorder
         End If
     End Sub
 
+    Public Sub generateFeedbackReport()
+        Dim report As ReportClass
+        report = New FeedbackReport()
+
+        report.SetParameterValue("ID", ViewFeedbackForm.txtID.Text)
+        report.SetParameterValue("Fullname", ViewFeedbackForm.txtFullname.Text)
+        report.SetParameterValue("Email", ViewFeedbackForm.txtEmail.Text)
+        report.SetParameterValue("Message", ViewFeedbackForm.txtMessage.Text)
+
+        ' Set the report to the CrystalReportViewer
+        TestReportForm.CrystalReportViewer1.ReportSource = report
+        ShowReport(report)
+    End Sub
+
     Private Sub ShowReport(report As ReportClass)
         ' Create an instance of the CrystalReportViewerForm
         Dim viewerForm As New TestReportForm()

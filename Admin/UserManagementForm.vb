@@ -4,7 +4,8 @@ Public Class UserManagementForm
 
     Public userAuthenticationString As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(userAuthenticationString)
-
+    Public oldName As String
+    Public oldPass As String
     Private Sub LoadData()
         Dim dataTable As New DataTable()
         If connection.State <> ConnectionState.Open Then
@@ -131,6 +132,9 @@ Public Class UserManagementForm
             txtName.Text = Name
             txtUsername.Text = Username
             txtPassword.Text = Password
+            oldName = Name
+            oldPass = Password
+
         End If
     End Sub
 
@@ -167,6 +171,7 @@ Public Class UserManagementForm
             If userExists Then
                 MsgBox("Username already used!", vbOK, "Username Exists")
             Else
+
                 Using LocalConnection As New SQLiteConnection(userAuthenticationString)
                     Try
                         If LocalConnection.State <> ConnectionState.Open Then
@@ -200,6 +205,9 @@ Public Class UserManagementForm
                     End Try
                 End Using
             End If
+
+        Else
+
         End If
     End Sub
 

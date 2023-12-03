@@ -27,10 +27,9 @@ Partial Class AdminForm
         Me.seperator1 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlMenu = New System.Windows.Forms.Panel()
-        Me.btnReport = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Label()
         Me.btnMenu = New System.Windows.Forms.Label()
-        Me.btnAbout = New System.Windows.Forms.Label()
         Me.btnUserManagement = New System.Windows.Forms.Label()
         Me.btnHome = New System.Windows.Forms.Label()
         Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
@@ -76,11 +75,10 @@ Partial Class AdminForm
         'pnlMenu
         '
         Me.pnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.pnlMenu.Controls.Add(Me.Label2)
         Me.pnlMenu.Controls.Add(Me.seperator2)
-        Me.pnlMenu.Controls.Add(Me.btnReport)
         Me.pnlMenu.Controls.Add(Me.btnLogout)
         Me.pnlMenu.Controls.Add(Me.btnMenu)
-        Me.pnlMenu.Controls.Add(Me.btnAbout)
         Me.pnlMenu.Controls.Add(Me.Label1)
         Me.pnlMenu.Controls.Add(Me.seperator1)
         Me.pnlMenu.Controls.Add(Me.btnUserManagement)
@@ -95,18 +93,18 @@ Partial Class AdminForm
         Me.pnlMenu.Size = New System.Drawing.Size(65, 860)
         Me.pnlMenu.TabIndex = 1
         '
-        'btnReport
+        'Label2
         '
-        Me.btnReport.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnReport.ForeColor = System.Drawing.Color.White
-        Me.btnReport.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.profit_report
-        Me.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReport.Location = New System.Drawing.Point(16, 405)
-        Me.btnReport.Name = "btnReport"
-        Me.btnReport.Size = New System.Drawing.Size(238, 45)
-        Me.btnReport.TabIndex = 8
-        Me.btnReport.Text = "                 Reports"
-        Me.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.feedback
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label2.Location = New System.Drawing.Point(16, 533)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(238, 45)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "                 View Feedback"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnLogout
         '
@@ -114,7 +112,7 @@ Partial Class AdminForm
         Me.btnLogout.ForeColor = System.Drawing.Color.White
         Me.btnLogout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.logout
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLogout.Location = New System.Drawing.Point(16, 801)
+        Me.btnLogout.Location = New System.Drawing.Point(23, 801)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(238, 40)
         Me.btnLogout.TabIndex = 6
@@ -131,26 +129,13 @@ Partial Class AdminForm
         Me.btnMenu.Size = New System.Drawing.Size(66, 42)
         Me.btnMenu.TabIndex = 0
         '
-        'btnAbout
-        '
-        Me.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAbout.ForeColor = System.Drawing.Color.White
-        Me.btnAbout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.information_button
-        Me.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAbout.Location = New System.Drawing.Point(16, 492)
-        Me.btnAbout.Name = "btnAbout"
-        Me.btnAbout.Size = New System.Drawing.Size(238, 45)
-        Me.btnAbout.TabIndex = 5
-        Me.btnAbout.Text = "                 About"
-        Me.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'btnUserManagement
         '
         Me.btnUserManagement.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUserManagement.ForeColor = System.Drawing.Color.White
         Me.btnUserManagement.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.user_small_
         Me.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUserManagement.Location = New System.Drawing.Point(16, 322)
+        Me.btnUserManagement.Location = New System.Drawing.Point(16, 416)
         Me.btnUserManagement.Name = "btnUserManagement"
         Me.btnUserManagement.Size = New System.Drawing.Size(238, 45)
         Me.btnUserManagement.TabIndex = 4
@@ -163,7 +148,7 @@ Partial Class AdminForm
         Me.btnHome.ForeColor = System.Drawing.Color.White
         Me.btnHome.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.home
         Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHome.Location = New System.Drawing.Point(16, 242)
+        Me.btnHome.Location = New System.Drawing.Point(16, 301)
         Me.btnHome.MinimumSize = New System.Drawing.Size(65, 0)
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Size = New System.Drawing.Size(238, 45)
@@ -203,11 +188,8 @@ Partial Class AdminForm
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents btnReport As Label
     Friend WithEvents seperator2 As Label
     Friend WithEvents btnLogout As Label
-    Friend WithEvents btnAbout As Label
     Friend WithEvents btnUserManagement As Label
     Friend WithEvents btnHome As Label
     Friend WithEvents seperator1 As Label
@@ -218,4 +200,5 @@ Partial Class AdminForm
     Friend WithEvents TimerPanelDecrease As Timer
     Friend WithEvents SubPanel As Panel
     Friend WithEvents Timerupdater As Timer
+    Friend WithEvents Label2 As Label
 End Class
