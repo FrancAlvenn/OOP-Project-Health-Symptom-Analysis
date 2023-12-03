@@ -238,7 +238,4 @@ Public Class UserManagementForm
 
     End Sub
 
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-        UserReportViewerForm.Show()
-    End Sub
 End Class

@@ -39,7 +39,6 @@ Partial Class UserManagementForm
         Me.dvgUsers = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.updateTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.btnPrint = New System.Windows.Forms.Button()
         CType(Me.dvgUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -149,7 +148,7 @@ Partial Class UserManagementForm
         Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.Color.Black
-        Me.btnDelete.Location = New System.Drawing.Point(863, 207)
+        Me.btnDelete.Location = New System.Drawing.Point(863, 237)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(224, 37)
         Me.btnDelete.TabIndex = 175
@@ -165,7 +164,7 @@ Partial Class UserManagementForm
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.Color.Black
-        Me.btnUpdate.Location = New System.Drawing.Point(863, 164)
+        Me.btnUpdate.Location = New System.Drawing.Point(863, 177)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(224, 37)
         Me.btnUpdate.TabIndex = 176
@@ -216,29 +215,12 @@ Partial Class UserManagementForm
         '
         Me.updateTimer.Interval = 1000
         '
-        'btnPrint
-        '
-        Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnPrint.FlatAppearance.BorderSize = 0
-        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
-        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrint.ForeColor = System.Drawing.Color.Black
-        Me.btnPrint.Location = New System.Drawing.Point(863, 251)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(224, 37)
-        Me.btnPrint.TabIndex = 180
-        Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = False
-        '
         'UserManagementForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1202, 822)
-        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dvgUsers)
         Me.Controls.Add(Me.btnInsert)
@@ -280,5 +262,4 @@ Partial Class UserManagementForm
     Friend WithEvents dvgUsers As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents updateTimer As Timer
-    Friend WithEvents btnPrint As Button
 End Class

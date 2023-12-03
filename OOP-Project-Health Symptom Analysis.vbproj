@@ -153,6 +153,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminAbout.Designer.vb">
+      <DependentUpon>AdminAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\AdminForm.Designer.vb">
       <DependentUpon>AdminForm.vb</DependentUpon>
     </Compile>
@@ -165,10 +171,22 @@
     <Compile Include="Admin\AdminHome.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin\AllUserReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllUserReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Admin\UserManagementForm.Designer.vb">
       <DependentUpon>UserManagementForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Admin\UserManagementForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\UserReportFormAll.Designer.vb">
+      <DependentUpon>UserReportFormAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserReportFormAll.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\ViewFeedbackForm.Designer.vb">
@@ -232,10 +250,10 @@
       <DependentUpon>UserManagementReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserAuthentication\UserReportForm.Designer.vb">
+    <Compile Include="Reports\UserReportForm.Designer.vb">
       <DependentUpon>UserReportForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="UserAuthentication\UserReportForm.vb">
+    <Compile Include="Reports\UserReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\UserReportViewerForm.Designer.vb">
@@ -400,14 +418,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\AdminAbout.resx">
+      <DependentUpon>AdminAbout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminForm.resx">
       <DependentUpon>AdminForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminHome.resx">
       <DependentUpon>AdminHome.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AllUserReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AllUserReport.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\UserManagementForm.resx">
       <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserReportFormAll.resx">
+      <DependentUpon>UserReportFormAll.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ViewFeedbackForm.resx">
       <DependentUpon>ViewFeedbackForm.vb</DependentUpon>
@@ -447,7 +475,7 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>UserManagementReport.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAuthentication\UserReportForm.resx">
+    <EmbeddedResource Include="Reports\UserReportForm.resx">
       <DependentUpon>UserReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserReportViewerForm.resx">
