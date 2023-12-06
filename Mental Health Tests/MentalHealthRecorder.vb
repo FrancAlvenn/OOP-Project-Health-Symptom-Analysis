@@ -84,7 +84,7 @@ Module MentalHealthRecorder
 
     Public Sub generateReport(testType As String)
         ' Connection string for SQLite in-memory database
-        Dim connectionString As String = "Data Source=C:\Users\Administrator\source\repos\OOP-Project-Health Symptom Analysis\database\userAuthentication.sqlite;"
+        Dim connectionString As String = DatabaseConfiguration.DataSourceUserAuthentication
         Dim report As ReportClass
         ' Create an SQLite connection
         Using connection As New SQLiteConnection(connectionString)

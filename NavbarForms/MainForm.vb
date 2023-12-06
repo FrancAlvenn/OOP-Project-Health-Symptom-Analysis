@@ -13,6 +13,7 @@
         panel.Dock = DockStyle.Fill
         pnlChangeable.Controls.Add(panel)
         panel.Show()
+
     End Sub
 
 
@@ -278,6 +279,7 @@
             If result = DialogResult.Yes Then
                 hasAccount = False
                 childForm(Home)
+                CloseMenuBar()
             End If
         Else
             Dim result As DialogResult = MessageBox.Show("Not logged in, please LogIn!", "CONFIRMATION",
