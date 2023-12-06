@@ -42,6 +42,7 @@ Partial Class AdminLogin
         '
         'btnClose
         '
+        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClose.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.close
         Me.btnClose.Location = New System.Drawing.Point(366, 29)
         Me.btnClose.Name = "btnClose"
@@ -51,6 +52,7 @@ Partial Class AdminLogin
         'btnSignIn
         '
         Me.btnSignIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSignIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

@@ -250,10 +250,10 @@
       <DependentUpon>UserManagementReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\UserReportForm.Designer.vb">
-      <DependentUpon>UserReportForm.vb</DependentUpon>
+    <Compile Include="UserAuthentication\UserProfileReportForm.Designer.vb">
+      <DependentUpon>UserProfileReportForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reports\UserReportForm.vb">
+    <Compile Include="UserAuthentication\UserProfileReportForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\UserReportViewerForm.Designer.vb">
@@ -475,8 +475,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>UserManagementReport.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\UserReportForm.resx">
-      <DependentUpon>UserReportForm.vb</DependentUpon>
+    <EmbeddedResource Include="UserAuthentication\UserProfileReportForm.resx">
+      <DependentUpon>UserProfileReportForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserReportViewerForm.resx">
       <DependentUpon>UserReportViewerForm.vb</DependentUpon>

@@ -295,7 +295,7 @@
 
     Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
         If hasAccount Then
-            childForm(UserReportForm)
+            childForm(UserProfileReportForm)
             CloseMenuBar()
         Else
             Dim result As DialogResult = MessageBox.Show("Not logged in to access profile please LogIn!", "CONFIRMATION",

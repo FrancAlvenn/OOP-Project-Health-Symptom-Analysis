@@ -262,7 +262,7 @@ Partial Class ViewFeedbackForm
         Me.Controls.Add(Me.dgvFeedbackViewer)
         Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "ViewFeedbackForm"
-        Me.Text = " "
+        Me.Text = "5"
         CType(Me.dgvFeedbackViewer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
