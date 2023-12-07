@@ -57,6 +57,7 @@
 
         ' Update the selected label
         selectedLabel = clickedLabel
+
     End Sub
 
 
@@ -137,7 +138,7 @@
     Private Sub lblHome_Click(sender As Object, e As EventArgs) Handles lblHome.Click
 
         'fucntion call to get childform
-
+        childForm(Home)
         'function call to change Fore Color of MenuBar
         changeForeColor(sender)
         'Close Menubar if open

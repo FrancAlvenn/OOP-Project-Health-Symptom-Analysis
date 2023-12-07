@@ -45,7 +45,7 @@ Partial Class AdminForm
         '
         Me.seperator2.BackColor = System.Drawing.Color.White
         Me.seperator2.ForeColor = System.Drawing.Color.White
-        Me.seperator2.Location = New System.Drawing.Point(11, 775)
+        Me.seperator2.Location = New System.Drawing.Point(11, 726)
         Me.seperator2.Name = "seperator2"
         Me.seperator2.Size = New System.Drawing.Size(250, 1)
         Me.seperator2.TabIndex = 7
@@ -94,7 +94,7 @@ Partial Class AdminForm
         Me.pnlMenu.MaximumSize = New System.Drawing.Size(270, 860)
         Me.pnlMenu.MinimumSize = New System.Drawing.Size(65, 0)
         Me.pnlMenu.Name = "pnlMenu"
-        Me.pnlMenu.Size = New System.Drawing.Size(65, 860)
+        Me.pnlMenu.Size = New System.Drawing.Size(65, 809)
         Me.pnlMenu.TabIndex = 1
         '
         'Label2
@@ -129,7 +129,7 @@ Partial Class AdminForm
         Me.btnLogout.ForeColor = System.Drawing.Color.White
         Me.btnLogout.Image = Global.OOP_Project_Health_Symptom_Analysis.My.Resources.Resources.logout
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLogout.Location = New System.Drawing.Point(16, 801)
+        Me.btnLogout.Location = New System.Drawing.Point(16, 746)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(238, 40)
         Me.btnLogout.TabIndex = 6
@@ -200,7 +200,7 @@ Partial Class AdminForm
         Me.SubPanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.SubPanel.Location = New System.Drawing.Point(65, 0)
         Me.SubPanel.Name = "SubPanel"
-        Me.SubPanel.Size = New System.Drawing.Size(1218, 861)
+        Me.SubPanel.Size = New System.Drawing.Size(1218, 809)
         Me.SubPanel.TabIndex = 9
         '
         'AdminForm
@@ -208,7 +208,7 @@ Partial Class AdminForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(1284, 861)
+        Me.ClientSize = New System.Drawing.Size(1284, 809)
         Me.Controls.Add(Me.SubPanel)
         Me.Controls.Add(Me.pnlMenu)
         Me.Name = "AdminForm"
