@@ -234,7 +234,7 @@ Module MentalHealthRecorder
         Return symptomCheckerResponseString
     End Function
 
-    Public Sub addRecordSymptom()
+    Public Sub addRecordSymptomChecker()
         If MainForm.hasAccount Then
             Try
                 connection.Open()
@@ -265,7 +265,7 @@ Module MentalHealthRecorder
                     ' Execute the query
                     command.ExecuteNonQuery()
 
-                    MsgBox("Record Inserted Successfully!", vbOK, "Record Added")
+                    MsgBox("Thank you for using SymptoMedic!", vbOK, "Record Added")
 
                 Else
                     Console.WriteLine("Bad Connection")

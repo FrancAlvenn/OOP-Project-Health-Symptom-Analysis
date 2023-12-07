@@ -34,7 +34,7 @@ Public Class SymptomCheckerResult
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         AddDiagnosisToQueue(tableDiagnosis)
         AddSymptomsToQueue(tableSymptoms)
-        addRecordSymptom()
+        addRecordSymptomChecker()
         generateSymptomCheckerReport()
     End Sub
 
