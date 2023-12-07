@@ -82,7 +82,7 @@
     End Sub
 
 
-    Private Sub CloseMenuBar()
+    Public Sub CloseMenuBar()
         'Closes Menu Bar if open
         If pnlMenu.Width > 0 Then
             TimerPanelDecrease.Enabled = True

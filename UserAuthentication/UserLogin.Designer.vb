@@ -44,6 +44,7 @@ Partial Class UserLogin
         'btnSignIn
         '
         Me.btnSignIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSignIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -192,7 +193,7 @@ Partial Class UserLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(433, 657)
+        Me.ClientSize = New System.Drawing.Size(429, 653)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.btnClose)

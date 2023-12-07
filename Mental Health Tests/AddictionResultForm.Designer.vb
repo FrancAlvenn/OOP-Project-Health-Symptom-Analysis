@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AddictionResultForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class AddictionResultForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddictionResultForm))
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,8 +48,8 @@ Partial Class AddictionResultForm
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.btnPrint = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -318,13 +318,6 @@ Partial Class AddictionResultForm
         Me.Label14.Text = "Your Answers"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label15
-        '
-        Me.Label15.Location = New System.Drawing.Point(940, 1601)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(45, 121)
-        Me.Label15.TabIndex = 165
-        '
         'btnPrint
         '
         Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
@@ -341,6 +334,13 @@ Partial Class AddictionResultForm
         Me.btnPrint.Text = "Print Report"
         Me.btnPrint.UseVisualStyleBackColor = False
         '
+        'Panel4
+        '
+        Me.Panel4.Location = New System.Drawing.Point(957, 1695)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(28, 36)
+        Me.Panel4.TabIndex = 197
+        '
         'AddictionResultForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -348,8 +348,8 @@ Partial Class AddictionResultForm
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1101, 658)
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.btnPrint)
-        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Button40)
@@ -397,6 +397,6 @@ Partial Class AddictionResultForm
     Friend WithEvents q1 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
     Friend WithEvents btnPrint As Button
+    Friend WithEvents Panel4 As Panel
 End Class

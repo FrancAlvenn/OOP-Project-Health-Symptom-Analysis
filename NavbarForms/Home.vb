@@ -26,6 +26,8 @@
         'check if user has account if not open login Form
         If MainForm.hasAccount = False Then
             Dim loginForm As DialogResult = UserLogin.ShowDialog()
+        Else
+            MainForm.childForm(BMICalc)
         End If
 
 

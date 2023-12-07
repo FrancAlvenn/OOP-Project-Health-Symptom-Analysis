@@ -42,6 +42,9 @@ Partial Class SymptomCheckerResult
         Me.backButton = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnPrint = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -298,6 +301,36 @@ Partial Class SymptomCheckerResult
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = False
         '
+        'Panel4
+        '
+        Me.Panel4.Location = New System.Drawing.Point(959, 1960)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(28, 120)
+        Me.Panel4.TabIndex = 197
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Black
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(171, 1960)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(700, 1)
+        Me.Label2.TabIndex = 196
+        Me.Label2.Text = "Label2"
+        Me.Label2.Visible = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(98, 1977)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(849, 28)
+        Me.Label6.TabIndex = 195
+        Me.Label6.Text = resources.GetString("Label6.Text")
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'SymptomCheckerResult
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -305,6 +338,9 @@ Partial Class SymptomCheckerResult
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1125, 719)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnConfirmSelection)
         Me.Controls.Add(Me.Label14)
@@ -326,6 +362,7 @@ Partial Class SymptomCheckerResult
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label14 As Label
@@ -347,4 +384,7 @@ Partial Class SymptomCheckerResult
     Friend WithEvents tableSymptoms As TableLayoutPanel
     Friend WithEvents Label3 As Label
     Friend WithEvents btnPrint As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label6 As Label
 End Class

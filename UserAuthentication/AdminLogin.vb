@@ -8,6 +8,7 @@ Public Class AdminLogin
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         attemptCheck()
+
     End Sub
 
     Private Sub timeOutTimer_Tick(sender As Object, e As EventArgs) Handles timeOutTimer.Tick
@@ -128,6 +129,7 @@ Public Class AdminLogin
             MessageBox.Show("Login successful!")
 
             AdminForm.Show()
+            MainForm.CloseMenuBar()
             Me.Dispose()
             MainForm.Hide()
 

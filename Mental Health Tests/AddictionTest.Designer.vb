@@ -53,6 +53,9 @@ Partial Class AddictionTest
         Me.backButton = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtConcern = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -377,6 +380,36 @@ Partial Class AddictionTest
         Me.txtConcern.Size = New System.Drawing.Size(271, 25)
         Me.txtConcern.TabIndex = 155
         '
+        'Panel2
+        '
+        Me.Panel2.Location = New System.Drawing.Point(973, 1759)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(28, 120)
+        Me.Panel2.TabIndex = 197
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.Black
+        Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(185, 1759)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(700, 1)
+        Me.Label10.TabIndex = 196
+        Me.Label10.Text = "Label2"
+        Me.Label10.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(112, 1776)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(849, 28)
+        Me.Label11.TabIndex = 195
+        Me.Label11.Text = resources.GetString("Label11.Text")
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'AddictionTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -384,6 +417,9 @@ Partial Class AddictionTest
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1152, 719)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.txtConcern)
         Me.Controls.Add(Me.backButton)
         Me.Controls.Add(Me.btnSubmit)
@@ -450,4 +486,7 @@ Partial Class AddictionTest
     Friend WithEvents Label15 As Label
     Friend WithEvents backButton As Label
     Friend WithEvents txtConcern As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
 End Class

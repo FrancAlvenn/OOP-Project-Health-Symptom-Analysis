@@ -241,4 +241,8 @@ lower your BMI by following standard weight-loss tips, such as:
         9uwAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="Label32.Text" xml:space="preserve">
+    <value>© 2023 SymptoMedic: Health Analysis System. All rights reserved. Confidential and for individual use only. This mental health assessment report is not a substitute for professional medical advice. 
+Please consult with a qualified healthcare professional for accurate diagnosis and personalized treatment.</value>
+  </data>
 </root>

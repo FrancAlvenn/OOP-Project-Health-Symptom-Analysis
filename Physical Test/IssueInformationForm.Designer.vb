@@ -38,6 +38,9 @@ Partial Class IssueInformationForm
         Me.txtName = New System.Windows.Forms.Label()
         Me.txtProfname = New System.Windows.Forms.Label()
         Me.btnPrint = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'backButton
@@ -135,9 +138,9 @@ Partial Class IssueInformationForm
         '
         'txtTreatmentDesc
         '
-        Me.txtTreatmentDesc.Location = New System.Drawing.Point(112, 1411)
+        Me.txtTreatmentDesc.Location = New System.Drawing.Point(112, 1402)
         Me.txtTreatmentDesc.Name = "txtTreatmentDesc"
-        Me.txtTreatmentDesc.Size = New System.Drawing.Size(851, 227)
+        Me.txtTreatmentDesc.Size = New System.Drawing.Size(851, 251)
         Me.txtTreatmentDesc.TabIndex = 179
         '
         'Label10
@@ -189,6 +192,36 @@ Partial Class IssueInformationForm
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = False
         '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Black
+        Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(177, 1703)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(700, 1)
+        Me.Label7.TabIndex = 193
+        Me.Label7.Text = "Label2"
+        Me.Label7.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(104, 1720)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(849, 28)
+        Me.Label5.TabIndex = 192
+        Me.Label5.Text = resources.GetString("Label5.Text")
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(965, 1703)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(28, 120)
+        Me.Panel1.TabIndex = 194
+        '
         'IssueInformationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -196,6 +229,9 @@ Partial Class IssueInformationForm
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1074, 719)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.txtProfname)
         Me.Controls.Add(Me.txtName)
@@ -236,4 +272,7 @@ Partial Class IssueInformationForm
     Friend WithEvents txtName As Label
     Friend WithEvents txtProfname As Label
     Friend WithEvents btnPrint As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel1 As Panel
 End Class

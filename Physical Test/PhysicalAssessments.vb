@@ -238,12 +238,18 @@ Public Class BMICalc
 
 
         symptomCount = 0
+        queueSymptomName.Clear()
+
+
 
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
         tableLayoutSymptoms.Controls.Remove(clickedLabelPhysicalAssessment)
         clickedLabelPhysicalAssessment.Dispose()
+        queueSymptomName.Dequeue()
+
+
     End Sub
 
     Public Function BodyLocations()
@@ -506,4 +512,11 @@ Public Class BMICalc
         End If
     End Sub
 
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        txtBMIResult.Text = ""
+        txtHeight.Text = ""
+        txtWeight.Text = ""
+        txtInch.Text = ""
+
+    End Sub
 End Class

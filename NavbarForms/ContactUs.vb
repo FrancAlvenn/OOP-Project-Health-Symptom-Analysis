@@ -50,6 +50,11 @@ Public Class ContactUs
         Return 0
     End Function
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        insertMessage()
+        If txtMessage.Text <> "" Then
+            insertMessage()
+        Else
+            MsgBox("No message inserted!", vbOK, "Invalid Input!")
+        End If
+
     End Sub
 End Class

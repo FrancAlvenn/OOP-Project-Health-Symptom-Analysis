@@ -131,7 +131,7 @@ Public Class UserLogin
             Me.Dispose()
             MainForm.Enabled = True
             MainForm.Show()
-
+            MainForm.CloseMenuBar()
         Else
             ' Invalid credentials
             MessageBox.Show("Invalid username or password.")

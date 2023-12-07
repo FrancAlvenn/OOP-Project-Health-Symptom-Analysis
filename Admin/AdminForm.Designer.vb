@@ -27,10 +27,6 @@ Partial Class AdminForm
         Me.seperator1 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlMenu = New System.Windows.Forms.Panel()
-        Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
-        Me.SubPanel = New System.Windows.Forms.Panel()
-        Me.Timerupdater = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnReport = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Label()
@@ -38,6 +34,10 @@ Partial Class AdminForm
         Me.btnAbout = New System.Windows.Forms.Label()
         Me.btnUserManagement = New System.Windows.Forms.Label()
         Me.btnHome = New System.Windows.Forms.Label()
+        Me.TimerPanelIncrease = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerPanelDecrease = New System.Windows.Forms.Timer(Me.components)
+        Me.SubPanel = New System.Windows.Forms.Panel()
+        Me.Timerupdater = New System.Windows.Forms.Timer(Me.components)
         Me.pnlMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -96,23 +96,6 @@ Partial Class AdminForm
         Me.pnlMenu.Name = "pnlMenu"
         Me.pnlMenu.Size = New System.Drawing.Size(65, 860)
         Me.pnlMenu.TabIndex = 1
-        '
-        'TimerPanelIncrease
-        '
-        Me.TimerPanelIncrease.Interval = 10
-        '
-        'TimerPanelDecrease
-        '
-        Me.TimerPanelDecrease.Interval = 10
-        '
-        'SubPanel
-        '
-        Me.SubPanel.BackColor = System.Drawing.Color.White
-        Me.SubPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.SubPanel.Location = New System.Drawing.Point(65, 0)
-        Me.SubPanel.Name = "SubPanel"
-        Me.SubPanel.Size = New System.Drawing.Size(1218, 861)
-        Me.SubPanel.TabIndex = 9
         '
         'Label2
         '
@@ -202,6 +185,23 @@ Partial Class AdminForm
         Me.btnHome.TabIndex = 3
         Me.btnHome.Text = "                 Home"
         Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TimerPanelIncrease
+        '
+        Me.TimerPanelIncrease.Interval = 10
+        '
+        'TimerPanelDecrease
+        '
+        Me.TimerPanelDecrease.Interval = 10
+        '
+        'SubPanel
+        '
+        Me.SubPanel.BackColor = System.Drawing.Color.White
+        Me.SubPanel.Dock = System.Windows.Forms.DockStyle.Left
+        Me.SubPanel.Location = New System.Drawing.Point(65, 0)
+        Me.SubPanel.Name = "SubPanel"
+        Me.SubPanel.Size = New System.Drawing.Size(1218, 861)
+        Me.SubPanel.TabIndex = 9
         '
         'AdminForm
         '

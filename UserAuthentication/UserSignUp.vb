@@ -100,20 +100,25 @@ Public Class UserSignUp
     End Sub
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
-
-        Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
-        If userExists Then
-            MsgBox("Username already used!", vbOK, "Username Exists")
-        Else
-            If Not String.IsNullOrEmpty(txtUsername.Text) And Not String.IsNullOrEmpty(txtPassword.Text) Then
-                insertUser()
-                Me.Dispose()
-                MainForm.Enabled = True
-                MainForm.Show()
+        If txtPassword.Text = txtConfirmPassword.Text Then
+            Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
+            If userExists Then
+                MsgBox("Username already used!", vbOK, "Username Exists")
             Else
-                MsgBox("Textbox is empty. Please enter a value.", vbInformation, "Empty Value!")
+                If Not String.IsNullOrEmpty(txtUsername.Text) And Not String.IsNullOrEmpty(txtPassword.Text) Then
+                    insertUser()
+                    Me.Dispose()
+                    MainForm.Enabled = True
+                    MainForm.Show()
+                    MainForm.CloseMenuBar()
+                Else
+                    MsgBox("Textbox is empty. Please enter a value.", vbInformation, "Empty Value!")
+                End If
             End If
+        Else
+            MsgBox("Password doesn't match! Please try again!", vbOK, "Mismatch Password")
         End If
+
     End Sub
 
     Public Function IsUsernameExists(username As String) As Boolean

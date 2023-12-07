@@ -64,7 +64,6 @@ Partial Class BMICalc
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.scrollTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.tableLayoutSymptoms = New System.Windows.Forms.TableLayoutPanel()
         Me.btnClear = New System.Windows.Forms.Button()
@@ -91,6 +90,9 @@ Partial Class BMICalc
         Me.Label31 = New System.Windows.Forms.Label()
         Me.btnSymptomChecker = New System.Windows.Forms.Label()
         Me.btnBMICalc = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel12.SuspendLayout()
@@ -583,13 +585,6 @@ Partial Class BMICalc
         '
         Me.scrollTimer.Interval = 10
         '
-        'Panel3
-        '
-        Me.Panel3.Location = New System.Drawing.Point(426, 2445)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(200, 81)
-        Me.Panel3.TabIndex = 10
-        '
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.White
@@ -909,6 +904,36 @@ Partial Class BMICalc
         Me.btnBMICalc.Size = New System.Drawing.Size(158, 184)
         Me.btnBMICalc.TabIndex = 4
         '
+        'Panel4
+        '
+        Me.Panel4.Location = New System.Drawing.Point(969, 2448)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(28, 120)
+        Me.Panel4.TabIndex = 197
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.Black
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(181, 2448)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(700, 1)
+        Me.Label6.TabIndex = 196
+        Me.Label6.Text = "Label2"
+        Me.Label6.Visible = False
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(108, 2465)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(849, 28)
+        Me.Label32.TabIndex = 195
+        Me.Label32.Text = resources.GetString("Label32.Text")
+        Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'BMICalc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -916,10 +941,12 @@ Partial Class BMICalc
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1211, 719)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label32)
         Me.Controls.Add(Me.Label31)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label23)
@@ -993,7 +1020,6 @@ Partial Class BMICalc
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents scrollTimer As Timer
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents tableLayoutSymptoms As TableLayoutPanel
     Friend WithEvents btnClear As Button
@@ -1018,4 +1044,7 @@ Partial Class BMICalc
     Friend WithEvents Label30 As Label
     Friend WithEvents Label31 As Label
     Public WithEvents cmb_BodyLocation As ComboBox
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label32 As Label
 End Class
