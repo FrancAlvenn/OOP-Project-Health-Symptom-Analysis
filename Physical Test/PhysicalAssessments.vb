@@ -198,10 +198,11 @@ Public Class BMICalc
     'Symptom Checker handler
 
     Private Sub btnAddSymptom_Click(sender As Object, e As EventArgs) Handles btnAddSymptom.Click
-        If cmb_Symptoms.SelectedIndex <> -1 Then
+
+        If cmdSearch.SelectedIndex <> -1 Then
             If symptomCount < 15 Then
                 Dim newLabel As New Label()
-                newLabel.Text = cmb_Symptoms.Text
+                newLabel.Text = cmdSearch.Text
                 newLabel.AutoSize = True
                 newLabel.Font = New Font("Microsoft Tai Le", 10, FontStyle.Regular)
                 newLabel.Dock = DockStyle.Fill
@@ -217,18 +218,51 @@ Public Class BMICalc
 
 
 
-                queueSymptomName.Enqueue(cmb_Symptoms.Text)
+                queueSymptomName.Enqueue(cmdSearch.Text)
 
                 cmb_BodyLocation.Items.Clear()
                 cmb_Symptoms.Items.Clear()
                 cmb_SpecificBodyLocation.Items.Clear()
+                cmdSearch.Items.Clear()
+                LoadSearchData()
                 BodyLocations()
 
             Else
                 MsgBox("Too many symptoms!")
             End If
         Else
-            MsgBox("Please select a symptom!", vbInformation, "No Symptom Selected")
+            If cmb_Symptoms.SelectedIndex <> -1 Then
+                If symptomCount < 15 Then
+                    Dim newLabel As New Label()
+                    newLabel.Text = cmb_Symptoms.Text
+                    newLabel.AutoSize = True
+                    newLabel.Font = New Font("Microsoft Tai Le", 10, FontStyle.Regular)
+                    newLabel.Dock = DockStyle.Fill
+                    newLabel.TextAlign = ContentAlignment.MiddleLeft
+
+                    AddHandler newLabel.Click, AddressOf Label_Click
+
+                    Dim row As Integer = 0
+                    Dim column As Integer = 0
+
+                    tableLayoutSymptoms.Controls.Add(newLabel, column, row)
+                    symptomCount += 1
+
+
+
+                    queueSymptomName.Enqueue(cmb_Symptoms.Text)
+
+                    cmb_BodyLocation.Items.Clear()
+                    cmb_Symptoms.Items.Clear()
+                    cmb_SpecificBodyLocation.Items.Clear()
+                    BodyLocations()
+
+                Else
+                    MsgBox("Too many symptoms!")
+                End If
+            Else
+                MsgBox("Please select a symptom!", vbInformation, "No Symptom Selected")
+            End If
         End If
 
     End Sub
@@ -390,7 +424,7 @@ Public Class BMICalc
         symptomCount = 0
         itemCount = 0
         itemCount2 = 0
-
+        LoadSearchData()
         BodyLocations()
     End Sub
 
@@ -441,38 +475,38 @@ Public Class BMICalc
         End If
 
         If Integer.TryParse(txtAge.Text, tempAge) Then
-            age = 2023 - tempAge
-        Else
-            MsgBox("Please enter you age", vbInformation, "Invalid Input")
-        End If
 
 
-        For Each item As Object In queueSymptomName
-            'specific bodylocation
-            Using connection As New SQLiteConnection(connectionString)
-                connection.Open()
+            For Each item As Object In queueSymptomName
+                'specific bodylocation
+                Using connection As New SQLiteConnection(connectionString)
+                    connection.Open()
 
 
 
-                ' Your SQL query to retrieve data
-                Dim query As String = "SELECT Name FROM tblIssueSpecific WHERE PossibleSymptoms LIKE '%" & item & "%';"
+                    ' Your SQL query to retrieve data
+                    Dim query As String = "SELECT Name FROM tblIssueSpecific WHERE PossibleSymptoms LIKE '%" & item & "%';"
 
-                ' Create a command and execute the query
-                Using command As New SQLiteCommand(query, connection)
-                    Using reader As SQLiteDataReader = command.ExecuteReader()
-                        ' Read data and add it to ComboBox
-                        While reader.Read()
-                            If IssueName.Count < 20 Then
-                                IssueName.Enqueue(reader("Name").ToString())
-                            End If
+                    ' Create a command and execute the query
+                    Using command As New SQLiteCommand(query, connection)
+                        Using reader As SQLiteDataReader = command.ExecuteReader()
+                            ' Read data and add it to ComboBox
+                            While reader.Read()
+                                If IssueName.Count < 20 Then
+                                    IssueName.Enqueue(reader("Name").ToString())
+                                End If
 
-                        End While
+                            End While
+                        End Using
                     End Using
                 End Using
-            End Using
-        Next
+            Next
+            MainForm.childForm(SymptomCheckerResult)
+        Else
 
-        MainForm.childForm(SymptomCheckerResult)
+            MsgBox("Please enter you age", vbInformation, "Invalid Input")
+
+        End If
 
     End Function
 
@@ -519,4 +553,21 @@ Public Class BMICalc
         txtInch.Text = ""
 
     End Sub
+
+    Private Sub LoadSearchData()
+        Using connection As New SQLiteConnection(DatabaseConfiguration.DataSourceSystemDatabase)
+            connection.Open()
+            Dim query As String = "SELECT Name FROM tblSymptoms"
+            Using command As New SQLiteCommand(query, connection)
+                Using reader As SQLiteDataReader = command.ExecuteReader
+                    While reader.Read
+                        cmdSearch.Items.Add(reader("Name").ToString)
+                    End While
+                End Using
+            End Using
+            End Using
+    End Sub
+
+
+
 End Class

@@ -103,7 +103,7 @@ Partial Class SymptomCheckerResult
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Label13.Location = New System.Drawing.Point(36, 38)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(184, 26)
+        Me.Label13.Size = New System.Drawing.Size(231, 31)
         Me.Label13.TabIndex = 144
         Me.Label13.Text = "Symptoms Added"
         '
@@ -130,7 +130,7 @@ Partial Class SymptomCheckerResult
         Me.Label9.ForeColor = System.Drawing.Color.DimGray
         Me.Label9.Location = New System.Drawing.Point(67, 451)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(689, 76)
+        Me.Label9.Size = New System.Drawing.Size(901, 92)
         Me.Label9.TabIndex = 162
         Me.Label9.Text = resources.GetString("Label9.Text")
         '
@@ -140,7 +140,7 @@ Partial Class SymptomCheckerResult
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.LinkLabel1.Location = New System.Drawing.Point(171, 312)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(141, 19)
+        Me.LinkLabel1.Size = New System.Drawing.Size(185, 23)
         Me.LinkLabel1.TabIndex = 161
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "https://apimedic.com"
@@ -150,7 +150,7 @@ Partial Class SymptomCheckerResult
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(63, 274)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(131, 57)
+        Me.Label8.Size = New System.Drawing.Size(174, 69)
         Me.Label8.TabIndex = 160
         Me.Label8.Text = "APIMedic Diagnosis" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Retrieved from"
         '
@@ -175,7 +175,7 @@ Partial Class SymptomCheckerResult
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(27, 217)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 25)
+        Me.Label7.Size = New System.Drawing.Size(99, 31)
         Me.Label7.TabIndex = 159
         Me.Label7.Text = "Source:"
         '
@@ -186,7 +186,7 @@ Partial Class SymptomCheckerResult
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(36, 42)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(177, 25)
+        Me.Label4.Size = New System.Drawing.Size(222, 31)
         Me.Label4.TabIndex = 157
         Me.Label4.Text = "About your Result"
         '
@@ -195,7 +195,7 @@ Partial Class SymptomCheckerResult
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(63, 102)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(681, 76)
+        Me.Label5.Size = New System.Drawing.Size(904, 92)
         Me.Label5.TabIndex = 158
         Me.Label5.Text = resources.GetString("Label5.Text")
         '
@@ -217,7 +217,7 @@ Partial Class SymptomCheckerResult
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(45, 19)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(451, 26)
+        Me.Label3.Size = New System.Drawing.Size(573, 31)
         Me.Label3.TabIndex = 160
         Me.Label3.Text = "Possible Issues based on the Symptoms Given"
         '
@@ -326,14 +326,14 @@ Partial Class SymptomCheckerResult
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(98, 1977)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(849, 28)
+        Me.Label6.Size = New System.Drawing.Size(1147, 34)
         Me.Label6.TabIndex = 195
         Me.Label6.Text = resources.GetString("Label6.Text")
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'SymptomCheckerResult
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White

@@ -195,7 +195,7 @@
     <Compile Include="Admin\ViewFeedbackForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mental Health Tests\MentalHealthRecorder.vb" />
+    <Compile Include="HealthAssessmentRecorder.vb" />
     <Compile Include="Reports\ADHDTestReport.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
