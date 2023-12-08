@@ -20,8 +20,32 @@ Public Class UserManagementForm
 
             End Using
         End Using
+        For Each column As DataColumn In dataTable.Columns
+            If column.ColumnName = "Password" Then
+                ' Set the password column as a DataGridViewTextBoxCell with PasswordChar property
+                Dim passwordColumn As New DataGridViewTextBoxCell()
+                passwordColumn.ValueType = GetType(String)
+                passwordColumn.Style.NullValue = Nothing
+                dvgUsers.Columns.Add(column.ColumnName, column.ColumnName)
+                dvgUsers.Columns(column.ColumnName).CellTemplate = passwordColumn
+            Else
+                ' Add other columns normally
+                dvgUsers.Columns.Add(column.ColumnName, column.ColumnName)
+            End If
+        Next
 
-        dvgUsers.DataSource = dataTable
+        ' Populate the DataGridView with data
+        For Each row As DataRow In dataTable.Rows
+            ' If the password is not null, set the cell value to the appropriate number of asterisks
+            If Not IsDBNull(row("Password")) Then
+                Dim password As String = row("Password").ToString()
+                Dim asterisks As String = New String("*"c, password.Length)
+                row("Password") = asterisks
+            End If
+            dvgUsers.Rows.Add(row.ItemArray)
+        Next
+
+        'dvgUsers.DataSource = dataTable
         dvgUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
 
     End Sub

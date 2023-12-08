@@ -32,9 +32,10 @@ Partial Class AdminAbout
         '
         Me.seperator1.BackColor = System.Drawing.Color.Black
         Me.seperator1.ForeColor = System.Drawing.Color.White
-        Me.seperator1.Location = New System.Drawing.Point(47, 208)
+        Me.seperator1.Location = New System.Drawing.Point(63, 256)
+        Me.seperator1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.seperator1.Name = "seperator1"
-        Me.seperator1.Size = New System.Drawing.Size(500, 1)
+        Me.seperator1.Size = New System.Drawing.Size(667, 1)
         Me.seperator1.TabIndex = 168
         Me.seperator1.Text = "Label2"
         Me.seperator1.Visible = False
@@ -44,10 +45,10 @@ Partial Class AdminAbout
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(45, 152)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(60, 187)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(699, 36)
+        Me.Label3.Size = New System.Drawing.Size(877, 45)
         Me.Label3.TabIndex = 167
         Me.Label3.Text = "Welcome to SymptoMedic Administrator Module!"
         '
@@ -55,20 +56,23 @@ Partial Class AdminAbout
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(47, 287)
+        Me.Label1.Location = New System.Drawing.Point(63, 353)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(722, 95)
+        Me.Label1.Size = New System.Drawing.Size(912, 115)
         Me.Label1.TabIndex = 169
         Me.Label1.Text = resources.GetString("Label1.Text")
         '
         'AdminAbout
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1054, 767)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1405, 944)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.seperator1)
         Me.Controls.Add(Me.Label3)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "AdminAbout"
         Me.Text = "AdminAbout"
         Me.ResumeLayout(False)

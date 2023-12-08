@@ -693,6 +693,12 @@
     <None Include="Icons\exchange.png" />
     <None Include="Icons\log-in.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Administrator Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdministratorHeader.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

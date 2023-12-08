@@ -57,7 +57,7 @@ Module MentalHealthRecorder
 
 
 
-                    MsgBox("Record Inserted Successfully!", vbOK, "Record Added")
+                    MsgBox("Thank you for using SymptoMedic!", vbOK, "Record Added")
 
                 Else
                     Console.WriteLine("Bad Connection")
