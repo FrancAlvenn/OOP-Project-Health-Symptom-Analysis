@@ -98,7 +98,7 @@ Partial Class ContactUs
         Me.txtEmail.Font = New System.Drawing.Font("Tahoma", 9.75!)
         Me.txtEmail.Location = New System.Drawing.Point(41, 217)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(330, 16)
+        Me.txtEmail.Size = New System.Drawing.Size(330, 20)
         Me.txtEmail.TabIndex = 64
         '
         'txtFullname
@@ -108,7 +108,7 @@ Partial Class ContactUs
         Me.txtFullname.Font = New System.Drawing.Font("Tahoma", 9.75!)
         Me.txtFullname.Location = New System.Drawing.Point(41, 129)
         Me.txtFullname.Name = "txtFullname"
-        Me.txtFullname.Size = New System.Drawing.Size(330, 16)
+        Me.txtFullname.Size = New System.Drawing.Size(330, 20)
         Me.txtFullname.TabIndex = 63
         '
         'Label8
@@ -125,7 +125,7 @@ Partial Class ContactUs
         Me.Label9.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(38, 264)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(58, 16)
+        Me.Label9.Size = New System.Drawing.Size(75, 21)
         Me.Label9.TabIndex = 60
         Me.Label9.Text = "Message"
         '
@@ -143,7 +143,7 @@ Partial Class ContactUs
         Me.Label6.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(38, 184)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(39, 16)
+        Me.Label6.Size = New System.Drawing.Size(51, 21)
         Me.Label6.TabIndex = 55
         Me.Label6.Text = "Email"
         '
@@ -161,7 +161,7 @@ Partial Class ContactUs
         Me.Label7.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(38, 99)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(60, 16)
+        Me.Label7.Size = New System.Drawing.Size(77, 21)
         Me.Label7.TabIndex = 52
         Me.Label7.Text = "Fullname"
         '
@@ -172,7 +172,7 @@ Partial Class ContactUs
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(285, 48)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Send us an Email"
+        Me.Label3.Text = "Send us a Message"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
@@ -226,7 +226,7 @@ Partial Class ContactUs
         '
         'ContactUs
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1093, 714)
