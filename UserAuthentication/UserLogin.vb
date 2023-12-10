@@ -132,6 +132,12 @@ Public Class UserLogin
             MainForm.Enabled = True
             MainForm.Show()
             MainForm.CloseMenuBar()
+            MainForm.childForm(Home)
+            BMICalc.tableLayoutSymptoms.Controls.Clear()
+
+
+            BMICalc.symptomCount = 0
+            BMICalc.queueSymptomName.Clear()
         Else
             ' Invalid credentials
             MessageBox.Show("Invalid username or password.")

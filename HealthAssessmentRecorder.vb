@@ -3,7 +3,7 @@ Imports System.Collections.Generic
 Imports CrystalDecisions.CrystalReports.Engine
 Imports CrystalDecisions.Shared
 
-Module MentalHealthRecorder
+Module HealthAssessmentRecorder
     Public connectionName As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(connectionName)
     Public patientResponseString As String
@@ -57,7 +57,7 @@ Module MentalHealthRecorder
 
 
 
-                    MsgBox("Record Inserted Successfully!", vbOK, "Record Added")
+                    MsgBox("Thank you for using SymptoMedic!", vbOK, "Record Added")
 
                 Else
                     Console.WriteLine("Bad Connection")

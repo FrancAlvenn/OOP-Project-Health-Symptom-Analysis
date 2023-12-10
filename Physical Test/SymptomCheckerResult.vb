@@ -35,7 +35,11 @@ Public Class SymptomCheckerResult
         AddDiagnosisToQueue(tableDiagnosis)
         AddSymptomsToQueue(tableSymptoms)
         addRecordSymptomChecker()
-        generateSymptomCheckerReport()
+        If MainForm.hasAccount Then
+            generateSymptomCheckerReport()
+        End If
+
+
     End Sub
 
     Private Sub SymptomCheckerResult_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -50,6 +54,17 @@ Public Class SymptomCheckerResult
         BMICalc.itemCount = 0
         BMICalc.itemCount2 = 0
         BMICalc.symptomCount = 0
+
+        For Each control In tableDiagnosis.Controls
+            tableDiagnosis.Controls.Remove(control)
+            control.dispose
+        Next
+
+        For Each control In tableSymptoms.Controls
+            tableSymptoms.Controls.Remove(control)
+            control.dispose
+        Next
+
     End Sub
 
     Private Sub Button40_Click(sender As Object, e As EventArgs) Handles Button40.Click

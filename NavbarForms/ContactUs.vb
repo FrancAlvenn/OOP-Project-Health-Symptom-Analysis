@@ -52,6 +52,9 @@ Public Class ContactUs
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
         If txtMessage.Text <> "" Then
             insertMessage()
+            txtEmail.Text = ""
+            txtFullname.Text = ""
+            txtMessage.Text = ""
         Else
             MsgBox("No message inserted!", vbOK, "Invalid Input!")
         End If
