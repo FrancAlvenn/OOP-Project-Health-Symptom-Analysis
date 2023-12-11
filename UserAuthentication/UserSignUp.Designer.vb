@@ -41,6 +41,9 @@ Partial Class UserSignUp
         Me.txtConfirmPassword = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtSchoolID = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'btnSignIn
@@ -120,7 +123,7 @@ Partial Class UserSignUp
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(90, 305)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(265, 2)
+        Me.Label4.Size = New System.Drawing.Size(121, 2)
         Me.Label4.TabIndex = 57
         '
         'txtUsername
@@ -130,7 +133,7 @@ Partial Class UserSignUp
         Me.txtUsername.Font = New System.Drawing.Font("Tahoma", 9.75!)
         Me.txtUsername.Location = New System.Drawing.Point(90, 286)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(265, 16)
+        Me.txtUsername.Size = New System.Drawing.Size(121, 16)
         Me.txtUsername.TabIndex = 56
         '
         'Label3
@@ -229,6 +232,32 @@ Partial Class UserSignUp
         Me.Label12.TabIndex = 69
         Me.Label12.Text = "Confirm Password"
         '
+        'Label13
+        '
+        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(234, 305)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(121, 2)
+        Me.Label13.TabIndex = 74
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(231, 263)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(62, 16)
+        Me.Label14.TabIndex = 72
+        Me.Label14.Text = "School ID"
+        '
+        'txtSchoolID
+        '
+        Me.txtSchoolID.Location = New System.Drawing.Point(234, 282)
+        Me.txtSchoolID.Mask = "0000-00000"
+        Me.txtSchoolID.Name = "txtSchoolID"
+        Me.txtSchoolID.Size = New System.Drawing.Size(121, 20)
+        Me.txtSchoolID.TabIndex = 75
+        '
         'UserSignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -236,6 +265,9 @@ Partial Class UserSignUp
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(441, 665)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtSchoolID)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.txtConfirmPassword)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label12)
@@ -284,4 +316,7 @@ Partial Class UserSignUp
     Friend WithEvents txtConfirmPassword As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents txtSchoolID As MaskedTextBox
 End Class

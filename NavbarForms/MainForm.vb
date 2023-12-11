@@ -130,7 +130,6 @@
         changeForeColor(lblHome)
 
 
-
     End Sub
 
 
@@ -150,15 +149,15 @@
 
         'check if user has account if not open login Form
         If hasAccount = False Then
-            Dim loginForm As DialogResult = UserLogin.ShowDialog()
+            MsgBox("Not logged in, please login first!", vbOK, "Warning!")
+            childForm(Home)
+        Else
+            'fucntion call to get childform
+            childForm(BMICalc)
+            'function call to change Fore Color of MenuBar
+            changeForeColor(sender)
         End If
 
-
-
-        'fucntion call to get childform
-        childForm(BMICalc)
-        'function call to change Fore Color of MenuBar
-        changeForeColor(sender)
         'Close Menubar if open
         CloseMenuBar()
     End Sub
@@ -166,15 +165,17 @@
     'lblMentalAssessment_Click
     Private Sub lblMentalAssessment_Click(sender As Object, e As EventArgs) Handles lblMentalAssessment.Click
 
-        'check if user has account if not open login Form
+        ''check if user has account if not open login Form
         If hasAccount = False Then
-            Dim loginForm As DialogResult = UserLogin.ShowDialog()
+            MsgBox("Not logged in, please login first!", vbOK, "Warning!")
+            childForm(Home)
+        Else
+            'fucntion call to get childform
+            childForm(MentalAssessment)
+            'function call to change Fore Color of MenuBar
+            changeForeColor(sender)
         End If
 
-        'fucntion call to get childform
-        childForm(MentalAssessment)
-        'function call to change Fore Color of MenuBar
-        changeForeColor(sender)
         'Close Menubar if open
         CloseMenuBar()
 
@@ -297,10 +298,9 @@
     End Sub
 
     Private Sub btnReports_Click(sender As Object, e As EventArgs) Handles btnReports.Click
-        If hasAccount Then
-            childForm(UserReportForm)
-            CloseMenuBar()
-        Else
+
+        'check if user has account if not open login Form
+        If hasAccount = False Then
             Dim result As DialogResult = MessageBox.Show("Not logged in to access profile please LogIn!", "CONFIRMATION",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
@@ -308,7 +308,13 @@
                 Dim loginForm As DialogResult = UserLogin.ShowDialog()
                 CloseMenuBar()
             End If
+            childForm(Home)
+        Else
+            'fucntion call to get childform
+            childForm(UserReportForm)
         End If
+
+        'Close Menubar if open
         CloseMenuBar()
     End Sub
 End Class

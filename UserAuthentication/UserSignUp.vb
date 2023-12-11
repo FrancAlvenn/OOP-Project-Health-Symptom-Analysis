@@ -6,16 +6,6 @@ Public Class UserSignUp
     Public connectionName As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(connectionName)
 
-    Public random As New Random()
-    Public generatedNumbers As New HashSet(Of Integer)()
-    Public randomNum As Integer
-    Public Function GenerateUniqueRandom() As Integer
-        Do
-            randomNum = random.Next(100000, 999999)
-        Loop While generatedNumbers.Contains(randomNum)
-        generatedNumbers.Add(randomNum)
-        Return randomNum
-    End Function
 
     '-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
     'FUNCTIONS AND METHODS
@@ -28,28 +18,29 @@ Public Class UserSignUp
             If connection.State = ConnectionState.Open Then
                 'Create Table if not exists in the database
                 Dim createTableString As String = "CREATE TABLE IF NOT EXISTS user_accounts ( " &
-                                                  "ID INTEGER PRIMARY KEY," &
+                                                  "ID TEXT PRIMARY KEY," &
                                                   "Name TEXT, " &
                                                   "Username TEXT NOT NULL, " &
-                                                  "Password TEXT NOT NULL )"
+                                                  "Password TEXT NOT NULL, " &
+                                                  "IsActive TEXT NOT NULL)"
                 ' Execute the query
                 Dim createTableCommand As New SQLiteCommand(createTableString, connection)
                 createTableCommand.ExecuteNonQuery()
 
                 ' Get value from form
-                GenerateUniqueRandom()
-                Dim accountNumber As Integer = "800" & randomNum.ToString
+                Dim schoolID As String = txtSchoolID.Text
                 Dim name As String = txtName.Text
                 Dim username As String = txtUsername.Text
                 Dim password As String = txtPassword.Text
-                Dim insertQuery As String = "INSERT INTO user_accounts (ID, Name, Username, Password) VALUES (@ID, @Name, @Username, @Password)"
+                Dim insertQuery As String = "INSERT INTO user_accounts (ID, Name, Username, Password, IsActive) VALUES (@ID, @Name, @Username, @Password,@IsActive)"
                 Dim command As New SQLiteCommand(insertQuery, connection)
 
                 ' Add parameters
-                command.Parameters.AddWithValue("@ID", accountNumber)
+                command.Parameters.AddWithValue("@ID", schoolID)
                 command.Parameters.AddWithValue("@Name", name)
                 command.Parameters.AddWithValue("@Username", username)
                 command.Parameters.AddWithValue("@Password", password)
+                command.Parameters.AddWithValue("@IsActive", "PENDING")
 
                 ' Execute the query
                 command.ExecuteNonQuery()

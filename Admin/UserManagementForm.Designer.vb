@@ -39,6 +39,8 @@ Partial Class UserManagementForm
         Me.dvgUsers = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.updateTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtIsActive = New System.Windows.Forms.ComboBox()
         CType(Me.dvgUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,7 +113,6 @@ Partial Class UserManagementForm
         '
         'txtID
         '
-        Me.txtID.Enabled = False
         Me.txtID.Location = New System.Drawing.Point(213, 139)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(269, 27)
@@ -190,7 +191,7 @@ Partial Class UserManagementForm
         'dvgUsers
         '
         Me.dvgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dvgUsers.Location = New System.Drawing.Point(97, 403)
+        Me.dvgUsers.Location = New System.Drawing.Point(97, 429)
         Me.dvgUsers.Name = "dvgUsers"
         Me.dvgUsers.Size = New System.Drawing.Size(990, 391)
         Me.dvgUsers.TabIndex = 178
@@ -215,12 +216,34 @@ Partial Class UserManagementForm
         '
         Me.updateTimer.Interval = 1000
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(93, 358)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(61, 19)
+        Me.Label6.TabIndex = 180
+        Me.Label6.Text = "Is Active"
+        '
+        'txtIsActive
+        '
+        Me.txtIsActive.FormattingEnabled = True
+        Me.txtIsActive.Items.AddRange(New Object() {"ACTIVE", "DEACTIVATED", "PENDING"})
+        Me.txtIsActive.Location = New System.Drawing.Point(213, 354)
+        Me.txtIsActive.Name = "txtIsActive"
+        Me.txtIsActive.Size = New System.Drawing.Size(269, 28)
+        Me.txtIsActive.TabIndex = 182
+        '
         'UserManagementForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1202, 822)
+        Me.Controls.Add(Me.txtIsActive)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dvgUsers)
         Me.Controls.Add(Me.btnInsert)
@@ -262,4 +285,6 @@ Partial Class UserManagementForm
     Friend WithEvents dvgUsers As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents updateTimer As Timer
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtIsActive As ComboBox
 End Class

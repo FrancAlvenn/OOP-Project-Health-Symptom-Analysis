@@ -4,9 +4,13 @@ Public Class UserManagementForm
 
     Public userAuthenticationString As String = DatabaseConfiguration.DataSourceUserAuthentication
     Public connection As New SQLiteConnection(userAuthenticationString)
-    Public oldName As String
-    Public oldPass As String
+    Public prevName As String
+    Public prevUsername As String
+    Public prevPass As String
+    Public prevStatus As String
     Private Sub LoadData()
+        dvgUsers.Rows.Clear()
+        dvgUsers.Columns.Clear()
         Dim dataTable As New DataTable()
         If connection.State <> ConnectionState.Open Then
             connection.Open()
@@ -55,6 +59,7 @@ Public Class UserManagementForm
         txtName.Text = ""
         txtUsername.Text = ""
         txtPassword.Text = ""
+        txtIsActive.Text = ""
     End Sub
 
     Public Function IsUsernameExists(username As String) As Boolean
@@ -89,16 +94,6 @@ Public Class UserManagementForm
 
     End Function
 
-    Public random As New Random()
-    Public generatedNumbers As New HashSet(Of Integer)()
-    Public randomNum As Integer
-    Public Function GenerateUniqueRandom() As Integer
-        Do
-            randomNum = random.Next(100000, 999999)
-        Loop While generatedNumbers.Contains(randomNum)
-        generatedNumbers.Add(randomNum)
-        Return randomNum
-    End Function
 
     Public Function insertUser()
         Try
@@ -106,19 +101,19 @@ Public Class UserManagementForm
                 connection.Open()
             End If
             If connection.State = ConnectionState.Open Then
-                GenerateUniqueRandom()
-                Dim accountNumber As Integer = "800" & randomNum.ToString
+                Dim schoolId As Integer = txtID.Text
                 Dim name As String = txtName.Text
                 Dim username As String = txtUsername.Text
                 Dim password As String = txtPassword.Text
-                Dim insertQuery As String = "INSERT INTO user_accounts (ID, Name, Username, Password) VALUES (@ID, @Name, @Username, @Password)"
+                Dim insertQuery As String = "INSERT INTO user_accounts (ID, Name, Username, Password, IsActive) VALUES (@ID, @Name, @Username, @Password, @IsActive)"
                 Dim command As New SQLiteCommand(insertQuery, connection)
 
                 ' Add parameters
-                command.Parameters.AddWithValue("@ID", accountNumber)
+                command.Parameters.AddWithValue("@ID", schoolId)
                 command.Parameters.AddWithValue("@Name", name)
                 command.Parameters.AddWithValue("@Username", username)
                 command.Parameters.AddWithValue("@Password", password)
+                command.Parameters.AddWithValue("@IsActive", txtIsActive.SelectedItem.ToString)
 
                 ' Execute the query
                 command.ExecuteNonQuery()
@@ -151,14 +146,19 @@ Public Class UserManagementForm
             Dim Name As Object = dvgUsers.Rows(e.RowIndex).Cells(1).Value
             Dim Username As Object = dvgUsers.Rows(e.RowIndex).Cells(2).Value
             Dim Password As Object = dvgUsers.Rows(e.RowIndex).Cells(3).Value
+            Dim IsActive As Object = dvgUsers.Rows(e.RowIndex).Cells(4).Value
 
             txtID.Text = ID
             txtName.Text = Name
             txtUsername.Text = Username
             txtPassword.Text = Password
-            oldName = Name
-            oldPass = Password
+            txtIsActive.Text = IsActive
 
+
+            prevName = Name
+            prevUsername = Username
+            prevPass = Password
+            prevStatus = IsActive
         End If
     End Sub
 
@@ -184,6 +184,7 @@ Public Class UserManagementForm
         txtName.Text = ""
         txtUsername.Text = ""
         txtPassword.Text = ""
+        txtIsActive.Text = ""
     End Sub
 
 
@@ -192,7 +193,7 @@ Public Class UserManagementForm
         'Dim connection As New SQLiteConnection(userAuthenticationString)
         If txtID.Text <> "" AndAlso txtName.Text <> "" AndAlso txtUsername.Text <> "" AndAlso txtPassword.Text <> "" Then
             Dim userExists As Boolean = IsUsernameExists(txtUsername.Text)
-            If userExists Then
+            If userExists And txtIsActive.Text = prevStatus And txtName.Text <> prevName And txtPassword.Text <> prevPass Then
                 MsgBox("Username already used!", vbOK, "Username Exists")
             Else
 
@@ -202,12 +203,13 @@ Public Class UserManagementForm
                             LocalConnection.Open()
                         End If
                         If LocalConnection.State = ConnectionState.Open Then
-                            Dim updateQuery As String = "UPDATE user_accounts SET Name = @Name, Username = @Username, Password = @Password WHERE ID = @ID;"
+                            Dim updateQuery As String = "UPDATE user_accounts SET Name = @Name, Username = @Username, Password = @Password, IsActive = @IsActive WHERE ID = @ID;"
 
                             Dim command As New SQLiteCommand(updateQuery, LocalConnection)
                             command.Parameters.AddWithValue("@Name", txtName.Text)
                             command.Parameters.AddWithValue("@Username", txtUsername.Text)
                             command.Parameters.AddWithValue("@Password", txtPassword.Text)
+                            command.Parameters.AddWithValue("@IsActive", txtIsActive.SelectedItem.ToString)
                             command.Parameters.AddWithValue("@ID", txtID.Text)
 
                             ' Execute the update query
