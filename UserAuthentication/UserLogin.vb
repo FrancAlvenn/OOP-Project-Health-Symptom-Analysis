@@ -124,20 +124,30 @@ Public Class UserLogin
 
         'check if the username and password are in the database
         If reader.Read() Then
+            Dim isActive As String = reader.GetString(4)
             ' Successful login
-            userID = reader("ID")
-            MessageBox.Show("Login successful!")
-            MainForm.hasAccount = True
-            Me.Dispose()
-            MainForm.Enabled = True
-            MainForm.Show()
-            MainForm.CloseMenuBar()
-            MainForm.childForm(Home)
-            BMICalc.tableLayoutSymptoms.Controls.Clear()
+
+            If isActive = "ACTIVE" Then
+                userID = reader("ID")
+                MessageBox.Show("Login successful!")
+                MainForm.hasAccount = True
+                Me.Dispose()
+                MainForm.Enabled = True
+                MainForm.Show()
+                MainForm.CloseMenuBar()
+                MainForm.childForm(Home)
+                BMICalc.tableLayoutSymptoms.Controls.Clear()
 
 
-            BMICalc.symptomCount = 0
-            BMICalc.queueSymptomName.Clear()
+                BMICalc.symptomCount = 0
+                BMICalc.queueSymptomName.Clear()
+            ElseIf isActive = "PENDING" Then
+                MsgBox("Account not active yet, please contact an admin!", vbOK, "Unactivated Account!")
+            ElseIf isActive = "DEACTIVATED" Then
+                MsgBox("Account has been deactivated, please contact an admin!", vbOK, "Deactivated Account!")
+            End If
+
+
         Else
             ' Invalid credentials
             MessageBox.Show("Invalid username or password.")

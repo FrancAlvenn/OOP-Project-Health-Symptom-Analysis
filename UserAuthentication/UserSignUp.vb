@@ -28,7 +28,7 @@ Public Class UserSignUp
                 createTableCommand.ExecuteNonQuery()
 
                 ' Get value from form
-                Dim schoolID As String = txtSchoolID.Text
+                Dim schoolID As String = txtSchoolID.Text.Replace("-", "")
                 Dim name As String = txtName.Text
                 Dim username As String = txtUsername.Text
                 Dim password As String = txtPassword.Text
@@ -46,18 +46,19 @@ Public Class UserSignUp
                 command.ExecuteNonQuery()
 
 
-                Dim createUserHistory As String = "CREATE TABLE IF NOT EXISTS _" & UserLogin.userID & " (ID INTEGER PRIMARY KEY AUTOINCREMENT," &
+                Dim createUserHistory As String = "CREATE TABLE IF NOT EXISTS _" & schoolID & "(ID INTEGER PRIMARY KEY AUTOINCREMENT," &
                                                    "AssessmentCategory TEXT," &
                                                    "TestResult TEXT," &
                                                    "PatientResponse TEXT," &
                                                    "DateTaken TEXT);"
                 ' Execute the query
-                Dim createUserHistoryCommand As New SQLiteCommand(createTableString, connection)
+                Dim createUserHistoryCommand As New SQLiteCommand(createUserHistory, connection)
+
                 createUserHistoryCommand.ExecuteNonQuery()
 
 
 
-                MsgBox("Account Created Successfully! Proceed to LogIn!", vbOK, "Welcome to SymptoMedic!")
+                MsgBox("Account has been sent to admin for confirmation, please contact the admin!", vbOK, "Welcome to SymptoMedic!")
 
 
             Else
