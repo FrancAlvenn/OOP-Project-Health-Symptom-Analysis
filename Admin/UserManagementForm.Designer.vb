@@ -41,6 +41,14 @@ Partial Class UserManagementForm
         Me.updateTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtIsActive = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cmbSortBy = New System.Windows.Forms.ComboBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnChangeName = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.dvgUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -109,7 +117,6 @@ Partial Class UserManagementForm
         Me.seperator1.Size = New System.Drawing.Size(500, 1)
         Me.seperator1.TabIndex = 166
         Me.seperator1.Text = "Label2"
-        Me.seperator1.Visible = False
         '
         'txtID
         '
@@ -191,7 +198,7 @@ Partial Class UserManagementForm
         'dvgUsers
         '
         Me.dvgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dvgUsers.Location = New System.Drawing.Point(97, 429)
+        Me.dvgUsers.Location = New System.Drawing.Point(96, 611)
         Me.dvgUsers.Name = "dvgUsers"
         Me.dvgUsers.Size = New System.Drawing.Size(990, 391)
         Me.dvgUsers.TabIndex = 178
@@ -236,12 +243,104 @@ Partial Class UserManagementForm
         Me.txtIsActive.Size = New System.Drawing.Size(269, 28)
         Me.txtIsActive.TabIndex = 182
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(687, 558)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(117, 19)
+        Me.Label8.TabIndex = 195
+        Me.Label8.Text = "Sort by Category:"
+        '
+        'cmbSortBy
+        '
+        Me.cmbSortBy.FormattingEnabled = True
+        Me.cmbSortBy.Items.AddRange(New Object() {"Active", "Pending", "Deactivated"})
+        Me.cmbSortBy.Location = New System.Drawing.Point(823, 556)
+        Me.cmbSortBy.Name = "cmbSortBy"
+        Me.cmbSortBy.Size = New System.Drawing.Size(263, 28)
+        Me.cmbSortBy.TabIndex = 194
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(185, 558)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(269, 27)
+        Me.txtSearch.TabIndex = 197
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(95, 562)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(83, 19)
+        Me.Label7.TabIndex = 196
+        Me.Label7.Text = "Search User"
+        '
+        'btnChangeName
+        '
+        Me.btnChangeName.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnChangeName.FlatAppearance.BorderSize = 0
+        Me.btnChangeName.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnChangeName.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.btnChangeName.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnChangeName.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnChangeName.ForeColor = System.Drawing.Color.Black
+        Me.btnChangeName.Location = New System.Drawing.Point(474, 558)
+        Me.btnChangeName.Name = "btnChangeName"
+        Me.btnChangeName.Size = New System.Drawing.Size(99, 27)
+        Me.btnChangeName.TabIndex = 198
+        Me.btnChangeName.Text = "Search"
+        Me.btnChangeName.UseVisualStyleBackColor = False
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.Black
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(45, 444)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(1058, 1)
+        Me.Label9.TabIndex = 199
+        Me.Label9.Text = "Label2"
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(1102, 940)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(38, 100)
+        Me.Panel1.TabIndex = 200
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(43, 477)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(139, 36)
+        Me.Label10.TabIndex = 201
+        Me.Label10.Text = "Userbase"
+        '
         'UserManagementForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1202, 822)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.btnChangeName)
+        Me.Controls.Add(Me.txtSearch)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.cmbSortBy)
         Me.Controls.Add(Me.txtIsActive)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button1)
@@ -287,4 +386,12 @@ Partial Class UserManagementForm
     Friend WithEvents updateTimer As Timer
     Friend WithEvents Label6 As Label
     Friend WithEvents txtIsActive As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents cmbSortBy As ComboBox
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents btnChangeName As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label10 As Label
 End Class

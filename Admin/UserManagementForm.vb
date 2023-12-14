@@ -24,34 +24,75 @@ Public Class UserManagementForm
 
             End Using
         End Using
-        For Each column As DataColumn In dataTable.Columns
-            If column.ColumnName = "Password" Then
-                ' Set the password column as a DataGridViewTextBoxCell with PasswordChar property
-                Dim passwordColumn As New DataGridViewTextBoxCell()
-                passwordColumn.ValueType = GetType(String)
-                passwordColumn.Style.NullValue = Nothing
-                dvgUsers.Columns.Add(column.ColumnName, column.ColumnName)
-                dvgUsers.Columns(column.ColumnName).CellTemplate = passwordColumn
-            Else
-                ' Add other columns normally
-                dvgUsers.Columns.Add(column.ColumnName, column.ColumnName)
-            End If
-        Next
 
-        ' Populate the DataGridView with data
-        For Each row As DataRow In dataTable.Rows
-            ' If the password is not null, set the cell value to the appropriate number of asterisks
-            If Not IsDBNull(row("Password")) Then
-                Dim password As String = row("Password").ToString()
-                Dim asterisks As String = New String("*"c, password.Length)
-                row("Password") = asterisks
-            End If
-            dvgUsers.Rows.Add(row.ItemArray)
-        Next
 
-        'dvgUsers.DataSource = dataTable
+        dvgUsers.DataSource = dataTable
         dvgUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
 
+    End Sub
+
+    Private Sub LoadDatabyUsername()
+        Try
+            Dim dataTable As New DataTable()
+
+            Using Localconnection As New SQLiteConnection(userAuthenticationString)
+                Localconnection.Open()
+
+                Dim query As String = "SELECT * FROM user_accounts WHERE ID LIKE @InputValue OR Username LIKE @InputValue OR Name LIKE @InputValue;"
+
+                Using cmd As New SQLiteCommand(query, Localconnection)
+                    cmd.Parameters.AddWithValue("@InputValue", "%" & txtSearch.Text & "%")
+
+                    Using adapter As New SQLiteDataAdapter(cmd)
+                        ' Fill the DataTable using the adapter
+                        adapter.Fill(dataTable)
+                    End Using
+                End Using
+            End Using
+
+            ' Check if there are any rows in the DataTable before binding to the DataGridView
+            If dataTable.Rows.Count > 0 Then
+                dvgUsers.DataSource = dataTable
+                dvgUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            Else
+                MessageBox.Show("No matching records found.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub LoadDatabyCategory()
+        Try
+            Dim dataTable As New DataTable()
+
+            Using Localconnection As New SQLiteConnection(userAuthenticationString)
+                Localconnection.Open()
+
+                Dim query As String = "SELECT * FROM user_accounts WHERE IsActive = @InputValue;"
+
+                Using cmd As New SQLiteCommand(query, Localconnection)
+                    cmd.Parameters.AddWithValue("@InputValue", cmbSortBy.SelectedItem.ToString.ToUpper)
+
+                    Using adapter As New SQLiteDataAdapter(cmd)
+                        ' Fill the DataTable using the adapter
+                        adapter.Fill(dataTable)
+                    End Using
+                End Using
+            End Using
+
+            ' Check if there are any rows in the DataTable before binding to the DataGridView
+            If dataTable.Rows.Count > 0 Then
+                dvgUsers.DataSource = dataTable
+                dvgUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            Else
+                MessageBox.Show("No matching records found.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub Clear()
@@ -264,4 +305,11 @@ Public Class UserManagementForm
 
     End Sub
 
+    Private Sub btnChangeName_Click(sender As Object, e As EventArgs) Handles btnChangeName.Click
+        LoadDatabyUsername()
+    End Sub
+
+    Private Sub cmbSortBy_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSortBy.SelectedIndexChanged
+        LoadDatabyCategory()
+    End Sub
 End Class

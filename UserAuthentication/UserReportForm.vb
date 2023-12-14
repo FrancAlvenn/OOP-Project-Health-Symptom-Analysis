@@ -96,7 +96,11 @@ Public Class UserReportForm
         If e.RowIndex >= 0 AndAlso e.RowIndex < dgvReports.RowCount - 1 Then
             ' Access the value of the clicked cell in the first column (index 0)
             AssessmentCategory = dgvReports.Rows(e.RowIndex).Cells(1).Value
+
+
         End If
+
+
     End Sub
 
 
@@ -325,4 +329,5 @@ Public Class UserReportForm
             scrollTimer.Stop()
         End If
     End Sub
+
 End Class
