@@ -9,8 +9,6 @@ Public Class UserManagementForm
     Public prevPass As String
     Public prevStatus As String
     Private Sub LoadData()
-        dvgUsers.Rows.Clear()
-        dvgUsers.Columns.Clear()
         Dim dataTable As New DataTable()
         If connection.State <> ConnectionState.Open Then
             connection.Open()
@@ -18,7 +16,7 @@ Public Class UserManagementForm
 
         Using Localconnection As New SQLiteConnection(userAuthenticationString)
 
-            Dim query As String = "SELECT * FROM user_accounts"
+            Dim query As String = "SELECT ID, Name, Username, IsActive FROM user_accounts"
             Using adapter As New SQLiteDataAdapter(query, Localconnection)
                 adapter.Fill(dataTable)
 
@@ -38,7 +36,7 @@ Public Class UserManagementForm
             Using Localconnection As New SQLiteConnection(userAuthenticationString)
                 Localconnection.Open()
 
-                Dim query As String = "SELECT * FROM user_accounts WHERE ID LIKE @InputValue OR Username LIKE @InputValue OR Name LIKE @InputValue;"
+                Dim query As String = "SELECT ID, Name, Username, IsActive FROM user_accounts WHERE ID LIKE @InputValue OR Username LIKE @InputValue OR Name LIKE @InputValue;"
 
                 Using cmd As New SQLiteCommand(query, Localconnection)
                     cmd.Parameters.AddWithValue("@InputValue", "%" & txtSearch.Text & "%")
@@ -70,7 +68,7 @@ Public Class UserManagementForm
             Using Localconnection As New SQLiteConnection(userAuthenticationString)
                 Localconnection.Open()
 
-                Dim query As String = "SELECT * FROM user_accounts WHERE IsActive = @InputValue;"
+                Dim query As String = "SELECT ID, Name, Username, IsActive FROM user_accounts WHERE IsActive = @InputValue;"
 
                 Using cmd As New SQLiteCommand(query, Localconnection)
                     cmd.Parameters.AddWithValue("@InputValue", cmbSortBy.SelectedItem.ToString.ToUpper)
@@ -186,19 +184,17 @@ Public Class UserManagementForm
             Dim ID As Object = dvgUsers.Rows(e.RowIndex).Cells(0).Value
             Dim Name As Object = dvgUsers.Rows(e.RowIndex).Cells(1).Value
             Dim Username As Object = dvgUsers.Rows(e.RowIndex).Cells(2).Value
-            Dim Password As Object = dvgUsers.Rows(e.RowIndex).Cells(3).Value
-            Dim IsActive As Object = dvgUsers.Rows(e.RowIndex).Cells(4).Value
+            'Dim Password As Object = dvgUsers.Rows(e.RowIndex).Cells(3).Value
+            Dim IsActive As Object = dvgUsers.Rows(e.RowIndex).Cells(3).Value
 
             txtID.Text = ID
             txtName.Text = Name
             txtUsername.Text = Username
-            txtPassword.Text = Password
             txtIsActive.Text = IsActive
 
 
             prevName = Name
             prevUsername = Username
-            prevPass = Password
             prevStatus = IsActive
         End If
     End Sub

@@ -288,7 +288,7 @@
                MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If result = DialogResult.Yes Then
-                Dim loginForm As DialogResult = UserSignUp.ShowDialog()
+                Dim loginForm As DialogResult = UserLogin.ShowDialog()
             End If
         End If
 

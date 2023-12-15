@@ -22,44 +22,29 @@ Partial Class UserSignUp
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnSignIn = New System.Windows.Forms.Button()
         Me.lblTimer = New System.Windows.Forms.Label()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtConfirmPassword = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtSchoolID = New System.Windows.Forms.MaskedTextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtConfirmPassword = New System.Windows.Forms.TextBox()
+        Me.btnSignIn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'btnSignIn
-        '
-        Me.btnSignIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSignIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSignIn.ForeColor = System.Drawing.Color.White
-        Me.btnSignIn.Location = New System.Drawing.Point(79, 487)
-        Me.btnSignIn.Name = "btnSignIn"
-        Me.btnSignIn.Size = New System.Drawing.Size(276, 41)
-        Me.btnSignIn.TabIndex = 64
-        Me.btnSignIn.Text = "SignUp"
-        Me.btnSignIn.UseVisualStyleBackColor = False
         '
         'lblTimer
         '
@@ -69,17 +54,6 @@ Partial Class UserSignUp
         Me.lblTimer.Size = New System.Drawing.Size(276, 23)
         Me.lblTimer.TabIndex = 63
         Me.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'txtPassword
-        '
-        Me.txtPassword.BackColor = System.Drawing.Color.White
-        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.Font = New System.Drawing.Font("Tahoma", 9.75!)
-        Me.txtPassword.Location = New System.Drawing.Point(93, 359)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(265, 16)
-        Me.txtPassword.TabIndex = 62
         '
         'Label8
         '
@@ -125,16 +99,6 @@ Partial Class UserSignUp
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(121, 2)
         Me.Label4.TabIndex = 57
-        '
-        'txtUsername
-        '
-        Me.txtUsername.BackColor = System.Drawing.Color.White
-        Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUsername.Font = New System.Drawing.Font("Tahoma", 9.75!)
-        Me.txtUsername.Location = New System.Drawing.Point(90, 286)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(121, 16)
-        Me.txtUsername.TabIndex = 56
         '
         'Label3
         '
@@ -183,16 +147,6 @@ Partial Class UserSignUp
         Me.Label9.Size = New System.Drawing.Size(265, 2)
         Me.Label9.TabIndex = 68
         '
-        'txtName
-        '
-        Me.txtName.BackColor = System.Drawing.Color.White
-        Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtName.Font = New System.Drawing.Font("Tahoma", 9.75!)
-        Me.txtName.Location = New System.Drawing.Point(90, 215)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(265, 16)
-        Me.txtName.TabIndex = 67
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -202,17 +156,6 @@ Partial Class UserSignUp
         Me.Label10.Size = New System.Drawing.Size(60, 16)
         Me.Label10.TabIndex = 66
         Me.Label10.Text = "Fullname"
-        '
-        'txtConfirmPassword
-        '
-        Me.txtConfirmPassword.BackColor = System.Drawing.Color.White
-        Me.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtConfirmPassword.Font = New System.Drawing.Font("Tahoma", 9.75!)
-        Me.txtConfirmPassword.Location = New System.Drawing.Point(96, 424)
-        Me.txtConfirmPassword.Name = "txtConfirmPassword"
-        Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtConfirmPassword.Size = New System.Drawing.Size(265, 16)
-        Me.txtConfirmPassword.TabIndex = 71
         '
         'Label11
         '
@@ -250,13 +193,70 @@ Partial Class UserSignUp
         Me.Label14.TabIndex = 72
         Me.Label14.Text = "School ID"
         '
+        'txtName
+        '
+        Me.txtName.BackColor = System.Drawing.Color.White
+        Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtName.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.txtName.Location = New System.Drawing.Point(90, 215)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(265, 16)
+        Me.txtName.TabIndex = 76
+        '
+        'txtUsername
+        '
+        Me.txtUsername.BackColor = System.Drawing.Color.White
+        Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUsername.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.txtUsername.Location = New System.Drawing.Point(90, 286)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(121, 16)
+        Me.txtUsername.TabIndex = 77
+        '
         'txtSchoolID
         '
         Me.txtSchoolID.Location = New System.Drawing.Point(234, 282)
         Me.txtSchoolID.Mask = "0000-00000"
         Me.txtSchoolID.Name = "txtSchoolID"
         Me.txtSchoolID.Size = New System.Drawing.Size(121, 20)
-        Me.txtSchoolID.TabIndex = 75
+        Me.txtSchoolID.TabIndex = 78
+        '
+        'txtPassword
+        '
+        Me.txtPassword.BackColor = System.Drawing.Color.White
+        Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPassword.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.txtPassword.Location = New System.Drawing.Point(93, 359)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(265, 16)
+        Me.txtPassword.TabIndex = 79
+        '
+        'txtConfirmPassword
+        '
+        Me.txtConfirmPassword.BackColor = System.Drawing.Color.White
+        Me.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtConfirmPassword.Font = New System.Drawing.Font("Tahoma", 9.75!)
+        Me.txtConfirmPassword.Location = New System.Drawing.Point(96, 424)
+        Me.txtConfirmPassword.Name = "txtConfirmPassword"
+        Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtConfirmPassword.Size = New System.Drawing.Size(265, 16)
+        Me.txtConfirmPassword.TabIndex = 80
+        '
+        'btnSignIn
+        '
+        Me.btnSignIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSignIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSignIn.ForeColor = System.Drawing.Color.White
+        Me.btnSignIn.Location = New System.Drawing.Point(82, 500)
+        Me.btnSignIn.Name = "btnSignIn"
+        Me.btnSignIn.Size = New System.Drawing.Size(276, 41)
+        Me.btnSignIn.TabIndex = 81
+        Me.btnSignIn.Text = "SignUp"
+        Me.btnSignIn.UseVisualStyleBackColor = False
         '
         'UserSignUp
         '
@@ -265,25 +265,25 @@ Partial Class UserSignUp
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(441, 665)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnSignIn)
+        Me.Controls.Add(Me.txtConfirmPassword)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtSchoolID)
+        Me.Controls.Add(Me.txtUsername)
+        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.txtConfirmPassword)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.btnClose)
-        Me.Controls.Add(Me.btnSignIn)
         Me.Controls.Add(Me.lblTimer)
-        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -298,25 +298,25 @@ Partial Class UserSignUp
     End Sub
 
     Friend WithEvents btnClose As Label
-    Friend WithEvents btnSignIn As Button
     Friend WithEvents lblTimer As Label
-    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents txtName As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents txtConfirmPassword As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents txtSchoolID As MaskedTextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtConfirmPassword As TextBox
+    Friend WithEvents btnSignIn As Button
 End Class
