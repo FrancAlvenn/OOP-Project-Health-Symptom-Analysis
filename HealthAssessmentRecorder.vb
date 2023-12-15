@@ -8,6 +8,7 @@ Module HealthAssessmentRecorder
     Public connection As New SQLiteConnection(connectionName)
     Public patientResponseString As String
     Public Function AddLabelsToQueue(labels As Label()) As String
+        patientResponseString = ""
         For Each label As Label In labels
             ' Get the text from each label
             Dim labelText As String = label.Text
@@ -49,7 +50,7 @@ Module HealthAssessmentRecorder
                     command.Parameters.AddWithValue("@AssessmentCategory", MentalAssessment.assessmentCategory)
                     command.Parameters.AddWithValue("@TestResult", testResult)
                     command.Parameters.AddWithValue("@PatientResponse", patientResponseString)
-                    command.Parameters.AddWithValue("@DateTaken", DateTime.Now)
+                    command.Parameters.AddWithValue("@DateTaken", DateTime.Now.ToString("yyyy-MM-dd  hh:mm:ss"))
 
 
                     ' Execute the query
@@ -197,6 +198,7 @@ Module HealthAssessmentRecorder
     Public symptomCheckerResultString As String
 
     Public Function AddDiagnosisToQueue(tableLayout As TableLayoutPanel) As String
+        symptomCheckerResultString = ""
         For Each control As Control In tableLayout.Controls
             If TypeOf control Is Label Then
                 ' Get the text from each label
@@ -217,6 +219,7 @@ Module HealthAssessmentRecorder
     Public symptomCheckerResponseString As String
 
     Public Function AddSymptomsToQueue(tableLayout As TableLayoutPanel) As String
+        symptomCheckerResponseString = ""
         For Each control As Control In tableLayout.Controls
             If TypeOf control Is Label Then
                 ' Get the text from each label
@@ -259,7 +262,7 @@ Module HealthAssessmentRecorder
                     command.Parameters.AddWithValue("@AssessmentCategory", "SymptomChecker")
                     command.Parameters.AddWithValue("@TestResult", symptomCheckerResultString)
                     command.Parameters.AddWithValue("@PatientResponse", symptomCheckerResponseString)
-                    command.Parameters.AddWithValue("@DateTaken", Date.Today)
+                    command.Parameters.AddWithValue("@DateTaken", DateTime.Now.ToString("yyyy-MM-dd  hh:mm:ss"))
 
 
                     ' Execute the query

@@ -330,4 +330,11 @@ Public Class UserReportForm
         End If
     End Sub
 
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        LoadData()
+        targetScrollValue = 610 ' Set the target scroll value
+        currentScrollValue = Me.VerticalScroll.Value
+        scrollTimer.Interval = 10 ' Set the interval for the timer (adjust as needed)
+        scrollTimer.Start()
+    End Sub
 End Class

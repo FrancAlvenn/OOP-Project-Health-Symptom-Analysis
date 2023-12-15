@@ -32,8 +32,7 @@ Public Class SymptomCheckerResult
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-        AddDiagnosisToQueue(tableDiagnosis)
-        AddSymptomsToQueue(tableSymptoms)
+
         'addRecordSymptomChecker()
         If MainForm.hasAccount Then
             generateSymptomCheckerReport()

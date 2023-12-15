@@ -459,8 +459,10 @@ Public Class BMICalc
         End If
 
         Add_Label()
-        addRecordSymptomChecker()
 
+        AddDiagnosisToQueue(SymptomCheckerResult.tableDiagnosis)
+        AddSymptomsToQueue(SymptomCheckerResult.tableSymptoms)
+        addRecordSymptomChecker()
     End Sub
 
     Public Function diagnosis()

@@ -60,7 +60,7 @@ Partial Class UserManagementForm
         Me.Label3.Location = New System.Drawing.Point(43, 44)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(268, 36)
+        Me.Label3.Size = New System.Drawing.Size(336, 45)
         Me.Label3.TabIndex = 161
         Me.Label3.Text = "User Management"
         '
@@ -71,7 +71,7 @@ Partial Class UserManagementForm
         Me.Label1.Location = New System.Drawing.Point(93, 139)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(23, 19)
+        Me.Label1.Size = New System.Drawing.Size(28, 23)
         Me.Label1.TabIndex = 162
         Me.Label1.Text = "ID"
         '
@@ -82,7 +82,7 @@ Partial Class UserManagementForm
         Me.Label2.Location = New System.Drawing.Point(93, 195)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 19)
+        Me.Label2.Size = New System.Drawing.Size(59, 23)
         Me.Label2.TabIndex = 163
         Me.Label2.Text = "Name"
         '
@@ -93,7 +93,7 @@ Partial Class UserManagementForm
         Me.Label4.Location = New System.Drawing.Point(93, 251)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 19)
+        Me.Label4.Size = New System.Drawing.Size(92, 23)
         Me.Label4.TabIndex = 164
         Me.Label4.Text = "Username"
         '
@@ -104,7 +104,7 @@ Partial Class UserManagementForm
         Me.Label5.Location = New System.Drawing.Point(93, 305)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(67, 19)
+        Me.Label5.Size = New System.Drawing.Size(86, 23)
         Me.Label5.TabIndex = 165
         Me.Label5.Text = "Password"
         '
@@ -122,21 +122,21 @@ Partial Class UserManagementForm
         '
         Me.txtID.Location = New System.Drawing.Point(213, 139)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(269, 27)
+        Me.txtID.Size = New System.Drawing.Size(269, 32)
         Me.txtID.TabIndex = 167
         '
         'txtName
         '
         Me.txtName.Location = New System.Drawing.Point(213, 191)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(269, 27)
+        Me.txtName.Size = New System.Drawing.Size(269, 32)
         Me.txtName.TabIndex = 168
         '
         'txtUsername
         '
         Me.txtUsername.Location = New System.Drawing.Point(213, 247)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(269, 27)
+        Me.txtUsername.Size = New System.Drawing.Size(269, 32)
         Me.txtUsername.TabIndex = 169
         '
         'txtPassword
@@ -144,7 +144,7 @@ Partial Class UserManagementForm
         Me.txtPassword.Location = New System.Drawing.Point(213, 301)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(269, 27)
+        Me.txtPassword.Size = New System.Drawing.Size(269, 32)
         Me.txtPassword.TabIndex = 170
         '
         'btnDelete
@@ -200,6 +200,7 @@ Partial Class UserManagementForm
         Me.dvgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dvgUsers.Location = New System.Drawing.Point(96, 611)
         Me.dvgUsers.Name = "dvgUsers"
+        Me.dvgUsers.RowHeadersWidth = 51
         Me.dvgUsers.Size = New System.Drawing.Size(990, 391)
         Me.dvgUsers.TabIndex = 178
         '
@@ -230,9 +231,9 @@ Partial Class UserManagementForm
         Me.Label6.Location = New System.Drawing.Point(93, 358)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 19)
+        Me.Label6.Size = New System.Drawing.Size(59, 23)
         Me.Label6.TabIndex = 180
-        Me.Label6.Text = "Is Active"
+        Me.Label6.Text = "Status"
         '
         'txtIsActive
         '
@@ -240,7 +241,7 @@ Partial Class UserManagementForm
         Me.txtIsActive.Items.AddRange(New Object() {"ACTIVE", "DEACTIVATED", "PENDING"})
         Me.txtIsActive.Location = New System.Drawing.Point(213, 354)
         Me.txtIsActive.Name = "txtIsActive"
-        Me.txtIsActive.Size = New System.Drawing.Size(269, 28)
+        Me.txtIsActive.Size = New System.Drawing.Size(269, 33)
         Me.txtIsActive.TabIndex = 182
         '
         'Label8
@@ -250,7 +251,7 @@ Partial Class UserManagementForm
         Me.Label8.Location = New System.Drawing.Point(687, 558)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(117, 19)
+        Me.Label8.Size = New System.Drawing.Size(150, 23)
         Me.Label8.TabIndex = 195
         Me.Label8.Text = "Sort by Category:"
         '
@@ -260,14 +261,14 @@ Partial Class UserManagementForm
         Me.cmbSortBy.Items.AddRange(New Object() {"Active", "Pending", "Deactivated"})
         Me.cmbSortBy.Location = New System.Drawing.Point(823, 556)
         Me.cmbSortBy.Name = "cmbSortBy"
-        Me.cmbSortBy.Size = New System.Drawing.Size(263, 28)
+        Me.cmbSortBy.Size = New System.Drawing.Size(263, 33)
         Me.cmbSortBy.TabIndex = 194
         '
         'txtSearch
         '
         Me.txtSearch.Location = New System.Drawing.Point(185, 558)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(269, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(269, 32)
         Me.txtSearch.TabIndex = 197
         '
         'Label7
@@ -277,7 +278,7 @@ Partial Class UserManagementForm
         Me.Label7.Location = New System.Drawing.Point(95, 562)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(83, 19)
+        Me.Label7.Size = New System.Drawing.Size(106, 23)
         Me.Label7.TabIndex = 196
         Me.Label7.Text = "Search User"
         '
@@ -322,13 +323,13 @@ Partial Class UserManagementForm
         Me.Label10.Location = New System.Drawing.Point(43, 477)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(139, 36)
+        Me.Label10.Size = New System.Drawing.Size(177, 45)
         Me.Label10.TabIndex = 201
         Me.Label10.Text = "Userbase"
         '
         'UserManagementForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
