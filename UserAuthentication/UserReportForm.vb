@@ -323,7 +323,7 @@ Public Class UserReportForm
 
     Private Sub scrollTimer_Tick(sender As Object, e As EventArgs) Handles scrollTimer.Tick
         If currentScrollValue < targetScrollValue Then
-            currentScrollValue += 25
+            currentScrollValue += 610
             Me.VerticalScroll.Value = currentScrollValue
         Else
             scrollTimer.Stop()

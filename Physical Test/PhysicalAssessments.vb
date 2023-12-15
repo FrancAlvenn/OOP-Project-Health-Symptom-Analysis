@@ -459,6 +459,7 @@ Public Class BMICalc
         End If
 
         Add_Label()
+        addRecordSymptomChecker()
 
     End Sub
 
