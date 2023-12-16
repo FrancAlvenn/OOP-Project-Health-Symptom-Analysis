@@ -81,11 +81,12 @@ Public Class SymptomCheckerResult
             'bodylocations
             ' Create a new connection
             If clickedLabel.Text <> "" Then
+
                 Using connection As New SQLiteConnection(connectionString)
                     connection.Open()
 
                     ' Your SQL query to retrieve data
-                    Dim query As String = "SELECT * FROM tblIssueSpecific WHERE Name = '" & clickedLabel.Text & "';"
+                    Dim query As String = "SELECT * FROM tblIssueSpecific WHERE Name = '" & clickedLabel.Text.Replace("'", "''") & "';"
 
                     ' Create a command and execute the query
                     Using command As New SQLiteCommand(query, connection)

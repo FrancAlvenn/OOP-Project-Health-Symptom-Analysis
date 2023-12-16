@@ -49,6 +49,7 @@ Partial Class UserManagementForm
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.dvgUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -248,7 +249,7 @@ Partial Class UserManagementForm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(687, 558)
+        Me.Label8.Location = New System.Drawing.Point(742, 559)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(150, 23)
@@ -259,13 +260,16 @@ Partial Class UserManagementForm
         '
         Me.cmbSortBy.FormattingEnabled = True
         Me.cmbSortBy.Items.AddRange(New Object() {"Active", "Pending", "Deactivated"})
-        Me.cmbSortBy.Location = New System.Drawing.Point(823, 556)
+        Me.cmbSortBy.Location = New System.Drawing.Point(899, 556)
         Me.cmbSortBy.Name = "cmbSortBy"
-        Me.cmbSortBy.Size = New System.Drawing.Size(263, 33)
+        Me.cmbSortBy.Size = New System.Drawing.Size(187, 33)
         Me.cmbSortBy.TabIndex = 194
         '
         'txtSearch
         '
+        Me.txtSearch.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtSearch.Location = New System.Drawing.Point(185, 558)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(269, 32)
@@ -327,6 +331,22 @@ Partial Class UserManagementForm
         Me.Label10.TabIndex = 201
         Me.Label10.Text = "Userbase"
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(197, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Tai Le", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.Black
+        Me.Button2.Location = New System.Drawing.Point(590, 558)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(99, 27)
+        Me.Button2.TabIndex = 202
+        Me.Button2.Text = "Refresh"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'UserManagementForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 25.0!)
@@ -334,6 +354,7 @@ Partial Class UserManagementForm
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1202, 822)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label9)
@@ -395,4 +416,5 @@ Partial Class UserManagementForm
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label10 As Label
+    Friend WithEvents Button2 As Button
 End Class
